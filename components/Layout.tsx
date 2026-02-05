@@ -4,20 +4,17 @@ import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { Language } from '../translations';
 
-const BrandLogo = ({ className = "w-10 h-10" }) => (
-  <svg className={className} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="50" r="45" fill="url(#globeGradient)" />
-    <path d="M10 50C10 50 25 30 50 30C75 30 90 50 90 50" stroke="white" strokeWidth="3" strokeLinecap="round" />
-    <path d="M15 65C15 65 35 45 50 45C65 45 85 65 85 65" stroke="white" strokeWidth="3" strokeLinecap="round" />
-    <path d="M50 5C50 5 40 25 40 50C40 75 50 95 50 95" stroke="white" strokeWidth="2" strokeLinecap="round" opacity="0.3" />
-    <defs>
-      <linearGradient id="globeGradient" x1="50" y1="5" x2="50" y2="95" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#FF9D00" />
-        <stop offset="1" stopColor="#FF5C00" />
-      </linearGradient>
-    </defs>
-  </svg>
+const BrandLogo = ({ className = "w-10 h-10" }: { className?: string }) => (
+  <img
+    src="/grace-logo.svg"
+    alt="Grace Way"
+    className={`${className} object-contain`}
+    loading="eager"
+    decoding="async"
+  />
 );
+
+
 
 const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, onClose }) => {
   const { language, setLanguage, t } = useLanguage();
