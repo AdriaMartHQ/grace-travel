@@ -179,11 +179,14 @@ const About: React.FC = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {a.credentials.list.map((item: string, idx: number) => {
-                const [label, value] = item.split('：');
+                const firstColonIndex = item.search(/[:：]/);
+                const label = firstColonIndex !== -1 ? item.substring(0, firstColonIndex) : item;
+                const value = firstColonIndex !== -1 ? item.substring(firstColonIndex + 1) : '';
+                
                 return (
                   <div key={idx} className="space-y-1">
                     <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{label}</p>
-                    <p className="text-sm font-bold text-slate-800">{value || label}</p>
+                    <p className="text-sm font-bold text-slate-800 whitespace-pre-line leading-relaxed">{value || label}</p>
                   </div>
                 );
               })}

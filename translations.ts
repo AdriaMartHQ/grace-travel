@@ -139,13 +139,13 @@ export const translations = {
       credentials: {
         title: 'Credentials & Contact',
         list: [
-          'Agency Type: A Grubu Seyahat Acentası İşletme Belgesi (A-Group Travel Agency License)',
+          'Agency Type: A Grubu Seyahat Acentası İşletme Belgesi\n(A-Group Travel Agency License)',
           'Authority: T.C. Kültür ve Turizm Bakanlığı',
           'License No (Belge No): 18717',
           'Company Entity: GRACE TRAVEL TURİZM VE TİC. LTD. ŞTİ.',
           'Address: Zeytinlik Mah. Halkçı Sok. Moda Pasajı No:25/35 (Kat:2 / Ofis No:35), Bakırköy / İstanbul',
-          'Website: https://www.gracetravel.com.tr | https://grace.tr',
-          'Phone (TR): +90 554 136 6090 | +90 212 570 15 28',
+          'Website: https://www.gracetravel.com.tr\nhttps://grace.tr',
+          'Phone (TR): +90 554 136 6090\n+90 212 570 15 28',
           'Phone (CN): +86 134 2640 1777',
           'Email: taha@gracetravel.com.tr'
         ]
@@ -917,13 +917,13 @@ export const translations = {
       credentials: {
         title: '资质与联系方式',
         list: [
-          '旅行社类型：A Grubu Seyahat Acentası İşletme Belgesi（A 组旅行社经营许可）',
+          '旅行社类型：A Grubu Seyahat Acentası İşletme Belgesi\n（A 组旅行社经营许可）',
           '主管部门：T.C. Kültür ve Turizm Bakanlığı',
           '证书编号（Belge No）：18717',
           '公司主体：GRACE TRAVEL TURİZM VE TİC. LTD. ŞTİ.',
           '地址：Zeytinlik Mah. Halkçı Sok. Moda Pasajı No:25/35 （Kat:2 / Ofis No:35）, Bakırköy / İstanbul',
-          '网址：https://www.gracetravel.com.tr ｜ https://grace.tr',
-          '电话（TR）：+90 554 136 6090 ｜ +90 212 570 15 28',
+          '网址：https://www.gracetravel.com.tr\nhttps://grace.tr',
+          '电话（TR）：+90 554 136 6090\n+90 212 570 15 28',
           '电话（CN）：+86 134 2640 1777',
           '邮箱：taha@gracetravel.com.tr'
         ]
@@ -1582,6 +1582,66 @@ export const translations = {
         entry: 'Müze Biletleri', 
         activity: 'Aktiviteler', 
         daytrip: 'Günübirlik Geziler' 
+      }
+    },
+    about: {
+      title: 'Hakkımızda',
+      subtitle: 'Türkiye\'de Köklü, Küresel Gezginlere Hizmet Veren',
+      philosophy: {
+        title: 'Felsefemiz',
+        content: 'Gerçek yüksek kaliteli seyahatin, bir programdaki maddelerin yığını değil, yabancı bir ülkede anlaşılma, önemsenme ve saygı duyulma deneyimi olduğuna inanıyoruz.'
+      },
+      advantage: {
+        title: 'Hizmet Avantajları',
+        content: 'İlk iletişimden itibaren, şablon yanıtlar yerine net ve profesyonel bir yaklaşım sunuyoruz. Müşterilerimizin yoldayken endişelenmesine gerek yok, çünkü tüm belirsizlikleri yola çıkmadan önce çözüyoruz.',
+        points: [
+          'İyi Hizmet: Her zaman müşterinin bakış açısıyla düşünmek',
+          'İyi Kalite: Sadece uyumlu kaynaklar ve istikrarlı standartlar kullanmak'
+        ]
+      },
+      team: {
+        title: 'Rehberler ve Ekip',
+        content: 'Bir rehber, yolculuğun kalitesini belirler. Rehberlerimiz ve şoförlerimiz sadece yol gösterenler değil, aynı zamanda:',
+        list: [
+          'Kültürü ve seyahat alışkanlıklarını gerçekten anlayanlar',
+          'Arka planı açıklayabilen ve doğru ritmi yakalayanlar',
+          'İhtiyaç duyulduğunda orada olan, sessizlik istendiğinde geri çekilenler'
+        ],
+        footer: 'Profesyonel, sabırlı ve nazik tavırlarıyla yolculuğu hem derin hem de konforlu kılarlar.'
+      },
+      scope: {
+        title: 'Hizmet Kapsamı',
+        list: [
+          'Tam Çince/İngilizce rehber ve şoför hizmetleri',
+          'İstanbul ve tüm Türkiye genelinde özel araç ve transferler',
+          'Grup turları ve yerel operasyon yönetimi',
+          'Özel butik turlar (Aile / Çocuk / Yaşlı)',
+          'İş gezileri, ticari karşılama ve fuar hizmetleri',
+          'Çin-Türkiye arası yerel hizmet koordinasyonu'
+        ]
+      },
+      trust: {
+        title: 'Güven ve Uyumluluk',
+        content: 'İster Türkiye\'ye ilk kez gelen bir ziyaretçi, ister detaylara önem veren bir iş grubu olsun, herkese aynı yüksek standartla hizmet veriyoruz.',
+        details: 'Tüm seyahat programları ve hizmetler Türkiye\'de yasal olarak yürütülmekte olup, net süreçler ve şeffaf maliyetler sunulmaktadır. Düşük fiyatlarla değil, uzun vadeli güven ve gerçek referanslarla büyüyoruz.',
+        footer: 'Türkiye\'de geçici bir aracı değil, uzun vadeli, yerel ve lisanslı bir seyahat acentesiyiz.'
+      },
+      summary: {
+        content: 'Sadece "bir kez ucuz" değil, "birçok kez huzur" arıyorsanız, GRACE WAY TRAVEL AGENCY doğru seçimdir.'
+      },
+      credentials: {
+        title: 'Belgeler ve İletişim',
+        list: [
+          'Acente Tipi: A Grubu Seyahat Acentası İşletme Belgesi\n(A-Group Travel Agency License)',
+          'Yetkili Makam: T.C. Kültür ve Turizm Bakanlığı',
+          'Belge No: 18717',
+          'Şirket Ünvanı: GRACE TRAVEL TURİZM VE TİC. LTD. ŞTİ.',
+          'Adres: Zeytinlik Mah. Halkçı Sok. Moda Pasajı No:25/35 (Kat:2 / Ofis No:35), Bakırköy / İstanbul',
+          'Web Sitesi: https://www.gracetravel.com.tr\nhttps://grace.tr',
+          'Telefon (TR): +90 554 136 6090\n+90 212 570 15 28',
+          'Telefon (CN): +86 134 2640 1777',
+          'E-posta: taha@gracetravel.com.tr'
+        ]
       }
     },
     itinerary_z2: {
