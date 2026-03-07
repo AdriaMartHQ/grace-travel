@@ -2,7 +2,7 @@ export type Language = 'en' | 'zh' | 'tr';
 
 export const translations = {
   en: {
-    nav: { home: 'Home', tours: 'Tours', tickets: 'Tickets', contact: 'Contact', enquire: 'Enquire Now', closeMenu: 'Close Menu' },
+    nav: { home: 'Home', tours: 'Tours', about: 'About Us', tickets: 'Tickets', contact: 'Contact', enquire: 'Enquire Now', closeMenu: 'Close Menu' },
     hero: {
       title: 'Discover the Soul of Turkey',
       subtitle: 'Bespoke journeys through ancient history and vibrant culture with Grace Way — your licensed boutique travel partner in Turkey.',
@@ -90,6 +90,66 @@ export const translations = {
       ],
       footer_cta: "Start Your Heritage Journey",
       sticky_cta: "Consult Expert Now"
+    },
+    about: {
+      title: 'About Us',
+      subtitle: 'Rooted in Turkey, Serving Global Travelers',
+      philosophy: {
+        title: 'Our Philosophy',
+        content: 'We believe that true high-quality travel is not a stack of items on an itinerary, but a complete experience of being understood, cared for, and respected in a foreign land.'
+      },
+      advantage: {
+        title: 'Service Advantages',
+        content: 'From the first communication, we provide professional docking that is clear and has a sense of boundaries, rather than templated replies. Customers don\'t need to confirm repeatedly, guess rules, or feel anxious on the road—because we have handled all uncertainties before departure.',
+        points: [
+          'Good Service: Always thinking from the customer\'s perspective',
+          'Good Quality: Only using compliant resources, clear processes, and stable standards'
+        ]
+      },
+      team: {
+        title: 'Guides & Team',
+        content: 'A guide determines the height of a journey. Our guides and drivers are not just "people who lead the way", but:',
+        list: [
+          'People who truly understand culture and travel habits',
+          'People who can explain the background, have proper proportions, and reasonable rhythm',
+          'People who appear when needed and step back when quiet'
+        ],
+        footer: 'They are professional, patient, restrained, and gentle, making the journey both deep and comfortable.'
+      },
+      scope: {
+        title: 'Service Scope',
+        list: [
+          'Full Chinese/English guide and driver services',
+          'Chartered cars and transfers in Istanbul and throughout Turkey',
+          'Group tour and land operation execution',
+          'Private customized tours (Parent-child / Family / Elders)',
+          'Business inspection, trade reception, exhibition services',
+          'China-Turkey all-category local service coordination'
+        ]
+      },
+      trust: {
+        title: 'Trust & Compliance',
+        content: 'Whether it is a first-time visitor to Turkey, or a family, business, or team customer with extremely high requirements for details, we treat them with the same standard—to the extent that customers "don\'t need to worry".',
+        details: 'All itineraries and services are legally executed locally in Turkey, with clear processes, explicit rules, and transparent costs. We do not rely on low prices to attract, nor on promises to pile up, but on long-term trust, real word-of-mouth, and continuous cooperation.',
+        footer: 'In Turkey, we are not a temporary intermediary, but a long-term local, legally licensed, verifiable, and trustworthy travel agency.'
+      },
+      summary: {
+        content: 'If you are looking for not just "cheap once", but "peace of mind many times", then GRACE WAY TRAVEL AGENCY is worth being seriously chosen.'
+      },
+      credentials: {
+        title: 'Credentials & Contact',
+        list: [
+          'Agency Type: A Grubu Seyahat Acentası İşletme Belgesi (A-Group Travel Agency License)',
+          'Authority: T.C. Kültür ve Turizm Bakanlığı',
+          'License No (Belge No): 18717',
+          'Company Entity: GRACE TRAVEL TURİZM VE TİC. LTD. ŞTİ.',
+          'Address: Zeytinlik Mah. Halkçı Sok. Moda Pasajı No:25/35 (Kat:2 / Ofis No:35), Bakırköy / İstanbul',
+          'Website: https://www.gracetravel.com.tr | https://grace.tr',
+          'Phone (TR): +90 554 136 6090 | +90 212 570 15 28',
+          'Phone (CN): +86 134 2640 1777',
+          'Email: taha@gracetravel.com.tr'
+        ]
+      }
     },
     itinerary_s2: {
       badge: "S2 Package · Boutique DMC",
@@ -720,7 +780,7 @@ export const translations = {
     }
   },
   zh: {
-    nav: { home: '首页', tours: '纵享行程', tickets: '门票体验', contact: '联系我们', enquire: '即刻定制', closeMenu: '关闭菜单' },
+    nav: { home: '首页', tours: '纵享行程', about: '关于我们', tickets: '门票体验', contact: '联系我们', enquire: '即刻定制', closeMenu: '关闭菜单' },
     hero: {
       title: '探索土耳其的灵魂',
       subtitle: '与恩途 · 国际旅行开启一场穿越古老历史与灿烂文化的私享定制之旅 —— 您在土耳其值得信赖的持牌精品伙伴。',
@@ -808,6 +868,66 @@ export const translations = {
       ],
       footer_cta: "开启您的圣迹之旅",
       sticky_cta: "立即预约顾问"
+    },
+    about: {
+      title: '关于我们',
+      subtitle: '扎根土耳其，服务全球华人',
+      philosophy: {
+        title: '我们的理念',
+        content: '我们相信，真正高品质的旅行，不是行程表上的项目堆叠，而是人在异国他乡时，被理解、被照顾、被尊重的完整体验。'
+      },
+      advantage: {
+        title: '服务优势',
+        content: '从第一次沟通开始，我们提供的不是模板化回复，而是全中文、清晰、有边界感的专业对接。客户不需要反复确认、不需要猜测规则、不需要在路途中焦虑——因为我们已经在出发之前，把所有不确定性处理完毕。',
+        points: [
+          '服务好：始终站在客户立场思考问题',
+          '品质好：只采用合规资源，流程清楚、标准稳定'
+        ]
+      },
+      team: {
+        title: '导游与团队',
+        content: '导游决定一段旅程的高度。我们的导游与司机不只是“带路的人”，更是：',
+        list: [
+          '真正理解中国文化与出行习惯的人',
+          '能讲清背景、分寸得当、节奏合理的人',
+          '在需要时出现，在安静时退后的人'
+        ],
+        footer: '他们专业、耐心、克制而温和，让旅程既有深度，也有舒适感。'
+      },
+      scope: {
+        title: '服务范围',
+        list: [
+          '全中文导游与司机服务',
+          '伊斯坦布尔及土耳其全境包车、接送',
+          '团队组团与地接执行',
+          '私人定制游（亲子 / 家庭 / 长辈）',
+          '商务考察、贸易接待、展会服务',
+          '中国—土耳其全品类在地服务协调'
+        ]
+      },
+      trust: {
+        title: '信任与合规',
+        content: '无论是第一次来土耳其的游客，还是对细节要求极高的家庭、商务或团队客户，我们都以同一标准对待——把服务做到让客户“不需要操心”的程度。',
+        details: '所有行程与服务，均在土耳其本地依法执行，流程清楚、规则明确、费用透明，不靠低价吸引，不靠承诺堆砌，而是靠长期信任、真实口碑与持续合作。',
+        footer: '在土耳其，我们不是临时出现的中介，而是长期在地、依法持证、可被核验、可被托付的旅行社。'
+      },
+      summary: {
+        content: '如果你在寻找的，不是“便宜一次”，而是“安心很多次”，那么，GRACE WAY TRAVEL AGENCY 值得被认真选择。'
+      },
+      credentials: {
+        title: '资质与联系方式',
+        list: [
+          '旅行社类型：A Grubu Seyahat Acentası İşletme Belgesi（A 组旅行社经营许可）',
+          '主管部门：T.C. Kültür ve Turizm Bakanlığı',
+          '证书编号（Belge No）：18717',
+          '公司主体：GRACE TRAVEL TURİZM VE TİC. LTD. ŞTİ.',
+          '地址：Zeytinlik Mah. Halkçı Sok. Moda Pasajı No:25/35 （Kat:2 / Ofis No:35）, Bakırköy / İstanbul',
+          '网址：https://www.gracetravel.com.tr ｜ https://grace.tr',
+          '电话（TR）：+90 554 136 6090 ｜ +90 212 570 15 28',
+          '电话（CN）：+86 134 2640 1777',
+          '邮箱：taha@gracetravel.com.tr'
+        ]
+      }
     },
     itinerary_s2: {
       badge: "S2 线路 · 全景文化",
@@ -1440,7 +1560,7 @@ export const translations = {
     }
   },
   tr: {
-    nav: { home: 'Ana Sayfa', tours: 'Turlar', tickets: 'Biletler', contact: 'İletişim', enquire: 'Teklif Al', closeMenu: 'Kapat' },
+    nav: { home: 'Ana Sayfa', tours: 'Turlar', about: 'Hakkımızda', tickets: 'Biletler', contact: 'İletişim', enquire: 'Teklif Al', closeMenu: 'Kapat' },
     hero: {
       title: 'Türkiye\'nin Ruhunu Keşfedin',
       subtitle: 'Grace Way ile antik tarihten canlı kültüre uzanan butik seyahat ortağınız.',

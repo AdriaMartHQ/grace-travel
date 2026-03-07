@@ -1,11 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Tours from './pages/Tours';
 import Tickets from './pages/Tickets';
 import Contact from './pages/Contact';
+import About from './pages/About';
 import StyleGuide from './pages/StyleGuide';
 import ItineraryS1 from './pages/ItineraryS1';
 import ItineraryS2 from './pages/ItineraryS2';
@@ -28,6 +29,7 @@ const AppContent: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tours" element={<Tours />} />
+        <Route path="/about" element={<About />} />
         <Route path="/itineraries/s1-turkey-6-days" element={<ItineraryS1 />} />
         <Route path="/itineraries/s2-turkey-8-days" element={<ItineraryS2 />} />
         <Route path="/itineraries/s4-turkey-10-days" element={<ItineraryS4 />} />
