@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import SEO from '../components/SEO';
 
 const ItineraryS1: React.FC = () => {
   const { t } = useLanguage();
@@ -44,6 +45,11 @@ const ItineraryS1: React.FC = () => {
 
   return (
     <div className="bg-[#fdfcfb] text-slate-900 selection:bg-orange-100 overflow-x-hidden">
+      <SEO 
+        title={d.seo?.title || d.title} 
+        description={d.seo?.description || d.description} 
+        keywords={d.seo?.keywords} 
+      />
       
       {/* 1. Hero Section */}
       <section className="relative h-[80vh] md:h-[85vh] flex items-center justify-center text-center px-4 overflow-hidden">

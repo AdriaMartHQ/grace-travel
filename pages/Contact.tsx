@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import SEO from '../components/SEO';
 import L from 'leaflet';
 
 // 真实微信图标：双气泡结构 + 圆点眼睛，品牌标准色 #07C160
@@ -88,6 +89,11 @@ const Contact: React.FC = () => {
 
   return (
     <div className="pt-24 min-h-screen bg-white animate-in fade-in duration-700">
+      <SEO 
+        title={t.seo.contact.title} 
+        description={t.seo.contact.description} 
+        keywords={t.seo.contact.keywords} 
+      />
       <section className="py-12 px-6 max-w-[1440px] mx-auto space-y-16 lg:space-y-24">
         
         {/* 信息卡片区域 */}

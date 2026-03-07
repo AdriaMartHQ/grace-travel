@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import SEO from '../components/SEO';
 
 const Tickets: React.FC = () => {
   const { t, language } = useLanguage();
@@ -47,6 +48,11 @@ const Tickets: React.FC = () => {
 
   return (
     <div className="pt-24 min-h-screen bg-slate-50 animate-in fade-in duration-700">
+      <SEO 
+        title={t.seo.tickets.title} 
+        description={t.seo.tickets.description} 
+        keywords={t.seo.tickets.keywords} 
+      />
       <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="text-center mb-20">
           <span className="text-[11px] font-black text-[#FF9D00] uppercase tracking-[0.4em] mb-4 block">Official Entry & Events</span>

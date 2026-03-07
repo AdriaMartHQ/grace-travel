@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import SEO from '../components/SEO';
 
 const Tours: React.FC = () => {
   const { t } = useLanguage();
@@ -52,6 +53,11 @@ const Tours: React.FC = () => {
 
   return (
     <div className="pt-24 min-h-screen animate-in fade-in duration-700">
+      <SEO 
+        title={t.seo.tours.title} 
+        description={t.seo.tours.description} 
+        keywords={t.seo.tours.keywords} 
+      />
       <section className="bg-slate-900 text-white py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-6">{t.nav.tours}</h1>

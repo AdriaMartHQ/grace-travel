@@ -2,6 +2,7 @@ import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'motion/react';
 import { Shield, Users, Target, Award, CheckCircle2, MapPin, Phone, Mail, Globe } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const About: React.FC = () => {
   const { t } = useLanguage();
@@ -11,6 +12,11 @@ const About: React.FC = () => {
 
   return (
     <div className="bg-white">
+      <SEO 
+        title={t.seo.about.title} 
+        description={t.seo.about.description} 
+        keywords={t.seo.about.keywords} 
+      />
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-slate-900">
         <div className="absolute inset-0 z-0">

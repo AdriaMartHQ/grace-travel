@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import SEO from '../components/SEO';
 
 const Hero: React.FC = () => {
   const { t } = useLanguage();
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden px-4">
+      <SEO 
+        title={t.seo.home.title} 
+        description={t.seo.home.description} 
+        keywords={t.seo.home.keywords} 
+      />
       <div className="absolute inset-0 z-0">
         <img 
           src="https://images.unsplash.com/photo-1527838832700-5059252407fa?auto=format&fit=crop&q=80&w=2400&q=80" 

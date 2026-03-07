@@ -89,7 +89,12 @@ export const translations = {
         "E-visa and personal expenses"
       ],
       footer_cta: "Start Your Heritage Journey",
-      sticky_cta: "Consult Expert Now"
+      sticky_cta: "Consult Expert Now",
+      seo: {
+        title: "Heritage Journey | 6-Day Istanbul & Cappadocia Tour",
+        description: "Join our 6-day boutique small group tour to Istanbul and Cappadocia. Experience hot air balloons, ancient heritage, and luxury stays.",
+        keywords: "Istanbul Cappadocia tour, 6 day Turkey tour, Cappadocia hot air balloon, Turkey heritage tour, boutique Turkey travel"
+      }
     },
     about: {
       title: 'About Us',
@@ -219,7 +224,12 @@ export const translations = {
       excluded_title: "Not Included",
       excluded_list: ["International flights", "Balloon/Paragliding fees", "Personal expenses", "Tips"],
       footer_cta: "Book Your Grand Tour",
-      sticky_cta: "Consult Now"
+      sticky_cta: "Consult Now",
+      seo: {
+        title: "Aegean to Anatolia | 8-Day Grand Turkey Tour",
+        description: "Experience the best of Turkey on an 8-day tour from the Aegean coast to Anatolia. Includes D400 scenic drive, Ephesus, and Cappadocia.",
+        keywords: "Turkey grand tour, Aegean to Anatolia, D400 scenic drive, Ephesus tour, Pamukkale tour, Cappadocia cave hotel"
+      }
     },
     itinerary_s4: {
       meta: {
@@ -239,7 +249,12 @@ export const translations = {
         footer_cta_title: "Start Your 10-Day Journey",
         cta_consult: "Consult Expert",
         cta_plan: "Get Details",
-        sticky_cta: "Enquire Now"
+        sticky_cta: "Enquire Now",
+        seo: {
+          title: "10-Day Panoramic Culture Tour | Turkey Grand Journey",
+          description: "Discover the epic landscapes of Turkey on a 10-day panoramic culture tour. Visit Troy, Ephesus, Antalya, and Cappadocia with expert guides.",
+          keywords: "Turkey 10 day tour, panoramic Turkey tour, Troy tour, Antalya travel, Cappadocia culture tour, luxury Turkey bus tour"
+        }
       },
       hero: {
         badge: "S4 Package · Panoramic",
@@ -426,7 +441,12 @@ export const translations = {
         footer_cta_title: "Start Your Troy & Fairy Road Journey",
         cta_consult: "Consult Expert Now",
         cta_plan: "Get Detailed Plan",
-        sticky_cta: "Enquire Now"
+        sticky_cta: "Enquire Now",
+        seo: {
+          title: "S5 Route · Troy & Fairy Road | 8-Day Depth Tour",
+          description: "Explore the Troy & Fairy Road on an 8-day in-depth panoramic culture tour. Visit Troy, Nicaea, Lake Egirdir, and Cappadocia.",
+          keywords: "Troy tour, Fairy Road Turkey, Nicaea tour, Lake Egirdir, Cappadocia in-depth, Turkey culture tour"
+        }
       },
       hero: {
         badge: "S5 Route · In-depth Panoramic",
@@ -583,7 +603,12 @@ export const translations = {
         footer_cta_title: "Start Your 10-Day Deep Pilgrimage",
         cta_consult: "Consult Expert Now",
         cta_plan: "Get Detailed Plan",
-        sticky_cta: "Enquire Now"
+        sticky_cta: "Enquire Now",
+        seo: {
+          title: "Z1 Route · Seven Churches & Apostle Path | 10-Day Pilgrimage",
+          description: "A deep 10-day faith pilgrimage through the Seven Churches of Revelation and the Apostle's path in Turkey. Expert historian guidance.",
+          keywords: "Seven Churches tour, Turkey pilgrimage, Apostle path, Revelation churches, biblical tour Turkey, Christian heritage Turkey"
+        }
       },
       highlights: {
         title: "Core Highlights",
@@ -657,7 +682,12 @@ export const translations = {
         footer_cta_title: "Start Your Revelation Sacred Journey",
         cta_consult: "Consult Expert Now",
         cta_plan: "Get Detailed Plan",
-        sticky_cta: "Enquire Now"
+        sticky_cta: "Enquire Now",
+        seo: {
+          title: "Z2 Route · Revelation Seven Churches Essence | 4-Day Tour",
+          description: "Experience the essence of the Seven Churches of Revelation on a 4-day deep pilgrimage tour. Visit Ephesus, Smyrna, and Pergamum.",
+          keywords: "Seven Churches essence, 4 day Turkey pilgrimage, Revelation tour, Ephesus faith tour, Smyrna Pergamum tour"
+        }
       },
       highlights: {
         title: "Core Highlights",
@@ -777,6 +807,33 @@ export const translations = {
       rights: 'All rights reserved.',
       tursabText: 'TÜRSAB Member',
       tursabBacklink: 'Official Licensed Turkish Travel Agency'
+    },
+    seo: {
+      home: { 
+        title: 'Grace Way Travel | Official Turkey Travel Agency', 
+        description: 'Bespoke journeys through ancient history and vibrant culture with Grace Way — your licensed boutique travel partner in Turkey.',
+        keywords: 'Turkey travel agency, bespoke Turkey tours, licensed Turkey DMC, boutique Turkey travel, Istanbul tours, Cappadocia balloon tours'
+      },
+      tours: { 
+        title: 'Turkey Tour Packages | Boutique Itineraries', 
+        description: 'Explore our signature Turkey tour packages. From Cappadocia balloons to Ephesus ruins, discover the best of Turkey.',
+        keywords: 'Turkey tour packages, Turkey itineraries, Cappadocia tours, Ephesus tours, luxury Turkey travel'
+      },
+      about: { 
+        title: 'About Grace Way | Licensed Turkey DMC', 
+        description: 'Learn about Grace Way Travel Agency, a licensed A-Group operator rooted in Turkey serving global travelers.',
+        keywords: 'Grace Way Travel, Turkey travel agency, licensed A-Group agency, Turkey DMC, professional travel services Turkey'
+      },
+      tickets: { 
+        title: 'Turkey Museum Tickets | Skip-the-Line Access', 
+        description: 'Book official Turkey museum tickets and skip-the-line access for Dolmabahce Palace, Topkapi, and more.',
+        keywords: 'Turkey museum tickets, skip the line Turkey, Dolmabahce Palace tickets, Topkapi Palace tickets, Hagia Sophia tickets'
+      },
+      contact: { 
+        title: 'Contact Us | Plan Your Turkey Trip', 
+        description: 'Get in touch with our Turkey travel experts to plan your customized boutique journey.',
+        keywords: 'contact Turkey travel agency, plan Turkey trip, Turkey travel consultation, custom Turkey tours'
+      }
     }
   },
   zh: {
@@ -867,7 +924,12 @@ export const translations = {
         "电子签证费及个人消费"
       ],
       footer_cta: "开启您的圣迹之旅",
-      sticky_cta: "立即预约顾问"
+      sticky_cta: "立即预约顾问",
+      seo: {
+        title: "S1 圣迹之旅 | 伊斯坦布尔 & 卡帕多奇亚 6日精品游",
+        description: "恩途 S1 线路：6日深度穿越伊斯坦布尔与卡帕多奇亚。包含热气球、非遗手作、以弗所光影博物馆，双段内陆飞行拒绝拉车。",
+        keywords: "土耳其6日游, 圣迹之旅, 卡帕多奇亚热气球, 以弗所旅游, 伊斯坦布尔定制游, 土耳其精品小团"
+      }
     },
     about: {
       title: '关于我们',
@@ -997,7 +1059,12 @@ export const translations = {
       excluded_title: "费用不含",
       excluded_list: ["国际段往返机票", "热气球/滑翔伞等自费项目", "个人消费及司导小费"],
       footer_cta: "开启您的全景之旅",
-      sticky_cta: "立即预约顾问"
+      sticky_cta: "立即预约顾问",
+      seo: {
+        title: "S2 爱琴海至安纳托利亚 | 土耳其 8日全景文化之旅",
+        description: "恩途 S2 线路：8日全景环线，驰骋 D400 最美公路，打卡以弗所、棉花堡、费特希耶。内陆双飞，纯玩无购物。",
+        keywords: "土耳8日游, D400公路旅游, 费特希耶滑翔伞, 棉花堡旅游, 土耳其全景游, 土耳其包车定制"
+      }
     },
     itinerary_s4: {
       meta: {
@@ -1017,7 +1084,12 @@ export const translations = {
         footer_cta_title: "开启您的 10 日全景文化之旅",
         cta_consult: "立即咨询专家",
         cta_plan: "获取详细方案",
-        sticky_cta: "立即预约顾问"
+        sticky_cta: "立即预约顾问",
+        seo: {
+          title: "S4 土耳其 10日全景文化之旅 | 爱琴海-地中海-特罗亚",
+          description: "恩途 S4 线路：10日深度全景，覆盖特罗亚、以弗所、棉花堡、费特希耶、安塔利亚及卡帕多奇亚。全程豪华大巴，纯玩精品。",
+          keywords: "土耳其10日游, 特罗亚古城, 土耳其全景旅游, 1915恰纳卡莱大桥, 土耳其深度文化游"
+        }
       },
       hero: {
         badge: "S4 线路 · 全景文化",
@@ -1206,7 +1278,12 @@ export const translations = {
         footer_cta_title: "开启您的特洛伊与精灵之路",
         cta_consult: "立即咨询专家",
         cta_plan: "获取详细方案",
-        sticky_cta: "立即预约顾问"
+        sticky_cta: "立即预约顾问",
+        seo: {
+          title: "S5 特洛伊与精灵之路 | 土耳其 8日全景深度之旅",
+          description: "恩途 S5 线路：8日全地貌深度体验，探访特罗亚、尼西亚、埃尔吉迪尔湖及卡帕多奇亚。中文领队，100%纯玩。",
+          keywords: "特洛伊旅游, 精灵之路, 尼西亚古城, 埃尔吉迪尔湖, 土耳其深度游, 土耳其8日定制"
+        }
       },
       hero: {
         badge: "S5 线路 · 深度全景",
@@ -1364,7 +1441,12 @@ export const translations = {
         footer_cta_title: "开启启示录七教会深度巡礼",
         cta_consult: "立即咨询专家",
         cta_plan: "获取详细方案",
-        sticky_cta: "立即预约顾问"
+        sticky_cta: "立即预约顾问",
+        seo: {
+          title: "Z1 启示录七教会与圣徒之径 | 10日深度信仰巡礼",
+          description: "恩途 Z1 线路：10日圣经历史深度巡礼，完整覆盖启示录七教会，追溯使徒脚踪。历史专家讲解，全程五星标准。",
+          keywords: "启示录七教会, 土耳其朝圣旅游, 圣经历史旅游, 使徒脚踪, 土耳其信仰之旅"
+        }
       },
       highlights: {
         title: "行程核心亮点",
@@ -1438,7 +1520,12 @@ export const translations = {
         footer_cta_title: "开启您的启示录圣迹之旅",
         cta_consult: "立即咨询专家",
         cta_plan: "获取详细方案",
-        sticky_cta: "立即预约顾问"
+        sticky_cta: "立即预约顾问",
+        seo: {
+          title: "Z2 启示录七教会精华巡礼 | 4日深度文化朝圣",
+          description: "恩途 Z2 线路：4日高效精华朝圣，聚焦以弗所、士每拿、别迦摩等核心圣迹。专家导游，五星住宿，纯玩无购物。",
+          keywords: "七教会精华游, 土耳其4日朝圣, 启示录圣迹, 以弗所朝圣, 土耳其短线定制"
+        }
       },
       highlights: {
         title: "行程核心亮点",
@@ -1557,6 +1644,33 @@ export const translations = {
       rights: '保留所有权利。',
       tursabText: 'TÜRSAB 认证成员',
       tursabBacklink: '土耳其官方持牌旅行社'
+    },
+    seo: {
+      home: { 
+        title: '土耳其恩途国际旅行社 | Grace Way Travel | 官方持牌旅行社', 
+        description: '恩途国际旅行社 (Grace Way Travel) 是土耳其持牌 A 组旅行社，专注于精品定制游、全中文导游、包车及商务接待。扎根土耳其，服务全球华人。',
+        keywords: '土耳其旅行社, 土耳其旅游, 土耳其定制游, 土耳其包车, 伊斯坦布尔导游, 卡帕多奇亚热气球'
+      },
+      tours: { 
+        title: '土耳其旅游线路定制 | 精品小团 | 恩途国际旅行', 
+        description: '探索恩途精选土耳其旅游线路。从卡帕多奇亚热气球到以弗所古城，为您打造深度文化体验。',
+        keywords: '土耳其旅游线路, 土耳其精品小团, 卡帕多奇亚旅游, 以弗所旅游, 土耳其深度游'
+      },
+      about: { 
+        title: '关于恩途 | 土耳其持牌 A 组旅行社 | 资质公示', 
+        description: '了解恩途国际旅行社，一家扎根土耳其、服务全球华人的专业 A 组旅行服务商。',
+        keywords: '恩途国际旅行, 土耳其A类旅行社, 土耳其DMC, 土耳其旅游资质, 专业地接社'
+      },
+      tickets: { 
+        title: '土耳其景点门票预订 | 皇宫博物馆免排队', 
+        description: '预订土耳其官方景点门票，包括多玛巴切皇宫、托普卡比皇宫等，享受免排队入场服务。',
+        keywords: '土耳其景点门票, 多玛巴切皇宫门票, 托普卡比皇宫门票, 圣索菲亚大教堂门票, 土耳其免排队门票'
+      },
+      contact: { 
+        title: '联系恩途 | 定制您的土耳其之旅', 
+        description: '联系我们的土耳其旅游专家，开始规划您的专属精品定制旅程。',
+        keywords: '联系土耳其旅行社, 土耳其旅游咨询, 定制土耳其旅行, 土耳其旅游专家'
+      }
     }
   },
   tr: {
@@ -1662,7 +1776,12 @@ export const translations = {
         footer_cta_title: "Kutsal Yolculuğunuza Başlayın",
         cta_consult: "Teklif Al",
         cta_plan: "Plan İste",
-        sticky_cta: "Hemen Rezervasyon"
+        sticky_cta: "Hemen Rezervasyon",
+        seo: {
+          title: "Z2 Rotası · Vahiy Yedi Kilise Özeti | 4 Günlük Tur",
+          description: "Vahiy Bölümü Yedi Kilise özeti ile 4 günlük derin bir inanç turu. Efes, İzmir ve Bergama'nın kutsal alanlarını uzman rehberler eşliğinde keşfedin.",
+          keywords: "Yedi Kilise turu, Türkiye inanç turu, Vahiy kiliseleri, Efes hac turu, Bergama kutsal alanlar"
+        }
       },
       highlights: {
         title: "Turun Öne Çıkanları",
@@ -1772,6 +1891,33 @@ export const translations = {
       rights: 'Tüm hakları saklıdır.',
       tursabText: 'TÜRSAB Üyesi',
       tursabBacklink: 'Resmi Lisanslı Türk Seyahat Acentesi'
+    },
+    seo: {
+      home: { 
+        title: 'Grace Way Travel | Resmi Türkiye Seyahat Acentesi', 
+        description: 'Türkiye\'nin antik tarihinden canlı kültürüne uzanan butik seyahat ortağınız Grace Way ile eşsiz bir yolculuğa çıkın.',
+        keywords: 'Türkiye seyahat acentesi, butik turlar, lisanslı DMC, İstanbul turları, Kapadokya balon turu, özel seyahat'
+      },
+      tours: { 
+        title: 'Türkiye Tur Paketleri | Butik Rotalar', 
+        description: 'Özel Türkiye tur paketlerimizi keşfedin. Kapadokya balonlarından Efes kalıntılarına, Türkiye\'nin en iyilerini keşfedin.',
+        keywords: 'Türkiye tur paketleri, butik rotalar, Kapadokya turları, Efes turları, lüks Türkiye seyahati'
+      },
+      about: { 
+        title: 'Grace Way Hakkında | Lisanslı Türkiye DMC', 
+        description: 'Türkiye köklü, küresel gezginlere hizmet veren lisanslı A Grubu seyahat acentesi Grace Way hakkında bilgi edinin.',
+        keywords: 'Grace Way Travel, Türkiye DMC, A Grubu seyahat acentesi, profesyonel seyahat hizmetleri'
+      },
+      tickets: { 
+        title: 'Türkiye Müze Biletleri | Hızlı Giriş', 
+        description: 'Dolmabahçe Sarayı, Topkapı ve daha fazlası için resmi Türkiye müze biletlerini ve hızlı giriş imkanlarını rezerve edin.',
+        keywords: 'Türkiye müze biletleri, hızlı giriş, Dolmabahçe Sarayı bileti, Topkapı Sarayı bileti, Ayasofya bileti'
+      },
+      contact: { 
+        title: 'İletişim | Türkiye Seyahatinizi Planlayın', 
+        description: 'Size özel butik yolculuğunuzu planlamak için Türkiye seyahat uzmanlarımızla iletişime geçin.',
+        keywords: 'Türkiye seyahat iletişimi, tur planlama, seyahat danışmanlığı, özel Türkiye turları'
+      }
     }
   }
 };
