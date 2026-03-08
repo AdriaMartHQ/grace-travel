@@ -78,7 +78,9 @@ const Tickets: React.FC = () => {
                     : 'bg-white text-slate-500 hover:bg-slate-200 border border-slate-100'
                 }`}
               >
-                {t.sections.categories[cat as keyof typeof t.sections.categories]}
+                {(t.sections.ticketCategories &&
+                  t.sections.ticketCategories[cat as keyof typeof t.sections.ticketCategories]) ||
+                 t.sections.categories[cat as keyof typeof t.sections.categories]}
               </button>
             ))}
           </div>

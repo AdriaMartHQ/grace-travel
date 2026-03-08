@@ -58,6 +58,21 @@ export const translations: Record<Language, BaseTranslations> = {
       whyUsSubtitle: 'Why Choose Our Expertise?',
       faq: 'Traveler FAQ',
       viewAll: 'View All Itineraries',
+      // Dedicated labels for tour filters
+      tourCategories: {
+        all: 'All Journeys',
+        classic: 'Classic Heritage',
+        luxury: 'Boutique & Luxury',
+        family: 'Family & Kids'
+      },
+      // Dedicated labels for ticket filters
+      ticketCategories: {
+        all: 'All Experiences',
+        entry: 'Attraction Tickets',
+        activity: 'Local Activities',
+        daytrip: 'Day Trips'
+      },
+      // Backwards-compatible combined map (used as fallback)
       categories: { 
         all: 'All Categories', 
         classic: 'Classic Heritage', 
@@ -893,6 +908,21 @@ export const translations: Record<Language, BaseTranslations> = {
       whyUsSubtitle: '为什么选择恩途？',
       faq: '旅行百科',
       viewAll: '探索全部行程',
+      // 纵享行程：用于线路页分类
+      tourCategories: { 
+        all: '全部行程', 
+        classic: '人文经典', 
+        luxury: '高端轻奢', 
+        family: '亲子家庭' 
+      },
+      // 门票体验：用于门票页分类
+      ticketCategories: { 
+        all: '全部体验', 
+        entry: '景点门票', 
+        activity: '城市体验', 
+        daytrip: '私家一日游' 
+      },
+      // 兼容旧用法的合并映射
       categories: { 
         all: '全部类别', 
         classic: '人文经典', 
@@ -1730,6 +1760,21 @@ export const translations: Record<Language, BaseTranslations> = {
       whyUsSubtitle: 'Hizmet Standartlarımız',
       faq: 'Seyahat Rehberi',
       viewAll: 'Tüm Turları Gör',
+      // Turlar sayfası için kategori etiketleri
+      tourCategories: { 
+        all: 'Tüm Turlar', 
+        classic: 'Klasik Kültür', 
+        luxury: 'Butik & Lüks', 
+        family: 'Aile & Çocuk' 
+      },
+      // Bilet & deneyim sayfası için kategori etiketleri
+      ticketCategories: { 
+        all: 'Tüm Deneyimler', 
+        entry: 'Resmi Giriş Biletleri', 
+        activity: 'Yerel Aktiviteler', 
+        daytrip: 'Günübirlik Turlar' 
+      },
+      // Eski kullanım için birleşik harita
       categories: { 
         all: 'Hepsi', 
         classic: 'Klasik Miras', 

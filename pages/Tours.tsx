@@ -83,7 +83,9 @@ const Tours: React.FC = () => {
                   : 'bg-slate-100 text-slate-500 hover:bg-slate-200'
               }`}
             >
-              {t.sections.categories[cat as keyof typeof t.sections.categories]}
+              {(t.sections.tourCategories &&
+                t.sections.tourCategories[cat as keyof typeof t.sections.tourCategories]) ||
+               t.sections.categories[cat as keyof typeof t.sections.categories]}
             </button>
           ))}
         </div>
@@ -109,7 +111,9 @@ const Tours: React.FC = () => {
                   />
                 </Link>
                 <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest text-slate-900 shadow-sm">
-                  {t.sections.categories[tour.category as keyof typeof t.sections.categories]}
+                  {(t.sections.tourCategories &&
+                    t.sections.tourCategories[tour.category as keyof typeof t.sections.tourCategories]) ||
+                   t.sections.categories[tour.category as keyof typeof t.sections.categories]}
                 </div>
               </div>
               <div className="p-10 flex flex-col flex-grow text-left">
