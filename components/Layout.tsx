@@ -5,18 +5,13 @@ import { useLanguage } from '../context/LanguageContext';
 import type { Language } from '../translations';
 
 const BrandLogo = ({ className = "w-10 h-10" }) => (
-  <svg className={className} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="50" r="45" fill="url(#globeGradient)" />
-    <path d="M10 50C10 50 25 30 50 30C75 30 90 50 90 50" stroke="white" strokeWidth="3" strokeLinecap="round" />
-    <path d="M15 65C15 65 35 45 50 45C65 45 85 65 85 65" stroke="white" strokeWidth="3" strokeLinecap="round" />
-    <path d="M50 5C50 5 40 25 40 50C40 75 50 95 50 95" stroke="white" strokeWidth="2" strokeLinecap="round" opacity="0.3" />
-    <defs>
-      <linearGradient id="globeGradient" x1="50" y1="5" x2="50" y2="95" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#FF9D00" />
-        <stop offset="1" stopColor="#FF5C00" />
-      </linearGradient>
-    </defs>
-  </svg>
+  <img
+    src="/favicon.svg"
+    alt="Grace Way logo"
+    className={className}
+    loading="eager"
+    decoding="async"
+  />
 );
 
 const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, onClose }) => {
@@ -62,13 +57,13 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
         className="flex flex-col items-center justify-center min-h-full py-20 px-6 space-y-12 overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        <BrandLogo className="w-20 h-20 shrink-0" />
+            <BrandLogo className="w-16 h-16 md:w-20 md:h-20 shrink-0" />
         <div className="flex flex-col items-center space-y-8 text-center">
           {navLinks.map((link) => (
             <Link 
               key={link.path} 
               to={link.path} 
-              className={`text-4xl font-black uppercase tracking-tighter transition-all active:scale-95 ${
+              className={`text-3xl md:text-4xl font-black uppercase tracking-tight md:tracking-tighter transition-all active:scale-95 ${
                 location.pathname === link.path ? 'text-[#FF9D00]' : 'text-white hover:text-[#FF9D00]'
               }`} 
               onClick={onClose}
@@ -82,7 +77,7 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
              <button 
                key={l.code} 
                onClick={() => { setLanguage(l.code); onClose(); }} 
-               className={`px-6 py-2 rounded-full text-xs font-black tracking-widest transition-all ${
+               className={`px-5 md:px-6 py-2 rounded-full text-[11px] md:text-xs font-black tracking-[0.18em] md:tracking-widest transition-all ${
                  language === l.code ? 'bg-[#FF9D00] text-white' : 'text-white/40 hover:text-white'
                }`}
              >
@@ -92,7 +87,7 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
         </div>
         <button 
           onClick={onClose} 
-          className="mt-8 px-10 py-4 bg-white/5 rounded-2xl text-white/30 text-[10px] font-black uppercase tracking-[0.3em] hover:text-white hover:bg-white/10 transition-all border border-white/5 active:scale-90"
+          className="mt-8 px-8 md:px-10 py-4 bg-white/5 rounded-2xl text-white/30 text-[11px] md:text-[10px] font-black uppercase tracking-[0.18em] md:tracking-[0.3em] hover:text-white hover:bg-white/10 transition-all border border-white/5 active:scale-90"
         >
           {t.nav?.closeMenu || 'CLOSE'}
         </button>
@@ -153,28 +148,28 @@ const Navbar: React.FC = () => {
         )}
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center text-left">
           <Link to="/" className="flex items-center gap-3 group relative z-[110] pointer-events-auto">
-            <BrandLogo className="w-9 h-9 transition-transform group-hover:scale-105" />
+            <BrandLogo className="w-8 h-8 md:w-9 md:h-9 transition-transform group-hover:scale-105" />
             <div className="flex flex-col">
-               <span className="text-lg font-black tracking-tight leading-none text-white">GRACE WAY</span>
-               <span className="text-[9px] font-bold tracking-[0.2em] text-white/60 uppercase">
+               <span className="text-base md:text-lg font-black tracking-tight leading-none text-white">GRACE WAY</span>
+               <span className="text-[8px] md:text-[9px] font-bold tracking-[0.16em] md:tracking-[0.2em] text-white/60 uppercase">
                  {language === 'zh' ? '恩途 · 国际旅行' : 'INTERNATIONAL'}
                </span>
             </div>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-10 pointer-events-auto">
+          <div className="hidden md:flex items-center space-x-8 lg:space-x-10 pointer-events-auto">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-[13px] font-bold uppercase tracking-widest transition-all hover:text-[#FF9D00] ${
+                className={`text-[12px] lg:text-[13px] font-bold uppercase tracking-[0.18em] lg:tracking-widest transition-all hover:text-[#FF9D00] ${
                   location.pathname === link.path ? 'text-[#FF9D00]' : 'text-white/90'
                 }`}
               >
                 {link.name}
               </Link>
             ))}
-            <div className="flex items-center space-x-4 border-l border-white/10 pl-10 ml-2 h-4">
+            <div className="flex items-center space-x-4 border-l border-white/10 pl-8 lg:pl-10 ml-2 h-4">
                {languages.map(l => (
                  <button 
                    key={l.code}
@@ -187,7 +182,7 @@ const Navbar: React.FC = () => {
                  </button>
                ))}
             </div>
-            <Link to="/contact" className="bg-[#FF9D00] hover:bg-white hover:text-slate-900 text-white px-7 py-2.5 rounded-full text-xs font-black uppercase tracking-[0.2em] transition-all shadow-xl shadow-orange-500/10">
+            <Link to="/contact" className="bg-[#FF9D00] hover:bg-white hover:text-slate-900 text-white px-6 lg:px-7 py-2.5 rounded-full text-[11px] md:text-xs font-black uppercase tracking-[0.16em] lg:tracking-[0.2em] transition-all shadow-xl shadow-orange-500/10">
               {t.nav?.enquire || 'ENQUIRE'}
             </Link>
           </div>
@@ -222,10 +217,10 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col items-center text-center mb-20">
            <BrandLogo className="w-24 h-24 mx-auto mb-6" />
-           <h3 className="text-2xl md:text-3xl font-black tracking-tight mb-2 uppercase text-slate-100">{f.brandEn || 'GRACE WAY'}</h3>
-           <h4 className="text-[#FF9D00] text-xl font-bold tracking-[0.2em]">{f.brandZh || ''}</h4>
+           <h3 className="text-xl md:text-[2rem] font-black tracking-tight mb-2 uppercase text-slate-100">{f.brandEn || 'GRACE WAY'}</h3>
+           <h4 className="text-[#FF9D00] text-base md:text-lg font-bold tracking-[0.12em] md:tracking-[0.16em]">{f.brandZh || ''}</h4>
            <div className="mt-8 inline-block px-10 py-3 border border-orange-500/20 rounded-full bg-orange-500/5 backdrop-blur-sm">
-             <span className="text-sm font-bold text-[#FF9D00] tracking-widest uppercase">
+             <span className="text-xs md:text-sm font-bold text-[#FF9D00] tracking-[0.16em] md:tracking-widest uppercase">
                {f.statement || 'Licensed DMC'}
              </span>
            </div>

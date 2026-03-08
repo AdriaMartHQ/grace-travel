@@ -38,13 +38,20 @@ const ItineraryS2: React.FC = () => {
           <img src={imgs.heroImage} className="w-full h-full object-cover" alt="S2 Tour" onError={handleImageError} />
           <div className="absolute inset-0 bg-black/45 z-10"></div>
         </div>
-        <div className="relative z-20 max-w-5xl animate-in fade-in slide-in-from-bottom-6 duration-1000">
-          <span className="inline-block px-3 py-1 bg-[#FF9D00] text-white text-[10px] font-black uppercase tracking-[0.3em] rounded mb-6">{d.badge}</span>
-          <h1 className="text-4xl md:text-7xl lg:text-8xl font-black serif text-white mb-6 leading-tight tracking-tight">{d.title} <br/> {d.subtitle}</h1>
-          <p className="text-white/80 text-base md:text-2xl font-light mb-10 tracking-widest uppercase">{d.description}</p>
+        <div className="relative z-20 max-w-6xl animate-in fade-in slide-in-from-bottom-6 duration-1000">
+          <span className="inline-block px-3 py-1 bg-[#FF9D00] text-white text-[9px] md:text-[10px] font-black uppercase tracking-[0.18em] md:tracking-[0.3em] rounded mb-6">{d.badge}</span>
+          <h1 className="mb-6 text-white">
+            <span className="block text-4xl md:text-6xl lg:text-7xl font-black serif leading-none tracking-tight">
+              {d.title}
+            </span>
+            <span className="mt-3 md:mt-4 block text-[1.9rem] md:text-[3.1rem] lg:text-[3.75rem] font-black serif leading-[1.08] tracking-tight text-white/96">
+              {d.subtitle}
+            </span>
+          </h1>
+          <p className="text-white/80 text-base md:text-[1.35rem] font-light mb-10 tracking-[0.12em] md:tracking-[0.22em] uppercase">{d.description}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link to="/contact" className="w-full sm:w-auto px-10 py-4 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-widest text-sm shadow-2xl">{d.cta_consult}</Link>
-            <Link to="/contact" className="w-full sm:w-auto px-10 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full font-black uppercase tracking-widest text-sm">{d.cta_plan}</Link>
+            <Link to="/contact" className="w-full sm:w-auto px-8 md:px-10 py-4 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-[0.16em] md:tracking-widest text-[12px] md:text-sm shadow-2xl">{d.cta_consult}</Link>
+            <Link to="/contact" className="w-full sm:w-auto px-8 md:px-10 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full font-black uppercase tracking-[0.16em] md:tracking-widest text-[12px] md:text-sm">{d.cta_plan}</Link>
           </div>
         </div>
       </section>

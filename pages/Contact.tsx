@@ -71,7 +71,6 @@ const MapComponent: React.FC<{ lat: number; lng: number }> = ({ lat, lng }) => {
 const Contact: React.FC = () => {
   const { t, language } = useLanguage();
   const [copied, setCopied] = useState(false);
-  const [mapVisible, setMapVisible] = useState(false);
 
   // 指定的联系电话与微信 ID
   const weChatID = "+86 134 2640 1777";
@@ -224,46 +223,18 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* 地图区域（点击后再加载，减轻移动端首屏压力） */}
+        {/* 地图区域 */}
         <div className="space-y-8 pb-12">
           <div className="relative">
-            {!mapVisible && (
-              <button
-                type="button"
-                onClick={() => setMapVisible(true)}
-                className="w-full h-[220px] md:h-[320px] rounded-[16px] border border-slate-200 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white flex flex-col items-center justify-center gap-3 shadow-xl active:scale-[0.99] transition-transform"
-              >
-                <span className="text-[11px] font-black uppercase tracking-[0.25em] text-white/60">
+            <>
+              <MapComponent lat={lat} lng={lng} />
+              <div className="absolute top-6 right-6 z-20 bg-white/95 backdrop-blur-md px-5 py-2.5 rounded-2xl border border-slate-200 shadow-xl flex items-center gap-3 animate-in fade-in slide-in-from-right-4 duration-1000">
+                <div className="w-2 h-2 bg-[#FF9D00] rounded-full animate-pulse shadow-[0_0_8px_rgba(255,157,0,0.6)]"></div>
+                <span className="text-[11px] font-black uppercase tracking-widest text-slate-900">
                   {t.contact.hqLocation}
                 </span>
-                <span className="text-lg md:text-xl font-black tracking-wide">
-                  {language === 'zh'
-                    ? '点击加载地图'
-                    : language === 'tr'
-                    ? 'Haritayı görmek için dokunun'
-                    : 'Tap to load map'}
-                </span>
-                <span className="text-[11px] text-white/40">
-                  {language === 'zh'
-                    ? '为节省流量，地图仅在需要时加载'
-                    : language === 'tr'
-                    ? 'Veri tasarrufu için harita isteğe bağlı yüklenir'
-                    : 'Map loads on demand to save data'}
-                </span>
-              </button>
-            )}
-
-            {mapVisible && (
-              <>
-                <MapComponent lat={lat} lng={lng} />
-                <div className="absolute top-6 right-6 z-20 bg-white/95 backdrop-blur-md px-5 py-2.5 rounded-2xl border border-slate-200 shadow-xl flex items-center gap-3 animate-in fade-in slide-in-from-right-4 duration-1000">
-                  <div className="w-2 h-2 bg-[#FF9D00] rounded-full animate-pulse shadow-[0_0_8px_rgba(255,157,0,0.6)]"></div>
-                  <span className="text-[11px] font-black uppercase tracking-widest text-slate-900">
-                    {t.contact.hqLocation}
-                  </span>
-                </div>
-              </>
-            )}
+              </div>
+            </>
           </div>
         </div>
       </section>

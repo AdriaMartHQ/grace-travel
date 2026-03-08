@@ -27,6 +27,7 @@ export interface BaseTranslations {
   footer?: {
     brandEn?: string;
     brandZh?: string;
+    lead?: string;
     statement?: string;
     explore?: string;
     about?: string;
@@ -38,6 +39,10 @@ export interface BaseTranslations {
     officialLicensed?: string;
     langSupport?: string;
     emailLabel?: string;
+    licenseInfo?: string;
+    rights?: string;
+    tursabText?: string;
+    tursabBacklink?: string;
   };
   [key: string]: any;
 }
@@ -61,24 +66,20 @@ export const translations: Record<Language, BaseTranslations> = {
       // Dedicated labels for tour filters
       tourCategories: {
         all: 'All Journeys',
-        classic: 'Classic Heritage',
-        luxury: 'Boutique & Luxury',
-        family: 'Family & Kids'
+        classic: 'Signature & Cultural',
+        family: 'Pilgrimage & Faith'
       },
       // Dedicated labels for ticket filters
       ticketCategories: {
         all: 'All Experiences',
-        entry: 'Attraction Tickets',
-        activity: 'Local Activities',
-        daytrip: 'Day Trips'
+        entry: 'Palaces & Museums'
       },
       // Backwards-compatible combined map (used as fallback)
       categories: { 
-        all: 'All Categories', 
-        classic: 'Classic Heritage', 
-        luxury: 'Luxury Collection', 
-        family: 'Family Adventure', 
-        entry: 'Museum Tickets', 
+        all: 'All Journeys', 
+        classic: 'Signature & Cultural', 
+        family: 'Pilgrimage & Faith', 
+        entry: 'Palaces & Museums', 
         activity: 'Local Activities', 
         daytrip: 'Excursions' 
       }
@@ -789,8 +790,8 @@ export const translations: Record<Language, BaseTranslations> = {
       { id: 's2', title: 'S2-Aegean to Anatolia 8 Days Grand Tour', location: 'Multi-City / D400', duration: '8 Days', price: 8999, image: "https://images.unsplash.com/photo-1596093145026-f6af675846c7?q=80&w=2148&auto=format&fit=crop", category: 'classic', highlights: ['D400 Coastal Road', 'Ephesus & Pamukkale', 'Dual Internal Flights'], path: '/itineraries/s2-turkey-8-days' },
       { id: 's4', title: 'S4-Istanbul to Anatolia 10 Days Culture', location: 'Multi-City / Troy', duration: '10 Days', price: 8999, image: "https://images.unsplash.com/photo-1689130033373-2773b6029aea?q=80&w=2148&auto=format&fit=crop", category: 'classic', highlights: ['Legendary Troy', 'Bosphorus Cruise', 'Ancient Heritage'], path: '/itineraries/s4-turkey-10-days' },
       { id: 's5', title: 'S5-Troy & Fairy Road 8 Days Depth Tour', location: 'Troy / Egirdir', duration: '8 Days', price: 8999, image: "https://images.unsplash.com/photo-1687706222092-b6545828217d?q=80&w=2340&auto=format&fit=crop", category: 'classic', highlights: ['Ancient Troy', 'Lake Egirdir', 'Council of Nicaea Site'], path: '/itineraries/s5-turkey-8-days' },
-      { id: 'z1', title: 'Z1-Seven Churches & Apostles Path 10-Day Tour', location: 'Faith Route / Seven Churches', duration: '10 Days', price: 10999, image: "https://images.unsplash.com/photo-1543949806-2c9935e6838d?q=80&w=1200&auto=format&fit=crop", category: 'classic', highlights: ['Seven Churches', 'Apostles Footsteps', 'Boutique Cave Hotels'], path: '/itineraries/z1-turkey-11-days' },
-      { id: 'z2', title: 'Z2-Revelation Seven Churches Essential 4-Day Tour', location: 'Seven Churches Essence', duration: '4 Days', price: 3999, image: "https://images.unsplash.com/photo-1684214190982-f3506653f932?q=80&w=1200&auto=format&fit=crop", category: 'classic', highlights: ['Seven Churches Essence', 'Deep apostolic mission', 'Thermal Springs'], path: '/itineraries/z2-revelation-4-days' }
+      { id: 'z1', title: 'Z1-Seven Churches & Apostles Path 10-Day Tour', location: 'Faith Route / Seven Churches', duration: '10 Days', price: 10999, image: "https://images.unsplash.com/photo-1543949806-2c9935e6838d?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['Seven Churches', 'Apostles Footsteps', 'Boutique Cave Hotels'], path: '/itineraries/z1-turkey-11-days' },
+      { id: 'z2', title: 'Z2-Revelation Seven Churches Essential 4-Day Tour', location: 'Seven Churches Essence', duration: '4 Days', price: 3999, image: "https://images.unsplash.com/photo-1684214190982-f3506653f932?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['Seven Churches Essence', 'Deep apostolic mission', 'Thermal Springs'], path: '/itineraries/z2-revelation-4-days' }
     ],
     ticketsData: [
       { id: 't1', title: 'Dolmabahçe Palace (Dolmabahçe Sarayı)', price: 400, includes: ['Access to Ceremonial Hall, Harem and Museum of Painting', 'Official Audio Guide support', 'Contact Customer Service for details'], image: 'https://images.unsplash.com/photo-1601565465051-67971a2d838c?q=80&w=2340&auto=format&fit=crop', category: 'entry' },
@@ -912,23 +913,19 @@ export const translations: Record<Language, BaseTranslations> = {
       tourCategories: { 
         all: '全部行程', 
         classic: '人文经典', 
-        luxury: '高端轻奢', 
-        family: '亲子家庭' 
+        family: '圣迹巡礼' 
       },
       // 门票体验：用于门票页分类
       ticketCategories: { 
         all: '全部体验', 
-        entry: '景点门票', 
-        activity: '城市体验', 
-        daytrip: '私家一日游' 
+        entry: '宫殿与博物馆' 
       },
       // 兼容旧用法的合并映射
       categories: { 
-        all: '全部类别', 
+        all: '全部行程', 
         classic: '人文经典', 
-        luxury: '高端轻奢', 
-        family: '亲子探险', 
-        entry: '官方门票', 
+        family: '圣迹巡礼', 
+        entry: '宫殿与博物馆', 
         activity: '特色体验', 
         daytrip: '私家一日游' 
       }
@@ -1642,8 +1639,8 @@ export const translations: Record<Language, BaseTranslations> = {
       { id: 's2', title: 'S2-爱琴海至安纳托利亚 8日全景', location: '全境环线 / D400', duration: '8天', price: 8999, image: "https://images.unsplash.com/photo-1596093145026-f6af675846c7?q=80&w=2148&auto=format&fit=crop", category: 'classic', highlights: ['D400 最美公路', '地中海滑翔伞', '内陆双飞接驳'], path: '/itineraries/s2-turkey-8-days' },
       { id: 's4', title: 'S4-土耳其 10 日全景文化之旅', location: '全境环线 / 特罗亚', duration: '10天', price: 8999, image: "https://images.unsplash.com/photo-1689130033373-2773b6029aea?q=80&w=2148&auto=format&fit=crop", category: 'classic', highlights: ['特罗亚古城', '全景文化深度', 'D400最美公路'], path: '/itineraries/s4-turkey-10-days' },
       { id: 's5', title: 'S5-土耳其 8 日全景文化深度之旅', location: '特罗亚 / 精灵之路', duration: '8天', price: 8999, image: "https://images.unsplash.com/photo-1687706222092-b6545828217d?q=80&w=2340&auto=format&fit=crop", category: 'classic', highlights: ['特罗亚古城', '精灵烟囱', '伊兹尼克古城'], path: '/itineraries/s5-turkey-8-days' },
-      { id: 'z1', title: 'Z1-启示录七教会与圣徒之径 10日', location: '全境巡礼 / 七教会', duration: '10天', price: 10999, image: "https://images.unsplash.com/photo-1543949806-2c9935e6838d?q=80&w=1200&auto=format&fit=crop", category: 'classic', highlights: ['启示录七教会', '使徒脚踪探访', '特色洞穴酒店'], path: '/itineraries/z1-turkey-11-days' },
-      { id: 'z2', title: 'Z2-启示录七教会精华 4日朝圣之旅', location: '七教会核心区', duration: '4天', price: 3999, image: "https://images.unsplash.com/photo-1684214190982-f3506653f932?q=80&w=1200&auto=format&fit=crop", category: 'classic', highlights: ['七教会精华', '使徒脚踪探访', '温泉圣迹之旅'], path: '/itineraries/z2-revelation-4-days' }
+      { id: 'z1', title: 'Z1-启示录七教会与圣徒之径 10日', location: '全境巡礼 / 七教会', duration: '10天', price: 10999, image: "https://images.unsplash.com/photo-1543949806-2c9935e6838d?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['启示录七教会', '使徒脚踪探访', '特色洞穴酒店'], path: '/itineraries/z1-turkey-11-days' },
+      { id: 'z2', title: 'Z2-启示录七教会精华 4日朝圣之旅', location: '七教会核心区', duration: '4天', price: 3999, image: "https://images.unsplash.com/photo-1684214190982-f3506653f932?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['七教会精华', '使徒脚踪探访', '温泉圣迹之旅'], path: '/itineraries/z2-revelation-4-days' }
     ],
     ticketsData: [
       { id: 't1', title: '多尔玛巴赫切宫 (Dolmabahçe Sarayı)', price: 400, includes: ['包含礼宾厅、后宫及绘画博物馆进入权限', '支持官方语音导览', '详情请联系客服'], image: 'https://images.unsplash.com/photo-1601565465051-67971a2d838c?q=80&w=2340&auto=format&fit=crop', category: 'entry' },
@@ -1763,24 +1760,20 @@ export const translations: Record<Language, BaseTranslations> = {
       // Turlar sayfası için kategori etiketleri
       tourCategories: { 
         all: 'Tüm Turlar', 
-        classic: 'Klasik Kültür', 
-        luxury: 'Butik & Lüks', 
-        family: 'Aile & Çocuk' 
+        classic: 'Klasik & Kültürel', 
+        family: 'İnanç & Hac Rotaları' 
       },
       // Bilet & deneyim sayfası için kategori etiketleri
       ticketCategories: { 
         all: 'Tüm Deneyimler', 
-        entry: 'Resmi Giriş Biletleri', 
-        activity: 'Yerel Aktiviteler', 
-        daytrip: 'Günübirlik Turlar' 
+        entry: 'Saraylar & Müzeler' 
       },
       // Eski kullanım için birleşik harita
       categories: { 
-        all: 'Hepsi', 
-        classic: 'Klasik Miras', 
-        luxury: 'Lüks', 
-        family: 'Aile', 
-        entry: 'Müze Biletleri', 
+        all: 'Tüm Turlar', 
+        classic: 'Klasik & Kültürel', 
+        family: 'İnanç & Hac Rotaları', 
+        entry: 'Saraylar & Müzeler', 
         activity: 'Aktiviteler', 
         daytrip: 'Günübirlik Geziler' 
       }
@@ -1909,7 +1902,12 @@ export const translations: Record<Language, BaseTranslations> = {
       }
     },
     toursData: [
-       { id: 'z2', title: 'Z2-Vahiy Yedi Kilise Özeti 4 Günlük Tur', location: 'Yedi Kilise Özeti', duration: '4 Gün', price: 3999, image: "https://images.unsplash.com/photo-1684214190982-f3506653f932?q=80&w=1200&auto=format&fit=crop", category: 'classic', highlights: ['Yedi Kilise', 'Elçilerin İzleri', 'Termal Keyfi'], path: '/itineraries/z2-revelation-4-days' }
+      { id: '1', title: 'S1-Istanbul & Kapadokya 6 Gün', location: 'Istanbul / Kapadokya', duration: '6 Gün', price: 6999, image: 'https://images.unsplash.com/photo-1636021597151-cc28dacd915c?auto=format&fit=crop&w=1200&q=80', category: 'classic', highlights: ['Gün Doğumu Balonları', 'Ebru Atölyesi', 'Dijital Efes Müzesi'], path: '/itineraries/s1-turkey-6-days' },
+      { id: 's2', title: 'S2-Ege’den Anadolu’ya 8 Günlük Panorama', location: 'Çok Şehirli / D400', duration: '8 Gün', price: 8999, image: "https://images.unsplash.com/photo-1596093145026-f6af675846c7?q=80&w=2148&auto=format&fit=crop", category: 'classic', highlights: ['D400 Sahil Yolu', 'Efes ve Pamukkale', 'Çift İç Hat Uçuşu'], path: '/itineraries/s2-turkey-8-days' },
+      { id: 's4', title: 'S4-Türkiye 10 Günlük Panorama Kültür Turu', location: 'Çok Şehirli / Troy', duration: '10 Gün', price: 8999, image: "https://images.unsplash.com/photo-1689130033373-2773b6029aea?q=80&w=2148&auto=format&fit=crop", category: 'classic', highlights: ['Efsanevi Troy', 'Boğaz Gezisi', 'Antik Miras'], path: '/itineraries/s4-turkey-10-days' },
+      { id: 's5', title: 'S5-Türkiye 8 Günlük Derin Kültür Yolculuğu', location: 'Troy / Eğirdir', duration: '8 Gün', price: 8999, image: "https://images.unsplash.com/photo-1687706222092-b6545828217d?q=80&w=2340&auto=format&fit=crop", category: 'classic', highlights: ['Antik Troy', 'Eğirdir Gölü', 'İznik Konsili İzleri'], path: '/itineraries/s5-turkey-8-days' },
+      { id: 'z1', title: 'Z1-Yedi Kilise ve Azizler Yolu 10 Gün', location: 'İnanç Rotası / Yedi Kilise', duration: '10 Gün', price: 10999, image: "https://images.unsplash.com/photo-1543949806-2c9935e6838d?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['Yedi Kilise', 'Elçilerin İzleri', 'Butik Mağara Otelleri'], path: '/itineraries/z1-turkey-11-days' },
+      { id: 'z2', title: 'Z2-Vahiy Yedi Kilise Özeti 4 Günlük Hac Turu', location: 'Yedi Kilise Ana Hattı', duration: '4 Gün', price: 3999, image: "https://images.unsplash.com/photo-1684214190982-f3506653f932?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['Yedi Kilise Özeti', 'Elçisel İzler', 'Termal Kutsal Rota'], path: '/itineraries/z2-revelation-4-days' }
     ],
     ticketsData: [
       { id: 't1', title: 'Dolmabahçe Palace (Dolmabahçe Sarayı)', price: 400, includes: ['Access to main sections', 'Consult CS for details'], image: 'https://images.unsplash.com/photo-1601565465051-67971a2d838c?q=80&w=2340&auto=format&fit=crop', category: 'entry' },

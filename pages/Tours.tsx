@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 
 const Tours: React.FC = () => {
   const { t } = useLanguage();
-  const [filter, setFilter] = useState<'all' | 'classic' | 'luxury' | 'family'>('all');
+  const [filter, setFilter] = useState<'all' | 'classic' | 'family'>('all');
   const [isHidden, setIsHidden] = useState(false);
   const lastScrollY = useRef(0);
   const ticking = useRef(false);
@@ -60,8 +60,8 @@ const Tours: React.FC = () => {
       />
       <section className="bg-slate-900 text-white py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-6">{t.nav.tours}</h1>
-          <p className="text-white/60 max-w-2xl mx-auto font-medium">{t.hero.subtitle}</p>
+          <h1 className="text-[2rem] md:text-[3.25rem] font-black uppercase tracking-tight mb-5 md:mb-6">{t.nav.tours}</h1>
+          <p className="text-[15px] md:text-base text-white/60 max-w-2xl mx-auto font-medium leading-relaxed">{t.hero.subtitle}</p>
         </div>
       </section>
 
@@ -72,12 +72,12 @@ const Tours: React.FC = () => {
           isHidden ? '-translate-y-[120%]' : 'translate-y-0'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-wrap items-center justify-center gap-4">
-          {(['all', 'classic', 'luxury', 'family'] as const).map(cat => (
+        <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex flex-wrap items-center justify-center gap-3 md:gap-4">
+          {(['all', 'classic', 'family'] as const).map(cat => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-8 py-2.5 rounded-full text-xs font-black uppercase tracking-widest transition-all ${
+              className={`px-5 md:px-8 py-2.5 rounded-full text-[11px] md:text-xs font-black tracking-[0.14em] md:tracking-widest transition-all ${
                 filter === cat 
                   ? 'bg-[#FF9D00] text-white shadow-lg shadow-orange-500/20' 
                   : 'bg-slate-100 text-slate-500 hover:bg-slate-200'
@@ -110,21 +110,21 @@ const Tours: React.FC = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                   />
                 </Link>
-                <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest text-slate-900 shadow-sm">
+                <div className="absolute top-4 right-4 md:top-6 md:right-6 bg-white/95 backdrop-blur-sm px-3 md:px-4 py-1.5 rounded-full text-[10px] md:text-[10px] font-black tracking-[0.12em] md:tracking-widest text-slate-900 shadow-sm max-w-[calc(100%-2rem)] md:max-w-none">
                   {(t.sections.tourCategories &&
                     t.sections.tourCategories[tour.category as keyof typeof t.sections.tourCategories]) ||
                    t.sections.categories[tour.category as keyof typeof t.sections.categories]}
                 </div>
               </div>
-              <div className="p-10 flex flex-col flex-grow text-left">
-                <div className="text-[10px] font-black text-[#FF9D00] uppercase tracking-[0.2em] mb-3">{tour.location} &bull; {tour.duration}</div>
+              <div className="p-7 md:p-10 flex flex-col flex-grow text-left">
+                <div className="text-[11px] md:text-[10px] font-black text-[#FF9D00] tracking-[0.12em] md:tracking-[0.2em] mb-3 leading-snug">{tour.location} &bull; {tour.duration}</div>
                 <Link to={tour.path || "/contact"}>
-                  <h3 className="text-xl font-black mb-6 text-slate-900 leading-tight group-hover:text-[#FF9D00] transition-colors">{tour.title}</h3>
+                  <h3 className="text-lg md:text-[1.4rem] font-black mb-5 md:mb-6 text-slate-900 leading-snug group-hover:text-[#FF9D00] transition-colors line-clamp-2">{tour.title}</h3>
                 </Link>
                 <div className="mb-8 flex-grow">
                   <ul className="space-y-3">
                     {(tour.highlights || []).map((h: string, i: number) => (
-                      <li key={i} className="text-sm text-slate-500 flex items-center font-medium">
+                      <li key={i} className="text-[13px] md:text-sm text-slate-500 flex items-start font-medium leading-relaxed">
                         <span className="text-[#FF9D00] mr-3 font-bold">✓</span> {h}
                       </li>
                     ))}
@@ -132,9 +132,9 @@ const Tours: React.FC = () => {
                 </div>
                 <div className="flex items-center justify-between pt-8 border-t border-slate-50">
                   <div className="flex flex-col">
-                    <span className="text-2xl font-black text-slate-900 tracking-tight">{currencySymbol}{tour.price}</span>
+                    <span className="text-xl md:text-[1.7rem] font-black text-slate-900 tracking-tight">{currencySymbol}{tour.price}</span>
                   </div>
-                  <Link to={tour.path || "/contact"} className="bg-slate-900 text-white px-8 py-4 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] hover:bg-[#FF9D00] transition-all shadow-lg">
+                  <Link to={tour.path || "/contact"} className="bg-slate-900 text-white px-5 md:px-8 py-4 rounded-2xl text-[11px] md:text-[10px] font-black uppercase tracking-[0.14em] md:tracking-[0.2em] hover:bg-[#FF9D00] transition-all shadow-lg whitespace-nowrap">
                     {tour.path ? (t.nav.home === '首页' ? '行程详情' : 'Details') : t.nav.enquire}
                   </Link>
                 </div>
