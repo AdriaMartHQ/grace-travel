@@ -1,6 +1,48 @@
 export type Language = 'en' | 'zh' | 'tr';
 
-export const translations = {
+// 基础翻译结构：为常用访问点提供类型约束，其余字段保持灵活
+import type { Tour, Ticket } from './types';
+
+export interface BaseTranslations {
+  nav: {
+    home: string;
+    tours: string;
+    about: string;
+    tickets: string;
+    contact: string;
+    enquire: string;
+    closeMenu?: string;
+  };
+  seo?: Record<
+    string,
+    {
+      title: string;
+      description: string;
+      keywords: string;
+    }
+  >;
+  toursData?: Tour[];
+  ticketsData?: Ticket[];
+  faqs?: { q: string; a: string }[];
+  footer?: {
+    brandEn?: string;
+    brandZh?: string;
+    statement?: string;
+    explore?: string;
+    about?: string;
+    contact?: string;
+    compliance?: string;
+    istanbulOffice?: string;
+    address?: string;
+    licensedAGroup?: string;
+    officialLicensed?: string;
+    langSupport?: string;
+    emailLabel?: string;
+  };
+  [key: string]: any;
+}
+
+export const translations: Record<Language, BaseTranslations> = {
   en: {
     nav: { home: 'Home', tours: 'Tours', about: 'About Us', tickets: 'Tickets', contact: 'Contact', enquire: 'Enquire Now', closeMenu: 'Close Menu' },
     hero: {
@@ -1891,6 +1933,854 @@ export const translations = {
       rights: 'Tüm hakları saklıdır.',
       tursabText: 'TÜRSAB Üyesi',
       tursabBacklink: 'Resmi Lisanslı Türk Seyahat Acentesi'
+    },
+    // S1 · Miras Yolculuğu 6 Gün (TR versiyonu)
+    itinerary_s1: {
+      badge: 'S1 Paket · Butik DMC',
+      title: 'Miras Yolculuğu',
+      subtitle: 'İstanbul & Kapadokya 6 Gün',
+      description: 'İç hat uçuşları ile zamandan tasarruf eden, miras odaklı butik küçük grup deneyimi.',
+      cta_consult: 'Teklif Al',
+      cta_plan: 'Detay Plan İste',
+      audience_title: 'Bu yolculuk sizin için mi?',
+      audience_list: [
+        'Uzun otobüs yolculukları yerine iç hat uçuşları ile zamanı verimli kullanmak isteyenler',
+        'Tarihe ve antik uygarlıklara derin ilgi duyan kültür gezginleri',
+        '5 yıldızlı oteller, termal tesisler ve butik mağara otellerinde konfor arayanlar',
+        'Alışveriş zorlaması olmayan, %100 saf seyahat ve net kurallar bekleyen misafirler',
+        'UNESCO listesine girmiş somut ve somut olmayan mirası yerinde deneyimlemek isteyen gruplar'
+      ],
+      highlights_title: 'Öne Çıkan Deneyimler',
+      highlights: [
+        {
+          title: 'Gün Doğumu Balon Deneyimi',
+          desc: 'Kapadokya üzerinde, gün doğumunda yükselen balonlar eşliğinde ay yüzeyini andıran manzaralara tanıklık edin.'
+        },
+        {
+          title: 'Ebru Atölyesi',
+          desc: 'UNESCO listesinde yer alan su üzerinde ebru sanatıyla tanışın, renklerle suyun üzerinde dans edin.'
+        },
+        {
+          title: 'Dijital Efes Müzesi',
+          desc: 'Işık ve gölge teknolojileriyle zenginleştirilmiş yeni müze deneyiminde antik Roma dönemine geri dönün.'
+        },
+        {
+          title: 'Özel Boğaz Turu',
+          desc: 'Avrupa ve Asya kıtaları arasında, yalıların eşlik ettiği özel tekne ile Boğaz turu.'
+        },
+        {
+          title: 'Osmanlı Teras Akşam Yemeği',
+          desc: 'Ayasofya manzaralı teras restoranda, Osmanlı mutfağından seçkilerle veda yemeği.'
+        },
+        {
+          title: 'Çift İç Hat Uçuşu',
+          desc: '5 saati aşan kara yolculuklarını uçuşlarla değiştirerek, daha fazla zamanı keşfe ayırın.'
+        }
+      ],
+      table_title: 'Program Özeti',
+      table_mobile_hint: '← Tüm tabloyu görmek için kaydırın →',
+      table_headers: {
+        day: 'Gün',
+        plan: 'Rota',
+        meals: 'K/Ö/A',
+        hotel: 'Konaklama'
+      },
+      schedule: [
+        { day: 'D1', plan: 'İstanbul ✈ Kapadokya', b: '/', l: 'Testi Kebabı', d: 'Otel', hotel: 'Mağara Butik Otel' },
+        { day: 'D2', plan: 'Balon · Ebru · Konya', b: 'Otel', l: 'Pide', d: 'Otel', hotel: 'Bayır Diamond 5*' },
+        { day: 'D3', plan: 'Konya → Pamukkale', b: 'Otel', l: 'Izgara', d: 'Otel', hotel: 'Termal Otel' },
+        { day: 'D4', plan: 'Pamukkale → Kuşadası', b: 'Otel', l: 'Yerel Lezzetler', d: 'Otel', hotel: 'Charisma De Luxe 5*' },
+        { day: 'D5', plan: 'Kuşadası ✈ İstanbul', b: 'Otel', l: 'Çin Mutfağı', d: 'Teras Akşam Yemeği', hotel: 'Sheraton İstanbul 5*' },
+        { day: 'D6', plan: 'Boğaz · Dönüş', b: 'Otel', l: 'Balık', d: 'Çin Mutfağı', hotel: 'Havalimanı Transferi' }
+      ],
+      daily_details: [
+        {
+          day: '01',
+          city: 'İstanbul ✈ Kapadokya',
+          theme: 'Peri Bacaları ve Açık Hava Müzesi',
+          content:
+            'İç hat uçuşu ile Kapadokya\'ya varış, Göreme Açık Hava Müzesi ziyareti, peri bacaları ve güvercinlik vadilerinde fotoğraf molaları.'
+        },
+        {
+          day: '02',
+          city: 'Balon Şafak · Ebru · Konya',
+          theme: 'Sufi Ruhu ve İpek Yolu',
+          content:
+            'Opsiyonel gün doğumu balon turu, ardından ebru atölyesi deneyimi. Öğleden sonra 13. yy Sultan Han kervansarayı üzerinden Konya\'ya geçiş ve Mevlana Müzesi.'
+        },
+        {
+          day: '03',
+          city: 'Konya → Pamukkale',
+          theme: 'Roma Hamamları ve Pamukkale',
+          content:
+            'Konya\'dan ayrılıp Pamukkale\'ye doğru yolculuk, Hierapolis antik kenti ve beyaz travertenlerde gün batımı yürüyüşü.'
+        },
+        {
+          day: '04',
+          city: 'Pamukkale → Kuşadası',
+          theme: 'Efes ve Dijital Müze',
+          content:
+            'Efes antik kenti ve yeni dijital müzede zenginleştirilmiş deneyim; akşam Ege kıyısındaki otelde serbest zaman.'
+        },
+        {
+          day: '05',
+          city: 'Kuşadası ✈ İstanbul',
+          theme: 'Ayasofya ve Veda Akşamı',
+          content:
+            'İstanbul\'a dönüş uçuşu, Ayasofya ve Sultanahmet çevresinde derinlemesine gezi, akşam teras restoranda veda yemeği.'
+        },
+        {
+          day: '06',
+          city: 'Boğaz Turu · Dönüş',
+          theme: 'Saraylar ve Boğaz Yalıları',
+          content:
+            'Özel tekne ile Boğaz turu, Dolmabahçe Sarayı ziyareti ve Çamlıca Tepesi\'nde kahve molası sonrası havaalanına transfer.'
+        }
+      ],
+      meals_label: 'Yemekler',
+      hotel_label: 'Konaklama',
+      fee_title: 'Ücret Detayları',
+      included_title: 'Fiyata Dahil Olanlar',
+      included_list: [
+        'Programda belirtilen iç hat uçuşları ve vergileri',
+        '5 gece 5 yıldızlı ve butik mağara/termal oteller',
+        'Lisanslı Türkçe/Çince rehber ve tecrübeli şoför',
+        'Tüm zorunlu müze ve ören yeri giriş ücretleri',
+        'Programda belirtilen seçili öğünler ve veda yemeği',
+        'Araç içi içme suyu ve temel ikramlar'
+      ],
+      excluded_title: 'Fiyata Dahil Olmayanlar',
+      excluded_list: [
+        'Türkiye’ye uluslararası uçuşlar',
+        'Opsiyonel balon uçuşu ve ekstra aktiviteler',
+        'Kişisel harcamalar ve ekstra içecekler',
+        'Rehber ve şoför bahşişleri',
+        'Vize ücreti ve sigorta (gerekiyorsa)'
+      ],
+      footer_cta: 'Miras Yolculuğunuza Bugün Başlayın',
+      sticky_cta: 'S1 İçin Teklif Al',
+      seo: {
+        title: 'S1 · İstanbul & Kapadokya 6 Günlük Miras Turu',
+        description:
+          'İstanbul ve Kapadokya’yı kapsayan 6 günlük butik miras turu. İç hat uçuşları, mağara otel deneyimi ve Boğaz turu ile konforlu bir rota.',
+        keywords:
+          'Kapadokya turu, İstanbul Kapadokya 6 gün, Türkiye miras turu, butik küçük grup, iç hat uçuşlu Türkiye turu'
+      }
+    },
+    // S2 · Ege’den Anadolu’ya 8 Gün (TR versiyonu)
+    itinerary_s2: {
+      badge: 'S2 Paket · Butik DMC',
+      title: 'Ege’den Anadolu’ya',
+      subtitle: '8 Günlük Büyük Türkiye Turu',
+      description: 'D400 sahil yolu, Ege kıyıları ve Anadolu içlerini birleştiren yüksek verimli 8 günlük keşif.',
+      cta_consult: 'Teklif Al',
+      cta_plan: 'Detay Plan İste',
+      images: {
+        coverImage:
+          'https://images.unsplash.com/photo-1596093145026-f6af675846c7?q=80&w=2148&auto=format&fit=crop',
+        heroImage:
+          'https://images.unsplash.com/photo-1689130033373-2773b6029aea?q=80&w=2148&auto=format&fit=crop',
+        cardImage:
+          'https://images.unsplash.com/photo-1697457661409-0adc99b64647?q=80&w=2340&auto=format&fit=crop',
+        day1Image:
+          'https://images.unsplash.com/photo-1665051153829-82fc1acb59e6?q=80&w=2340&auto=format&fit=crop',
+        day2Image:
+          'https://images.unsplash.com/photo-1708251088223-e56cd382e8c6?q=80&w=2832&auto=format&fit=crop',
+        day3Image:
+          'https://images.unsplash.com/photo-1686428007573-f4a91f2d8bd0?q=80&w=2340&auto=format&fit=crop',
+        day4Image:
+          'https://images.unsplash.com/photo-1632821629445-bdc26ce3ccf0?q=80&w=2340&auto=format&fit=crop',
+        day5Image:
+          'https://images.unsplash.com/photo-1674715577456-49ae7a6945a8?q=80&w=2340&auto=format&fit=crop',
+        day6Image:
+          'https://images.unsplash.com/photo-1643354812958-b648b92dc6c5?q=80&w=2340&auto=format&fit=crop',
+        day7Image:
+          'https://images.unsplash.com/photo-1680204412403-73110934f5aa?q=80&w=2340&auto=format&fit=crop',
+        day8Image:
+          'https://images.unsplash.com/photo-1624786712432-e021fdf57c48?q=80&w=2832&auto=format&fit=crop'
+      },
+      audience_title: 'Bu rota kimler için ideal?',
+      audience_list: [
+        'Dünyanın en güzel sahil yollarından D400 üzerinde araba ile yol almak isteyenler',
+        'Efes, Pamukkale ve Aspendos gibi klasik miras noktalarını derinlemesine gezmek isteyen tarih meraklıları',
+        'Fethiye’de yamaç paraşütü ve Kapadokya’da balon gibi ikonik deneyimleri aynı rota içinde toplamak isteyenler',
+        'Uzun kara yolculukları yerine iç hat uçuşları ile zamanı maksimum verimle kullanmak isteyenler',
+        'Alışveriş baskısı olmayan, net kurallı ve konforlu 5 yıldızlı konaklama arayan aile veya küçük gruplar'
+      ],
+      highlights_title: 'Öne Çıkan Deneyimler',
+      highlights: [
+        {
+          title: 'D400 Sahil Yolu',
+          desc: 'Fethiye – Kaş – Antalya hattında Akdeniz manzaraları eşliğinde efsanevi D400 sahil yolunu deneyimleyin.'
+        },
+        {
+          title: 'Antik Efes',
+          desc: 'Celsus Kütüphanesi ve Büyük Tiyatro ile antik dünyanın en iyi korunmuş şehirlerinden birini keşfedin.'
+        },
+        {
+          title: 'Pamukkale Travertenleri',
+          desc: 'Bembeyaz travertenler üzerinde yürüyüş ve antik termal havuzda yüzme imkânı.'
+        },
+        {
+          title: 'Fethiye Ölüdeniz',
+          desc: 'Turkuaz denizi ve lagünü ile ünlü Ölüdeniz’de serbest zaman veya opsiyonel yamaç paraşütü.'
+        },
+        {
+          title: 'İki İç Hat Uçuşu',
+          desc: 'İstanbul–İzmir ve Kapadokya–İstanbul uçuşları ile 20+ saatlik kara yolunu kısaltın.'
+        },
+        {
+          title: 'Butik Mağara Otel',
+          desc: 'Kapadokya’da özgün mağara otel konaklaması ile coğrafyanın ruhunu hissedin.'
+        }
+      ],
+      table_title: 'Program Özeti',
+      table_mobile_hint: '← Tabloyu görmek için kaydırın →',
+      table_headers: { day: 'Gün', plan: 'Rota', meals: 'K/Ö/A', hotel: 'Konaklama' },
+      schedule: [
+        {
+          day: 'D1',
+          plan: 'İstanbul ✈ İzmir → Kuşadası',
+          b: '/',
+          l: 'Dahil',
+          d: 'Otel',
+          hotel: 'Kuşadası 5*'
+        },
+        {
+          day: 'D2',
+          plan: 'Efes & Pamukkale',
+          b: 'Otel',
+          l: 'Dahil',
+          d: 'Otel',
+          hotel: 'Pamukkale Termal 5*'
+        },
+        {
+          day: 'D3',
+          plan: 'Pamukkale → Fethiye',
+          b: 'Otel',
+          l: 'Dahil',
+          d: 'Otel',
+          hotel: 'Fethiye 5*'
+        },
+        {
+          day: 'D4',
+          plan: 'D400 → Kaş → Antalya',
+          b: 'Otel',
+          l: 'Dahil',
+          d: 'Otel',
+          hotel: 'Antalya 5*'
+        },
+        {
+          day: 'D5',
+          plan: 'Aspendos → Konya',
+          b: 'Otel',
+          l: 'Dahil',
+          d: 'Otel',
+          hotel: 'Konya 5*'
+        },
+        {
+          day: 'D6',
+          plan: 'Konya → Kapadokya',
+          b: 'Otel',
+          l: 'Dahil',
+          d: 'Otel',
+          hotel: 'Mağara Butik Otel'
+        },
+        {
+          day: 'D7',
+          plan: 'Kapadokya ✈ İstanbul',
+          b: 'Otel',
+          l: 'Dahil',
+          d: 'Otel',
+          hotel: 'İstanbul 5*'
+        },
+        { day: 'D8', plan: 'İstanbul Şehir Turu', b: 'Otel', l: 'Dahil', d: '/', hotel: '/' }
+      ],
+      daily_details: [
+        {
+          day: '01',
+          city: 'İstanbul ✈ İzmir → Kuşadası',
+          theme: 'Ege Kıyısına İlk Adım',
+          content:
+            'İstanbul’dan İzmir’e uçuş ve Kuşadası’na transfer. Ege kıyısında dinlenme ve sahil yürüyüşü için serbest zaman.'
+        },
+        {
+          day: '02',
+          city: 'Efes & Pamukkale',
+          theme: 'Antik Miras ve Beyaz Teraslar',
+          content:
+            'Sabah Efes antik kentinde rehberli tur, öğleden sonra Pamukkale travertenleri ve Hierapolis antik kentinde gezinti.'
+        },
+        {
+          day: '03',
+          city: 'Pamukkale → Fethiye',
+          theme: 'Mavi Lagün',
+          content:
+            'Termal bölgeden ayrılıp Fethiye’ye geçiş, Ölüdeniz ve çevresinde dinlenme veya opsiyonel yamaç paraşütü imkânı.'
+        },
+        {
+          day: '04',
+          city: 'Fethiye → Kaş → Antalya',
+          theme: 'D400 Sahil Yolu',
+          content:
+            'Kaputaş Plajı ve Kaş üzerinden, Akdeniz’in en güzel manzaralarına sahip D400 yolu ile Antalya’ya varış.'
+        },
+        {
+          day: '05',
+          city: 'Aspendos → Konya',
+          theme: 'Roma Tiyatrosu ve Sufi İzleri',
+          content:
+            'Dünyanın en iyi korunmuş antik tiyatrolarından Aspendos ziyareti, ardından Mevlana şehri Konya’ya geçiş.'
+        },
+        {
+          day: '06',
+          city: 'Konya → Kapadokya',
+          theme: 'İpek Yolu Güzergâhı',
+          content:
+            'Mevlana Müzesi ve Sultan Han kervansarayı üzerinden Kapadokya’ya yolculuk, akşam mağara otelde konaklama.'
+        },
+        {
+          day: '07',
+          city: 'Kapadokya ✈ İstanbul',
+          theme: 'Balonlar ve Yeraltı Şehirleri',
+          content:
+            'Opsiyonel balon turu, Göreme ve yeraltı şehri ziyaretleri. Akşam iç hat uçuşu ile İstanbul’a dönüş.'
+        },
+        {
+          day: '08',
+          city: 'İstanbul Finali',
+          theme: 'İmparatorluk Mirası',
+          content:
+            'Boğaz bölgesi ve tarihî yarımada gezisi; Ayasofya çevresi ve Kapalıçarşı’da serbest zaman sonrası dönüş hazırlığı.'
+        }
+      ],
+      meals_label: 'Yemekler',
+      hotel_label: 'Konaklama',
+      fee_title: 'Ücret Detayları',
+      included_title: 'Fiyata Dahil Olanlar',
+      included_list: [
+        'Programda belirtilen iç hat uçuşu',
+        '7 gece 5 yıldızlı ve butik otellerde konaklama',
+        'Lisanslı profesyonel rehber',
+        'Zorunlu müze ve ören yeri girişleri',
+        'Programda işaretli öğünler'
+      ],
+      excluded_title: 'Fiyata Dahil Olmayanlar',
+      excluded_list: [
+        'Türkiye’ye geliş–dönüş uluslararası uçuşlar',
+        'Balon, yamaç paraşütü gibi opsiyonel aktiviteler',
+        'Kişisel harcamalar ve ekstra içecekler',
+        'Bahşişler ve sigorta'
+      ],
+      footer_cta: 'Ege’den Anadolu’ya Büyük Tura Katılın',
+      sticky_cta: 'S2 İçin Teklif Al',
+      seo: {
+        title: 'S2 · Ege’den Anadolu’ya 8 Günlük Büyük Türkiye Turu',
+        description:
+          'Ege kıyılarından Kapadokya’ya uzanan 8 günlük büyük Türkiye turu. D400 sahil yolu, Efes, Pamukkale ve Kapadokya tek rotada.',
+        keywords:
+          'Türkiye 8 gün tur, Ege Anadolu turu, D400 sahil rotası, Efes Pamukkale Kapadokya turu, butik Türkiye turu'
+      }
+    },
+    // S4 · 10 Günlük Panorama Kültür Turu (TR versiyonu)
+    itinerary_s4: {
+      meta: {
+        code: 'S4',
+        seriesTitle: 'S Serisi · Konfor Grubu | 10 Günlük Panorama Kültür Turu',
+        title: '10 Günlük Panorama Kültür Turu',
+        subtitle: 'Troy’dan Kapadokya’ya Uzanan Geniş Hat',
+        tagline: 'Konfor Grubu | Lisanslı Rehber | Zorunlu Alışveriş Yok | Saf Seyahat',
+        transport:
+          'WIFI ve USB şarj girişli lüks otobüs ile Türkiye’nin demir yolu ve hava yolu ile ulaşılması zor bölgelerini keşif.',
+        hotels: '5 Yıldızlı oteller ve seçili mağara / termal konaklamalar',
+        transport_label: 'Ulaşım İlkesi',
+        hotels_label: 'Konaklama Standardı',
+        price_label: 'Referans Fiyat',
+        price: '8999',
+        meals_label: 'Yemek',
+        stay_label: 'Konaklama Örneği',
+        footer_cta_title: '10 Günlük Yolculuğunuza Başlayın',
+        cta_consult: 'Uzmanla Görüşün',
+        cta_plan: 'Detay Plan Alın',
+        sticky_cta: 'S4 İçin Teklif Al',
+        seo: {
+          title: 'S4 · 10 Günlük Panorama Kültür Turu',
+          description:
+            'Troy, Efes, Pamukkale, Fethiye, Antalya, Konya, Kapadokya ve İstanbul’u kapsayan 10 günlük konforlu kültür turu.',
+          keywords:
+            'Türkiye 10 gün turu, Troy turu, Antalya Kapadokya turu, panoramik Türkiye turu, konfor grubu tur'
+        }
+      },
+      hero: {
+        badge: 'S4 Paket · Panorama',
+        title: '10 Günlük Panorama Kültür Turu',
+        subtitle: 'Ege, Akdeniz ve Anadolu Bir Arada',
+        ctaPrimary: 'Teklif Al',
+        ctaSecondary: 'Detay Plan',
+        image:
+          'https://images.unsplash.com/photo-1689130033373-2773b6029aea?q=80&w=2148&auto=format&fit=crop'
+      },
+      highlights: {
+        title: 'Öne Çıkanlar',
+        items: [
+          'Truva Antik Kenti ve 1915 Çanakkale Köprüsü ile iki kıta arasında geçiş',
+          'Efes + Pamukkale + Fethiye Mavi Lagün + D400 sahil yolu + Kapadokya balon deneyimi',
+          'Aspendos, Konya, Tuz Gölü ve İstanbul klasiklerinin tek rotada birleştirilmesi'
+        ]
+      },
+      summaryTable: {
+        title: 'Program Özeti',
+        columns: ['Gün', 'Rota', 'K', 'Ö', 'A', 'Konaklama'],
+        rows: [
+          {
+            day: 'D1',
+            route: 'İstanbul → Troy → Çanakkale',
+            breakfast: '/',
+            lunch: 'Var',
+            dinner: 'Var',
+            hotel: 'Çanakkale 5★'
+          },
+          {
+            day: 'D2',
+            route: 'Çanakkale → Alaçatı → İzmir → Kuşadası',
+            breakfast: 'Otel',
+            lunch: 'Var',
+            dinner: 'Var',
+            hotel: 'Kuşadası 5★'
+          },
+          {
+            day: 'D3',
+            route: 'Efes → Pamukkale',
+            breakfast: 'Otel',
+            lunch: 'Var',
+            dinner: 'Var',
+            hotel: 'Pamukkale 5★'
+          },
+          {
+            day: 'D4',
+            route: 'Pamukkale → Fethiye',
+            breakfast: 'Otel',
+            lunch: 'Var',
+            dinner: 'Var',
+            hotel: 'Fethiye 5★'
+          },
+          {
+            day: 'D5',
+            route: 'Fethiye → Kaputaş → Kaş → Antalya',
+            breakfast: 'Otel',
+            lunch: 'Var',
+            dinner: 'Var',
+            hotel: 'Antalya 5★'
+          },
+          {
+            day: 'D6',
+            route: 'Antalya → Aspendos → Konya',
+            breakfast: 'Otel',
+            lunch: 'Var',
+            dinner: 'Var',
+            hotel: 'Konya 5★'
+          },
+          {
+            day: 'D7',
+            route: 'Konya → Kapadokya',
+            breakfast: 'Otel',
+            lunch: 'Var',
+            dinner: 'Var',
+            hotel: 'Mağara Otel'
+          },
+          {
+            day: 'D8',
+            route: 'Kapadokya Derin Keşif',
+            breakfast: 'Otel',
+            lunch: 'Var',
+            dinner: 'Var',
+            hotel: 'Mağara Otel'
+          },
+          {
+            day: 'D9',
+            route: 'Kapadokya → Tuz Gölü → İstanbul',
+            breakfast: 'Otel',
+            lunch: 'Var',
+            dinner: 'Var',
+            hotel: 'İstanbul 5★'
+          },
+          {
+            day: 'D10',
+            route: 'İstanbul Klasik Tur → Dönüş',
+            breakfast: 'Otel',
+            lunch: 'Var',
+            dinner: 'Var',
+            hotel: '/'
+          }
+        ]
+      },
+      sections: {
+        title: 'Detaylı Program',
+        days: [
+          {
+            day: 'D1',
+            title: 'İstanbul → Troy → Çanakkale',
+            stay: 'Konaklama: Çanakkale 5★',
+            image:
+              'https://images.unsplash.com/photo-1687706222092-b6545828217d?q=80&w=2340&auto=format&fit=crop',
+            paragraphs: [
+              'Sabah İstanbul’dan hareketle Marmara Denizi boyunca batıya ilerleyip 1915 Çanakkale Köprüsü’nden geçiyoruz.',
+              'UNESCO listesinde yer alan Truva antik kentini gezip, Troya Atı efsanesinin geçtiği toprakları ziyaret ediyoruz.'
+            ],
+            meals: { breakfast: '/', lunch: 'Var', dinner: 'Var' }
+          },
+          {
+            day: 'D2',
+            title: 'Çanakkale → Alaçatı → İzmir → Kuşadası',
+            stay: 'Konaklama: Kuşadası 5★',
+            image:
+              'https://images.unsplash.com/photo-1701428588034-5893b2512a68?q=80&w=2340&auto=format&fit=crop',
+            paragraphs: [
+              'Sabah Ege’nin sanat köylerinden Alaçatı’da taş evler ve rüzgar gülleri arasında yürüyüş.',
+              'İzmir şehir merkezinde kısa tur sonrası, Ege kıyısındaki Kuşadası’na geçiş.'
+            ],
+            meals: { breakfast: 'Otel', lunch: 'Var', dinner: 'Var' }
+          },
+          {
+            day: 'D3',
+            title: 'Efes → Pamukkale',
+            stay: 'Konaklama: Pamukkale Termal 5★',
+            image:
+              'https://images.unsplash.com/photo-1433854471391-5603c019de62?q=80&w=2340&auto=format&fit=crop',
+            paragraphs: [
+              'Sabah Efes antik kentinde Celsus Kütüphanesi ve Büyük Tiyatroyu ziyaret.',
+              'Öğleden sonra Pamukkale’ye hareket, travertenler ve Hierapolis antik kentinde gezinti.'
+            ],
+            meals: { breakfast: 'Otel', lunch: 'Var', dinner: 'Var' }
+          },
+          {
+            day: 'D4',
+            title: 'Pamukkale → Fethiye',
+            stay: 'Konaklama: Fethiye 5★',
+            image:
+              'https://images.unsplash.com/photo-1498222954553-93fc8d1941da?q=80&w=2346&auto=format&fit=crop',
+            paragraphs: [
+              'Toros Dağları üzerinden Fethiye’ye iniş; Ölüdeniz Mavi Lagün’de fotoğraf ve serbest zaman.',
+              'Akşam Fethiye’de sahil yürüyüşü ve eski şehirde keyifli bir akşam.'
+            ],
+            meals: { breakfast: 'Otel', lunch: 'Var', dinner: 'Var' }
+          },
+          {
+            day: 'D5',
+            title: 'Fethiye → Kaputaş → Kaş → Antalya',
+            stay: 'Konaklama: Antalya 5★',
+            image:
+              'https://images.unsplash.com/photo-1584382838634-1e651f6c5c66?q=80&w=2342&auto=format&fit=crop',
+            paragraphs: [
+              'D400 sahil yolu üzerinde Kaputaş Plajı ve Kaş’ta manzara molaları.',
+              'Akşam Antalya’ya varış ve Akdeniz kıyısında konaklama.'
+            ],
+            meals: { breakfast: 'Otel', lunch: 'Var', dinner: 'Var' }
+          },
+          {
+            day: 'D6',
+            title: 'Antalya → Aspendos → Konya',
+            stay: 'Konaklama: Konya 5★',
+            image:
+              'https://images.unsplash.com/photo-1631098983935-09a89fba42c2?q=80&w=2340&auto=format&fit=crop',
+            paragraphs: [
+              'Sabah Aspendos antik tiyatrosunu ziyaret; dünyanın en iyi korunmuş Roma tiyatrolarından biri.',
+              'Öğleden sonra Mevlana şehri Konya’ya geçiş ve şehir merkezinde kısa akşam gezisi.'
+            ],
+            meals: { breakfast: 'Otel', lunch: 'Var', dinner: 'Var' }
+          },
+          {
+            day: 'D7',
+            title: 'Konya → Kapadokya',
+            stay: 'Konaklama: Kapadokya Mağara Otel',
+            image:
+              'https://images.unsplash.com/photo-1701616857654-8c56b923d80c?q=80&w=1600&auto=format&fit=crop',
+            paragraphs: [
+              'Sultan Han kervansarayında kısa mola sonrası Kapadokya’ya varış.',
+              'Akşam mağara otelde konaklama ve bölgeye alışma.'
+            ],
+            meals: { breakfast: 'Otel', lunch: 'Var', dinner: 'Var' }
+          },
+          {
+            day: 'D8',
+            title: 'Kapadokya Derin Keşif',
+            stay: 'Konaklama: Kapadokya Mağara Otel',
+            image:
+              'https://images.unsplash.com/photo-1685106748514-d10288e9b535?auto=format&fit=crop&w=1600&q=80',
+            paragraphs: [
+              'Opsiyonel balon deneyimi, Göreme Açık Hava Müzesi ve yeraltı şehirlerinde derin keşif.',
+              'Gün batımında vadilerde manzara noktalarına ziyaret.'
+            ],
+            meals: { breakfast: 'Otel', lunch: 'Var', dinner: 'Var' }
+          },
+          {
+            day: 'D9',
+            title: 'Kapadokya → Tuz Gölü → İstanbul',
+            stay: 'Konaklama: İstanbul 5★',
+            image:
+              'https://images.unsplash.com/photo-1636021597151-cc28dacd915c?auto=format&fit=crop&w=1600&q=80',
+            paragraphs: [
+              'Kapadokya’dan ayrılıp Tuz Gölü kıyısında fotoğraf molası.',
+              'Akşam saatlerinde İstanbul’a varış ve şehir otelinde konaklama.'
+            ],
+            meals: { breakfast: 'Otel', lunch: 'Var', dinner: 'Var' }
+          },
+          {
+            day: 'D10',
+            title: 'İstanbul Klasik Tur → Dönüş',
+            stay: 'Konaklama: /',
+            image:
+              'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=2148&auto=format&fit=crop',
+            paragraphs: [
+              'Ayasofya, Sultanahmet ve Boğaz bölgesinde klasik İstanbul turu.',
+              'Uçuş saatine göre serbest zaman ve havalimanına transfer.'
+            ],
+            meals: { breakfast: 'Otel', lunch: 'Var', dinner: 'Var' }
+          }
+        ]
+      },
+      notices: {
+        title: 'Önemli Notlar ve Hatırlatmalar',
+        items: [
+          'Program Değişikliği: Hava durumu, uçuş saatleri veya yol koşulları nedeniyle gün içi sıralama güvenlik için değişebilir.',
+          'Otel Politikası: Belirtilen oteller dolu olduğunda benzer standartta alternatif otel kullanılacaktır.',
+          'Opsiyonel Aktiviteler: Balon uçuşu ve benzeri aktiviteler hava şartlarına bağlı ve ekstra ücretlidir.',
+          'Zorunlu Alışveriş Yok: Programda belirtilmeyen zorunlu alışveriş durağı bulunmaz.',
+          'Sağlık ve Güvenlik: Rahat yürüyüş ayakkabısı önerilir, kronik rahatsızlıklar için lütfen önceden danışınız.'
+        ]
+      }
+    },
+    // S5 · 8 Günlük Truva & Peri Yolu (TR versiyonu)
+    itinerary_s5: {
+      meta: {
+        code: 'S5',
+        seriesTitle: 'S5 Serisi · Tam Jeomorfik Derinlik Deneyimi | 8 Günlük Panorama Kültür Turu',
+        title: 'S5 Rotası · Truva & Peri Yolu',
+        subtitle: 'Türkiye Tarihi | Miras | Otantiklik',
+        tagline: 'Tam Jeomorfik Deneyim | Türkçe/Çince Rehber | %100 Saf Seyahat | Zorunlu Alışveriş Yok',
+        transport:
+          'WIFI ve USB şarj girişli konforlu otobüs ile, tren ve uçuş hatlarının ulaşmadığı güzergâhlarda kara yolu keşfi.',
+        hotels: '5 Yıldızlı oteller ve seçili mağara / miras butik konaklamalar',
+        transport_label: 'Ulaşım İlkesi',
+        hotels_label: 'Konaklama Standardı',
+        price_label: 'Referans Fiyat',
+        price: '8999',
+        meals_label: 'Yemek',
+        stay_label: 'Konaklama Örneği',
+        footer_cta_title: 'Truva & Peri Yolu Yolculuğunuza Başlayın',
+        cta_consult: 'Uzmanla Hemen Görüşün',
+        cta_plan: 'Detaylı Plan Alın',
+        sticky_cta: 'S5 İçin Teklif Al',
+        seo: {
+          title: 'S5 Rotası · Truva & Peri Yolu | 8 Günlük Derinlik Turu',
+          description:
+            'Truva, İznik, Eğirdir Gölü, Kapadokya ve Ankara’yı kapsayan 8 günlük derinlik kültür turu ile Türkiye’nin farklı yüzlerini keşfedin.',
+          keywords:
+            'Truva turu, Peri yolu Türkiye, İznik turu, Eğirdir Gölü, Kapadokya kültür turu, Türkiye derinlik turu'
+        }
+      },
+      hero: {
+        badge: 'S5 Rota · Panorama Derinlik',
+        title: 'S5 Rotası · Truva & Peri Yolu',
+        subtitle: '8 Günlük Büyük Kültür Yolculuğu',
+        ctaPrimary: 'Teklif Al',
+        ctaSecondary: 'Plan Görüntüle',
+        image:
+          'https://images.unsplash.com/photo-1687706222092-b6545828217d?q=80&w=2340&auto=format&fit=crop'
+      },
+      highlights: {
+        title: 'Çekirdek Öne Çıkanlar',
+        items: [
+          'Truva Antik Kenti ve Homer’in destanlarına konu olan Troya Atı efsanesi',
+          'İznik (Nikaia) gölü kıyısında, Hıristiyanlık tarihinde iz bırakan konsil şehri',
+          'Çanakkale Boğazı ve 1915 Köprüsü ile çağlar arası geçiş hissi',
+          'Eğirdir Gölü kıyısında Anadolu platosunun sakin ritmini deneyimleme',
+          'Mevlana Müzesi ile Sufi geleneğinin kalbini ziyaret',
+          'Kapadokya’da peri bacaları ve mağara kiliseleriyle derin jeomorfik deneyim',
+          'Ankara Anıtkabir ile modern Türkiye Cumhuriyeti’nin hikâyesini takip etme'
+        ]
+      },
+      summaryTable: {
+        title: 'Program Özeti',
+        columns: ['Gün', 'Rota', 'K', 'Ö', 'A', 'Konaklama'],
+        rows: [
+          {
+            day: 'D1',
+            route: 'İstanbul | İmparatorluk Sabahı',
+            breakfast: '/',
+            lunch: 'Var',
+            dinner: 'Var',
+            hotel: 'İstanbul 5★'
+          },
+          {
+            day: 'D2',
+            route: 'İstanbul → Çanakkale | Homer’in Yankısı',
+            breakfast: 'Otel',
+            lunch: 'Var',
+            dinner: 'Var',
+            hotel: 'Çanakkale 5★'
+          },
+          {
+            day: 'D3',
+            route: 'Çanakkale → İzmir | Ege Nefesi',
+            breakfast: 'Otel',
+            lunch: 'Var',
+            dinner: 'Var',
+            hotel: 'İzmir 5★'
+          },
+          {
+            day: 'D4',
+            route: 'İzmir → Pamukkale | Yeryüzü Kaplıcaları',
+            breakfast: 'Otel',
+            lunch: 'Var',
+            dinner: 'Var',
+            hotel: 'Pamukkale 5★'
+          },
+          {
+            day: 'D5',
+            route: 'Pamukkale → Eğirdir Gölü → Konya | Sufi Kalbi',
+            breakfast: 'Otel',
+            lunch: 'Var',
+            dinner: 'Var',
+            hotel: 'Konya 5★'
+          },
+          {
+            day: 'D6',
+            route: 'Konya → Göreme | Peri Masalı',
+            breakfast: 'Otel',
+            lunch: 'Var',
+            dinner: 'Var',
+            hotel: 'Kapadokya 5★ / Mağara'
+          },
+          {
+            day: 'D7',
+            route: 'Göreme → Ankara | Balon Şafağı',
+            breakfast: 'Otel',
+            lunch: 'Var',
+            dinner: 'Var',
+            hotel: 'Ankara 5★'
+          },
+          {
+            day: 'D8',
+            route: 'Ankara → İznik → İstanbul | Göl Kıyısında Veda',
+            breakfast: 'Otel',
+            lunch: 'Var',
+            dinner: 'Var',
+            hotel: '/'
+          }
+        ]
+      },
+      sections: {
+        title: 'Detaylı Program',
+        days: [
+          {
+            day: '01',
+            title: 'İstanbul | İmparatorluk Başkentiyle Tanışma',
+            stay: 'Konaklama: İstanbul 5★',
+            image:
+              'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=2148&auto=format&fit=crop',
+            paragraphs: [
+              'Varış saatine göre Sultanahmet ve çevresinde yumuşak bir şehir yürüyüşü; Ayasofya ve Hipodrom çevresinde dıştan tanıtım.',
+              'Akşam, misafirlerin durumuna göre erken dinlenme veya kısa bir Boğaz manzara turu.'
+            ],
+            meals: { breakfast: '/', lunch: 'Var', dinner: 'Var' }
+          },
+          {
+            day: '02',
+            title: 'İstanbul → Truva → Çanakkale',
+            stay: 'Konaklama: Çanakkale 5★',
+            image:
+              'https://images.unsplash.com/photo-1687706222092-b6545828217d?q=80&w=2340&auto=format&fit=crop',
+            paragraphs: [
+              '1915 Çanakkale Köprüsü üzerinden geçerek, Asya ve Avrupa kıtalarını birleştiren mühendislik harikasını deneyimliyoruz.',
+              'Truva antik kentinde rehber eşliğinde gezi; efsanelerle tarihin nasıl iç içe geçtiğini dinliyorsunuz.'
+            ],
+            meals: { breakfast: 'Otel', lunch: 'Var', dinner: 'Var' }
+          },
+          {
+            day: '03',
+            title: 'Çanakkale → İzmir',
+            stay: 'Konaklama: İzmir 5★',
+            image:
+              'https://images.unsplash.com/photo-1701428588034-5893b2512a68?q=80&w=2340&auto=format&fit=crop',
+            paragraphs: [
+              'Ege kıyı güzergâhı üzerinden İzmir’e yolculuk; Konak Meydanı ve Saat Kulesi çevresinde kısa şehir turu.',
+              'Akşam Kordonboyu’nda serbest zaman ve Ege atmosferini hissetme imkânı.'
+            ],
+            meals: { breakfast: 'Otel', lunch: 'Var', dinner: 'Var' }
+          },
+          {
+            day: '04',
+            title: 'İzmir → Pamukkale',
+            stay: 'Konaklama: Pamukkale 5★',
+            image:
+              'https://images.unsplash.com/photo-1708251088223-e56cd382e8c6?q=80&w=2832&auto=format&fit=crop',
+            paragraphs: [
+              'İzmir’den ayrılarak iç bölgelere yöneliyoruz; öğleden sonra Pamukkale travertenlerinde yürüyüş ve Hierapolis gezisi.',
+              'Akşam termal otelde dinlenme ve spa imkânı.'
+            ],
+            meals: { breakfast: 'Otel', lunch: 'Var', dinner: 'Var' }
+          },
+          {
+            day: '05',
+            title: 'Pamukkale → Eğirdir Gölü → Konya',
+            stay: 'Konaklama: Konya 5★',
+            image:
+              'https://images.unsplash.com/photo-1718227973712-fa3c9b1fda6e?q=80&w=2340&auto=format&fit=crop',
+            paragraphs: [
+              'Toroslar üzerinden Eğirdir Gölü’ne varış; göl kıyısında sakin yürüyüş ve fotoğraf molası.',
+              'Öğleden sonra Anadolu platosu üzerinden Konya’ya geçiş ve Mevlana çevresinde akşam gezisi.'
+            ],
+            meals: { breakfast: 'Otel', lunch: 'Var', dinner: 'Var' }
+          },
+          {
+            day: '06',
+            title: 'Konya → Kapadokya (Göreme)',
+            stay: 'Konaklama: Kapadokya Mağara Otel',
+            image:
+              'https://images.unsplash.com/photo-1701616857654-8c56b923d80c?auto=format&fit=crop&w=1600&q=80',
+            paragraphs: [
+              'Mevlana Müzesi ziyaretiyle Sufi geleneğini daha yakından tanıyoruz.',
+              'Sultan Han kervansarayı üzerinden Kapadokya’ya giriş ve akşam mağara otelde konaklama.'
+            ],
+            meals: { breakfast: 'Otel', lunch: 'Var', dinner: 'Var' }
+          },
+          {
+            day: '07',
+            title: 'Kapadokya → Ankara',
+            stay: 'Konaklama: Ankara 5★',
+            image:
+              'https://images.unsplash.com/photo-1685106748514-d10288e9b535?auto=format&fit=crop&w=1600&q=80',
+            paragraphs: [
+              'Gün doğumunda opsiyonel balon uçuşu imkânı; ardından Göreme Açık Hava Müzesi ve çevre vadiler ziyareti.',
+              'Öğleden sonra Ankara’ya hareket ve akşam Anıtkabir panoramik ziyareti.'
+            ],
+            meals: { breakfast: 'Otel', lunch: 'Var', dinner: 'Var' }
+          },
+          {
+            day: '08',
+            title: 'Ankara → İznik → İstanbul',
+            stay: 'Konaklama: /',
+            image:
+              'https://images.unsplash.com/photo-1684214190982-f3506653f932?q=80&w=2340&auto=format&fit=crop',
+            paragraphs: [
+              'Ankara’dan ayrılarak İznik’e varış; göl kıyısında yürüyüş ve tarihi surlar çevresinde kısa tanıtım.',
+              'Akşamüstü İstanbul’a dönüş ve uçuş saatine göre havalimanına transfer.'
+            ],
+            meals: { breakfast: 'Otel', lunch: 'Var', dinner: 'Var' }
+          }
+        ]
+      },
+      notices: {
+        title: 'Önemli Notlar ve Hatırlatmalar',
+        items: [
+          'Program Değişikliği: Hava durumu, trafik ve yerel düzenlemelere göre gün içi sıralamalar değişebilir.',
+          'Opsiyonel Aktiviteler: Balon uçuşu ve benzeri aktiviteler ekstra ücrete tabidir ve hava şartlarına bağlıdır.',
+          'Konaklama: Belirtilen oteller dolu olduğunda benzer standartta alternatif tesis kullanılacaktır.',
+          'Sağlık: Program orta düzey yürüyüş içerir; rahat ayakkabı ve hava koşullarına uygun kıyafet önerilir.',
+          '%100 Saf Seyahat: Zorunlu alışveriş durağı yoktur; kültürel tanıtım durakları bilgilendirme amaçlıdır.'
+        ]
+      }
     },
     seo: {
       home: { 

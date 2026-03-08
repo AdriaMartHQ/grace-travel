@@ -33,11 +33,15 @@ const SEO: React.FC<SEOProps> = ({ title, description, keywords }) => {
       metaKeywords.setAttribute('content', keywords);
     }
 
-    // Update Canonical Link
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute('href', window.location.href);
+    // Update Canonical Link - use origin + pathname only
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
     }
+    const canonicalUrl = `${window.location.origin}${window.location.pathname}`;
+    canonical.setAttribute('href', canonicalUrl);
 
     // Update HTML lang attribute
     document.documentElement.lang = language;

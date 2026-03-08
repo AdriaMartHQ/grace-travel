@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -47,10 +47,8 @@ const AppContent: React.FC = () => {
 const App: React.FC = () => {
   return (
     <LanguageProvider>
-      <Router>
-        <ScrollToTop />
-        <AppContent />
-      </Router>
+      <ScrollToTop />
+      <AppContent />
     </LanguageProvider>
   );
 };

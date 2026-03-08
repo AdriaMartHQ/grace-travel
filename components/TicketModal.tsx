@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Language } from '../translations';
+import type { Language } from '../translations';
 
 interface TicketModalProps {
   isOpen: boolean;
