@@ -811,7 +811,8 @@ export const translations: Record<Language, BaseTranslations> = {
       { q: 'How do I book a tour with Grace Way?', a: 'Browse our tours and click "Enquire Now". We tailor every detail with you via WeChat, Email, or WhatsApp to ensure a seamless experience.' },
       { q: 'Is Grace Way a licensed travel agency?', a: 'Yes, Grace Way is a fully licensed A-Class Turkish travel agency (TURSAB Registered).' },
       { q: 'What is your cancellation policy?', a: 'Cancellations up to 7 days before the tour are fully refundable. Custom packages may have specific terms.' },
-      { q: 'Do you offer airport transfers?', a: 'Yes, we provide private airport transfers across all major Turkish airports including IST, SAW, and AYT.' }
+      { q: 'Do you offer airport transfers?', a: 'Yes, we provide private airport transfers across all major Turkish airports including IST, SAW, and AYT.' },
+      { q: 'Do I need Turkey entry travel insurance?', a: 'We offer Turkey entry travel insurance at CNY 20 per day per traveler. Coverage includes Tibbi Tedavi Teminati (medical treatment), Tibbi Nakil (medical transport), and Cenaze Nakli (remains repatriation), with a maximum payout of CNY 240,000.' }
     ],
     features: {
       f1: { title: 'Fully Licensed Agency', desc: 'A-Class TURSAB member. Operating under strict government regulations for your peace of mind.' },
@@ -1659,7 +1660,8 @@ export const translations: Record<Language, BaseTranslations> = {
     faqs: [
       { q: '如何预订恩途的旅行服务？', a: '您可以浏览线路并点击“立即定制”.我们将优先通过微信、邮件与您确认细节，确保行程完美衔接。' },
       { q: '恩途是正规持牌旅行社吗？', a: '是的，恩途 · 国际旅行社是经土耳其旅游协会 (TÜRSAB) 认证运行合作的 A 类持牌旅行社。' },
-      { q: '取消政策是怎样的？', a: '通常在行程开始前 7 天取消可获全额退款.部分定制服务可能有特殊说明。' }
+      { q: '取消政策是怎样的？', a: '通常在行程开始前 7 天取消可获全额退款.部分定制服务可能有特殊说明。' },
+      { q: '入境土耳其旅游保险如何保障？', a: '入境土耳其旅游保险参考价格为 20 元人民币 / 日 / 人，保障范围包含 Tibbi Tedavi Teminati：医疗治疗保障、Tibbi Nakil：医疗转运、Cenaze Nakli：遗体运送，最高赔付 24 万人民币。' }
     ],
     features: {
       f1: { title: '官方持牌资质', desc: '土耳其旅游协会 (TÜRSAB) A类成员.政府监管，全程保险，保障旅程安全。' },
@@ -1923,7 +1925,9 @@ export const translations: Record<Language, BaseTranslations> = {
       { id: 't11', title: 'Aynalıkavak Pavilion (Aynalıkavak Kasrı)', price: 50, includes: ['Pavilion access', 'Consult CS for details'], image: 'https://cdn.kulturenvanteri.com/wp-content/uploads/2019/11/Aynalikavak-Kasri-1-1024x683.jpg', category: 'entry' },
       { id: 't12', title: 'Maslak Pavilion (Maslak Kasrı)', price: 50, includes: ['Pavilion access', 'Consult CS for details'], image: 'https://images.unsplash.com/photo-1766778834237-34aeabf4d9b2?q=80&w=2340&auto=format&fit=crop', category: 'entry' }
     ],
-    faqs: [],
+    faqs: [
+      { q: 'Turkiye giris seyahat sigortasi var mi?', a: 'Turkiye giris seyahat sigortasi kisi basi gunluk 20 CNY referans fiyatla sunulur. Teminatlar: Tibbi Tedavi Teminati, Tibbi Nakil ve Cenaze Nakli. Azami odeme tutari 240.000 CNY\'dir.' }
+    ],
     features: {
       f1: { title: 'Lisanslı Acente', desc: 'TÜRSAB A Grubu üyesi resmi seyahat acentesi.' },
       f2: { title: 'Butik ve Özel', desc: 'Kişiye özel planlanmış butik seyahat deneyimleri.' },
