@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
+import { chinaInboundContent } from '../chinaInboundContent';
+import { getChinaFallbackImage } from '../chinaImageFallback';
 
 const Hero: React.FC = () => {
   const { t } = useLanguage();
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden px-4">
+    <section className="relative min-h-[88vh] md:min-h-screen flex items-end overflow-hidden px-4">
       <SEO 
         title={t.seo.home.title} 
         description={t.seo.home.description} 
@@ -18,23 +20,26 @@ const Hero: React.FC = () => {
           alt="Grace Way Hero" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/45"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/78 via-slate-950/42 to-slate-950/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/72 via-transparent to-slate-950/12"></div>
       </div>
       
-      <div className="relative z-10 text-center max-w-5xl">
-        <h1 className="text-[2rem] sm:text-5xl md:text-7xl lg:text-[5.5rem] font-black text-white mb-5 md:mb-8 serif leading-[1.08] tracking-tight drop-shadow-2xl px-2">
+      <div className="relative z-10 mx-auto w-full max-w-6xl pb-14 md:pb-20 lg:pb-24">
+        <div className="max-w-4xl text-center md:text-left">
+        <h1 className="mx-auto md:mx-0 max-w-[12ch] text-[2.15rem] sm:text-[3.2rem] md:text-[4.8rem] lg:text-[5.6rem] font-black text-white mb-5 md:mb-7 serif leading-[1.01] tracking-tight [text-wrap:balance] drop-shadow-2xl px-2 md:px-0">
           {t.hero.title}
         </h1>
-        <p className="text-[15px] sm:text-lg md:text-[1.35rem] lg:text-[1.5rem] text-white/90 mb-8 md:mb-12 max-w-2xl mx-auto font-light leading-relaxed px-2">
+        <p className="text-[15px] sm:text-lg md:text-[1.22rem] lg:text-[1.38rem] text-white/88 mb-8 md:mb-11 max-w-2xl md:max-w-[36rem] mx-auto md:mx-0 font-light leading-relaxed [text-wrap:pretty] px-2 md:px-0">
           {t.hero.subtitle}
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
+        <div className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4 md:gap-5">
           <Link to="/tours" className="w-full sm:w-auto bg-[#FF9D00] text-white px-8 md:px-10 py-4 rounded-full text-[12px] md:text-sm font-black uppercase tracking-[0.16em] md:tracking-widest transition-all transform active:scale-95 shadow-xl shadow-orange-500/30">
             {t.hero.cta1}
           </Link>
           <Link to="/contact" className="w-full sm:w-auto bg-white/10 text-white backdrop-blur-md border border-white/20 px-8 md:px-10 py-4 rounded-full text-[12px] md:text-sm font-black uppercase tracking-[0.16em] md:tracking-widest transition-all">
             {t.hero.cta2}
           </Link>
+        </div>
         </div>
       </div>
     </section>
@@ -76,7 +81,7 @@ const TourCard: React.FC<{ tour: any; priority?: boolean }> = ({ tour, priority 
           <span className="text-lg md:text-[1.7rem] font-black text-slate-900 tracking-tight">{currencySymbol}{tour.price}</span>
         </div>
         <Link to={tour.path || "/contact"}>
-          <h3 className="text-base sm:text-lg md:text-[1.55rem] font-black mb-4 text-slate-900 leading-snug group-hover:text-[#FF9D00] transition-colors line-clamp-2">
+          <h3 className="text-base sm:text-lg md:text-[1.5rem] font-black mb-4 text-slate-900 leading-[1.12] tracking-tight [text-wrap:balance] group-hover:text-[#FF9D00] transition-colors line-clamp-2">
             {tour.title}
           </h3>
         </Link>
@@ -95,7 +100,28 @@ const TourCard: React.FC<{ tour: any; priority?: boolean }> = ({ tour, priority 
 
 const Home: React.FC = () => {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const chinaContent = chinaInboundContent[language];
+  const chinaTitle =
+    language === 'zh' ? '中国入境游' : language === 'tr' ? 'Cin Giris Turlari' : 'China Inbound Journeys';
+  const chinaIntro =
+    language === 'zh'
+      ? '面向海外客人来中国旅行的新模块，包含科技考察与经典城市文化线路。'
+      : language === 'tr'
+      ? 'Uluslararasi misafirlerin Cin seyahatleri icin hazirlanan yeni bolum; teknoloji rotalari ve klasik sehir turlari icerir.'
+      : 'A new module for international guests traveling in China, including innovation journeys and classic city routes.';
+  const chinaCta = language === 'zh' ? '进入中国入境游' : language === 'tr' ? 'Cin Modulu' : 'Explore China';
+  const chinaFallbackImage = getChinaFallbackImage(chinaTitle, 'Grace Way China Inbound');
+  const chinaFeatureImage =
+    chinaContent.routes.find((route) => route.id === 'r3')?.gallery[0] ||
+    chinaContent.routes.find((route) => route.id === 'r3')?.heroImage ||
+    chinaContent.routes[0]?.image;
+
+  const handleChinaImageError = (event: React.SyntheticEvent<HTMLImageElement>) => {
+    const target = event.currentTarget;
+    target.onerror = null;
+    target.src = chinaFallbackImage;
+  };
 
   return (
     <div className="animate-in fade-in duration-1000 overflow-x-hidden">
@@ -106,7 +132,7 @@ const Home: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-24 gap-6">
           <div className="text-left">
             <span className="text-[11px] md:text-[10px] font-black text-[#FF9D00] uppercase tracking-[0.22em] md:tracking-[0.4em] mb-4 block">{t.sections.featuredTours}</span>
-            <h3 className="text-[28px] md:text-5xl lg:text-6xl font-black serif text-slate-900 leading-tight">{t.sections.featuredSubtitle}</h3>
+            <h3 className="max-w-[18ch] text-[28px] md:text-5xl lg:text-6xl font-black serif text-slate-900 leading-[1.08] [text-wrap:balance]">{t.sections.featuredSubtitle}</h3>
           </div>
           <Link to="/tours" className="text-slate-900 font-black uppercase tracking-[0.16em] md:tracking-widest text-[11px] md:text-[10px] border-b-2 border-[#FF9D00] pb-2 w-fit">
             {t.sections.viewAll}
@@ -120,12 +146,57 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      <section className="bg-slate-950 border-t border-slate-900 text-white overflow-hidden">
+        <div className="grid lg:min-h-[620px] lg:grid-cols-[minmax(0,42rem)_minmax(0,1fr)] items-stretch">
+          <div className="w-full lg:justify-self-end">
+            <div className="mx-auto max-w-3xl px-6 py-20 md:px-10 md:py-24 lg:px-14 lg:py-28 text-left">
+                <span className="text-[11px] md:text-[10px] font-black text-[#FF9D00] uppercase tracking-[0.22em] md:tracking-[0.4em] mb-4 block">
+                  China Inbound
+                </span>
+                <h3 className="text-[28px] md:text-5xl font-black serif leading-[1.04] tracking-tight whitespace-nowrap">
+                  {chinaTitle}
+                </h3>
+                <p className="mt-5 text-white/70 text-base md:text-lg leading-relaxed [text-wrap:pretty] max-w-2xl">
+                  {chinaIntro}
+                </p>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  {chinaContent.routes.map((route) => (
+                    <span
+                      key={route.id}
+                      className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.12em] md:tracking-[0.18em] px-4 py-2 rounded-full bg-white/10 border border-white/10 text-white/80"
+                    >
+                      {route.duration} · {route.location}
+                    </span>
+                  ))}
+                </div>
+                <Link
+                  to="/china-inbound"
+                  className="mt-10 inline-flex items-center justify-center bg-[#FF9D00] text-white px-8 md:px-10 py-4 rounded-full text-[12px] md:text-sm font-black uppercase tracking-[0.16em] md:tracking-widest transition-all shadow-xl shadow-orange-500/20"
+                >
+                  {chinaCta}
+                </Link>
+              </div>
+          </div>
+          <div className="relative min-h-[320px] md:min-h-[420px] lg:min-h-full">
+                <img
+                  src={chinaFeatureImage}
+                  alt={chinaTitle}
+                  className="w-full h-full object-cover object-center"
+                  loading="lazy"
+                  decoding="async"
+                  onError={handleChinaImageError}
+                />
+                <div className="absolute inset-0 bg-gradient-to-l from-slate-950/0 via-slate-950/10 to-slate-950/72"></div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Us */}
       <section className="py-20 md:py-40 bg-slate-950 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <span className="text-[11px] md:text-[10px] font-black text-[#FF9D00] uppercase tracking-[0.22em] md:tracking-[0.4em] mb-4 block">The Grace Way Standard</span>
-            <h3 className="text-[28px] md:text-5xl lg:text-6xl font-black serif mb-6 leading-tight">{t.sections.whyUsSubtitle}</h3>
+            <h3 className="mx-auto max-w-[18ch] text-[28px] md:text-5xl lg:text-6xl font-black serif mb-6 leading-[1.08] [text-wrap:balance]">{t.sections.whyUsSubtitle}</h3>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -147,13 +218,13 @@ const Home: React.FC = () => {
       {/* FAQ */}
       <section className="py-20 md:py-40 max-w-4xl mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h3 className="text-[28px] md:text-3xl font-black serif text-slate-900 leading-tight">{t.sections.faq}</h3>
+          <h3 className="text-[28px] md:text-3xl font-black serif text-slate-900 leading-[1.1]">{t.sections.faq}</h3>
         </div>
         <div className="space-y-4">
           {(t.faqs || []).map((faq: any, idx: number) => (
             <div key={idx} className="border border-slate-100 rounded-2xl overflow-hidden bg-white">
               <button 
-                className="w-full flex items-center justify-between p-5 md:p-6 text-left font-black text-slate-800 tracking-[0.08em] md:tracking-widest text-[13px] md:text-[11px] leading-snug"
+                className="w-full flex items-center justify-between gap-4 p-5 md:p-6 text-left font-black text-slate-800 tracking-[0.03em] md:tracking-[0.08em] text-[13px] md:text-[11px] leading-snug"
                 onClick={() => setActiveFaq(activeFaq === idx ? null : idx)}
               >
                 <span>{faq.q}</span>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="160" y1="80" x2="1450" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#09131D"/>
+      <stop offset="0.5" stop-color="#173042"/>
+      <stop offset="1" stop-color="#224B63"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="970" y1="120" x2="1410" y2="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD089"/>
+      <stop offset="1" stop-color="#FF8A00"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <path d="M0 618C187 603 359 521 567 524C759 528 964 617 1159 607C1320 599 1461 513 1600 463V1000H0V618Z" fill="#0B1622"/>
+  <ellipse cx="1220" cy="220" rx="260" ry="150" fill="url(#accent)"/>
+  <g opacity="0.95" fill="#163347">
+    <rect x="132" y="420" width="228" height="216" rx="20"/>
+    <rect x="386" y="360" width="268" height="276" rx="24"/>
+    <rect x="690" y="314" width="246" height="322" rx="24"/>
+    <rect x="972" y="394" width="210" height="242" rx="22"/>
+    <rect x="1216" y="338" width="244" height="298" rx="24"/>
+  </g>
+  <g fill="#0F2434">
+    <rect x="170" y="378" width="42" height="64"/>
+    <rect x="228" y="332" width="42" height="110"/>
+    <rect x="286" y="288" width="42" height="154"/>
+    <rect x="438" y="272" width="48" height="88"/>
+    <rect x="504" y="230" width="48" height="130"/>
+    <rect x="570" y="194" width="48" height="166"/>
+    <rect x="736" y="246" width="56" height="68"/>
+    <rect x="812" y="198" width="56" height="116"/>
+    <rect x="888" y="160" width="56" height="154"/>
+    <rect x="1030" y="330" width="46" height="64"/>
+    <rect x="1092" y="286" width="46" height="108"/>
+  </g>
+  <g stroke="#F8FAFC" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M171 656H1422"/>
+    <path d="M178 728C223 696 285 690 334 709L463 759C528 785 603 785 668 759L815 698C873 674 939 674 997 698L1148 760C1210 785 1280 785 1342 760L1436 722"/>
+  </g>
+  <g stroke="#FF9D00" stroke-width="12" stroke-linecap="round">
+    <path d="M315 543H586"/>
+    <path d="M315 578H664"/>
+    <path d="M730 549H1052"/>
+    <path d="M730 586H1119"/>
+    <path d="M1238 565H1453"/>
+  </g>
+  <g transform="translate(1124 472)">
+    <circle cx="0" cy="0" r="68" fill="#F8FAFC"/>
+    <circle cx="0" cy="0" r="40" fill="#0F2434"/>
+    <path d="M0 -92V-148M0 92V148M92 0H148M-92 0H-148M65 -65L105 -105M-65 -65L-105 -105M65 65L105 105M-65 65L-105 105" stroke="#FFB347" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(470 694)">
+    <rect x="0" y="0" width="288" height="88" rx="44" fill="#F8FAFC"/>
+    <circle cx="54" cy="92" r="38" fill="#0C1825"/>
+    <circle cx="236" cy="92" r="38" fill="#0C1825"/>
+    <path d="M58 44H220L258 10" stroke="#FF9D00" stroke-width="14" stroke-linecap="round"/>
+  </g>
+</svg>

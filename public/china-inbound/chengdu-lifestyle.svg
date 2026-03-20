@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="1440" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1716"/>
+      <stop offset="0.55" stop-color="#1A3C37"/>
+      <stop offset="1" stop-color="#2F6A4E"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="1050" y1="120" x2="1412" y2="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF0BD"/>
+      <stop offset="1" stop-color="#FFAF3F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <ellipse cx="1220" cy="214" rx="248" ry="136" fill="url(#sun)"/>
+  <path d="M0 646C201 596 386 572 571 585C762 599 922 656 1099 673C1264 689 1427 672 1600 618V1000H0V646Z" fill="#0E211E"/>
+  <path d="M0 762C179 727 332 712 503 729C683 747 840 796 1003 810C1219 829 1423 789 1600 722V1000H0V762Z" fill="#081211"/>
+  <g stroke="#7BD389" stroke-width="16" stroke-linecap="round">
+    <path d="M118 214C178 376 220 538 234 738"/>
+    <path d="M208 156C270 334 314 536 329 774"/>
+    <path d="M292 102C346 302 381 535 394 814"/>
+  </g>
+  <g transform="translate(762 488)">
+    <circle cx="0" cy="0" r="154" fill="#F9FBFC"/>
+    <circle cx="-64" cy="-46" r="34" fill="#101A1A"/>
+    <circle cx="64" cy="-46" r="34" fill="#101A1A"/>
+    <circle cx="-58" cy="-36" r="12" fill="#F9FBFC"/>
+    <circle cx="70" cy="-36" r="12" fill="#F9FBFC"/>
+    <ellipse cx="0" cy="22" rx="44" ry="34" fill="#101A1A"/>
+    <ellipse cx="-102" cy="-118" rx="56" ry="62" fill="#101A1A"/>
+    <ellipse cx="102" cy="-118" rx="56" ry="62" fill="#101A1A"/>
+  </g>
+  <g stroke="#FFCF6A" stroke-width="12" stroke-linecap="round">
+    <path d="M1088 566C1148 522 1208 510 1270 528C1321 542 1364 579 1404 638"/>
+    <path d="M1066 652H1452"/>
+  </g>
+  <g fill="#F4E7C7">
+    <rect x="1118" y="470" width="46" height="96" rx="10"/>
+    <rect x="1188" y="432" width="46" height="134" rx="10"/>
+    <rect x="1258" y="392" width="46" height="174" rx="10"/>
+  </g>
+</svg>
