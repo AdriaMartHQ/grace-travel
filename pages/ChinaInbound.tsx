@@ -15,10 +15,10 @@ const ChinaInbound: React.FC = () => {
     language === 'zh' ? '中国入境游' : language === 'tr' ? 'Cin Giris Turlari' : 'China Inbound Journeys';
   const intro =
     language === 'zh'
-      ? '这是新增在原有站点基础上的中国入境游模块，面向海外客人来中国旅行、商务访问和高端小团定制。'
+      ? '为海外客人设计的中国入境旅行系列，覆盖经典观光、商务访问与高端小团定制，让第一次来中国也能更轻松地找到合适线路。'
       : language === 'tr'
-      ? 'Bu bolum, mevcut sitenin uzerine eklenen Cin giris turu moduludur ve uluslararasi misafirler, is heyetleri ve ust segment kucuk gruplar icin hazirlanmistir.'
-      : 'This is the new China inbound module added on top of the existing site, designed for international visitors, delegation travel, and premium small-group journeys in China.';
+      ? 'Uluslararasi misafirler icin tasarlanan bu Cin seyahat serisi; klasik gezi, is ziyaretleri ve ust segment kucuk grup talepleri icin daha uygun rotalari daha kolay secmeyi saglar.'
+      : 'Designed for international guests, this China journey collection covers classic sightseeing, delegation travel, and premium small-group routes, making it easier to choose the right itinerary for a first visit.';
 
   const filteredRoutes = useMemo(() => {
     return filter === 'all'

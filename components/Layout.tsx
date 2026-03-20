@@ -17,6 +17,8 @@ const BrandLogo = ({ className = "w-10 h-10" }) => (
 const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, onClose }) => {
   const { language, setLanguage, t } = useLanguage();
   const location = useLocation();
+  const chinaInboundLabel =
+    language === 'zh' ? '中国入境游' : language === 'tr' ? 'Cin Giris Turlari' : 'China Inbound';
 
   useEffect(() => {
     if (isOpen) {
@@ -35,6 +37,7 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
   const navLinks = [
     { name: t.nav?.home || 'Home', path: '/' },
     { name: t.nav?.tours || 'Tours', path: '/tours' },
+    { name: chinaInboundLabel, path: '/china-inbound' },
     { name: t.nav?.about || 'About Us', path: '/about' },
     { name: t.nav?.tickets || 'Tickets', path: '/tickets' },
     { name: t.nav?.contact || 'Contact', path: '/contact' },
@@ -64,7 +67,11 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
               key={link.path} 
               to={link.path} 
               className={`text-3xl md:text-4xl font-black uppercase tracking-tight md:tracking-tighter transition-all active:scale-95 ${
-                location.pathname === link.path ? 'text-[#FF9D00]' : 'text-white hover:text-[#FF9D00]'
+                (link.path === '/china-inbound'
+                  ? location.pathname === '/china-inbound' || location.pathname.startsWith('/china-inbound/')
+                  : location.pathname === link.path)
+                  ? 'text-[#FF9D00]'
+                  : 'text-white hover:text-[#FF9D00]'
               }`} 
               onClick={onClose}
             >
@@ -103,6 +110,8 @@ const Navbar: React.FC = () => {
   const { language, setLanguage, t } = useLanguage();
   const location = useLocation();
   const ticking = useRef(false);
+  const chinaInboundLabel =
+    language === 'zh' ? '中国入境游' : language === 'tr' ? 'Cin Giris Turlari' : 'China Inbound';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -121,6 +130,7 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: t.nav?.home || 'Home', path: '/' },
     { name: t.nav?.tours || 'Tours', path: '/tours' },
+    { name: chinaInboundLabel, path: '/china-inbound' },
     { name: t.nav?.about || 'About Us', path: '/about' },
     { name: t.nav?.tickets || 'Tickets', path: '/tickets' },
     { name: t.nav?.contact || 'Contact', path: '/contact' },
@@ -157,13 +167,17 @@ const Navbar: React.FC = () => {
             </div>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8 lg:space-x-10 pointer-events-auto">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8 pointer-events-auto">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-[12px] lg:text-[13px] font-bold uppercase tracking-[0.18em] lg:tracking-widest transition-all hover:text-[#FF9D00] ${
-                  location.pathname === link.path ? 'text-[#FF9D00]' : 'text-white/90'
+                className={`text-[11px] lg:text-[12px] font-bold uppercase tracking-[0.14em] lg:tracking-[0.18em] transition-all hover:text-[#FF9D00] ${
+                  (link.path === '/china-inbound'
+                    ? location.pathname === '/china-inbound' || location.pathname.startsWith('/china-inbound/')
+                    : location.pathname === link.path)
+                    ? 'text-[#FF9D00]'
+                    : 'text-white/90'
                 }`}
               >
                 {link.name}
@@ -206,7 +220,7 @@ const Navbar: React.FC = () => {
 };
 
 const Footer: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   // 【核心修复点】：安全解构 footer 属性
   // 为什么改：防止 tr 语言环境下由于数据结构不一致导致的 brandEn 读取 undefined 错误。
   // 影响范围：仅增强健壮性，不影响 zh/en 的正常展示，也不改动其他线路逻辑。
@@ -231,6 +245,7 @@ const Footer: React.FC = () => {
             <ul className="grid grid-cols-2 gap-y-4 gap-x-6 text-sm text-slate-400 font-medium">
               <li><Link to="/" className="hover:text-[#FF9D00] transition-colors">{t.nav?.home || 'Home'}</Link></li>
               <li><Link to="/tours" className="hover:text-[#FF9D00] transition-colors">{t.nav?.tours || 'Tours'}</Link></li>
+              <li><Link to="/china-inbound" className="hover:text-[#FF9D00] transition-colors">{language === 'zh' ? '中国入境游' : language === 'tr' ? 'Cin Giris Turlari' : 'China Inbound'}</Link></li>
               <li><Link to="/tickets" className="hover:text-[#FF9D00] transition-colors">{t.nav?.tickets || 'Tickets'}</Link></li>
               <li><Link to="/contact" className="hover:text-[#FF9D00] transition-colors">{t.nav?.contact || 'Contact'}</Link></li>
             </ul>

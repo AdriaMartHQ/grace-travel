@@ -106,10 +106,10 @@ const Home: React.FC = () => {
     language === 'zh' ? '中国入境游' : language === 'tr' ? 'Cin Giris Turlari' : 'China Inbound Journeys';
   const chinaIntro =
     language === 'zh'
-      ? '面向海外客人来中国旅行的新模块，包含科技考察与经典城市文化线路。'
+      ? '为海外客人设计的中国入境旅行系列，涵盖经典城市文化、科技考察与高端定制线路。'
       : language === 'tr'
-      ? 'Uluslararasi misafirlerin Cin seyahatleri icin hazirlanan yeni bolum; teknoloji rotalari ve klasik sehir turlari icerir.'
-      : 'A new module for international guests traveling in China, including innovation journeys and classic city routes.';
+      ? 'Uluslararasi misafirler icin tasarlanan Cin seyahatleri; klasik sehir kulturu, teknoloji kesfi ve ust segment ozel rotalari bir araya getirir.'
+      : 'China journeys designed for international guests, spanning classic city culture, innovation visits, and premium tailor-made routes.';
   const chinaCta = language === 'zh' ? '进入中国入境游' : language === 'tr' ? 'Cin Modulu' : 'Explore China';
   const chinaFallbackImage = getChinaFallbackImage(chinaTitle, 'Grace Way China Inbound');
   const chinaFeatureImage =
