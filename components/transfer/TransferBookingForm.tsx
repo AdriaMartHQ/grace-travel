@@ -200,17 +200,6 @@ const TransferBookingForm: React.FC<TransferBookingFormProps> = ({
             <div className="grid grid-cols-2 gap-3">
               <button
                 type="button"
-                onClick={() => onFieldChange('preferredContact', 'whatsapp')}
-                className={`rounded-[1.4rem] border px-4 py-4 text-sm font-black transition-all ${
-                  values.preferredContact === 'whatsapp'
-                    ? 'border-[#FF9D00] bg-orange-50 text-slate-900'
-                    : 'border-slate-200 bg-white text-slate-500'
-                }`}
-              >
-                {labels.whatsapp}
-              </button>
-              <button
-                type="button"
                 onClick={() => onFieldChange('preferredContact', 'email')}
                 className={`rounded-[1.4rem] border px-4 py-4 text-sm font-black transition-all ${
                   values.preferredContact === 'email'
@@ -220,6 +209,17 @@ const TransferBookingForm: React.FC<TransferBookingFormProps> = ({
               >
                 {labels.email}
               </button>
+              <button
+                type="button"
+                onClick={() => onFieldChange('preferredContact', 'whatsapp')}
+                className={`rounded-[1.4rem] border px-4 py-4 text-sm font-black transition-all ${
+                  values.preferredContact === 'whatsapp'
+                    ? 'border-[#FF9D00] bg-orange-50 text-slate-900'
+                    : 'border-slate-200 bg-white text-slate-500'
+                }`}
+              >
+                {labels.whatsapp}
+              </button>
             </div>
           </label>
         </div>
@@ -227,14 +227,21 @@ const TransferBookingForm: React.FC<TransferBookingFormProps> = ({
         <div className="grid gap-4 md:grid-cols-2">
           <label className="block">
             <div className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-slate-500">
-              {labels.whatsapp}
+              {labels.email}
             </div>
-            <div className={fieldShell}>
-              <MessageCircleMore className={iconClass} />
+            <div
+              className={`${fieldShell} ${
+                values.preferredContact === 'email'
+                  ? 'border-[#FF9D00] bg-orange-50/50'
+                  : ''
+              }`}
+            >
+              <Mail className={iconClass} />
               <input
-                value={values.whatsapp}
-                onChange={(event) => onFieldChange('whatsapp', event.target.value)}
-                placeholder="+90 ..."
+                type="email"
+                value={values.email}
+                onChange={(event) => onFieldChange('email', event.target.value)}
+                placeholder="name@email.com"
                 className={inputClass}
               />
             </div>
@@ -242,15 +249,20 @@ const TransferBookingForm: React.FC<TransferBookingFormProps> = ({
 
           <label className="block">
             <div className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-slate-500">
-              {labels.email}
+              {labels.whatsapp}
             </div>
-            <div className={fieldShell}>
-              <Mail className={iconClass} />
+            <div
+              className={`${fieldShell} ${
+                values.preferredContact === 'whatsapp'
+                  ? 'border-[#FF9D00] bg-orange-50/50'
+                  : ''
+              }`}
+            >
+              <MessageCircleMore className={iconClass} />
               <input
-                type="email"
-                value={values.email}
-                onChange={(event) => onFieldChange('email', event.target.value)}
-                placeholder="name@email.com"
+                value={values.whatsapp}
+                onChange={(event) => onFieldChange('whatsapp', event.target.value)}
+                placeholder="+90 ..."
                 className={inputClass}
               />
             </div>

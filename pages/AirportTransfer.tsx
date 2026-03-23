@@ -6,6 +6,7 @@ import TransferPriceCard from '../components/transfer/TransferPriceCard';
 import { useLanguage } from '../context/LanguageContext';
 import { popularTransferSuggestions, turkeyAirports } from '../data/turkeyAirports';
 import {
+  buildTransferEmailUrl,
   buildTransferWhatsAppUrl,
   getTransferQuote,
   type TransferFormValues,
@@ -31,7 +32,7 @@ const AirportTransfer: React.FC = () => {
           title: '土耳其机场接送服务',
           subtitle: '私人接送，固定价格 $50 起',
           intro:
-            '覆盖伊斯坦布尔、安塔利亚、卡帕多奇亚等热门目的地。提前确认机场、地址与时间，即可快速获取预估报价并通过 WhatsApp 直接预约。',
+            '覆盖伊斯坦布尔、安塔利亚、卡帕多奇亚等热门目的地。提前确认机场、地址与时间，即可快速获取预估报价，并优先通过 Email 提交预约；如你更习惯 WhatsApp，也可一键切换。',
           seoTitle: 'Airport Transfer Turkey | Private Pickup from $50',
           seoDescription:
             'Book reliable airport transfer in Turkey. Istanbul, Antalya, Cappadocia & more. Fixed price from $50.',
@@ -51,10 +52,12 @@ const AirportTransfer: React.FC = () => {
           dropoff: '送机到机场',
           hotPlaces: '热门目的地',
           formHint:
-            '输入酒店名、景点名或区域名即可估算距离；如路线超过 100km 或地址暂未匹配，将自动转为 WhatsApp 人工报价。',
+            '输入酒店名、景点名或区域名即可估算距离；如路线超过 100km 或地址暂未匹配，将按你选择的联系方式转为人工报价。',
           preferredContact: '优先联系',
-          quoteButton: 'Get Quote',
-          bookButton: 'Book Now',
+          quoteButtonEmail: '邮件获取报价',
+          bookButtonEmail: '邮件提交预约',
+          quoteButtonWhatsapp: 'WhatsApp 获取报价',
+          bookButtonWhatsapp: 'WhatsApp 预约',
           quoteTitle: '实时价格',
           majorAirports: 'Turkey Major Airports',
           noAddress: '填写地址后即可显示预估距离与价格。',
@@ -65,19 +68,24 @@ const AirportTransfer: React.FC = () => {
           noHiddenFees: 'No hidden fees',
           englishDriver: 'English-speaking driver',
           liveEstimate: '系统会根据机场与目的地实时估算价格。',
-          contactToConfirm: '联系客服确认',
-          readyLabel: 'WhatsApp 快速确认',
+          contactToConfirmEmail: '通过 Email 确认',
+          contactToConfirmWhatsapp: '通过 WhatsApp 确认',
+          readyLabel: '快速确认',
           sectionTitle: '从机场到酒店，一步完成',
           sectionSubtitle:
             '默认 Istanbul Airport（IST），你可以直接切换到 Antalya、Cappadocia、Izmir 等热门机场。',
-          note: '提交后将直接跳转 WhatsApp，并自动带上航班接送信息。',
+          noteWhatsapp: '提交后将直接跳转 WhatsApp，并自动带上航班接送信息。',
+          noteEmail: '提交后将打开邮件客户端，并自动填入接送机预约内容。',
+          channelLabelWhatsapp: 'WhatsApp Direct',
+          channelLabelEmail: 'Email Request',
+          missingPreferredContact: '请填写你选中的优先联系方式。',
         }
       : language === 'tr'
       ? {
           title: 'Turkiye Havalimani Transferi',
           subtitle: '$50 baslangic fiyatli ozel karsilama ve birakma',
           intro:
-            'Istanbul, Antalya ve Kapadokya dahil populer noktalari kapsar. Havalimani, adres ve saati girin; tahmini fiyati aninda gorun ve WhatsApp uzerinden dogrudan rezervasyon isteyin.',
+            'Istanbul, Antalya ve Kapadokya dahil populer noktalari kapsar. Havalimani, adres ve saati girin; tahmini fiyati aninda gorun ve once Email ile rezervasyon talebi gonderin. Isterseniz WhatsApp\'a da tek tikla gecebilirsiniz.',
           seoTitle: 'Airport Transfer Turkey | Private Pickup from $50',
           seoDescription:
             'Book reliable airport transfer in Turkey. Istanbul, Antalya, Cappadocia & more. Fixed price from $50.',
@@ -97,10 +105,12 @@ const AirportTransfer: React.FC = () => {
           dropoff: 'Havalimanina Birakma',
           hotPlaces: 'Populer Noktalar',
           formHint:
-            'Otel adi, bolge veya bilinen bir nokta girin. Mesafe 100 km uzerindeyse veya adres eslesmezse sistem sizi WhatsApp uzerinden ozel fiyata yonlendirir.',
+            'Otel adi, bolge veya bilinen bir nokta girin. Mesafe 100 km uzerindeyse veya adres eslesmezse sistem sizi sectiginiz iletisim kanalina gore ozel fiyata yonlendirir.',
           preferredContact: 'Tercih Edilen Iletisim',
-          quoteButton: 'Get Quote',
-          bookButton: 'Book Now',
+          quoteButtonEmail: 'Email ile Teklif Al',
+          bookButtonEmail: 'Email ile Rezervasyon',
+          quoteButtonWhatsapp: 'WhatsApp ile Teklif Al',
+          bookButtonWhatsapp: 'WhatsApp ile Rezervasyon',
           quoteTitle: 'Canli Fiyat',
           majorAirports: 'Turkiye Ana Havalimanlari',
           noAddress: 'Adres girildiginde tahmini mesafe ve fiyat gorunur.',
@@ -111,18 +121,23 @@ const AirportTransfer: React.FC = () => {
           noHiddenFees: 'No hidden fees',
           englishDriver: 'English-speaking driver',
           liveEstimate: 'Sistem havalimani ve hedefe gore anlik tahmin uretir.',
-          contactToConfirm: 'Iletisim ile netlestirilir',
-          readyLabel: 'WhatsApp ile hizli onay',
+          contactToConfirmEmail: 'Email ile netlestirilir',
+          contactToConfirmWhatsapp: 'WhatsApp ile netlestirilir',
+          readyLabel: 'Hizli Onay',
           sectionTitle: 'Havalimanindan sehre tek akista',
           sectionSubtitle:
             'Varsayilan olarak Istanbul Airport (IST) secilir; Antalya, Kapadokya, Izmir ve diger ana havalimanlarini aninda degistirebilirsiniz.',
-          note: 'Gonderdikten sonra bilgiler otomatik olarak WhatsApp mesajina eklenir.',
+          noteWhatsapp: 'Gonderdikten sonra bilgiler otomatik olarak WhatsApp mesajina eklenir.',
+          noteEmail: 'Gonderdikten sonra e-posta uygulamasi acilir ve bilgiler otomatik doldurulur.',
+          channelLabelWhatsapp: 'WhatsApp Direct',
+          channelLabelEmail: 'Email Request',
+          missingPreferredContact: 'Lutfen sectiginiz iletisim kanalini doldurun.',
         }
       : {
           title: 'Turkey Airport Transfer',
           subtitle: 'Private pickup & drop-off, fixed price from $50',
           intro:
-            'Covering Istanbul, Antalya, Cappadocia, and more. Select the airport, enter the transfer address, see the live estimate, and continue directly on WhatsApp.',
+            'Covering Istanbul, Antalya, Cappadocia, and more. Select the airport, enter the transfer address, see the live estimate, and continue with email first. WhatsApp stays available if you prefer faster chat.',
           seoTitle: 'Airport Transfer Turkey | Private Pickup from $50',
           seoDescription:
             'Book reliable airport transfer in Turkey. Istanbul, Antalya, Cappadocia & more. Fixed price from $50.',
@@ -142,10 +157,12 @@ const AirportTransfer: React.FC = () => {
           dropoff: 'Airport drop-off',
           hotPlaces: 'Popular places',
           formHint:
-            'Enter a hotel, landmark, or district to estimate the route. If the route is over 100 km or the address is not matched, we will switch to a custom WhatsApp quote.',
+            'Enter a hotel, landmark, or district to estimate the route. If the route is over 100 km or the address is not matched, we will switch to a custom quote in your preferred contact channel.',
           preferredContact: 'Preferred contact',
-          quoteButton: 'Get Quote',
-          bookButton: 'Book Now',
+          quoteButtonEmail: 'Get Quote by Email',
+          bookButtonEmail: 'Book by Email',
+          quoteButtonWhatsapp: 'Get Quote on WhatsApp',
+          bookButtonWhatsapp: 'Book on WhatsApp',
           quoteTitle: 'Live estimate',
           majorAirports: 'Turkey Major Airports',
           noAddress: 'Add an address to see the estimated fare.',
@@ -156,12 +173,17 @@ const AirportTransfer: React.FC = () => {
           noHiddenFees: 'No hidden fees',
           englishDriver: 'English-speaking driver',
           liveEstimate: 'Your live estimate updates as soon as the route is recognized.',
-          contactToConfirm: 'Confirm via WhatsApp',
-          readyLabel: 'WhatsApp-ready request',
+          contactToConfirmEmail: 'Confirm via email',
+          contactToConfirmWhatsapp: 'Confirm via WhatsApp',
+          readyLabel: 'Direct request',
           sectionTitle: 'Airport pickup built for fast booking',
           sectionSubtitle:
             'Istanbul Airport (IST) is selected by default, and you can switch instantly to Antalya, Cappadocia, Izmir, and other key airports.',
-          note: 'Submitting opens WhatsApp with the trip details already filled in.',
+          noteWhatsapp: 'Submitting opens WhatsApp with the trip details already filled in.',
+          noteEmail: 'Submitting opens your email app with the transfer request already prepared.',
+          channelLabelWhatsapp: 'WhatsApp Direct',
+          channelLabelEmail: 'Email Request',
+          missingPreferredContact: 'Please complete the contact method you selected.',
         };
 
   const [form, setForm] = useState<TransferFormValues>({
@@ -173,7 +195,7 @@ const AirportTransfer: React.FC = () => {
     contactName: '',
     whatsapp: '',
     email: '',
-    preferredContact: 'whatsapp',
+    preferredContact: 'email',
   });
 
   const quote = useMemo(
@@ -185,9 +207,27 @@ const AirportTransfer: React.FC = () => {
     Boolean(form.address.trim()) &&
     Boolean(form.dateTime) &&
     Boolean(form.contactName.trim()) &&
-    Boolean(form.whatsapp.trim() || form.email.trim());
+    Boolean(
+      form.preferredContact === 'whatsapp' ? form.whatsapp.trim() : form.email.trim(),
+    );
   const submitLabel =
-    isReadyToBook && !quote.is_custom_quote ? content.bookButton : content.quoteButton;
+    form.preferredContact === 'email'
+      ? isReadyToBook && !quote.is_custom_quote
+        ? content.bookButtonEmail
+        : content.quoteButtonEmail
+      : isReadyToBook && !quote.is_custom_quote
+      ? content.bookButtonWhatsapp
+      : content.quoteButtonWhatsapp;
+  const submitNote =
+    form.preferredContact === 'email' ? content.noteEmail : content.noteWhatsapp;
+  const submitChannelLabel =
+    form.preferredContact === 'email'
+      ? content.channelLabelEmail
+      : content.channelLabelWhatsapp;
+  const contactToConfirm =
+    form.preferredContact === 'email'
+      ? content.contactToConfirmEmail
+      : content.contactToConfirmWhatsapp;
 
   const handleFieldChange = <Key extends keyof TransferFormValues>(
     field: Key,
@@ -200,23 +240,28 @@ const AirportTransfer: React.FC = () => {
     event.preventDefault();
 
     if (!isReadyToBook) {
-      window.alert(
-        language === 'zh'
-          ? '请先填写机场、地址、日期时间和至少一种联系方式。'
-          : language === 'tr'
-          ? 'Lutfen havalimani, adres, tarih saat ve en az bir iletisim yontemi girin.'
-          : 'Please complete the airport, address, date/time, and at least one contact method first.',
-      );
+      window.alert(content.missingPreferredContact);
+      return;
+    }
+    const targetUrl =
+      form.preferredContact === 'email'
+        ? buildTransferEmailUrl({
+            form,
+            quote,
+            language,
+          })
+        : buildTransferWhatsAppUrl({
+            form,
+            quote,
+            language,
+          });
+
+    if (form.preferredContact === 'email') {
+      window.location.href = targetUrl;
       return;
     }
 
-    const whatsappUrl = buildTransferWhatsAppUrl({
-      form,
-      quote,
-      language,
-    });
-
-    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    window.open(targetUrl, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -324,7 +369,7 @@ const AirportTransfer: React.FC = () => {
             noHiddenFees: content.noHiddenFees,
             englishDriver: content.englishDriver,
             liveEstimate: content.liveEstimate,
-            contactToConfirm: content.contactToConfirm,
+            contactToConfirm,
           }}
         />
       </section>
@@ -334,22 +379,34 @@ const AirportTransfer: React.FC = () => {
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div className="max-w-3xl">
               <div className="text-[11px] font-black uppercase tracking-[0.18em] text-[#FF9D00]">
-                WhatsApp First
+                {submitChannelLabel}
               </div>
               <p className="mt-3 text-base md:text-lg text-slate-600 leading-relaxed">
-                {content.note}
+                {submitNote}
               </p>
             </div>
             <button
               type="button"
               onClick={() => {
                 if (!isReadyToBook) return;
-                const whatsappUrl = buildTransferWhatsAppUrl({
-                  form,
-                  quote,
-                  language,
-                });
-                window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+                const targetUrl =
+                  form.preferredContact === 'email'
+                    ? buildTransferEmailUrl({
+                        form,
+                        quote,
+                        language,
+                      })
+                    : buildTransferWhatsAppUrl({
+                        form,
+                        quote,
+                        language,
+                      });
+                if (form.preferredContact === 'email') {
+                  window.location.href = targetUrl;
+                  return;
+                }
+
+                window.open(targetUrl, '_blank', 'noopener,noreferrer');
               }}
               disabled={!isReadyToBook}
               className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-900 px-7 py-4 text-[12px] font-black uppercase tracking-[0.16em] text-white transition-colors hover:bg-[#FF9D00] disabled:cursor-not-allowed disabled:bg-slate-300"

@@ -285,3 +285,90 @@ export const buildTransferWhatsAppUrl = ({
 
   return `https://wa.me/905064972026?text=${encodeURIComponent(lines.join('\n'))}`;
 };
+
+export const buildTransferEmailUrl = ({
+  form,
+  quote,
+  language,
+}: {
+  form: TransferFormValues;
+  quote: TransferQuoteResponse;
+  language: 'zh' | 'en' | 'tr';
+}) => {
+  const labels =
+    language === 'zh'
+      ? {
+          subject: '土耳其接送机预约',
+          direction: '服务类型',
+          pickup: '接机',
+          dropoff: '送机',
+          airport: '机场',
+          address: '地址',
+          dateTime: '日期时间',
+          passengers: '人数',
+          name: '联系人',
+          whatsapp: 'WhatsApp',
+          email: 'Email',
+          preferred: '优先联系',
+          quote: '预估报价',
+          distance: '预估距离',
+          custom: '请按此行程提供自定义报价',
+        }
+      : language === 'tr'
+      ? {
+          subject: 'Turkiye Havalimani Transfer Talebi',
+          direction: 'Hizmet Tipi',
+          pickup: 'Karsilama',
+          dropoff: 'Havalimanina Birakma',
+          airport: 'Havalimani',
+          address: 'Adres',
+          dateTime: 'Tarih Saat',
+          passengers: 'Yolcu',
+          name: 'Iletisim Adi',
+          whatsapp: 'WhatsApp',
+          email: 'Email',
+          preferred: 'Tercih Edilen Iletisim',
+          quote: 'Tahmini Fiyat',
+          distance: 'Tahmini Mesafe',
+          custom: 'Bu rota icin ozel fiyat rica ederim',
+        }
+      : {
+          subject: 'Turkey Airport Transfer Request',
+          direction: 'Service',
+          pickup: 'Airport Pickup',
+          dropoff: 'Airport Drop-off',
+          airport: 'Airport',
+          address: 'Address',
+          dateTime: 'Date & Time',
+          passengers: 'Passengers',
+          name: 'Contact Name',
+          whatsapp: 'WhatsApp',
+          email: 'Email',
+          preferred: 'Preferred Contact',
+          quote: 'Estimated Fare',
+          distance: 'Estimated Distance',
+          custom: 'Please send a custom quote for this route',
+        };
+
+  const bodyLines = [
+    labels.subject,
+    '',
+    `${labels.direction}: ${form.direction === 'pickup' ? labels.pickup : labels.dropoff}`,
+    `${labels.airport}: ${quote.airport?.name || form.airportCode}`,
+    `${labels.address}: ${form.address}`,
+    `${labels.dateTime}: ${form.dateTime.replace('T', ' ')}`,
+    `${labels.passengers}: ${form.passengers}`,
+    `${labels.name}: ${form.contactName}`,
+    form.whatsapp ? `${labels.whatsapp}: ${form.whatsapp}` : null,
+    form.email ? `${labels.email}: ${form.email}` : null,
+    `${labels.preferred}: ${form.preferredContact === 'email' ? labels.email : labels.whatsapp}`,
+    quote.distance_km ? `${labels.distance}: ${quote.distance_km} km` : null,
+    quote.price
+      ? `${labels.quote}: $${quote.price} ${quote.currency}`
+      : `${labels.quote}: ${labels.custom}`,
+  ].filter(Boolean);
+
+  return `mailto:bookings@grace.tr?subject=${encodeURIComponent(
+    labels.subject,
+  )}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+};
