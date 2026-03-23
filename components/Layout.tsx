@@ -19,8 +19,12 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
   const location = useLocation();
   const chinaInboundLabel =
     language === 'zh' ? '中国入境游' : language === 'tr' ? 'Cin Giris Turlari' : 'China Inbound';
+  const expoBusinessLabel =
+    language === 'zh' ? '会展服务' : language === 'tr' ? 'Fuar Hizmetleri' : 'Expo Services';
   const airportTransferLabel =
     language === 'zh' ? '接送机服务' : language === 'tr' ? 'Havalimani Transfer' : 'Airport Transfer';
+  const expoBusinessPath = '/china-inbound?category=expo';
+  const isExpoCategory = new URLSearchParams(location.search).get('category') === 'expo';
 
   useEffect(() => {
     if (isOpen) {
@@ -41,10 +45,25 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
     { name: t.nav?.tours || 'Tours', path: '/tours' },
     { name: airportTransferLabel, path: '/airport-transfer' },
     { name: chinaInboundLabel, path: '/china-inbound' },
-    { name: t.nav?.about || 'About Us', path: '/about' },
+    { name: expoBusinessLabel, path: expoBusinessPath },
     { name: t.nav?.tickets || 'Tickets', path: '/tickets' },
-    { name: t.nav?.contact || 'Contact', path: '/contact' },
   ];
+
+  const isLinkActive = (path: string) => {
+    if (path === expoBusinessPath) {
+      return location.pathname === '/china-inbound' && isExpoCategory;
+    }
+    if (path === '/china-inbound') {
+      return (
+        (location.pathname === '/china-inbound' && !isExpoCategory) ||
+        location.pathname.startsWith('/china-inbound/')
+      );
+    }
+    if (path === '/airport-transfer') {
+      return location.pathname === '/airport-transfer';
+    }
+    return location.pathname === path;
+  };
 
   const languages: { code: Language; label: string }[] = [
     { code: 'en', label: 'EN' },
@@ -70,11 +89,7 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
               key={link.path} 
               to={link.path} 
               className={`text-3xl md:text-4xl font-black uppercase tracking-tight md:tracking-tighter transition-all active:scale-95 ${
-                (link.path === '/china-inbound'
-                  ? location.pathname === '/china-inbound' || location.pathname.startsWith('/china-inbound/')
-                  : link.path === '/airport-transfer'
-                  ? location.pathname === '/airport-transfer'
-                  : location.pathname === link.path)
+                isLinkActive(link.path)
                   ? 'text-[#FF9D00]'
                   : 'text-white hover:text-[#FF9D00]'
               }`} 
@@ -117,8 +132,12 @@ const Navbar: React.FC = () => {
   const ticking = useRef(false);
   const chinaInboundLabel =
     language === 'zh' ? '中国入境游' : language === 'tr' ? 'Cin Giris Turlari' : 'China Inbound';
+  const expoBusinessLabel =
+    language === 'zh' ? '会展服务' : language === 'tr' ? 'Fuar Hizmetleri' : 'Expo Services';
   const airportTransferLabel =
     language === 'zh' ? '接送机服务' : language === 'tr' ? 'Havalimani Transfer' : 'Airport Transfer';
+  const expoBusinessPath = '/china-inbound?category=expo';
+  const isExpoCategory = new URLSearchParams(location.search).get('category') === 'expo';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -139,10 +158,25 @@ const Navbar: React.FC = () => {
     { name: t.nav?.tours || 'Tours', path: '/tours' },
     { name: airportTransferLabel, path: '/airport-transfer' },
     { name: chinaInboundLabel, path: '/china-inbound' },
-    { name: t.nav?.about || 'About Us', path: '/about' },
+    { name: expoBusinessLabel, path: expoBusinessPath },
     { name: t.nav?.tickets || 'Tickets', path: '/tickets' },
-    { name: t.nav?.contact || 'Contact', path: '/contact' },
   ];
+
+  const isLinkActive = (path: string) => {
+    if (path === expoBusinessPath) {
+      return location.pathname === '/china-inbound' && isExpoCategory;
+    }
+    if (path === '/china-inbound') {
+      return (
+        (location.pathname === '/china-inbound' && !isExpoCategory) ||
+        location.pathname.startsWith('/china-inbound/')
+      );
+    }
+    if (path === '/airport-transfer') {
+      return location.pathname === '/airport-transfer';
+    }
+    return location.pathname === path;
+  };
 
   const languages: { code: Language; label: string }[] = [
     { code: 'en', label: 'EN' },
@@ -181,11 +215,7 @@ const Navbar: React.FC = () => {
                 key={link.path}
                 to={link.path}
                 className={`text-[11px] lg:text-[12px] font-bold uppercase tracking-[0.14em] lg:tracking-[0.18em] transition-all hover:text-[#FF9D00] ${
-                  (link.path === '/china-inbound'
-                    ? location.pathname === '/china-inbound' || location.pathname.startsWith('/china-inbound/')
-                    : link.path === '/airport-transfer'
-                    ? location.pathname === '/airport-transfer'
-                    : location.pathname === link.path)
+                  isLinkActive(link.path)
                     ? 'text-[#FF9D00]'
                     : 'text-white/90'
                 }`}

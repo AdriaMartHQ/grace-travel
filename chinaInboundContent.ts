@@ -1,6 +1,6 @@
 import type { Language } from './translations';
 
-export type JourneyCategory = 'innovation' | 'classic';
+export type JourneyCategory = 'innovation' | 'classic' | 'expo';
 export type HighlightCategory = 'innovation' | 'heritage' | 'city';
 
 export interface JourneyDay {
@@ -493,6 +493,1558 @@ const chinaJourneySpotlights: Record<Language, Record<'r1' | 'r2' | 'r3', Journe
   },
 };
 
+const chinaExpoRoutesZh: Journey[] = [
+  {
+    id: 'x1',
+    slug: 'canton-fair-sourcing-service',
+    category: 'expo',
+    badge: '中国会展商务服务',
+    title: '广交会综合采购服务',
+    subtitle: '面向多行业采购客户的一站式中国参访与供应商筛选服务',
+    duration: '2026春季',
+    location: '广州',
+    image: chinaAssetImages.guangzhouNight,
+    heroImage: chinaAssetImages.guangzhouNight,
+    gallery: [
+      chinaAssetImages.guangzhouNight,
+      chinaAssetImages.yongqingFang,
+      chinaAssetImages.factoryLine,
+      chinaAssetImages.shenzhenNight,
+    ],
+    spotlights: [
+      {
+        label: '时间',
+        title: '第139届春季广交会',
+        summary:
+          '2026年4月15日至5月5日分三期举行，适合根据采购品类选择更匹配的参访窗口与重点展区。',
+        image: chinaAssetImages.guangzhouNight,
+      },
+      {
+        label: '客群',
+        title: '综合采购客户匹配度最高',
+        summary:
+          '特别适合贸易商、批发商、零售商，以及电器、建材、家具、家居、五金类采购客户。',
+        image: chinaAssetImages.factoryLine,
+      },
+      {
+        label: '价值',
+        title: '一次中国行完成多行业初筛',
+        summary:
+          '它的核心价值不是单一行业深挖，而是高效率比较供应商、看样品、看价格，并判断后续工厂考察方向。',
+        image: chinaAssetImages.yongqingFang,
+      },
+    ],
+    overview:
+      '广交会是中国最成熟的一站式综合采购平台之一，尤其适合首次来中国找供应商或希望一次覆盖多个行业的土耳其客户。我们围绕展前准备、现场翻译、供应商筛选和会后工厂预约，提供更完整的商务服务。',
+    highlights: [
+      '一次集中覆盖多个行业，适合多品类采购计划',
+      '可结合展期节奏筛选更精准的供应商名单',
+      '适合首次来华客户建立对中国供应链的整体判断',
+      '可衔接广州及珠三角工厂拜访与会后跟进',
+    ],
+    itinerary: [
+      {
+        day: '模块 01',
+        title: '展前注册与采购方向梳理',
+        description:
+          '根据客户关注品类协助判断期数、完成注册准备，并提前梳理重点展区、目标供应商与现场沟通重点。',
+      },
+      {
+        day: '模块 02',
+        title: '展馆陪同与翻译支持',
+        description:
+          '安排展馆内翻译陪同与商务协助，帮助客户更高效地看样品、问价格、比较起订量与合作条件。',
+      },
+      {
+        day: '模块 03',
+        title: '供应商筛选与会后整理',
+        description:
+          '围绕客户真正关心的价格、交期、品类完整度和配套能力，对展会接触到的供应商做初步筛选与分层。',
+      },
+      {
+        day: '模块 04',
+        title: '珠三角企业延伸拜访',
+        description:
+          '如客户有进一步合作意向，可继续安排广州、佛山、东莞、中山或深圳的工厂与企业实地拜访。',
+      },
+    ],
+    idealFor: [
+      '希望一次覆盖多行业的综合采购客户',
+      '首次来中国寻找供应商的贸易与分销客户',
+      '需要后续衔接工厂考察的批发与工程配套客户',
+    ],
+    serviceStandards: [
+      '展会注册与参访准备协助',
+      '中文与英语商务翻译陪同',
+      '供应商筛选与会后清单整理',
+      '珠三角工厂拜访预约与广州接待支持',
+    ],
+  },
+  {
+    id: 'x2',
+    slug: 'ciif-smart-manufacturing-service',
+    category: 'expo',
+    badge: '中国会展商务服务',
+    title: '工博会智能制造服务',
+    subtitle: '聚焦工业自动化、设备升级与智能工厂解决方案的专业会展商务服务',
+    duration: '2026.10',
+    location: '上海',
+    image: chinaAssetImages.factoryLine,
+    heroImage: chinaAssetImages.bayIndustry,
+    gallery: [
+      chinaAssetImages.factoryLine,
+      chinaAssetImages.bayIndustry,
+      chinaAssetImages.shanghaiNight,
+      chinaAssetImages.apolloDrive,
+    ],
+    spotlights: [
+      {
+        label: '时间',
+        title: '2026中国国际工业博览会',
+        summary: '展会将于2026年10月12日至16日在上海国家会展中心举行，主题更垂直，客户更精准。',
+        image: chinaAssetImages.factoryLine,
+      },
+      {
+        label: '客群',
+        title: '工业制造与设备客户更适配',
+        summary:
+          '适合工厂、制造企业、设备代理商、机器人、机床、工业自动化与能源装备客户。',
+        image: chinaAssetImages.bayIndustry,
+      },
+      {
+        label: '价值',
+        title: '比综合采购展更适合B端对接',
+        summary:
+          '它的核心不是看消费品，而是看设备升级、自动化改造、技术合作与产业链能力。',
+        image: chinaAssetImages.shanghaiNight,
+      },
+    ],
+    overview:
+      '工博会是更适合工业制造客户的专业展会产品。对于工厂老板、设备经销商或工业项目公司而言，它比综合消费展更聚焦，也更容易形成真正有价值的技术交流与商务合作。',
+    highlights: [
+      '围绕自动化、机器人、机床与智能制造展开',
+      '更适合设备选型、技术合作与产业升级对话',
+      '能够直接连接工业品牌、方案商与潜在渠道伙伴',
+      '适合叠加长三角制造企业拜访与工厂参观',
+    ],
+    itinerary: [
+      {
+        day: '模块 01',
+        title: '行业方向预判与展前清单整理',
+        description:
+          '根据客户所属行业与采购目标，提前整理建议展区、重点品牌与需要重点了解的技术方向。',
+      },
+      {
+        day: '模块 02',
+        title: '展会现场专业陪同',
+        description:
+          '围绕自动化、机器人、机床、能源装备等主题，安排更贴近工业语境的会展陪同与翻译服务。',
+      },
+      {
+        day: '模块 03',
+        title: '品牌筛选与合作对接',
+        description:
+          '会后整理重点品牌与方案商信息，帮助客户更快判断哪些对象适合继续进入代理或项目对接阶段。',
+      },
+      {
+        day: '模块 04',
+        title: '长三角工厂与企业延伸参访',
+        description:
+          '可根据客户需求继续安排上海、昆山、苏州、嘉兴等制造企业的实地拜访。',
+      },
+    ],
+    idealFor: [
+      '关注设备升级与自动化改造的工业客户',
+      '希望寻找品牌合作与渠道机会的设备代理商',
+      '需要把展会参访与工厂考察结合的企业代表团',
+    ],
+    serviceStandards: [
+      '工业展区参访路径规划',
+      '工业与设备类商务翻译陪同',
+      '重点品牌与方案商信息整理',
+      '长三角企业拜访预约与上海接待支持',
+    ],
+  },
+  {
+    id: 'x3',
+    slug: 'bauma-china-machinery-service',
+    category: 'expo',
+    badge: '中国会展商务服务',
+    title: 'bauma CHINA工程机械服务',
+    subtitle: '面向建筑、基建与设备渠道客户的工程机械及矿山设备专业参访服务',
+    duration: '2026.11',
+    location: '上海',
+    image: chinaAssetImages.bayIndustry,
+    heroImage: chinaAssetImages.factoryLine,
+    gallery: [
+      chinaAssetImages.bayIndustry,
+      chinaAssetImages.factoryLine,
+      chinaAssetImages.shanghaiNightAlt,
+      chinaAssetImages.shanghaiNight,
+    ],
+    spotlights: [
+      {
+        label: '时间',
+        title: '2026 bauma CHINA',
+        summary: '展会将于2026年11月24日至27日在上海新国际博览中心举行，聚焦工程机械与施工技术。',
+        image: chinaAssetImages.bayIndustry,
+      },
+      {
+        label: '客群',
+        title: '工程与矿业客户对口度高',
+        summary:
+          '适合建筑公司、工程承包商、矿业相关企业、工程机械代理商以及设备配件渠道客户。',
+        image: chinaAssetImages.factoryLine,
+      },
+      {
+        label: '价值',
+        title: '更容易进入代理与项目洽谈',
+        summary:
+          '相较综合展会，这类专业展更容易让客户直接围绕整机、配件、施工技术和项目需求展开沟通。',
+        image: chinaAssetImages.shanghaiNightAlt,
+      },
+    ],
+    overview:
+      'bauma CHINA 是中国工程机械领域非常重要的专业展会之一，更适合目标明确的项目型客户。对于来自建筑、矿业、工程承包与设备租赁领域的土耳其客户，这类参访通常比综合展更容易形成高质量商务对话。',
+    highlights: [
+      '整机、配件、矿山设备与施工技术覆盖较完整',
+      '行业集中度高，客户商业目标更清晰',
+      '适合设备代理、渠道合作和项目沟通',
+      '可延伸到品牌工厂、展厅或区域团队拜访',
+    ],
+    itinerary: [
+      {
+        day: '模块 01',
+        title: '设备方向梳理与目标品牌准备',
+        description:
+          '根据客户关注的设备类型、应用场景与代理目标，提前整理重点品牌与展区路线。',
+      },
+      {
+        day: '模块 02',
+        title: '展会陪同与需求翻译',
+        description:
+          '在现场围绕整机、配件、售后、交期和区域合作模式进行翻译支持与商务沟通辅助。',
+      },
+      {
+        day: '模块 03',
+        title: '品牌深聊与合作意向整理',
+        description:
+          '帮助客户把展会中收集到的信息按代理、采购、项目合作等不同方向做归纳，提升后续跟进效率。',
+      },
+      {
+        day: '模块 04',
+        title: '展后企业拜访与本地接待',
+        description:
+          '如客户希望进一步深入，可安排展后品牌展厅、工厂或中国团队的实地拜访与会谈。',
+      },
+    ],
+    idealFor: [
+      '建筑与工程承包相关企业',
+      '工程机械渠道商、配件商与设备租赁客户',
+      '需要直接对接品牌与项目资源的专业买家',
+    ],
+    serviceStandards: [
+      '工程机械类展前路线规划',
+      '设备与项目沟通翻译陪同',
+      '重点品牌会后信息归纳与筛选',
+      '上海本地商务接待与企业拜访支持',
+    ],
+  },
+  {
+    id: 'x4',
+    slug: 'auto-china-ev-smart-mobility-service',
+    category: 'expo',
+    badge: '中国会展商务服务',
+    title: '北京车展新能源汽车服务',
+    subtitle: '聚焦中国新能源汽车、智能驾驶与汽车产业趋势的商务参访服务',
+    duration: '2026.04-05',
+    location: '北京',
+    image: chinaAssetImages.apolloDrive,
+    heroImage: chinaAssetImages.forbiddenCityMoat,
+    gallery: [
+      chinaAssetImages.apolloDrive,
+      chinaAssetImages.forbiddenCityMoat,
+      chinaAssetImages.greatWallAlt,
+      chinaAssetImages.shanghaiNightAlt,
+    ],
+    spotlights: [
+      {
+        label: '时间',
+        title: '2026北京车展',
+        summary: '展会将于2026年4月24日至5月3日在北京举办，是观察中国汽车产业趋势的重要窗口。',
+        image: chinaAssetImages.forbiddenCityMoat,
+      },
+      {
+        label: '客群',
+        title: '汽车行业客户关注度高',
+        summary:
+          '适合汽车行业客户、汽配商、经销商、投资人，以及关注新能源汽车与智能驾驶的企业代表。',
+        image: chinaAssetImages.apolloDrive,
+      },
+      {
+        label: '价值',
+        title: '不只是看车，更是看趋势',
+        summary:
+          '这类参访更适合围绕中国新能源汽车、供应链创新和品牌变化建立判断，而不是停留在车型展示层面。',
+        image: chinaAssetImages.greatWallAlt,
+      },
+    ],
+    overview:
+      '北京车展的价值不只在于展示车型，而在于帮助客户快速理解中国汽车产业的变化速度。对于土耳其客户来说，它适合用于观察品牌、技术、智能化方向与未来合作机会，是典型的趋势型商务参访产品。',
+    highlights: [
+      '新能源汽车与智能驾驶话题集中呈现',
+      '适合经销、投资、汽配与产业合作客户',
+      '能够帮助客户快速建立对中国汽车趋势的判断',
+      '可叠加企业交流与产业链对话安排',
+    ],
+    itinerary: [
+      {
+        day: '模块 01',
+        title: '品牌与技术关注方向确认',
+        description:
+          '根据客户背景提前梳理重点品牌、技术方向和展馆路线，避免现场信息过载。',
+      },
+      {
+        day: '模块 02',
+        title: '展会参访与产业趋势讲解',
+        description:
+          '围绕新能源、智能驾驶、智能座舱与供应链创新，帮助客户更聚焦地理解展示内容。',
+      },
+      {
+        day: '模块 03',
+        title: '品牌对比与合作线索整理',
+        description:
+          '从品牌定位、产品节奏、技术方向与合作可能性几个维度，对客户重点关注对象做对比归纳。',
+      },
+      {
+        day: '模块 04',
+        title: '后续会谈与城市商务支持',
+        description:
+          '如客户需要，可继续安排北京本地商务会谈、企业交流与后续沟通支持。',
+      },
+    ],
+    idealFor: [
+      '汽车品牌、经销、投资与汽配行业客户',
+      '关注中国新能源与智能汽车趋势的企业代表',
+      '希望通过展会建立产业判断与合作线索的客户',
+    ],
+    serviceStandards: [
+      '重点品牌与展馆路线建议',
+      '汽车行业语境的商务翻译陪同',
+      '趋势整理与重点品牌信息汇总',
+      '北京城市商务接待与会谈支持',
+    ],
+  },
+  {
+    id: 'x5',
+    slug: 'cmef-medical-equipment-service',
+    category: 'expo',
+    badge: '中国会展商务服务',
+    title: 'CMEF医疗器械服务',
+    subtitle: '面向医疗采购、品牌代理与设备合作客户的专业会展参访服务',
+    duration: '2026.04',
+    location: '上海',
+    image: chinaAssetImages.shanghaiNight,
+    heroImage: chinaAssetImages.shanghaiNightAlt,
+    gallery: [
+      chinaAssetImages.shanghaiNight,
+      chinaAssetImages.shanghaiNightAlt,
+      chinaAssetImages.factoryLine,
+      chinaAssetImages.bayIndustry,
+    ],
+    spotlights: [
+      {
+        label: '时间',
+        title: '2026春季CMEF',
+        summary: '展会将于2026年4月9日至12日在上海国家会展中心举行，是中国医疗器械行业的重要平台。',
+        image: chinaAssetImages.shanghaiNightAlt,
+      },
+      {
+        label: '客群',
+        title: '医疗采购与代理客户更明确',
+        summary:
+          '适合医疗器械经销商、医院采购、诊所集团、康复设备客户与影像设备相关企业。',
+        image: chinaAssetImages.factoryLine,
+      },
+      {
+        label: '价值',
+        title: '更适合找品牌、找代理、找新品',
+        summary:
+          '相比泛行业展会，CMEF 的商业路径更清楚，客户通常能够更快进入品牌筛选与合作判断阶段。',
+        image: chinaAssetImages.bayIndustry,
+      },
+    ],
+    overview:
+      'CMEF 更适合目标清晰的医疗行业客户。无论是医疗器械经销、医院采购，还是康复设备与影像设备方向，这类产品都更强调新品观察、品牌筛选、合作评估与会后商务对接效率。',
+    highlights: [
+      '覆盖医疗器械全产业链与多个细分板块',
+      '适合新品考察、品牌筛选和代理合作',
+      '客户采购目标明确，商业转化路径更直接',
+      '可叠加企业拜访与专业翻译服务',
+    ],
+    itinerary: [
+      {
+        day: '模块 01',
+        title: '采购需求与品牌方向预判',
+        description:
+          '展前梳理客户重点关注的设备类型、采购方向与品牌层级，提高现场参访效率。',
+      },
+      {
+        day: '模块 02',
+        title: '展会陪同与专业沟通支持',
+        description:
+          '围绕设备功能、认证要求、渠道合作与售后支持等问题，提供更贴近医疗语境的翻译与陪同。',
+      },
+      {
+        day: '模块 03',
+        title: '候选品牌整理与合作判断',
+        description:
+          '帮助客户把接触到的品牌按产品匹配度、合作潜力和下一步沟通优先级做归纳。',
+      },
+      {
+        day: '模块 04',
+        title: '展后企业拜访与上海商务支持',
+        description:
+          '如有需要，可继续安排展后企业拜访、会谈支持与本地商务接待。',
+      },
+    ],
+    idealFor: [
+      '医疗器械经销与代理客户',
+      '医院采购与诊所集团相关负责人',
+      '康复、影像和专业设备方向的商务客户',
+    ],
+    serviceStandards: [
+      '医疗类展前需求梳理',
+      '专业翻译陪同与商务配对支持',
+      '重点品牌与产品信息归纳',
+      '企业拜访预约与上海接待服务',
+    ],
+  },
+  {
+    id: 'x6',
+    slug: 'ciie-china-market-entry-service',
+    category: 'expo',
+    badge: '中国会展商务服务',
+    title: '进博会中国市场进入服务',
+    subtitle: '面向希望进入中国市场的海外企业的参访、买家接触与渠道拓展服务',
+    duration: '2026.11',
+    location: '上海',
+    image: chinaAssetImages.shanghaiNightAlt,
+    heroImage: chinaAssetImages.shanghaiNight,
+    gallery: [
+      chinaAssetImages.shanghaiNightAlt,
+      chinaAssetImages.shanghaiNight,
+      chinaAssetImages.guangzhouNight,
+      chinaAssetImages.bayIndustry,
+    ],
+    spotlights: [
+      {
+        label: '时间',
+        title: '第9届中国国际进口博览会',
+        summary: '展会将于2026年11月5日至10日在上海举行，重点面向进入中国市场的海外品牌与企业。',
+        image: chinaAssetImages.shanghaiNight,
+      },
+      {
+        label: '客群',
+        title: '更适合想把产品卖进中国的企业',
+        summary:
+          '适合食品、消费品、健康、技术、服务贸易等方向，希望寻找中国买家和渠道伙伴的土耳其企业。',
+        image: chinaAssetImages.guangzhouNight,
+      },
+      {
+        label: '价值',
+        title: '不是采购型展会，而是市场进入平台',
+        summary:
+          '它的重点在于品牌展示、买家接触、渠道建立和市场验证，与采购型展会的逻辑完全不同。',
+        image: chinaAssetImages.bayIndustry,
+      },
+    ],
+    overview:
+      '进博会与采购型展会的逻辑完全不同。它更适合希望把土耳其产品卖进中国、寻找中国买家、建立品牌认知和探索渠道合作的客户，是典型的中国市场进入型商务服务产品。',
+    highlights: [
+      '适合做中国市场进入与渠道拓展',
+      '更强调买家接触、品牌展示与合作判断',
+      '适合食品、消费品、健康与服务贸易企业',
+      '可衔接渠道拜访、市场调研与本地会谈安排',
+    ],
+    itinerary: [
+      {
+        day: '模块 01',
+        title: '市场进入目标梳理',
+        description:
+          '在展前帮助客户明确参访目的，是以买家接触、品牌观察、渠道判断还是市场验证为优先。',
+      },
+      {
+        day: '模块 02',
+        title: '展会参访与重点资源筛选',
+        description:
+          '根据客户行业方向陪同参访，重点观察潜在买家、合作渠道与市场相关资源。',
+      },
+      {
+        day: '模块 03',
+        title: '渠道与合作线索整理',
+        description:
+          '围绕客户产品定位，整理值得继续跟进的买家、渠道伙伴和合作对象，形成更清晰的后续方向。',
+      },
+      {
+        day: '模块 04',
+        title: '上海延伸拜访与市场进入支持',
+        description:
+          '如客户希望进一步了解中国市场，可增加渠道拜访、商务会谈与本地市场进入咨询支持。',
+      },
+    ],
+    idealFor: [
+      '希望把土耳其产品卖进中国的企业',
+      '关注中国买家、渠道和品牌落地机会的客户',
+      '希望先做市场验证再决定投入节奏的企业代表',
+    ],
+    serviceStandards: [
+      '展前目标梳理与参访建议',
+      '会展陪同与中文商务支持',
+      '买家与渠道线索整理',
+      '上海本地商务会谈与渠道拜访支持',
+    ],
+  },
+];
+
+const chinaExpoRoutesEn: Journey[] = [
+  {
+    id: 'x1',
+    slug: 'canton-fair-sourcing-service',
+    category: 'expo',
+    badge: 'China Expo Business Services',
+    title: 'Canton Fair Sourcing Service',
+    subtitle: 'One-stop China expo support for multi-category sourcing and supplier screening',
+    duration: 'Spring 2026',
+    location: 'Guangzhou',
+    image: chinaAssetImages.guangzhouNight,
+    heroImage: chinaAssetImages.guangzhouNight,
+    gallery: [
+      chinaAssetImages.guangzhouNight,
+      chinaAssetImages.yongqingFang,
+      chinaAssetImages.factoryLine,
+      chinaAssetImages.shenzhenNight,
+    ],
+    spotlights: [
+      {
+        label: 'Timing',
+        title: 'The 139th Spring Canton Fair',
+        summary:
+          'Held from April 15 to May 5, 2026 across three phases, making it easier to match the visit window to the right sourcing categories.',
+        image: chinaAssetImages.guangzhouNight,
+      },
+      {
+        label: 'Clients',
+        title: 'Best suited to broad sourcing buyers',
+        summary:
+          'Especially relevant for traders, wholesalers, retailers, and buyers in electronics, building materials, furniture, homeware, and hardware.',
+        image: chinaAssetImages.factoryLine,
+      },
+      {
+        label: 'Value',
+        title: 'Cover multiple sectors in one China trip',
+        summary:
+          'Its main value is not deep industry specialization, but efficient comparison of suppliers, samples, price levels, and next-step factory visit potential.',
+        image: chinaAssetImages.yongqingFang,
+      },
+    ],
+    overview:
+      'The Canton Fair remains one of China’s most established one-stop sourcing platforms, especially for Turkey-facing clients who want either a first entry into Chinese supply chains or a broad cross-category sourcing trip. Our service combines pre-show preparation, onsite interpretation, supplier screening, and post-show factory visit support.',
+    highlights: [
+      'Covers multiple sectors in one concentrated sourcing window',
+      'Helps buyers screen supplier lists based on the right fair phase',
+      'Works well for first-time China sourcing clients building market judgment',
+      'Can be extended into post-fair factory visits across the Pearl River Delta',
+    ],
+    itinerary: [
+      {
+        day: 'Module 01',
+        title: 'Registration support and sourcing brief',
+        description:
+          'We help determine the right fair phase, complete registration prep, and structure the target halls, supplier types, and onsite discussion priorities in advance.',
+      },
+      {
+        day: 'Module 02',
+        title: 'Onsite interpretation and fair escorting',
+        description:
+          'Provide booth-by-booth interpretation and business support so clients can compare samples, prices, MOQs, and cooperation terms more efficiently.',
+      },
+      {
+        day: 'Module 03',
+        title: 'Supplier screening and post-show review',
+        description:
+          'We help filter fair contacts by price level, lead time, product depth, and support capability so the buyer can move faster after the show.',
+      },
+      {
+        day: 'Module 04',
+        title: 'Pearl River Delta factory extensions',
+        description:
+          'If the client wants to go deeper, we can continue with factory and company visits in Guangzhou, Foshan, Dongguan, Zhongshan, or Shenzhen.',
+      },
+    ],
+    idealFor: [
+      'Buyers who want broad multi-sector sourcing in one trip',
+      'Traders and distributors visiting China for supplier discovery',
+      'Wholesale or project-support clients who need post-fair factory follow-up',
+    ],
+    serviceStandards: [
+      'Fair registration and visit preparation support',
+      'Chinese-English business interpretation onsite',
+      'Supplier screening and post-show contact organization',
+      'Pearl River Delta factory booking and Guangzhou local support',
+    ],
+  },
+  {
+    id: 'x2',
+    slug: 'ciif-smart-manufacturing-service',
+    category: 'expo',
+    badge: 'China Expo Business Services',
+    title: 'CIIF Smart Manufacturing Service',
+    subtitle: 'A focused expo service around industrial automation, equipment upgrades, and smart factory solutions',
+    duration: '2026.10',
+    location: 'Shanghai',
+    image: chinaAssetImages.factoryLine,
+    heroImage: chinaAssetImages.bayIndustry,
+    gallery: [
+      chinaAssetImages.factoryLine,
+      chinaAssetImages.bayIndustry,
+      chinaAssetImages.shanghaiNight,
+      chinaAssetImages.apolloDrive,
+    ],
+    spotlights: [
+      {
+        label: 'Timing',
+        title: 'CIIF 2026 in Shanghai',
+        summary:
+          'Scheduled for October 12 to 16, 2026 at the National Exhibition and Convention Center, with a much more vertical industrial focus than general trade fairs.',
+        image: chinaAssetImages.factoryLine,
+      },
+      {
+        label: 'Clients',
+        title: 'Stronger fit for industrial buyers',
+        summary:
+          'Built for factories, manufacturers, equipment agents, robotics, machine tools, industrial automation, and energy equipment clients.',
+        image: chinaAssetImages.bayIndustry,
+      },
+      {
+        label: 'Value',
+        title: 'Better for B2B industrial decision-making',
+        summary:
+          'The goal is not consumer product sourcing, but equipment upgrades, automation strategy, technical cooperation, and understanding industrial capability.',
+        image: chinaAssetImages.shanghaiNight,
+      },
+    ],
+    overview:
+      'CIIF is a much stronger product for industrial and manufacturing clients than a broad consumer fair. For factory owners, equipment distributors, and industrial project companies, it is more focused and far more likely to generate high-value technical conversations and business opportunities.',
+    highlights: [
+      'Centered on automation, robotics, machine tools, and smart manufacturing',
+      'More suitable for equipment selection and industrial cooperation',
+      'Connects buyers with industrial brands, solution providers, and channel partners',
+      'Can be paired with factory and company visits across the Yangtze River Delta',
+    ],
+    itinerary: [
+      {
+        day: 'Module 01',
+        title: 'Pre-show industry mapping',
+        description:
+          'We prepare a focused shortlist of halls, brands, and technical themes based on the client’s sector and investment priorities.',
+      },
+      {
+        day: 'Module 02',
+        title: 'Onsite industrial fair support',
+        description:
+          'Interpretation and guidance are aligned with industrial language, especially around automation, robotics, machine tools, and energy equipment.',
+      },
+      {
+        day: 'Module 03',
+        title: 'Brand screening and cooperation review',
+        description:
+          'After the fair, we help sort priority brands and solution providers according to agency potential, procurement fit, and project relevance.',
+      },
+      {
+        day: 'Module 04',
+        title: 'Yangtze Delta factory extensions',
+        description:
+          'Where needed, visits can continue into Shanghai, Kunshan, Suzhou, Jiaxing, and other manufacturing hubs in the region.',
+      },
+    ],
+    idealFor: [
+      'Industrial buyers planning equipment upgrades and automation changes',
+      'Equipment distributors looking for brand or channel opportunities',
+      'Corporate delegations that want to combine fair visits with factory tours',
+    ],
+    serviceStandards: [
+      'Industrial hall planning and route design',
+      'Industrial and equipment-focused business interpretation',
+      'Priority brand and solution-provider shortlisting',
+      'Yangtze Delta factory booking and Shanghai local support',
+    ],
+  },
+  {
+    id: 'x3',
+    slug: 'bauma-china-machinery-service',
+    category: 'expo',
+    badge: 'China Expo Business Services',
+    title: 'bauma CHINA Machinery Service',
+    subtitle: 'A professional expo service for construction, infrastructure, mining, and heavy equipment channels',
+    duration: '2026.11',
+    location: 'Shanghai',
+    image: chinaAssetImages.bayIndustry,
+    heroImage: chinaAssetImages.factoryLine,
+    gallery: [
+      chinaAssetImages.bayIndustry,
+      chinaAssetImages.factoryLine,
+      chinaAssetImages.shanghaiNightAlt,
+      chinaAssetImages.shanghaiNight,
+    ],
+    spotlights: [
+      {
+        label: 'Timing',
+        title: 'bauma CHINA 2026',
+        summary:
+          'Scheduled for November 24 to 27, 2026 at the Shanghai New International Expo Centre, focusing on construction machinery and site technologies.',
+        image: chinaAssetImages.bayIndustry,
+      },
+      {
+        label: 'Clients',
+        title: 'High relevance for engineering and mining buyers',
+        summary:
+          'Best suited to construction firms, contractors, mining companies, machinery agents, spare-parts channels, and equipment-focused buyers.',
+        image: chinaAssetImages.factoryLine,
+      },
+      {
+        label: 'Value',
+        title: 'Easier path into agency and project discussions',
+        summary:
+          'Compared with a general fair, this type of specialist exhibition makes it easier to move directly into machinery, parts, service, and project-level discussions.',
+        image: chinaAssetImages.shanghaiNightAlt,
+      },
+    ],
+    overview:
+      'bauma CHINA is one of the key professional exhibitions in China’s machinery sector and fits well with project-driven clients. For Turkey-facing businesses in construction, mining, contracting, and equipment rental, this usually creates stronger and more focused business conversations than a general sourcing fair.',
+    highlights: [
+      'Covers machinery, spare parts, mining equipment, and construction technologies',
+      'Industry concentration is high and buyer intent is clearer',
+      'Well suited to agency talks, procurement discussions, and project alignment',
+      'Can be extended into showrooms, factories, or local brand teams after the fair',
+    ],
+    itinerary: [
+      {
+        day: 'Module 01',
+        title: 'Equipment brief and target brand shortlist',
+        description:
+          'We structure the visit around the equipment categories, use cases, and agency goals that matter most to the client.',
+      },
+      {
+        day: 'Module 02',
+        title: 'Onsite machinery fair escorting',
+        description:
+          'Provide interpretation around units, parts, lead times, service capacity, and regional cooperation models while moving through the fair.',
+      },
+      {
+        day: 'Module 03',
+        title: 'Follow-up prioritization by cooperation type',
+        description:
+          'We help sort the fair’s contacts by agency, procurement, project, and channel relevance so the client can move faster after the visit.',
+      },
+      {
+        day: 'Module 04',
+        title: 'Post-fair company visits and local support',
+        description:
+          'Where needed, we can extend the trip into showrooms, factories, or China team meetings for deeper discussions.',
+      },
+    ],
+    idealFor: [
+      'Construction, engineering, and contracting companies',
+      'Machinery channels, parts distributors, and rental-oriented buyers',
+      'Professional buyers who need direct access to brands and project resources',
+    ],
+    serviceStandards: [
+      'Pre-fair machinery route planning',
+      'Equipment and project interpretation support',
+      'Post-fair brand screening and contact sorting',
+      'Shanghai business reception and company-visit support',
+    ],
+  },
+  {
+    id: 'x4',
+    slug: 'auto-china-ev-smart-mobility-service',
+    category: 'expo',
+    badge: 'China Expo Business Services',
+    title: 'Auto China EV Service',
+    subtitle: 'A business visit product focused on China’s EV, smart driving, and automotive trend shifts',
+    duration: '2026.04-05',
+    location: 'Beijing',
+    image: chinaAssetImages.apolloDrive,
+    heroImage: chinaAssetImages.forbiddenCityMoat,
+    gallery: [
+      chinaAssetImages.apolloDrive,
+      chinaAssetImages.forbiddenCityMoat,
+      chinaAssetImages.greatWallAlt,
+      chinaAssetImages.shanghaiNightAlt,
+    ],
+    spotlights: [
+      {
+        label: 'Timing',
+        title: 'Auto China 2026 in Beijing',
+        summary:
+          'Running from April 24 to May 3, 2026, this show is one of the clearest windows into China’s changing automotive landscape.',
+        image: chinaAssetImages.forbiddenCityMoat,
+      },
+      {
+        label: 'Clients',
+        title: 'Strong fit for automotive-facing buyers',
+        summary:
+          'Relevant for auto-industry clients, parts distributors, dealers, investors, and companies watching EV and smart-mobility trends.',
+        image: chinaAssetImages.apolloDrive,
+      },
+      {
+        label: 'Value',
+        title: 'More than vehicles, it is about direction',
+        summary:
+          'The strongest value lies in reading brand shifts, EV strategy, smart-driving momentum, and supply-chain innovation rather than just viewing car models.',
+        image: chinaAssetImages.greatWallAlt,
+      },
+    ],
+    overview:
+      'Auto China matters because it helps clients understand how quickly China’s automotive sector is evolving. For Turkey-facing partners, it works best as a trend-reading and industry-orientation product: a way to look at brands, technology, smart mobility, and future cooperation possibilities with more clarity.',
+    highlights: [
+      'Brings EV and smart-driving conversations into one concentrated viewing window',
+      'Works for dealers, investors, parts players, and broader automotive partners',
+      'Helps visitors form a faster judgment on China’s automotive direction',
+      'Can be paired with brand meetings and supply-chain conversations after the show',
+    ],
+    itinerary: [
+      {
+        day: 'Module 01',
+        title: 'Brand and technology focus planning',
+        description:
+          'Before the show, we help narrow the visit around the brands, technologies, and halls most relevant to the client’s role and goals.',
+      },
+      {
+        day: 'Module 02',
+        title: 'Expo visit and trend interpretation',
+        description:
+          'The visit is guided around EVs, smart driving, intelligent cabins, and supply-chain shifts so the client can read the exhibition more effectively.',
+      },
+      {
+        day: 'Module 03',
+        title: 'Brand comparison and follow-up priorities',
+        description:
+          'We organize the client’s observations around positioning, product rhythm, technology direction, and cooperation potential.',
+      },
+      {
+        day: 'Module 04',
+        title: 'Beijing business meetings and local support',
+        description:
+          'If needed, the visit can continue with local meetings, brand exchanges, or broader business support in Beijing.',
+      },
+    ],
+    idealFor: [
+      'Automotive brands, dealers, investors, and parts-sector visitors',
+      'Companies tracking China’s EV and smart-mobility direction',
+      'Clients using the fair to build market judgment and cooperation leads',
+    ],
+    serviceStandards: [
+      'Priority brand and hall route recommendations',
+      'Automotive-context business interpretation support',
+      'Trend notes and key-brand information summaries',
+      'Beijing business reception and meeting support',
+    ],
+  },
+  {
+    id: 'x5',
+    slug: 'cmef-medical-equipment-service',
+    category: 'expo',
+    badge: 'China Expo Business Services',
+    title: 'CMEF Medical Equipment Service',
+    subtitle: 'A professional expo support product for medical procurement, brand agency, and equipment cooperation',
+    duration: '2026.04',
+    location: 'Shanghai',
+    image: chinaAssetImages.shanghaiNight,
+    heroImage: chinaAssetImages.shanghaiNightAlt,
+    gallery: [
+      chinaAssetImages.shanghaiNight,
+      chinaAssetImages.shanghaiNightAlt,
+      chinaAssetImages.factoryLine,
+      chinaAssetImages.bayIndustry,
+    ],
+    spotlights: [
+      {
+        label: 'Timing',
+        title: 'Spring CMEF 2026',
+        summary:
+          'Scheduled for April 9 to 12, 2026 at the National Exhibition and Convention Center in Shanghai, it remains one of China’s key medical equipment platforms.',
+        image: chinaAssetImages.shanghaiNightAlt,
+      },
+      {
+        label: 'Clients',
+        title: 'Clear fit for medical procurement and agencies',
+        summary:
+          'Well suited to medical equipment distributors, hospital buyers, clinic groups, rehabilitation-focused buyers, and imaging-related companies.',
+        image: chinaAssetImages.factoryLine,
+      },
+      {
+        label: 'Value',
+        title: 'Best used for brand, agency, and product screening',
+        summary:
+          'Compared with broad cross-sector fairs, CMEF offers a more direct path into product assessment, agency evaluation, and supplier selection.',
+        image: chinaAssetImages.bayIndustry,
+      },
+    ],
+    overview:
+      'CMEF is best used for clients with a clear healthcare objective. Whether the focus is distribution, hospital procurement, rehabilitation, or imaging devices, the value lies in structured product observation, brand screening, cooperation review, and faster post-show follow-up.',
+    highlights: [
+      'Covers the full medical equipment chain across key sub-sectors',
+      'Strong fit for new-product discovery, brand screening, and agency talks',
+      'Buyer intentions are usually clearer and more commercially direct',
+      'Can be extended into company visits and specialist interpretation support',
+    ],
+    itinerary: [
+      {
+        day: 'Module 01',
+        title: 'Procurement brief and brand-direction setup',
+        description:
+          'We structure the visit around the client’s target device categories, procurement goals, and preferred brand level before the fair begins.',
+      },
+      {
+        day: 'Module 02',
+        title: 'Onsite medical interpretation support',
+        description:
+          'Interpretation is aligned with technical specifications, certification questions, distribution models, and after-sales concerns common in medical discussions.',
+      },
+      {
+        day: 'Module 03',
+        title: 'Candidate brand review and next-step judgment',
+        description:
+          'We help organize the fair’s contacts by product fit, partnership potential, and urgency for follow-up after the event.',
+      },
+      {
+        day: 'Module 04',
+        title: 'Post-show company visits and Shanghai support',
+        description:
+          'Where needed, the trip can continue with company visits, meetings, and Shanghai-based business support.',
+      },
+    ],
+    idealFor: [
+      'Medical equipment distributors and agency-side buyers',
+      'Hospital procurement teams and clinic-group decision makers',
+      'Commercial visitors focused on rehab, imaging, and specialist devices',
+    ],
+    serviceStandards: [
+      'Medical-fair visit planning based on procurement goals',
+      'Specialist interpretation and business matching support',
+      'Brand and product information screening',
+      'Company-visit booking and Shanghai reception support',
+    ],
+  },
+  {
+    id: 'x6',
+    slug: 'ciie-china-market-entry-service',
+    category: 'expo',
+    badge: 'China Expo Business Services',
+    title: 'CIIE China Market Entry Service',
+    subtitle: 'A business-support product for overseas companies seeking buyers, channels, and entry paths into China',
+    duration: '2026.11',
+    location: 'Shanghai',
+    image: chinaAssetImages.shanghaiNightAlt,
+    heroImage: chinaAssetImages.shanghaiNight,
+    gallery: [
+      chinaAssetImages.shanghaiNightAlt,
+      chinaAssetImages.shanghaiNight,
+      chinaAssetImages.guangzhouNight,
+      chinaAssetImages.bayIndustry,
+    ],
+    spotlights: [
+      {
+        label: 'Timing',
+        title: 'The 9th China International Import Expo',
+        summary:
+          'Running from November 5 to 10, 2026 in Shanghai, it is one of the clearest platforms for overseas brands studying China market entry.',
+        image: chinaAssetImages.shanghaiNight,
+      },
+      {
+        label: 'Clients',
+        title: 'Built for companies selling into China',
+        summary:
+          'A strong match for Turkey-based brands in food, consumer products, health, technology, and services that want Chinese buyers and channel partners.',
+        image: chinaAssetImages.guangzhouNight,
+      },
+      {
+        label: 'Value',
+        title: 'Not a sourcing fair but a market-entry platform',
+        summary:
+          'Its value comes from buyer exposure, brand visibility, channel discovery, and early market validation rather than buying from China.',
+        image: chinaAssetImages.bayIndustry,
+      },
+    ],
+    overview:
+      'CIIE follows a completely different commercial logic from procurement fairs. It fits companies that want to sell Turkish products into China, meet buyers, build brand awareness, and evaluate channel opportunities. That makes it a true China-market-entry business service rather than a sourcing trip.',
+    highlights: [
+      'Designed around market entry and channel development in China',
+      'More relevant for buyer exposure, brand visibility, and partner discovery',
+      'Works well for food, consumer, health, technology, and service-trade clients',
+      'Can be extended into channel visits, market sounding, and local business meetings',
+    ],
+    itinerary: [
+      {
+        day: 'Module 01',
+        title: 'Market-entry objective setting',
+        description:
+          'Before the show, we help define whether the priority is buyer discovery, brand observation, channel judgment, or broader market validation.',
+      },
+      {
+        day: 'Module 02',
+        title: 'Expo visit and priority-resource screening',
+        description:
+          'The fair is approached through the lens of potential buyers, channel partners, and market-facing opportunities relevant to the client’s sector.',
+      },
+      {
+        day: 'Module 03',
+        title: 'Buyer and channel lead review',
+        description:
+          'We organize the strongest buyer, partner, and channel leads into a clearer post-show follow-up structure.',
+      },
+      {
+        day: 'Module 04',
+        title: 'Shanghai follow-up and local market support',
+        description:
+          'Where needed, we continue with channel visits, business meetings, and practical local support for China market-entry evaluation.',
+      },
+    ],
+    idealFor: [
+      'Companies aiming to sell Turkish products into China',
+      'Brands looking for Chinese buyers, channels, and market partners',
+      'Businesses that want early validation before committing more deeply to China',
+    ],
+    serviceStandards: [
+      'Pre-show market-entry briefing and visit planning',
+      'Onsite expo support and Chinese-language business assistance',
+      'Buyer and channel lead organization',
+      'Shanghai-based meetings and channel-visit support',
+    ],
+  },
+];
+
+const chinaExpoRoutesTr: Journey[] = [
+  {
+    id: 'x1',
+    slug: 'canton-fair-sourcing-service',
+    category: 'expo',
+    badge: 'Çin Fuar İş Hizmetleri',
+    title: 'Canton Fair Tedarik Hizmeti',
+    subtitle: 'Çok kategorili satın alma ve tedarikçi elemesi için tek duraklı Çin fuar destek hizmeti',
+    duration: '2026 İlkbahar',
+    location: 'Guangzhou',
+    image: chinaAssetImages.guangzhouNight,
+    heroImage: chinaAssetImages.guangzhouNight,
+    gallery: [
+      chinaAssetImages.guangzhouNight,
+      chinaAssetImages.yongqingFang,
+      chinaAssetImages.factoryLine,
+      chinaAssetImages.shenzhenNight,
+    ],
+    spotlights: [
+      {
+        label: 'Tarih',
+        title: '139. Bahar Canton Fair',
+        summary:
+          '15 Nisan ile 5 Mayıs 2026 arasında üç faz halinde düzenlenir; böylece ziyaret penceresi satın alma kategorilerine göre daha doğru planlanabilir.',
+        image: chinaAssetImages.guangzhouNight,
+      },
+      {
+        label: 'Müşteri',
+        title: 'Geniş satın alma profili için en güçlü eşleşme',
+        summary:
+          'Özellikle tüccarlar, toptancılar, perakendeciler ve elektronik, yapı malzemesi, mobilya, ev yaşamı ve hırdavat alıcıları için uygundur.',
+        image: chinaAssetImages.factoryLine,
+      },
+      {
+        label: 'Değer',
+        title: 'Tek Çin seyahatinde çok sektörlü ön eleme',
+        summary:
+          'Asıl değer derin tek sektör uzmanlığından değil; tedarikçileri, numuneleri, fiyat seviyelerini ve fabrika ziyareti potansiyelini hızla karşılaştırmaktan gelir.',
+        image: chinaAssetImages.yongqingFang,
+      },
+    ],
+    overview:
+      'Canton Fair, Çin’in en köklü tek duraklı tedarik platformlarından biridir. Özellikle Çin tedarik zincirine ilk kez girecek veya tek seyahatte çok sektörlü satın alma yapmak isteyen Türkiye odaklı müşteriler için güçlü bir başlangıç noktasıdır. Hizmetimiz fuar öncesi hazırlık, saha çevirisi, tedarikçi elemesi ve fuar sonrası fabrika ziyareti desteğini bir araya getirir.',
+    highlights: [
+      'Tek pencerede birden fazla sektörü kapsar',
+      'Doğru fuar fazına göre daha isabetli tedarikçi elemesi yapılabilir',
+      'Çin pazarını ilk kez değerlendiren müşteriler için güçlü bir giriş sağlar',
+      'Fuar sonrası İnci Nehri Deltası fabrika ziyaretleriyle devam edebilir',
+    ],
+    itinerary: [
+      {
+        day: 'Modül 01',
+        title: 'Kayıt desteği ve satın alma çerçevesi',
+        description:
+          'Müşterinin ürün ilgisine göre doğru faz belirlenir; kayıt hazırlığı tamamlanır ve önceden salon, tedarikçi tipi ve görüşme öncelikleri yapılandırılır.',
+      },
+      {
+        day: 'Modül 02',
+        title: 'Sahada çeviri ve fuar refakati',
+        description:
+          'Numune, fiyat, MOQ ve iş birliği koşullarını daha hızlı karşılaştırabilmek için saha içi çeviri ve iş desteği sağlanır.',
+      },
+      {
+        day: 'Modül 03',
+        title: 'Tedarikçi elemesi ve fuar sonrası tasnif',
+        description:
+          'Toplanan bağlantılar fiyat seviyesi, teslim süresi, ürün derinliği ve destek kapasitesi açısından ön elemeden geçirilir.',
+      },
+      {
+        day: 'Modül 04',
+        title: 'İnci Nehri Deltası fabrika uzantıları',
+        description:
+          'İhtiyaç halinde Guangzhou, Foshan, Dongguan, Zhongshan veya Shenzhen’de fabrika ve şirket ziyaretleriyle devam edilir.',
+      },
+    ],
+    idealFor: [
+      'Tek seyahatte çok sektörlü satın alma yapmak isteyen alıcılar',
+      'Çin’de tedarikçi keşfi yapacak tüccarlar ve distribütörler',
+      'Fuar sonrası fabrika takibi gerektiren toptan ve proje destek müşterileri',
+    ],
+    serviceStandards: [
+      'Fuar kaydı ve ziyaret hazırlık desteği',
+      'Çince-İngilizce iş çevirisi refakati',
+      'Tedarikçi elemesi ve fuar sonrası iletişim düzeni',
+      'İnci Nehri Deltası fabrika rezervasyonu ve Guangzhou yerel desteği',
+    ],
+  },
+  {
+    id: 'x2',
+    slug: 'ciif-smart-manufacturing-service',
+    category: 'expo',
+    badge: 'Çin Fuar İş Hizmetleri',
+    title: 'CIIF Akıllı Üretim Hizmeti',
+    subtitle: 'Endüstriyel otomasyon, ekipman yenileme ve akıllı fabrika çözümlerine odaklanan profesyonel fuar hizmeti',
+    duration: '2026.10',
+    location: 'Shanghai',
+    image: chinaAssetImages.factoryLine,
+    heroImage: chinaAssetImages.bayIndustry,
+    gallery: [
+      chinaAssetImages.factoryLine,
+      chinaAssetImages.bayIndustry,
+      chinaAssetImages.shanghaiNight,
+      chinaAssetImages.apolloDrive,
+    ],
+    spotlights: [
+      {
+        label: 'Tarih',
+        title: 'CIIF 2026 Şanghay',
+        summary:
+          '12-16 Ekim 2026 tarihlerinde Ulusal Sergi ve Kongre Merkezi’nde yapılacak; genel ticaret fuarlarına göre çok daha dikey bir sanayi odağı sunacaktır.',
+        image: chinaAssetImages.factoryLine,
+      },
+      {
+        label: 'Müşteri',
+        title: 'Sanayi alıcıları için daha güçlü uyum',
+        summary:
+          'Fabrikalar, üreticiler, ekipman acenteleri, robotik, takım tezgahı, endüstriyel otomasyon ve enerji ekipmanı müşterileri için uygundur.',
+        image: chinaAssetImages.bayIndustry,
+      },
+      {
+        label: 'Değer',
+        title: 'B2B endüstriyel kararlar için daha uygun',
+        summary:
+          'Odak tüketim ürünü almak değil; ekipman yenilemesi, otomasyon stratejisi, teknik iş birliği ve endüstriyel kapasiteyi anlamaktır.',
+        image: chinaAssetImages.shanghaiNight,
+      },
+    ],
+    overview:
+      'CIIF, geniş tüketim fuarlarına kıyasla sanayi ve üretim müşterileri için çok daha güçlü bir üründür. Fabrika sahipleri, ekipman distribütörleri ve endüstriyel proje şirketleri için daha odaklıdır ve daha yüksek değerli teknik görüşmelere kapı açar.',
+    highlights: [
+      'Otomasyon, robotik, takım tezgahı ve akıllı üretim ekseninde şekillenir',
+      'Ekipman seçimi ve sanayi iş birliği için daha uygundur',
+      'Alıcıları sanayi markaları, çözüm sağlayıcılar ve kanal ortaklarıyla buluşturur',
+      'Yangtze Deltası fabrika ziyaretleriyle birleştirilebilir',
+    ],
+    itinerary: [
+      {
+        day: 'Modül 01',
+        title: 'Fuar öncesi sektör haritalaması',
+        description:
+          'Müşterinin sektörüne ve yatırım önceliklerine göre hedef salonlar, markalar ve teknik temalar önceden hazırlanır.',
+      },
+      {
+        day: 'Modül 02',
+        title: 'Sahada endüstriyel fuar refakati',
+        description:
+          'Çeviri ve yönlendirme; otomasyon, robotik, takım tezgahı ve enerji ekipmanı gibi alanlarda daha doğru sanayi diliyle yürütülür.',
+      },
+      {
+        day: 'Modül 03',
+        title: 'Marka elemesi ve iş birliği değerlendirmesi',
+        description:
+          'Fuar sonrası öncelikli markalar ve çözüm sağlayıcılar acentelik, tedarik uyumu ve proje ilgisi açısından tasnif edilir.',
+      },
+      {
+        day: 'Modül 04',
+        title: 'Yangtze Deltası fabrika uzantıları',
+        description:
+          'Gerektiğinde ziyaret Şanghay, Kunshan, Suzhou, Jiaxing ve benzeri üretim merkezlerine taşınabilir.',
+      },
+    ],
+    idealFor: [
+      'Ekipman yenilemesi ve otomasyon planlayan sanayi alıcıları',
+      'Marka ve kanal fırsatı arayan ekipman distribütörleri',
+      'Fuar ziyaretini fabrika turuyla birleştirmek isteyen heyetler',
+    ],
+    serviceStandards: [
+      'Sanayi salonu planlama ve rota tasarımı',
+      'Sanayi ve ekipman odaklı iş çevirisi',
+      'Öncelikli marka ve çözüm sağlayıcı kısa listesi',
+      'Yangtze Deltası fabrika rezervasyonu ve Şanghay yerel desteği',
+    ],
+  },
+  {
+    id: 'x3',
+    slug: 'bauma-china-machinery-service',
+    category: 'expo',
+    badge: 'Çin Fuar İş Hizmetleri',
+    title: 'bauma CHINA Makine Hizmeti',
+    subtitle: 'İnşaat, altyapı, madencilik ve ağır ekipman kanalları için profesyonel fuar hizmeti',
+    duration: '2026.11',
+    location: 'Shanghai',
+    image: chinaAssetImages.bayIndustry,
+    heroImage: chinaAssetImages.factoryLine,
+    gallery: [
+      chinaAssetImages.bayIndustry,
+      chinaAssetImages.factoryLine,
+      chinaAssetImages.shanghaiNightAlt,
+      chinaAssetImages.shanghaiNight,
+    ],
+    spotlights: [
+      {
+        label: 'Tarih',
+        title: 'bauma CHINA 2026',
+        summary:
+          '24-27 Kasım 2026 tarihlerinde Şanghay Yeni Uluslararası Fuar Merkezi’nde yapılacak; inşaat makineleri ve saha teknolojilerine odaklanır.',
+        image: chinaAssetImages.bayIndustry,
+      },
+      {
+        label: 'Müşteri',
+        title: 'Mühendislik ve madencilik için yüksek uygunluk',
+        summary:
+          'İnşaat firmaları, müteahhitler, madencilik şirketleri, makine acenteleri, yedek parça kanalları ve ekipman alıcıları için uygundur.',
+        image: chinaAssetImages.factoryLine,
+      },
+      {
+        label: 'Değer',
+        title: 'Acentelik ve proje görüşmelerine daha hızlı geçiş',
+        summary:
+          'Genel fuarlara göre bu tip uzman fuarlar; makine, parça, servis ve proje seviyesindeki görüşmelere daha doğrudan geçiş sağlar.',
+        image: chinaAssetImages.shanghaiNightAlt,
+      },
+    ],
+    overview:
+      'bauma CHINA, Çin makine sektörünün öne çıkan profesyonel fuarlarından biridir ve proje odaklı müşteriler için güçlü bir eşleşme sunar. İnşaat, madencilik, taahhüt ve ekipman kiralama alanındaki Türkiye odaklı firmalar için genel tedarik fuarlarına göre daha odaklı ve verimli görüşmeler üretir.',
+    highlights: [
+      'Makine, yedek parça, madencilik ekipmanı ve saha teknolojilerini kapsar',
+      'Sektör yoğunluğu yüksek, müşteri niyeti daha nettir',
+      'Acentelik, tedarik ve proje görüşmeleri için uygundur',
+      'Fuar sonrası showroom, fabrika veya yerel marka ekipleriyle devam edebilir',
+    ],
+    itinerary: [
+      {
+        day: 'Modül 01',
+        title: 'Ekipman özeti ve hedef marka listesi',
+        description:
+          'Ziyaret; müşterinin ekipman kategorileri, kullanım senaryoları ve acentelik hedefleri etrafında önceden yapılandırılır.',
+      },
+      {
+        day: 'Modül 02',
+        title: 'Sahada makine fuarı refakati',
+        description:
+          'Birimler, yedek parçalar, teslim süreleri, servis kapasitesi ve bölgesel iş birliği modelleri üzerinden çeviri desteği sağlanır.',
+      },
+      {
+        day: 'Modül 03',
+        title: 'İş birliği türüne göre önceliklendirme',
+        description:
+          'Toplanan bağlantılar acentelik, satın alma, proje ve kanal uygunluğu açısından ayrıştırılarak takip süreci hızlandırılır.',
+      },
+      {
+        day: 'Modül 04',
+        title: 'Fuar sonrası şirket ziyaretleri',
+        description:
+          'Gerekirse ziyaret showroom, fabrika veya Çin ekipleriyle daha derin toplantılara uzatılabilir.',
+      },
+    ],
+    idealFor: [
+      'İnşaat, mühendislik ve taahhüt şirketleri',
+      'Makine kanalları, yedek parça distribütörleri ve kiralama odaklı alıcılar',
+      'Markalara ve proje kaynaklarına doğrudan erişmek isteyen profesyonel alıcılar',
+    ],
+    serviceStandards: [
+      'Fuar öncesi makine rota planlaması',
+      'Ekipman ve proje çeviri desteği',
+      'Fuar sonrası marka elemesi ve ilişki tasnifi',
+      'Şanghay iş karşılama ve şirket ziyareti desteği',
+    ],
+  },
+  {
+    id: 'x4',
+    slug: 'auto-china-ev-smart-mobility-service',
+    category: 'expo',
+    badge: 'Çin Fuar İş Hizmetleri',
+    title: 'Auto China EV Hizmeti',
+    subtitle: 'Çin’in elektrikli araç, akıllı sürüş ve otomotiv trendlerine odaklanan iş ziyareti ürünü',
+    duration: '2026.04-05',
+    location: 'Beijing',
+    image: chinaAssetImages.apolloDrive,
+    heroImage: chinaAssetImages.forbiddenCityMoat,
+    gallery: [
+      chinaAssetImages.apolloDrive,
+      chinaAssetImages.forbiddenCityMoat,
+      chinaAssetImages.greatWallAlt,
+      chinaAssetImages.shanghaiNightAlt,
+    ],
+    spotlights: [
+      {
+        label: 'Tarih',
+        title: 'Auto China 2026 Pekin',
+        summary:
+          '24 Nisan ile 3 Mayıs 2026 arasında düzenlenecek; Çin otomotiv dünyasındaki değişimi okumak için en net pencerelerden biridir.',
+        image: chinaAssetImages.forbiddenCityMoat,
+      },
+      {
+        label: 'Müşteri',
+        title: 'Otomotiv odaklı alıcılar için güçlü uyum',
+        summary:
+          'Otomotiv müşterileri, yedek parça dağıtıcıları, bayiler, yatırımcılar ve EV ile akıllı mobiliteyi takip eden firmalar için uygundur.',
+        image: chinaAssetImages.apolloDrive,
+      },
+      {
+        label: 'Değer',
+        title: 'Sadece araç değil, sektör yönü okunur',
+        summary:
+          'En büyük değer; marka değişimlerini, EV stratejilerini, akıllı sürüş ivmesini ve tedarik zinciri yeniliğini okumaktan gelir.',
+        image: chinaAssetImages.greatWallAlt,
+      },
+    ],
+    overview:
+      'Auto China’nın değeri yalnızca araç göstermesinde değil, Çin otomotiv sektörünün ne kadar hızlı değiştiğini anlaşılır kılmasındadır. Türkiye odaklı ortaklar için bu ürün; markaları, teknolojileri, akıllı mobiliteyi ve gelecekteki iş birliği ihtimallerini daha net okumaya yarar.',
+    highlights: [
+      'EV ve akıllı sürüş başlıklarını tek pencerede sunar',
+      'Bayiler, yatırımcılar, parça oyuncuları ve otomotiv ortakları için uygundur',
+      'Ziyaretçilerin Çin otomotiv yönü hakkında daha hızlı fikir geliştirmesini sağlar',
+      'Fuar sonrası marka görüşmeleri ve tedarik zinciri konuşmalarıyla genişleyebilir',
+    ],
+    itinerary: [
+      {
+        day: 'Modül 01',
+        title: 'Marka ve teknoloji odak planlaması',
+        description:
+          'Fuar öncesinde ziyaret, müşterinin rolü ve hedefleri için en anlamlı marka, teknoloji ve salonlar etrafında daraltılır.',
+      },
+      {
+        day: 'Modül 02',
+        title: 'Fuar ziyareti ve trend yorumlama',
+        description:
+          'EV, akıllı sürüş, akıllı kabin ve tedarik zinciri değişimleri odaklı bir rehberlikle fuar daha doğru okunur.',
+      },
+      {
+        day: 'Modül 03',
+        title: 'Marka karşılaştırması ve takip öncelikleri',
+        description:
+          'Gözlemler; konumlandırma, ürün ritmi, teknoloji yönü ve iş birliği ihtimali başlıklarında düzenlenir.',
+      },
+      {
+        day: 'Modül 04',
+        title: 'Pekin iş toplantıları ve yerel destek',
+        description:
+          'Gerektiğinde ziyaret; yerel toplantılar, marka görüşmeleri ve daha geniş iş desteğiyle devam ettirilebilir.',
+      },
+    ],
+    idealFor: [
+      'Otomotiv markaları, bayiler, yatırımcılar ve yedek parça sektörü ziyaretçileri',
+      'Çin’in EV ve akıllı mobilite yönünü takip eden şirketler',
+      'Fuarı pazar okuması ve iş birliği ipucu için kullanan müşteriler',
+    ],
+    serviceStandards: [
+      'Öncelikli marka ve salon rota önerileri',
+      'Otomotiv bağlamına uygun iş çevirisi desteği',
+      'Trend notları ve kilit marka bilgi özeti',
+      'Pekin iş karşılama ve toplantı desteği',
+    ],
+  },
+  {
+    id: 'x5',
+    slug: 'cmef-medical-equipment-service',
+    category: 'expo',
+    badge: 'Çin Fuar İş Hizmetleri',
+    title: 'CMEF Medikal Ekipman Hizmeti',
+    subtitle: 'Medikal satın alma, marka acenteliği ve ekipman iş birliği için profesyonel fuar destek ürünü',
+    duration: '2026.04',
+    location: 'Shanghai',
+    image: chinaAssetImages.shanghaiNight,
+    heroImage: chinaAssetImages.shanghaiNightAlt,
+    gallery: [
+      chinaAssetImages.shanghaiNight,
+      chinaAssetImages.shanghaiNightAlt,
+      chinaAssetImages.factoryLine,
+      chinaAssetImages.bayIndustry,
+    ],
+    spotlights: [
+      {
+        label: 'Tarih',
+        title: 'CMEF İlkbahar 2026',
+        summary:
+          '9-12 Nisan 2026 tarihlerinde Şanghay Ulusal Sergi ve Kongre Merkezi’nde düzenlenecek; Çin’in temel medikal ekipman platformlarından biridir.',
+        image: chinaAssetImages.shanghaiNightAlt,
+      },
+      {
+        label: 'Müşteri',
+        title: 'Medikal satın alma ve acentelik için net uyum',
+        summary:
+          'Medikal ekipman distribütörleri, hastane alıcıları, klinik grupları, rehabilitasyon odaklı alıcılar ve görüntüleme şirketleri için uygundur.',
+        image: chinaAssetImages.factoryLine,
+      },
+      {
+        label: 'Değer',
+        title: 'Marka, acentelik ve ürün elemesi için ideal',
+        summary:
+          'Geniş sektör fuarlarına kıyasla CMEF; ürün değerlendirmesi, acentelik incelemesi ve tedarikçi seçimine daha doğrudan bir yol sunar.',
+        image: chinaAssetImages.bayIndustry,
+      },
+    ],
+    overview:
+      'CMEF, sağlık sektöründe hedefi net olan müşteriler için en doğru kullanılır. Dağıtım, hastane satın alma, rehabilitasyon veya görüntüleme cihazları odaklı olsun; değer ürün gözlemi, marka elemesi, iş birliği değerlendirmesi ve fuar sonrası daha hızlı takiptir.',
+    highlights: [
+      'Temel alt segmentler üzerinden tüm medikal ekipman zincirini kapsar',
+      'Yeni ürün keşfi, marka elemesi ve acentelik görüşmeleri için uygundur',
+      'Alıcı niyeti genelde daha nettir ve ticari yol daha doğrudandır',
+      'Şirket ziyaretleri ve uzman çeviri desteğiyle genişletilebilir',
+    ],
+    itinerary: [
+      {
+        day: 'Modül 01',
+        title: 'Satın alma özeti ve marka yönünün kurulması',
+        description:
+          'Fuar öncesinde ziyaret, hedef cihaz kategorileri, satın alma amaçları ve tercih edilen marka seviyeleri etrafında yapılandırılır.',
+      },
+      {
+        day: 'Modül 02',
+        title: 'Sahada medikal çeviri desteği',
+        description:
+          'Teknik özellikler, sertifikasyon, dağıtım modeli ve satış sonrası konular üzerinden medikal bağlama uygun çeviri desteği sunulur.',
+      },
+      {
+        day: 'Modül 03',
+        title: 'Aday marka incelemesi ve sonraki adım kararı',
+        description:
+          'Toplanan bağlantılar ürün uyumu, ortaklık potansiyeli ve takip önceliğine göre düzenlenir.',
+      },
+      {
+        day: 'Modül 04',
+        title: 'Fuar sonrası şirket ziyaretleri ve Şanghay desteği',
+        description:
+          'Gerektiğinde ziyaret; şirket görüşmeleri, toplantılar ve Şanghay tabanlı iş desteğiyle devam eder.',
+      },
+    ],
+    idealFor: [
+      'Medikal ekipman distribütörleri ve acente tarafı alıcılar',
+      'Hastane satın alma ekipleri ve klinik grubu karar vericileri',
+      'Rehabilitasyon, görüntüleme ve uzman cihazlarda ticari ziyaretçiler',
+    ],
+    serviceStandards: [
+      'Satın alma hedeflerine göre medikal fuar planlaması',
+      'Uzman çeviri ve iş eşleştirme desteği',
+      'Marka ve ürün bilgi elemesi',
+      'Şirket ziyareti rezervasyonu ve Şanghay karşılama desteği',
+    ],
+  },
+  {
+    id: 'x6',
+    slug: 'ciie-china-market-entry-service',
+    category: 'expo',
+    badge: 'Çin Fuar İş Hizmetleri',
+    title: 'CIIE Çin Pazarına Giriş Hizmeti',
+    subtitle: 'Çin’e giriş yolu, alıcı ve kanal arayan yurt dışı firmalar için iş destek ürünü',
+    duration: '2026.11',
+    location: 'Shanghai',
+    image: chinaAssetImages.shanghaiNightAlt,
+    heroImage: chinaAssetImages.shanghaiNight,
+    gallery: [
+      chinaAssetImages.shanghaiNightAlt,
+      chinaAssetImages.shanghaiNight,
+      chinaAssetImages.guangzhouNight,
+      chinaAssetImages.bayIndustry,
+    ],
+    spotlights: [
+      {
+        label: 'Tarih',
+        title: '9. Çin Uluslararası İthalat Fuarı',
+        summary:
+          '5-10 Kasım 2026 tarihlerinde Şanghay’da düzenlenecek; Çin pazarına giriş düşünen yurt dışı markalar için en net platformlardan biridir.',
+        image: chinaAssetImages.shanghaiNight,
+      },
+      {
+        label: 'Müşteri',
+        title: 'Ürününü Çin’e satmak isteyen firmalar için',
+        summary:
+          'Gıda, tüketim ürünleri, sağlık, teknoloji ve hizmet ticareti alanlarında Çinli alıcı ve kanal ortakları arayan Türk markaları için güçlü bir uyum sunar.',
+        image: chinaAssetImages.guangzhouNight,
+      },
+      {
+        label: 'Değer',
+        title: 'Tedarik fuarı değil, pazara giriş platformu',
+        summary:
+          'Asıl değer Çin’den alım yapmakta değil; alıcı görünürlüğü, marka görünürlüğü, kanal keşfi ve erken pazar doğrulamasındadır.',
+        image: chinaAssetImages.bayIndustry,
+      },
+    ],
+    overview:
+      'CIIE, satın alma fuarlarından tamamen farklı bir ticari mantığa sahiptir. Türk ürünlerini Çin’e satmak, alıcılarla tanışmak, marka bilinirliği oluşturmak ve kanal fırsatlarını değerlendirmek isteyen firmalar için gerçek bir Çin pazarı giriş hizmetidir.',
+    highlights: [
+      'Çin’de pazar girişi ve kanal geliştirme etrafında tasarlanmıştır',
+      'Alıcı görünürlüğü, marka farkındalığı ve iş ortağı keşfi için daha uygundur',
+      'Gıda, tüketim, sağlık, teknoloji ve hizmet ticareti müşterileriyle iyi eşleşir',
+      'Kanal ziyaretleri, pazar yoklaması ve yerel toplantılarla genişletilebilir',
+    ],
+    itinerary: [
+      {
+        day: 'Modül 01',
+        title: 'Pazara giriş hedeflerinin netleştirilmesi',
+        description:
+          'Fuar öncesi önceliğin alıcı keşfi, marka gözlemi, kanal kararı ya da genel pazar doğrulaması olup olmadığı netleştirilir.',
+      },
+      {
+        day: 'Modül 02',
+        title: 'Fuar ziyareti ve öncelikli kaynak elemesi',
+        description:
+          'Ziyaret; müşterinin sektörüne göre potansiyel alıcılar, kanal ortakları ve pazar odaklı iş fırsatları üzerinden yapılandırılır.',
+      },
+      {
+        day: 'Modül 03',
+        title: 'Alıcı ve kanal temaslarının düzenlenmesi',
+        description:
+          'En güçlü alıcı, ortak ve kanal temasları fuar sonrası daha net bir takip yapısına dönüştürülür.',
+      },
+      {
+        day: 'Modül 04',
+        title: 'Şanghay takibi ve yerel pazar desteği',
+        description:
+          'Gerektiğinde ziyaret, kanal görüşmeleri, iş toplantıları ve yerel pazar değerlendirme desteğiyle devam ettirilir.',
+      },
+    ],
+    idealFor: [
+      'Türk ürünlerini Çin’e satmayı hedefleyen şirketler',
+      'Çinli alıcı, kanal ve pazar ortağı arayan markalar',
+      'Çin’e daha derin yatırım yapmadan önce erken doğrulama isteyen firmalar',
+    ],
+    serviceStandards: [
+      'Fuar öncesi pazara giriş özeti ve ziyaret planı',
+      'Sahada fuar desteği ve Çince iş desteği',
+      'Alıcı ve kanal temaslarının düzenlenmesi',
+      'Şanghay tabanlı toplantı ve kanal ziyareti desteği',
+    ],
+  },
+];
+
 export const chinaInboundContent: Record<Language, SiteContent> = {
   zh: {
     brand: {
@@ -558,6 +2110,7 @@ export const chinaInboundContent: Record<Language, SiteContent> = {
       all: '全部线路',
       innovation: '科技探索',
       classic: '经典中国',
+      expo: '中国会展商务服务',
     },
     highlightCategories: {
       all: '全部亮点',
@@ -689,6 +2242,7 @@ export const chinaInboundContent: Record<Language, SiteContent> = {
           '可根据语言需求匹配导游、司兼导与深度体验模块',
         ],
       },
+      ...chinaExpoRoutesZh,
     ],
     experiences: [
       {
@@ -916,6 +2470,7 @@ export const chinaInboundContent: Record<Language, SiteContent> = {
       all: 'All Journeys',
       innovation: 'Innovation Routes',
       classic: 'China Classics',
+      expo: 'Expo Services',
     },
     highlightCategories: {
       all: 'All Highlights',
@@ -1047,6 +2602,7 @@ export const chinaInboundContent: Record<Language, SiteContent> = {
           'Guide language, transport level, and deeper experiences can be customized',
         ],
       },
+      ...chinaExpoRoutesEn,
     ],
     experiences: [
       {
@@ -1274,6 +2830,7 @@ export const chinaInboundContent: Record<Language, SiteContent> = {
       all: 'Tüm Rotalar',
       innovation: 'İnovasyon Rotaları',
       classic: 'Çin Klasikleri',
+      expo: 'Fuar Hizmetleri',
     },
     highlightCategories: {
       all: 'Tüm Başlıklar',
@@ -1405,6 +2962,7 @@ export const chinaInboundContent: Record<Language, SiteContent> = {
           'Rehber dili, ulaşım seviyesi ve derin deneyimler özelleştirilebilir',
         ],
       },
+      ...chinaExpoRoutesTr,
     ],
     experiences: [
       {

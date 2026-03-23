@@ -10,32 +10,72 @@ const JourneyDetail: React.FC = () => {
   const { slug } = useParams();
   const content = chinaInboundContent[language];
   const journey = content.routes.find((item) => item.slug === slug);
+  const isExpo = journey?.category === 'expo';
   const labels =
     language === 'zh'
-      ? {
-          overview: '线路概览',
-          highlights: '核心亮点',
-          idealFor: '适合客群',
-          standards: '服务标准',
-          itinerary: '每日行程',
-          gallery: '线路图库',
-          spotlights: '景点精选',
-          spotlightsHeading: '值得期待的场景',
-          galleryHeading: '线路画面',
-          itineraryHeading: '每日节奏',
-        }
+      ? isExpo
+        ? {
+            overview: '展会概览',
+            highlights: '核心价值',
+            idealFor: '适合客户',
+            standards: '配套服务',
+            itinerary: '服务模块',
+            gallery: '相关画面',
+            spotlights: '重点信息',
+            spotlightsHeading: '先看懂这场展会',
+            galleryHeading: '展会相关画面',
+            itineraryHeading: '服务如何展开',
+          }
+        : {
+            overview: '线路概览',
+            highlights: '核心亮点',
+            idealFor: '适合客群',
+            standards: '服务标准',
+            itinerary: '每日行程',
+            gallery: '线路图库',
+            spotlights: '景点精选',
+            spotlightsHeading: '值得期待的场景',
+            galleryHeading: '线路画面',
+            itineraryHeading: '每日节奏',
+          }
       : language === 'tr'
+      ? isExpo
+        ? {
+            overview: 'Fuar Özeti',
+            highlights: 'Temel Değerler',
+            idealFor: 'Uygun Müşteriler',
+            standards: 'Destek Hizmetleri',
+            itinerary: 'Hizmet Modülleri',
+            gallery: 'İlgili Görseller',
+            spotlights: 'Temel Bilgiler',
+            spotlightsHeading: 'Fuarı Hızlı Anlayın',
+            galleryHeading: 'Fuardan Kareler',
+            itineraryHeading: 'Hizmet Akışı',
+          }
+        : {
+            overview: 'Rota Özeti',
+            highlights: 'Öne Çıkanlar',
+            idealFor: 'Kimler İçin Uygun',
+            standards: 'Hizmet Standardı',
+            itinerary: 'Günlük Program',
+            gallery: 'Rota Galerisi',
+            spotlights: 'One Cikan Duraklar',
+            spotlightsHeading: 'One Cikan Sahneler',
+            galleryHeading: 'Rotadan Kareler',
+            itineraryHeading: 'Gun Gun Akis',
+          }
+      : isExpo
       ? {
-          overview: 'Rota Özeti',
-          highlights: 'Öne Çıkanlar',
-          idealFor: 'Kimler İçin Uygun',
-          standards: 'Hizmet Standardı',
-          itinerary: 'Günlük Program',
-          gallery: 'Rota Galerisi',
-          spotlights: 'One Cikan Duraklar',
-          spotlightsHeading: 'One Cikan Sahneler',
-          galleryHeading: 'Rotadan Kareler',
-          itineraryHeading: 'Gun Gun Akis',
+          overview: 'Expo Overview',
+          highlights: 'Core Value',
+          idealFor: 'Ideal Clients',
+          standards: 'Support Services',
+          itinerary: 'Service Modules',
+          gallery: 'Related Visuals',
+          spotlights: 'Key Facts',
+          spotlightsHeading: 'What To Know First',
+          galleryHeading: 'Expo Visuals',
+          itineraryHeading: 'How The Service Works',
         }
       : {
           overview: 'Route Overview',
@@ -69,7 +109,9 @@ const JourneyDetail: React.FC = () => {
       <SEO
         title={journey.title}
         description={journey.overview}
-        keywords={`${journey.title}, ${journey.location}, ${journey.duration}, China inbound travel`}
+        keywords={`${journey.title}, ${journey.location}, ${journey.duration}, ${
+          isExpo ? 'China expo business service' : 'China inbound travel'
+        }`}
       />
 
       <section className="relative min-h-[70vh] md:min-h-[82vh] flex items-end overflow-hidden">
@@ -92,7 +134,7 @@ const JourneyDetail: React.FC = () => {
               {journey.badge}
             </span>
             <h1
-              className="mt-5 md:mt-6 text-[1.95rem] sm:text-[2.35rem] md:text-[4.35rem] lg:text-[5rem] xl:text-[5.35rem] font-black text-white leading-[1.01] tracking-tight serif whitespace-nowrap"
+              className="mt-5 md:mt-6 text-[1.95rem] sm:text-[2.35rem] md:text-[4.35rem] lg:text-[5rem] xl:text-[5.35rem] font-black text-white leading-[1.01] tracking-tight serif [text-wrap:balance]"
             >
               {journey.title}
             </h1>
@@ -297,7 +339,7 @@ const JourneyDetail: React.FC = () => {
       <section className="max-w-6xl mx-auto px-6 py-20 text-center">
         <div className="rounded-[2.5rem] bg-slate-900 px-8 py-14 md:px-16">
           <p className="text-sm md:text-base font-black tracking-[0.22em] uppercase text-[#FF9D00]">
-            Grace Way China Journeys
+            {isExpo ? 'Grace Way China Business Services' : 'Grace Way China Journeys'}
           </p>
           <h3 className="mx-auto mt-4 max-w-[12ch] md:max-w-[16ch] text-3xl md:text-5xl font-black text-white serif leading-[1.08] [text-wrap:balance]">
             {content.contact.title}

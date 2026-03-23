@@ -896,7 +896,7 @@ export const translations: Record<Language, BaseTranslations> = {
     }
   },
   zh: {
-    nav: { home: '首页', tours: '纵享行程', about: '关于我们', tickets: '门票体验', contact: '联系我们', enquire: '即刻定制', closeMenu: '关闭菜单' },
+    nav: { home: '首页', tours: '土耳其线路', about: '关于我们', tickets: '门票体验', contact: '联系我们', enquire: '即刻定制', closeMenu: '关闭菜单' },
     hero: {
       title: '探索土耳其的灵魂',
       subtitle: '与恩途 · 国际旅行开启一场穿越古老历史与灿烂文化的私享定制之旅 —— 您在土耳其值得信赖的持牌精品伙伴。',

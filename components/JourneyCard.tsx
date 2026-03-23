@@ -42,7 +42,7 @@ const JourneyCard: React.FC<JourneyCardProps> = ({ journey, ctaLabel, basePath, 
           {journey.location} • {journey.duration}
         </div>
         <Link to={href} className="mt-4 block">
-          <h3 className="text-[1.3rem] md:text-[1.55rem] font-black text-slate-900 leading-[1.08] tracking-tight whitespace-nowrap transition-colors group-hover:text-[#FF9D00]">
+          <h3 className="text-[1.3rem] md:text-[1.55rem] font-black text-slate-900 leading-[1.08] tracking-tight [text-wrap:balance] line-clamp-2 transition-colors group-hover:text-[#FF9D00]">
             {journey.title}
           </h3>
         </Link>
