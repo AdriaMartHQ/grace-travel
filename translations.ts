@@ -1636,12 +1636,12 @@ export const translations: Record<Language, BaseTranslations> = {
       }
     },
     toursData: [
-      { id: '1', title: 'S1-伊斯坦布尔飞机-卡帕多奇亚 6日', location: '伊斯坦布尔 / 卡帕多奇亚', duration: '6天', price: 6999, image: 'https://images.unsplash.com/photo-1636021597151-cc28dacd915c?auto=format&fit=crop&w=1200&q=80', category: 'classic', highlights: ['热气球晨光飞行', '湿拓画 Ebru 手作', '以弗所沉浸式博物馆'], path: '/itineraries/s1-turkey-6-days' },
-      { id: 's2', title: 'S2-爱琴海至安纳托利亚 8日全景', location: '全境环线 / D400', duration: '8天', price: 8999, image: "https://images.unsplash.com/photo-1596093145026-f6af675846c7?q=80&w=2148&auto=format&fit=crop", category: 'classic', highlights: ['D400 最美公路', '地中海滑翔伞', '内陆双飞接驳'], path: '/itineraries/s2-turkey-8-days' },
-      { id: 's4', title: 'S4-土耳其 10 日全景文化之旅', location: '全境环线 / 特罗亚', duration: '10天', price: 8999, image: "https://images.unsplash.com/photo-1689130033373-2773b6029aea?q=80&w=2148&auto=format&fit=crop", category: 'classic', highlights: ['特罗亚古城', '全景文化深度', 'D400最美公路'], path: '/itineraries/s4-turkey-10-days' },
-      { id: 's5', title: 'S5-土耳其 8 日全景文化深度之旅', location: '特罗亚 / 精灵之路', duration: '8天', price: 8999, image: "https://images.unsplash.com/photo-1687706222092-b6545828217d?q=80&w=2340&auto=format&fit=crop", category: 'classic', highlights: ['特罗亚古城', '精灵烟囱', '伊兹尼克古城'], path: '/itineraries/s5-turkey-8-days' },
-      { id: 'z1', title: 'Z1-启示录七教会与圣徒之径 10日', location: '全境巡礼 / 七教会', duration: '10天', price: 10999, image: "https://images.unsplash.com/photo-1543949806-2c9935e6838d?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['启示录七教会', '使徒脚踪探访', '特色洞穴酒店'], path: '/itineraries/z1-turkey-11-days' },
-      { id: 'z2', title: 'Z2-启示录七教会精华 4日朝圣之旅', location: '七教会核心区', duration: '4天', price: 3999, image: "https://images.unsplash.com/photo-1684214190982-f3506653f932?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['七教会精华', '使徒脚踪探访', '温泉圣迹之旅'], path: '/itineraries/z2-revelation-4-days' }
+      { id: '1', title: 'S1-伊斯坦布尔飞机-卡帕多奇亚 6日', location: '伊斯坦布尔 / 卡帕多奇亚', duration: '6天', price: 8049, image: 'https://images.unsplash.com/photo-1636021597151-cc28dacd915c?auto=format&fit=crop&w=1200&q=80', category: 'classic', highlights: ['热气球晨光飞行', '湿拓画 Ebru 手作', '以弗所沉浸式博物馆'], path: '/itineraries/s1-turkey-6-days' },
+      { id: 's2', title: 'S2-爱琴海至安纳托利亚 8日全景', location: '全境环线 / D400', duration: '8天', price: 10349, image: "https://images.unsplash.com/photo-1596093145026-f6af675846c7?q=80&w=2148&auto=format&fit=crop", category: 'classic', highlights: ['D400 最美公路', '地中海滑翔伞', '内陆双飞接驳'], path: '/itineraries/s2-turkey-8-days' },
+      { id: 's4', title: 'S4-土耳其 10 日全景文化之旅', location: '全境环线 / 特罗亚', duration: '10天', price: 10349, image: "https://images.unsplash.com/photo-1689130033373-2773b6029aea?q=80&w=2148&auto=format&fit=crop", category: 'classic', highlights: ['特罗亚古城', '全景文化深度', 'D400最美公路'], path: '/itineraries/s4-turkey-10-days' },
+      { id: 's5', title: 'S5-土耳其 8 日全景文化深度之旅', location: '特罗亚 / 精灵之路', duration: '8天', price: 10349, image: "https://images.unsplash.com/photo-1687706222092-b6545828217d?q=80&w=2340&auto=format&fit=crop", category: 'classic', highlights: ['特罗亚古城', '精灵烟囱', '伊兹尼克古城'], path: '/itineraries/s5-turkey-8-days' },
+      { id: 'z1', title: 'Z1-启示录七教会与圣徒之径 10日', location: '全境巡礼 / 七教会', duration: '10天', price: 12649, image: "https://images.unsplash.com/photo-1543949806-2c9935e6838d?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['启示录七教会', '使徒脚踪探访', '特色洞穴酒店'], path: '/itineraries/z1-turkey-11-days' },
+      { id: 'z2', title: 'Z2-启示录七教会精华 4日朝圣之旅', location: '七教会核心区', duration: '4天', price: 4999, image: "https://images.unsplash.com/photo-1684214190982-f3506653f932?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['七教会精华', '使徒脚踪探访', '温泉圣迹之旅'], path: '/itineraries/z2-revelation-4-days' }
     ],
     ticketsData: [
       { id: 't1', title: '多尔玛巴赫切宫 (Dolmabahçe Sarayı)', price: 400, includes: ['包含礼宾厅、后宫及绘画博物馆进入权限', '支持官方语音导览', '详情请联系客服'], image: 'https://images.unsplash.com/photo-1601565465051-67971a2d838c?q=80&w=2340&auto=format&fit=crop', category: 'entry' },
@@ -1660,8 +1660,8 @@ export const translations: Record<Language, BaseTranslations> = {
     faqs: [
       { q: '如何预订恩途的旅行服务？', a: '您可以浏览线路并点击“立即定制”.我们将优先通过微信、邮件与您确认细节，确保行程完美衔接。' },
       { q: '恩途是正规持牌旅行社吗？', a: '是的，恩途 · 国际旅行社是经土耳其旅游协会 (TÜRSAB) 认证运行合作的 A 类持牌旅行社。' },
-      { q: '取消政策是怎样的？', a: '通常在行程开始前 7 天取消可获全额退款.部分定制服务可能有特殊说明。' },
-      { q: '入境土耳其旅游保险如何保障？', a: '入境土耳其旅游保险参考价格为 20 元人民币 / 日 / 人，保障范围包含 Tibbi Tedavi Teminati：医疗治疗保障、Tibbi Nakil：医疗转运、Cenaze Nakli：遗体运送，最高赔付 24 万人民币。' }
+      { q: '取消政策是怎样的？', a: 'İptal Koşulları（取消条件）\n出发前30天以上取消，全额退款\n出发前29–15天取消，扣除50%费用\n出发前14天内取消，不予退款\n如被拒签，提供官方证明后扣除已产生费用退款。\n机票及签证费用不予退还\n\nNotlar / Ek Bilgiler（重要提示）\n行程需达到最低成团人数方可出发\n护照有效期需在行程结束后至少6个月\n行程可能根据实际情况调整\n最终出发信息将在出行前确认\n本行程可为私人团或家庭团定制' },
+      { q: '入境土耳其旅游保险如何保障？', a: '入境土耳其旅游保险参考价格约为 20元人民币/人/天。\n保障内容包括：\n\n医疗治疗保障（Tibbi Tedavi Teminati）\n医疗转运（Tibbi Nakil）\n遗体运送（Cenaze Nakli）\n\n最高赔付额度可达 24万元人民币。' }
     ],
     features: {
       f1: { title: '官方持牌资质', desc: '土耳其旅游协会 (TÜRSAB) A类成员.政府监管，全程保险，保障旅程安全。' },

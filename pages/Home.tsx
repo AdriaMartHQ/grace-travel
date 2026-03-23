@@ -5,6 +5,11 @@ import SEO from '../components/SEO';
 import { chinaInboundContent } from '../chinaInboundContent';
 import { getChinaFallbackImage } from '../chinaImageFallback';
 
+const EMPHASIZED_FAQ_LINES = new Set([
+  'İptal Koşulları（取消条件）',
+  'Notlar / Ek Bilgiler（重要提示）',
+]);
+
 const Hero: React.FC = () => {
   const { t } = useLanguage();
   return (
@@ -123,6 +128,22 @@ const Home: React.FC = () => {
     target.src = chinaFallbackImage;
   };
 
+  const renderFaqAnswer = (answer: string) =>
+    answer.split('\n').map((line, idx) => {
+      if (!line.trim()) {
+        return <div key={`faq-spacer-${idx}`} className="h-3" aria-hidden="true" />;
+      }
+
+      return (
+        <p
+          key={`faq-line-${idx}`}
+          className={EMPHASIZED_FAQ_LINES.has(line) ? 'font-black text-slate-800' : ''}
+        >
+          {line}
+        </p>
+      );
+    });
+
   return (
     <div className="animate-in fade-in duration-1000 overflow-x-hidden">
       <Hero />
@@ -233,8 +254,8 @@ const Home: React.FC = () => {
                 </span>
               </button>
               {activeFaq === idx && (
-                <div className="px-6 pb-6 pt-0 text-slate-500 text-sm font-light leading-relaxed animate-in slide-in-from-top-2 duration-300">
-                  {faq.a}
+                <div className="px-6 pb-6 pt-0 text-slate-500 text-sm font-light leading-loose animate-in slide-in-from-top-2 duration-300">
+                  {renderFaqAnswer(faq.a)}
                 </div>
               )}
             </div>
