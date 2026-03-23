@@ -1047,8 +1047,8 @@ export const translations: Record<Language, BaseTranslations> = {
   zh: {
     nav: { home: '首页', tours: '土耳其线路', faith: '信仰之旅', about: '关于我们', tickets: '门票体验', contact: '联系我们', enquire: '即刻定制', closeMenu: '关闭菜单' },
     hero: {
-      title: '探索土耳其的灵魂',
-      subtitle: '与恩途 · 国际旅行开启一场穿越古老历史与灿烂文化的私享定制之旅 —— 您在土耳其值得信赖的持牌精品伙伴。',
+      title: '探索土耳其',
+      subtitle: '与恩途 · 国际旅行开启一场穿越古老历史与灿烂文化的私享定制之旅\n\n“你出你入，耶和华要保护你，\n从今时直到永远。”\n—— 诗篇 121:8',
       cta1: '查看精彩线路',
       cta2: '在线咨询'
     },
