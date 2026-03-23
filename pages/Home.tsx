@@ -11,7 +11,19 @@ const EMPHASIZED_FAQ_LINES = new Set([
 ]);
 
 const Hero: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const isEnglish = language === 'en';
+  const isTurkish = language === 'tr';
+  const heroTitleClasses = isEnglish
+    ? 'text-[2.15rem] sm:text-[3.2rem] md:text-[4.8rem] lg:text-[5.6rem] max-w-[11ch]'
+    : isTurkish
+    ? 'text-[2.05rem] sm:text-[3rem] md:text-[4.35rem] lg:text-[5rem] max-w-[10.5ch]'
+    : 'text-[2.15rem] sm:text-[3.2rem] md:text-[4.8rem] lg:text-[5.6rem] max-w-[12ch]';
+  const heroSubtitleClasses = isEnglish
+    ? 'md:text-[1.16rem] lg:text-[1.28rem] max-w-xl md:max-w-[33rem]'
+    : isTurkish
+    ? 'md:text-[1.12rem] lg:text-[1.22rem] max-w-xl md:max-w-[31rem]'
+    : 'md:text-[1.22rem] lg:text-[1.38rem] max-w-2xl md:max-w-[36rem]';
   return (
     <section className="relative min-h-[88vh] md:min-h-screen flex items-end overflow-hidden px-4">
       <SEO 
@@ -31,10 +43,10 @@ const Hero: React.FC = () => {
       
       <div className="relative z-10 mx-auto w-full max-w-6xl pb-14 md:pb-20 lg:pb-24">
         <div className="max-w-4xl text-center md:text-left">
-        <h1 className="mx-auto md:mx-0 max-w-[12ch] text-[2.15rem] sm:text-[3.2rem] md:text-[4.8rem] lg:text-[5.6rem] font-black text-white mb-5 md:mb-7 serif leading-[1.01] tracking-tight [text-wrap:balance] drop-shadow-2xl px-2 md:px-0">
+        <h1 className={`mx-auto md:mx-0 font-black text-white mb-5 md:mb-7 serif leading-[1.01] tracking-tight [text-wrap:balance] drop-shadow-2xl px-2 md:px-0 ${heroTitleClasses}`}>
           {t.hero.title}
         </h1>
-        <p className="text-[15px] sm:text-lg md:text-[1.22rem] lg:text-[1.38rem] text-white/88 mb-8 md:mb-11 max-w-2xl md:max-w-[36rem] mx-auto md:mx-0 font-light leading-relaxed [text-wrap:pretty] px-2 md:px-0">
+        <p className={`text-[15px] sm:text-lg text-white/88 mb-8 md:mb-11 mx-auto md:mx-0 font-light leading-relaxed [text-wrap:pretty] px-2 md:px-0 ${heroSubtitleClasses}`}>
           {t.hero.subtitle}
         </p>
         <div className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4 md:gap-5">
@@ -108,14 +120,14 @@ const Home: React.FC = () => {
   const { t, language } = useLanguage();
   const chinaContent = chinaInboundContent[language];
   const chinaTitle =
-    language === 'zh' ? '中国入境游' : language === 'tr' ? 'Cin Giris Turlari' : 'China Inbound Journeys';
+    language === 'zh' ? '中国入境游' : language === 'tr' ? 'Çin Turları' : 'China Travel';
   const chinaIntro =
     language === 'zh'
       ? '为海外客人设计的中国入境旅行系列，涵盖经典城市文化、科技考察与高端定制线路。'
       : language === 'tr'
-      ? 'Uluslararasi misafirler icin tasarlanan Cin seyahatleri; klasik sehir kulturu, teknoloji kesfi ve ust segment ozel rotalari bir araya getirir.'
+      ? 'Uluslararası misafirler için tasarlanan Çin seyahatleri; şehir kültürü, teknoloji keşfi ve üst segment özel rotaları bir araya getirir.'
       : 'China journeys designed for international guests, spanning classic city culture, innovation visits, and premium tailor-made routes.';
-  const chinaCta = language === 'zh' ? '进入中国入境游' : language === 'tr' ? 'Cin Modulu' : 'Explore China';
+  const chinaCta = language === 'zh' ? '进入中国入境游' : language === 'tr' ? 'Çin’i Keşfet' : 'Explore China';
   const chinaFallbackImage = getChinaFallbackImage(chinaTitle, 'Grace Way China Inbound');
   const chinaFeatureImage =
     chinaContent.routes.find((route) => route.id === 'r3')?.gallery[0] ||
@@ -172,9 +184,9 @@ const Home: React.FC = () => {
           <div className="w-full lg:justify-self-end">
             <div className="mx-auto max-w-3xl px-6 py-20 md:px-10 md:py-24 lg:px-14 lg:py-28 text-left">
                 <span className="text-[11px] md:text-[10px] font-black text-[#FF9D00] uppercase tracking-[0.22em] md:tracking-[0.4em] mb-4 block">
-                  China Inbound
+                  {language === 'en' ? 'China Travel' : language === 'tr' ? 'Çin Turları' : 'China Inbound'}
                 </span>
-                <h3 className="text-[28px] md:text-5xl font-black serif leading-[1.04] tracking-tight whitespace-nowrap">
+                <h3 className="max-w-[14ch] text-[28px] md:text-5xl font-black serif leading-[1.04] tracking-tight [text-wrap:balance]">
                   {chinaTitle}
                 </h3>
                 <p className="mt-5 text-white/70 text-base md:text-lg leading-relaxed [text-wrap:pretty] max-w-2xl">

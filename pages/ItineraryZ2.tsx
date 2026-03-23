@@ -21,7 +21,7 @@ const ItineraryZ2: React.FC = () => {
           <div className="text-center space-y-6 max-w-sm">
             <div className="w-16 h-16 border-4 border-[#FF9D00] border-t-transparent rounded-full animate-spin mx-auto"></div>
             <p className="text-slate-500 font-bold uppercase tracking-widest text-xs leading-relaxed">
-              {language === 'zh' ? '正在为您加载圣迹巡礼精华行程...' : 'Loading sacred essence pilgrimage...'}
+              {language === 'zh' ? '正在为您加载信仰之旅精华行程...' : 'Loading sacred essence pilgrimage...'}
             </p>
           </div>
         </div>

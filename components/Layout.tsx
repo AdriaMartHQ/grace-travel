@@ -18,12 +18,14 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
   const { language, setLanguage, t } = useLanguage();
   const location = useLocation();
   const chinaInboundLabel =
-    language === 'zh' ? '中国入境游' : language === 'tr' ? 'Cin Giris Turlari' : 'China Inbound';
+    language === 'zh' ? '中国入境游' : language === 'tr' ? 'Çin Turları' : 'China Travel';
   const expoBusinessLabel =
-    language === 'zh' ? '会展服务' : language === 'tr' ? 'Fuar Hizmetleri' : 'Expo Services';
+    language === 'zh' ? '会展服务' : language === 'tr' ? 'Fuar' : 'Expo';
   const airportTransferLabel =
-    language === 'zh' ? '接送机服务' : language === 'tr' ? 'Havalimani Transfer' : 'Airport Transfer';
+    language === 'zh' ? '接送机服务' : language === 'tr' ? 'Transfer' : 'Transfers';
+  const faithJourneyPath = '/tours?category=family';
   const expoBusinessPath = '/china-inbound?category=expo';
+  const activeTourCategory = new URLSearchParams(location.search).get('category');
   const isExpoCategory = new URLSearchParams(location.search).get('category') === 'expo';
 
   useEffect(() => {
@@ -43,6 +45,7 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
   const navLinks = [
     { name: t.nav?.home || 'Home', path: '/' },
     { name: t.nav?.tours || 'Tours', path: '/tours' },
+    { name: t.nav?.faith || 'Faith', path: faithJourneyPath },
     { name: airportTransferLabel, path: '/airport-transfer' },
     { name: chinaInboundLabel, path: '/china-inbound' },
     { name: expoBusinessLabel, path: expoBusinessPath },
@@ -50,8 +53,14 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
   ];
 
   const isLinkActive = (path: string) => {
+    if (path === faithJourneyPath) {
+      return location.pathname === '/tours' && activeTourCategory === 'family';
+    }
     if (path === expoBusinessPath) {
       return location.pathname === '/china-inbound' && isExpoCategory;
+    }
+    if (path === '/tours') {
+      return location.pathname === '/tours' && activeTourCategory !== 'family';
     }
     if (path === '/china-inbound') {
       return (
@@ -130,13 +139,17 @@ const Navbar: React.FC = () => {
   const { language, setLanguage, t } = useLanguage();
   const location = useLocation();
   const ticking = useRef(false);
+  const isEnglish = language === 'en';
+  const isTurkish = language === 'tr';
   const chinaInboundLabel =
-    language === 'zh' ? '中国入境游' : language === 'tr' ? 'Cin Giris Turlari' : 'China Inbound';
+    language === 'zh' ? '中国入境游' : language === 'tr' ? 'Çin Turları' : 'China Travel';
   const expoBusinessLabel =
-    language === 'zh' ? '会展服务' : language === 'tr' ? 'Fuar Hizmetleri' : 'Expo Services';
+    language === 'zh' ? '会展服务' : language === 'tr' ? 'Fuar' : 'Expo';
   const airportTransferLabel =
-    language === 'zh' ? '接送机服务' : language === 'tr' ? 'Havalimani Transfer' : 'Airport Transfer';
+    language === 'zh' ? '接送机服务' : language === 'tr' ? 'Transfer' : 'Transfers';
+  const faithJourneyPath = '/tours?category=family';
   const expoBusinessPath = '/china-inbound?category=expo';
+  const activeTourCategory = new URLSearchParams(location.search).get('category');
   const isExpoCategory = new URLSearchParams(location.search).get('category') === 'expo';
 
   useEffect(() => {
@@ -156,6 +169,7 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: t.nav?.home || 'Home', path: '/' },
     { name: t.nav?.tours || 'Tours', path: '/tours' },
+    { name: t.nav?.faith || 'Faith', path: faithJourneyPath },
     { name: airportTransferLabel, path: '/airport-transfer' },
     { name: chinaInboundLabel, path: '/china-inbound' },
     { name: expoBusinessLabel, path: expoBusinessPath },
@@ -163,8 +177,14 @@ const Navbar: React.FC = () => {
   ];
 
   const isLinkActive = (path: string) => {
+    if (path === faithJourneyPath) {
+      return location.pathname === '/tours' && activeTourCategory === 'family';
+    }
     if (path === expoBusinessPath) {
       return location.pathname === '/china-inbound' && isExpoCategory;
+    }
+    if (path === '/tours') {
+      return location.pathname === '/tours' && activeTourCategory !== 'family';
     }
     if (path === '/china-inbound') {
       return (
@@ -185,6 +205,24 @@ const Navbar: React.FC = () => {
   ];
 
   const isHome = location.pathname === '/';
+  const desktopNavContainerClasses = isTurkish
+    ? 'hidden md:flex items-center gap-3 lg:gap-4 pointer-events-auto'
+    : isEnglish
+    ? 'hidden md:flex items-center gap-4 lg:gap-6 pointer-events-auto'
+    : 'hidden md:flex items-center space-x-6 lg:space-x-8 pointer-events-auto';
+  const desktopNavLinkClasses = isTurkish
+    ? 'text-[9px] lg:text-[10px] tracking-[0.09em] lg:tracking-[0.12em]'
+    : isEnglish
+    ? 'text-[10px] lg:text-[11px] tracking-[0.12em] lg:tracking-[0.14em]'
+    : 'text-[11px] lg:text-[12px] tracking-[0.14em] lg:tracking-[0.18em]';
+  const desktopEnquireClasses = isTurkish
+    ? 'px-4 lg:px-5 py-2.5 text-[10px] tracking-[0.12em] lg:tracking-[0.14em]'
+    : isEnglish
+    ? 'px-5 lg:px-6 py-2.5 text-[10px] lg:text-[11px] tracking-[0.14em] lg:tracking-[0.18em]'
+    : 'px-6 lg:px-7 py-2.5 text-[11px] md:text-xs tracking-[0.16em] lg:tracking-[0.2em]';
+  const languageSwitchClasses = isTurkish
+    ? 'flex items-center space-x-3 border-l border-white/10 pl-6 lg:pl-8 ml-1 h-4'
+    : 'flex items-center space-x-4 border-l border-white/10 pl-8 lg:pl-10 ml-2 h-4';
   
   const navBackgroundClasses = isHome 
     ? (isScrolled 
@@ -209,12 +247,12 @@ const Navbar: React.FC = () => {
             </div>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-8 pointer-events-auto">
+          <div className={desktopNavContainerClasses}>
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-[11px] lg:text-[12px] font-bold uppercase tracking-[0.14em] lg:tracking-[0.18em] transition-all hover:text-[#FF9D00] ${
+                className={`${desktopNavLinkClasses} whitespace-nowrap shrink-0 font-bold uppercase transition-all hover:text-[#FF9D00] ${
                   isLinkActive(link.path)
                     ? 'text-[#FF9D00]'
                     : 'text-white/90'
@@ -223,7 +261,7 @@ const Navbar: React.FC = () => {
                 {link.name}
               </Link>
             ))}
-            <div className="flex items-center space-x-4 border-l border-white/10 pl-8 lg:pl-10 ml-2 h-4">
+            <div className={languageSwitchClasses}>
                {languages.map(l => (
                  <button 
                    key={l.code}
@@ -236,7 +274,7 @@ const Navbar: React.FC = () => {
                  </button>
                ))}
             </div>
-            <Link to="/contact" className="bg-[#FF9D00] hover:bg-white hover:text-slate-900 text-white px-6 lg:px-7 py-2.5 rounded-full text-[11px] md:text-xs font-black uppercase tracking-[0.16em] lg:tracking-[0.2em] transition-all shadow-xl shadow-orange-500/10">
+            <Link to="/contact" className={`bg-[#FF9D00] hover:bg-white hover:text-slate-900 text-white rounded-full whitespace-nowrap shrink-0 font-black uppercase transition-all shadow-xl shadow-orange-500/10 ${desktopEnquireClasses}`}>
               {t.nav?.enquire || 'ENQUIRE'}
             </Link>
           </div>
@@ -262,7 +300,9 @@ const Navbar: React.FC = () => {
 const Footer: React.FC = () => {
   const { t, language } = useLanguage();
   const airportTransferLabel =
-    language === 'zh' ? '接送机服务' : language === 'tr' ? 'Havalimani Transfer' : 'Airport Transfer';
+    language === 'zh' ? '接送机服务' : language === 'tr' ? 'Transfer' : 'Transfers';
+  const chinaInboundLabel =
+    language === 'zh' ? '中国入境游' : language === 'tr' ? 'Çin Turları' : 'China Travel';
   // 【核心修复点】：安全解构 footer 属性
   // 为什么改：防止 tr 语言环境下由于数据结构不一致导致的 brandEn 读取 undefined 错误。
   // 影响范围：仅增强健壮性，不影响 zh/en 的正常展示，也不改动其他线路逻辑。
@@ -288,7 +328,7 @@ const Footer: React.FC = () => {
               <li><Link to="/" className="hover:text-[#FF9D00] transition-colors">{t.nav?.home || 'Home'}</Link></li>
               <li><Link to="/tours" className="hover:text-[#FF9D00] transition-colors">{t.nav?.tours || 'Tours'}</Link></li>
               <li><Link to="/airport-transfer" className="hover:text-[#FF9D00] transition-colors">{airportTransferLabel}</Link></li>
-              <li><Link to="/china-inbound" className="hover:text-[#FF9D00] transition-colors">{language === 'zh' ? '中国入境游' : language === 'tr' ? 'Cin Giris Turlari' : 'China Inbound'}</Link></li>
+              <li><Link to="/china-inbound" className="hover:text-[#FF9D00] transition-colors">{chinaInboundLabel}</Link></li>
               <li><Link to="/tickets" className="hover:text-[#FF9D00] transition-colors">{t.nav?.tickets || 'Tickets'}</Link></li>
               <li><Link to="/contact" className="hover:text-[#FF9D00] transition-colors">{t.nav?.contact || 'Contact'}</Link></li>
             </ul>

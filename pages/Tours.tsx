@@ -1,11 +1,21 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
 
+type TourFilter = 'all' | 'classic' | 'family';
+
+const parseTourFilter = (value: string | null): TourFilter => {
+  if (value === 'classic' || value === 'family') {
+    return value;
+  }
+  return 'all';
+};
+
 const Tours: React.FC = () => {
   const { t } = useLanguage();
-  const [filter, setFilter] = useState<'all' | 'classic' | 'family'>('all');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const filter = parseTourFilter(searchParams.get('category'));
   const [isHidden, setIsHidden] = useState(false);
   const lastScrollY = useRef(0);
   const ticking = useRef(false);
@@ -15,6 +25,18 @@ const Tours: React.FC = () => {
   const filteredTours = useMemo(() => {
     return filter === 'all' ? toursData : toursData.filter((tour: any) => tour.category === filter);
   }, [filter, toursData]);
+
+  const handleFilterChange = (nextFilter: TourFilter) => {
+    const nextParams = new URLSearchParams(searchParams);
+
+    if (nextFilter === 'all') {
+      nextParams.delete('category');
+    } else {
+      nextParams.set('category', nextFilter);
+    }
+
+    setSearchParams(nextParams, { replace: true });
+  };
 
   useEffect(() => {
     const updateVisibility = () => {
@@ -76,7 +98,7 @@ const Tours: React.FC = () => {
           {(['all', 'classic', 'family'] as const).map(cat => (
             <button
               key={cat}
-              onClick={() => setFilter(cat)}
+              onClick={() => handleFilterChange(cat)}
               className={`px-5 md:px-8 py-2.5 rounded-full text-[11px] md:text-xs font-black tracking-[0.14em] md:tracking-widest transition-all ${
                 filter === cat 
                   ? 'bg-[#FF9D00] text-white shadow-lg shadow-orange-500/20' 
