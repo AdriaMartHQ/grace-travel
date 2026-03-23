@@ -10,6 +10,7 @@ import About from './pages/About';
 import StyleGuide from './pages/StyleGuide';
 import ChinaInbound from './pages/ChinaInbound';
 import JourneyDetail from './pages/JourneyDetail';
+import AirportTransfer from './pages/AirportTransfer';
 import ItineraryS1 from './pages/ItineraryS1';
 import ItineraryS2 from './pages/ItineraryS2';
 import ItineraryS4 from './pages/ItineraryS4';
@@ -31,6 +32,7 @@ const AppContent: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tours" element={<Tours />} />
+        <Route path="/airport-transfer" element={<AirportTransfer />} />
         <Route path="/china-inbound" element={<ChinaInbound />} />
         <Route path="/china-inbound/:slug" element={<JourneyDetail />} />
         <Route path="/about" element={<About />} />
