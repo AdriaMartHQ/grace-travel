@@ -1,6 +1,6 @@
 
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
-import type { Language, BaseTranslations } from '../translations';
+import { translations, type Language, type BaseTranslations } from '../translations';
 
 interface LanguageContextProps {
   language: Language;
@@ -43,34 +43,11 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
   const [language, setLanguageState] = useState<Language>(getInitialLanguage());
   const [showHint, setShowHint] = useState(false);
   const [hintText, setHintText] = useState('');
-  const [translations, setTranslations] = useState<Record<Language, BaseTranslations> | null>(null);
-
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
     localStorage.setItem('gw_lang', lang);
     localStorage.setItem('gw_lang_hint_shown', 'true');
   };
-
-  // 动态按语言加载大翻译包，拆分主 bundle 体积
-  useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      try {
-        const mod = await import('../translations');
-        if (!cancelled) {
-          setTranslations(mod.translations);
-        }
-      } catch (e) {
-        console.error('Failed to load translations', e);
-        if (!cancelled) {
-          setTranslations(null);
-        }
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, []);
 
   useEffect(() => {
     document.documentElement.lang = language;
@@ -87,31 +64,21 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
     }
   }, [language]);
 
-  const translationsLoaded = !!translations;
-  const t: BaseTranslations =
-    (translationsLoaded && translations![language]) || ({} as BaseTranslations);
+  const t: BaseTranslations = translations[language] || translations.en;
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>
-      {translationsLoaded ? (
-        <>
-          {children}
-          {/* Syncing Toast Z-index to 90 to be below Navbar (100) */}
-          {showHint && (
-            <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[90] animate-in slide-in-from-bottom-4 fade-in duration-500">
-              <div className="bg-slate-900/90 backdrop-blur-md text-white px-6 py-3 rounded-2xl shadow-2xl border border-white/10 flex items-center gap-3">
-                <div className="w-1.5 h-1.5 bg-[#FF9D00] rounded-full animate-pulse"></div>
-                <span className="text-xs font-bold tracking-wide uppercase">{hintText}</span>
-                <button onClick={() => setShowHint(false)} className="ml-2 text-white/40 hover:text-white transition-colors">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12"/></svg>
-                </button>
-              </div>
-            </div>
-          )}
-        </>
-      ) : (
-        <div className="min-h-screen flex items-center justify-center bg-white text-slate-500 text-xs font-bold tracking-[0.25em] uppercase">
-          Loading language…
+      {children}
+      {/* Syncing Toast Z-index to 90 to be below Navbar (100) */}
+      {showHint && (
+        <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[90] animate-in slide-in-from-bottom-4 fade-in duration-500">
+          <div className="bg-slate-900/90 backdrop-blur-md text-white px-6 py-3 rounded-2xl shadow-2xl border border-white/10 flex items-center gap-3">
+            <div className="w-1.5 h-1.5 bg-[#FF9D00] rounded-full animate-pulse"></div>
+            <span className="text-xs font-bold tracking-wide uppercase">{hintText}</span>
+            <button onClick={() => setShowHint(false)} className="ml-2 text-white/40 hover:text-white transition-colors">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </div>
         </div>
       )}
     </LanguageContext.Provider>
