@@ -376,7 +376,6 @@ const FloatingQuickLinks: React.FC = () => {
   const { t, language } = useLanguage();
   const location = useLocation();
   const isAbout = location.pathname === '/about';
-  const isContact = location.pathname === '/contact';
 
   const aboutHelper =
     language === 'zh'
@@ -384,50 +383,35 @@ const FloatingQuickLinks: React.FC = () => {
       : language === 'tr'
       ? 'Sirket Profili'
       : 'Company Profile';
-  const contactHelper =
-    language === 'zh'
-      ? '立即咨询'
-      : language === 'tr'
-      ? 'Hizli Iletisim'
-      : 'Quick Contact';
-
-  const linkBase =
-    'group flex min-w-[148px] items-center gap-3 rounded-2xl border px-4 py-3 shadow-[0_18px_45px_-22px_rgba(15,23,42,0.6)] backdrop-blur-xl transition-all';
+  const licenseLabel = t.footer?.licensedAGroup || 'Licensed A-Group Agency';
+  const verifiedLabel = t.footer?.officialLicensed || 'Official Licensed';
 
   return (
-    <div className="pointer-events-none fixed bottom-5 left-4 z-[70] md:bottom-6 md:left-6">
-      <div className="pointer-events-auto flex flex-col gap-3">
+    <div className="pointer-events-none fixed bottom-5 right-4 z-[70] md:bottom-6 md:right-6">
+      <div className="pointer-events-auto flex items-center gap-3">
+        <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white/96 px-4 py-3 shadow-[0_18px_45px_-22px_rgba(15,23,42,0.45)] backdrop-blur-xl">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-slate-900 text-white shadow-sm">
+            <span className="text-[10px] font-black uppercase tracking-tight">TÜRSAB</span>
+          </div>
+          <div className="min-w-0">
+            <p className="text-[10px] font-black uppercase tracking-tight text-slate-900">{licenseLabel}</p>
+            <p className="text-[8px] font-black uppercase tracking-[0.2em] text-slate-500">{verifiedLabel}</p>
+          </div>
+        </div>
         <Link
           to="/about"
-          className={`${linkBase} ${
+          className={`group flex min-w-[142px] items-center gap-3 rounded-2xl border px-4 py-3 shadow-[0_18px_45px_-22px_rgba(15,23,42,0.55)] backdrop-blur-xl transition-all ${
             isAbout
               ? 'border-slate-900 bg-slate-900 text-white'
-              : 'border-slate-200 bg-white/96 text-slate-900 hover:-translate-y-0.5 hover:border-[#FF9D00] hover:text-[#FF9D00]'
+              : 'border-[#FF9D00]/30 bg-[#FF9D00] text-white hover:border-slate-900 hover:bg-slate-900'
           }`}
         >
-          <div className={`h-9 w-9 rounded-xl ${isAbout ? 'bg-white/10' : 'bg-slate-900'} flex items-center justify-center`}>
-            <span className={`text-[10px] font-black uppercase tracking-widest ${isAbout ? 'text-white' : 'text-white'}`}>GW</span>
+          <div className={`flex h-9 w-9 items-center justify-center rounded-xl ${isAbout ? 'bg-white/10' : 'bg-white/15'}`}>
+            <span className="text-[10px] font-black uppercase tracking-widest text-white">GW</span>
           </div>
           <div className="min-w-0">
-            <p className="text-[9px] font-black uppercase tracking-[0.22em] opacity-60">{aboutHelper}</p>
+            <p className="text-[9px] font-black uppercase tracking-[0.22em] text-white/70">{aboutHelper}</p>
             <p className="truncate text-sm font-black">{t.nav?.about || 'About Us'}</p>
-          </div>
-        </Link>
-
-        <Link
-          to="/contact"
-          className={`${linkBase} ${
-            isContact
-              ? 'border-[#FF9D00] bg-[#FF9D00] text-white'
-              : 'border-[#FF9D00]/25 bg-[#FF9D00] text-white hover:-translate-y-0.5 hover:bg-slate-900 hover:border-slate-900'
-          }`}
-        >
-          <div className={`h-9 w-9 rounded-xl ${isContact ? 'bg-white/15' : 'bg-white/15'} flex items-center justify-center`}>
-            <span className="text-[10px] font-black uppercase tracking-widest text-white">24H</span>
-          </div>
-          <div className="min-w-0">
-            <p className="text-[9px] font-black uppercase tracking-[0.22em] text-white/70">{contactHelper}</p>
-            <p className="truncate text-sm font-black">{t.nav?.contact || 'Contact'}</p>
           </div>
         </Link>
       </div>
