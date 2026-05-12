@@ -387,8 +387,8 @@ const FloatingQuickLinks: React.FC = () => {
   const verifiedLabel = t.footer?.officialLicensed || 'Official Licensed';
 
   return (
-    <div className="pointer-events-none fixed bottom-5 right-4 z-[70] md:bottom-6 md:right-6">
-      <div className="pointer-events-auto flex items-center gap-3">
+    <div className="pointer-events-none fixed bottom-5 right-3 z-[70] md:bottom-6 md:right-5">
+      <div className="pointer-events-auto flex items-center gap-4 md:gap-5">
         <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white/96 px-4 py-3 shadow-[0_18px_45px_-22px_rgba(15,23,42,0.45)] backdrop-blur-xl">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-slate-900 text-white shadow-sm">
             <span className="text-[10px] font-black uppercase tracking-tight">TÜRSAB</span>
