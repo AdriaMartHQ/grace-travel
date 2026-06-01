@@ -3,10 +3,10 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
 
-type TourFilter = 'all' | 'classic' | 'family';
+type TourFilter = 'all' | 'classic' | 'family' | 'balkan';
 
 const parseTourFilter = (value: string | null): TourFilter => {
-  if (value === 'classic' || value === 'family') {
+  if (value === 'classic' || value === 'family' || value === 'balkan') {
     return value;
   }
   return 'all';
@@ -25,6 +25,13 @@ const Tours: React.FC = () => {
   const filteredTours = useMemo(() => {
     return filter === 'all' ? toursData : toursData.filter((tour: any) => tour.category === filter);
   }, [filter, toursData]);
+
+  // Show only the category chips that actually have tours in the current language's data.
+  const categoryButtons = useMemo(() => {
+    const order: TourFilter[] = ['classic', 'family', 'balkan'];
+    const present = order.filter((c) => toursData.some((tour: any) => tour.category === c));
+    return ['all', ...present] as TourFilter[];
+  }, [toursData]);
 
   const handleFilterChange = (nextFilter: TourFilter) => {
     const nextParams = new URLSearchParams(searchParams);
@@ -95,7 +102,7 @@ const Tours: React.FC = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex flex-wrap items-center justify-center gap-3 md:gap-4">
-          {(['all', 'classic', 'family'] as const).map(cat => (
+          {categoryButtons.map(cat => (
             <button
               key={cat}
               onClick={() => handleFilterChange(cat)}
@@ -154,7 +161,7 @@ const Tours: React.FC = () => {
                 </div>
                 <div className="flex items-center justify-between pt-8 border-t border-slate-50">
                   <div className="flex flex-col">
-                    <span className="text-xl md:text-[1.7rem] font-black text-slate-900 tracking-tight">{currencySymbol}{tour.price}</span>
+                    <span className="text-xl md:text-[1.7rem] font-black text-slate-900 tracking-tight">{typeof tour.price === 'number' ? `${currencySymbol}${tour.price}` : tour.price}</span>
                   </div>
                   <Link to={tour.path || "/contact"} className="bg-slate-900 text-white px-5 md:px-8 py-4 rounded-2xl text-[11px] md:text-[10px] font-black uppercase tracking-[0.14em] md:tracking-[0.2em] hover:bg-[#FF9D00] transition-all shadow-lg whitespace-nowrap">
                     {tour.path ? (t.nav.home === '首页' ? '行程详情' : 'Details') : t.nav.enquire}

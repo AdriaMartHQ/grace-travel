@@ -102,7 +102,7 @@ const TourCard: React.FC<{ tour: any; priority?: boolean }> = ({ tour, priority 
       <div className="p-8 md:p-10 flex flex-col flex-grow">
         <div className="flex justify-between items-center mb-4">
           <span className="text-[10px] md:text-[9px] font-black text-[#FF9D00] uppercase tracking-[0.16em] md:tracking-widest">{tour.duration}</span>
-          <span className="text-lg md:text-[1.7rem] font-black text-slate-900 tracking-tight">{currencySymbol}{tour.price}</span>
+          <span className="text-lg md:text-[1.7rem] font-black text-slate-900 tracking-tight">{typeof tour.price === 'number' ? `${currencySymbol}${tour.price}` : tour.price}</span>
         </div>
         <Link to={tour.path || "/contact"}>
           <h3 className="text-base sm:text-lg md:text-[1.5rem] font-black mb-4 text-slate-900 leading-[1.12] tracking-tight [text-wrap:balance] group-hover:text-[#FF9D00] transition-colors line-clamp-2">

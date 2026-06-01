@@ -4,9 +4,9 @@ export interface Tour {
   title: string;
   location: string;
   duration: string;
-  price: number;
+  price: number | string;
   image: string;
-  category: 'classic' | 'luxury' | 'family';
+  category: 'classic' | 'luxury' | 'family' | 'balkan';
   highlights: string[];
   path?: string;
 }

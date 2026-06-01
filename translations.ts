@@ -68,7 +68,8 @@ export const translations: Record<Language, BaseTranslations> = {
       tourCategories: {
         all: 'All Journeys',
         classic: 'Signature & Cultural',
-        family: 'Faith Journeys'
+        family: 'Faith Journeys',
+        balkan: 'Balkans'
       },
       // Dedicated labels for ticket filters
       ticketCategories: {
@@ -1063,8 +1064,9 @@ export const translations: Record<Language, BaseTranslations> = {
       // 纵享行程：用于线路页分类
       tourCategories: { 
         all: '全部行程', 
-        classic: '人文经典', 
-        family: '信仰之旅' 
+        classic: '人文经典',
+        family: '信仰之旅',
+        balkan: '巴尔干三国'
       },
       // 门票体验：用于门票页分类
       ticketCategories: { 
@@ -1940,7 +1942,8 @@ export const translations: Record<Language, BaseTranslations> = {
       { id: 'z2', title: 'Z2-启示录七教会精华 4日朝圣之旅', location: '七教会核心区', duration: '4天', price: 4999, image: "https://images.unsplash.com/photo-1684214190982-f3506653f932?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['七教会精华', '使徒脚踪探访', '温泉圣迹之旅'], path: '/itineraries/z2-revelation-4-days' },
       { id: 'z5', title: 'Z5-9天8晚·陆路深度基督教朝圣之旅', location: '保罗足迹 / 七教会', duration: '9天8晚', price: 11800, image: "https://images.unsplash.com/photo-1605382628707-0aa0593fba19?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['保罗足迹寻访', '七教会双日巡踪', '卡帕多奇亚信仰记忆'], path: '/itineraries/z5-paul-footsteps-9-days' },
       { id: 'z6', title: 'Z6-7天6晚·陆路伊城+7教会朝圣之旅', location: '伊斯坦布尔 / 七教会', duration: '7天6晚', price: 9880, image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['伊城深度探访', '七教会陆路朝圣', '圣经讲解祷告'], path: '/itineraries/z6-overland-seven-churches-7-days' },
-      { id: 'i1', title: 'I1-8天7晚·以色列圣地灵修之旅', location: '耶路撒冷 / 加利利 / 伯利恒', duration: '8天7晚', price: 14890, image: "https://images.unsplash.com/photo-1542743408-218cc173cda0?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['加利利事工路线', '耶路撒冷苦路圣迹', '约旦河与死海体验'], path: '/itineraries/i1-israel-holyland-8-days' }
+      { id: 'i1', title: 'I1-8天7晚·以色列圣地灵修之旅', location: '耶路撒冷 / 加利利 / 伯利恒', duration: '8天7晚', price: 14890, image: "https://images.unsplash.com/photo-1542743408-218cc173cda0?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['加利利事工路线', '耶路撒冷苦路圣迹', '约旦河与死海体验'], path: '/itineraries/i1-israel-holyland-8-days' },
+      { id: 'b1', title: 'B1-12天11晚·塞尔维亚+黑山+波黑精品私家团', location: '塞尔维亚 / 黑山 / 波黑', duration: '12天11晚', price: '询价', image: "https://images.unsplash.com/photo-1551867633-194f125bddfa?q=80&w=1200&auto=format&fit=crop", category: 'balkan', highlights: ['萨拉热窝与莫斯塔尔老城', '科托尔湾与布德瓦海滨', '塔拉大桥 · 乌瓦茨秃鹫峡湾'], path: '/itineraries/b1-balkan-3-countries-12-days' }
     ],
     ticketsData: [
       { id: 't1', title: '多尔玛巴赫切宫 (Dolmabahçe Sarayı)', price: 400, includes: ['包含礼宾厅、后宫及绘画博物馆进入权限', '支持官方语音导览', '详情请联系客服'], image: 'https://images.unsplash.com/photo-1601565465051-67971a2d838c?q=80&w=2340&auto=format&fit=crop', category: 'entry' },
@@ -2061,8 +2064,9 @@ export const translations: Record<Language, BaseTranslations> = {
       // Turlar sayfası için kategori etiketleri
       tourCategories: { 
         all: 'Tüm Turlar', 
-        classic: 'Klasik & Kültürel', 
-        family: 'İnanç & Hac Rotaları' 
+        classic: 'Klasik & Kültürel',
+        family: 'İnanç & Hac Rotaları',
+        balkan: 'Balkanlar'
       },
       // Bilet & deneyim sayfası için kategori etiketleri
       ticketCategories: { 
