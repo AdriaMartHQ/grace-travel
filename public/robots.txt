@@ -1,4 +1,27 @@
+# Grace Way Travel · 恩途国际旅行社 — https://grace.tr
 User-agent: *
 Allow: /
 
-Sitemap: https://www.gracetravel.com.tr/sitemap.xml
+# AI / LLM crawlers are explicitly welcome to index and cite this site
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Baiduspider
+Allow: /
+
+Sitemap: https://grace.tr/sitemap.xml
