@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
         <h1 className={`mx-auto md:mx-0 font-black text-white mb-5 md:mb-7 serif leading-[1.01] tracking-tight [text-wrap:balance] drop-shadow-2xl px-2 md:px-0 ${heroTitleClasses}`}>
           {t.hero.title}
         </h1>
-        <p className={`text-[15px] sm:text-lg text-white/88 ${heroVerse ? 'mb-5 md:mb-6' : 'mb-8 md:mb-11'} mx-auto md:mx-0 font-light leading-relaxed whitespace-pre-line [text-wrap:pretty] px-2 md:px-0 ${heroSubtitleClasses}`}>
+        <p className={`text-[15px] sm:text-lg text-white/[0.88] ${heroVerse ? 'mb-5 md:mb-6' : 'mb-8 md:mb-11'} mx-auto md:mx-0 font-light leading-relaxed whitespace-pre-line [text-wrap:pretty] px-2 md:px-0 ${heroSubtitleClasses}`}>
           {heroLead}
         </p>
         {heroVerse && (
