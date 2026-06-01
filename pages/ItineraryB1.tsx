@@ -510,6 +510,11 @@ const ItineraryB1: React.FC = () => {
               返回巴尔干线路
             </Link>
           </div>
+          <div className="pt-8 mt-2 border-t border-white/10 max-w-md mx-auto">
+            <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40 mb-3">巴尔干业务对接人</p>
+            <a href="tel:+381665423472" className="inline-block text-2xl md:text-3xl font-black text-[#FF9D00] tracking-tight hover:text-white transition-colors">+381 66 542 3472</a>
+            <p className="text-sm text-white/60 font-medium mt-2">微信同号（WeChat：+381 66 542 3472）</p>
+          </div>
         </div>
       </section>
 
