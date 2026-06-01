@@ -3,20 +3,28 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
 
-// 注：以下为已验证可用的通用风景占位图（Unsplash，免版权），按每日场景类型分配，
-// 后续可替换为巴尔干实拍照片（科托尔湾 / 莫斯塔尔古桥 / 塔拉大桥 / 乌瓦茨等）。
+// 配图：逐站真实地标。多数为 Wikimedia Commons 实景照片(CC BY-SA，页脚已署名)；
+// 金色缆车无自由授权图，采用 goldgondola.rs 官方图(本地托管)。最终成行将替换为本社实拍。
+const wc = (file: string, w = 1600) =>
+  `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=${w}`;
+
 const IMG = {
-  danubeCity: 'https://images.unsplash.com/photo-1551867633-194f125bddfa?auto=format&fit=crop&w=1600&q=80', // 多瑙河城市（诺维萨德/贝尔格莱德感）
-  sunsetCity: 'https://images.unsplash.com/photo-1565008576549-57569a49371d?auto=format&fit=crop&w=1600&q=80', // 暮色老城+穹顶
-  whiteCoast: 'https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?auto=format&fit=crop&w=1600&q=80', // 地中海海滨白城
-  cliffTown: 'https://images.unsplash.com/photo-1499678329028-101435549a4e?auto=format&fit=crop&w=1600&q=80', // 海崖暮色老城
-  turquoiseSea: 'https://images.unsplash.com/photo-1612278675615-7b093b07772d?auto=format&fit=crop&w=1600&q=80', // 碧蓝海湾
-  mountains: 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=1600&q=80', // 雪山针叶林
+  belgradeStSava: wc('Church of Saint Sava (Belgrade, Serbia).jpg'),
+  sarajevo: wc('Sarajevo - view from Baščaršija.JPG'),
+  mostar: wc('Mostar Stari Most BW 2024-10-01 13-00-05.jpg'),
+  kotorBay: wc('Kotor and Boka kotorska - view from city wall.jpg'),
+  svetiStefan: wc('Sveti Stefan (06).jpg'),
+  lovcen: wc('Jezerski Vrh, Njegos mausoleum - 2.jpg'),
+  taraBridge: wc('Đurđevića Tara Bridge (by Pudelek).JPG'),
+  uvac: wc('Curving meanders in Special Nature Reserve Uvac River canyon valley, Serbia.JPG'),
+  goldGondola: '/img/zlatibor-gold-gondola.jpg', // goldgondola.rs 官方图，本地托管
+  petrovaradin: wc('Petrovaradin Fortress 2014.jpg'),
+  zemun: wc('Zemun panorama from Gardoš tower.jpg'),
+  kalemegdan: wc('Kalemegdan, a04.jpg'),
 };
 
-const heroImage =
-  'https://images.unsplash.com/photo-1551867633-194f125bddfa?auto=format&fit=crop&w=2200&q=80';
-const fallbackImage = IMG.danubeCity;
+const heroImage = wc('Kotor and Boka kotorska - view from city wall.jpg', 2000);
+const fallbackImage = IMG.kotorBay;
 
 const itineraryContent = {
   zh: {
@@ -100,7 +108,7 @@ const itineraryContent = {
           day: '01',
           title: '抵达贝尔格莱德｜白城初印象',
           stay: '贝尔格莱德酒店',
-          image: IMG.sunsetCity,
+          image: IMG.belgradeStSava,
           paragraphs: [
             '抵达贝尔格莱德，由中文导游接机。先前往世界上最大的东正教教堂之一——圣萨瓦教堂，在恢弘的穹顶下感受塞尔维亚的信仰与国族记忆，随后漫步共和国广场与米哈伊洛大公街，触摸这座“白城”的日常脉搏。',
             '傍晚登上卡莱梅格丹城堡，在多瑙河与萨瓦河交汇处看落日，两河相拥、舟楫往来，为整趟巴尔干之旅写下从容的序章。',
@@ -111,7 +119,7 @@ const itineraryContent = {
           day: '02',
           title: '贝尔格莱德 → 萨拉热窝｜东西方交汇之城',
           stay: '萨拉热窝酒店',
-          image: IMG.cliffTown,
+          image: IMG.sarajevo,
           paragraphs: [
             '上午驱车前往波黑首都萨拉热窝（车程约 4.5 小时）。这座城市在一条街上就能完成从清真寺到东正教堂、再到天主教堂与犹太会堂的步行，被称为“欧洲的耶路撒冷”。',
             '深入巴什察尔希亚老城的铜匠街与古老市集，途经见证一战导火索的拉丁桥，并在《瓦尔特保卫萨拉热窝》的取景地重温那段熟悉的旋律；登上黄堡观景台，俯瞰被群山环抱的红顶老城。',
@@ -122,7 +130,7 @@ const itineraryContent = {
           day: '03',
           title: '萨拉热窝 → 莫斯塔尔｜古桥与跳桥少年',
           stay: '莫斯塔尔酒店',
-          image: IMG.turquoiseSea,
+          image: IMG.mostar,
           paragraphs: [
             '前往波黑南部的莫斯塔尔（车程约 2.5 小时），这里以横跨内雷特瓦河的莫斯塔尔古桥闻名于世——奥斯曼时代的石拱桥在战火中倒塌后又被精心重建，是巴尔干韧性与和解的象征。',
             '在鹅卵石铺就的老城里穿行，欣赏勇敢的跳桥少年从古桥一跃入碧绿的河水，再沿内雷特瓦河谷感受群山与翡翠色河流交织的独特风景。',
@@ -133,7 +141,7 @@ const itineraryContent = {
           day: '04',
           title: '莫斯塔尔 → 科托尔 → 布德瓦｜驶入亚得里亚海湾',
           stay: '布德瓦酒店',
-          image: IMG.whiteCoast,
+          image: IMG.kotorBay,
           paragraphs: [
             '一路向南进入黑山，抵达被群山环抱的科托尔湾。在湾区观景台俯瞰这条深入内陆、形似峡湾的海湾，蜿蜒的海岸线与依山而建的村落构成地中海少见的画面。',
             '走进世界文化遗产科托尔古城，在中世纪石巷与城墙间寻访教堂与广场，随后前往黑山最迷人的海滨度假地布德瓦入住，开启连住三晚的海滨慢时光。',
@@ -144,7 +152,7 @@ const itineraryContent = {
           day: '05',
           title: '布德瓦海滨｜老城与圣斯特凡岛',
           stay: '布德瓦酒店',
-          image: IMG.cliffTown,
+          image: IMG.svetiStefan,
           paragraphs: [
             '今日留给海岸线。上午漫步布德瓦老城，威尼斯风格的城墙、教堂与窄巷紧贴海面，是亚得里亚海岸上保存完好的古城之一。',
             '远眺如珍珠般卧在海中的圣斯特凡岛——昔日渔村、今日传奇度假地，再沿海滨步道散步、看海，享受一段完全属于自己的悠闲时光。',
@@ -155,7 +163,7 @@ const itineraryContent = {
           day: '06',
           title: '洛夫琴国家公园｜黑山之巅的诗与远方',
           stay: '布德瓦酒店',
-          image: IMG.mountains,
+          image: IMG.lovcen,
           paragraphs: [
             '乘坐科托尔缆车扶摇直上，在空中俯瞰科托尔湾层层退去的蓝，是黑山最具冲击力的视角之一，随后进入黑山的精神高地——洛夫琴国家公园。',
             '登临山顶的涅戈什陵墓，凭吊这位黑山的诗人与统治者，在群峰之巅远望，理解“黑山”之名从何而来。傍晚返回布德瓦海滨。',
@@ -166,7 +174,7 @@ const itineraryContent = {
           day: '07',
           title: '布德瓦 → 扎布利亚克｜峡谷与高山黑湖',
           stay: '扎布利亚克酒店',
-          image: IMG.turquoiseSea,
+          image: IMG.taraBridge,
           paragraphs: [
             '告别海岸，向北深入黑山腹地。途经壮丽的莫拉查峡谷，再抵达横跨塔拉河谷的塔拉大桥——曾是欧洲最高的公路混凝土拱桥，桥下是欧洲最深的峡谷之一。',
             '抵达杜米托尔山区的扎布利亚克，前往静卧群山与黑松林间的黑湖，在清澈的湖水与雪峰倒影前散步，感受巴尔干高山截然不同的气息。',
@@ -177,7 +185,7 @@ const itineraryContent = {
           day: '08',
           title: '扎布利亚克 → 乌瓦茨 → 新瓦罗什｜秃鹫翱翔的河曲秘境',
           stay: '新瓦罗什酒店',
-          image: IMG.mountains,
+          image: IMG.uvac,
           paragraphs: [
             '进入塞尔维亚西南，前往少有人至的乌瓦茨特别自然保护区。乘游船在层层叠叠的河曲峡湾间穿行，两岸峭壁如屏，是巴尔干最摄人心魄的地貌之一。',
             '这里是欧洲珍稀的白头秃鹫栖息地，运气好时可见它们在峡谷上空盘旋；登上乌瓦茨观景台俯瞰著名的“河曲蜿蜒”全景后，前往新瓦罗什入住。',
@@ -186,11 +194,11 @@ const itineraryContent = {
         },
         {
           day: '09',
-          title: '新瓦罗什 → 兹拉蒂博尔｜山地度假与怀旧时光',
+          title: '新瓦罗什 → 兹拉蒂博尔｜金色缆车与怀旧时光',
           stay: '兹拉蒂博尔酒店',
-          image: IMG.sunsetCity,
+          image: IMG.goldGondola,
           paragraphs: [
-            '前往塞尔维亚著名的山地度假胜地兹拉蒂博尔，乘坐金色缆车览高原牧场与松林风光，在清新的空气里放慢脚步。',
+            '前往塞尔维亚著名的山地度假胜地兹拉蒂博尔，乘坐世界最长的全景观光缆车之一——“金色缆车”，在空中览过高原牧场与松林风光，在清新的空气里放慢脚步。',
             '可选前往著名导演库斯图里卡打造的“木头村”，或体验如时光倒流般的沙尔干八字铁路，在蜿蜒的窄轨小火车上邂逅巴尔干田园。（可选项目可在定制时一并安排）',
           ],
           meals: { breakfast: '含', lunch: '—', dinner: '—' },
@@ -199,7 +207,7 @@ const itineraryContent = {
           day: '10',
           title: '兹拉蒂博尔 → 诺维萨德｜要塞与多瑙河畔',
           stay: '诺维萨德酒店',
-          image: IMG.danubeCity,
+          image: IMG.petrovaradin,
           paragraphs: [
             '北上前往塞尔维亚第二大城诺维萨德，途中可探访塞尔维亚的红酒小镇，品味当地风土。',
             '登临多瑙河畔的彼得罗瓦拉丁要塞，在“多瑙河上的直布罗陀”俯瞰河湾与对岸老城，再漫步诺维萨德老城的彩色街巷与广场，感受这座文艺之城的从容。',
@@ -210,7 +218,7 @@ const itineraryContent = {
           day: '11',
           title: '诺维萨德 → 贝尔格莱德｜泽蒙古镇与多瑙河漫步',
           stay: '贝尔格莱德酒店',
-          image: IMG.sunsetCity,
+          image: IMG.zemun,
           paragraphs: [
             '返回贝尔格莱德，前往多瑙河畔的泽蒙古镇——这片曾属于奥匈帝国的街区保留着中欧的优雅气质。登上加尔多什塔（千禧塔），俯瞰多瑙河与红顶老城。',
             '沿多瑙河步道散步，看渔船与水上餐厅，随后留出自由活动时间，购物或在河畔咖啡馆小坐，为旅程收尾。',
@@ -221,7 +229,7 @@ const itineraryContent = {
           day: '12',
           title: '贝尔格莱德送机｜带着巴尔干的故事回家',
           stay: '返回温暖的家',
-          image: IMG.cliffTown,
+          image: IMG.kalemegdan,
           paragraphs: [
             '根据航班时间安排送机，结束这段愉快的巴尔干三国之旅。',
             '从贝尔格莱德的两河交汇，到莫斯塔尔的古桥、科托尔的海湾与杜米托尔的雪山——愿这一路的山海与老城，成为你心里关于巴尔干的长久记忆。',
@@ -303,7 +311,7 @@ const ItineraryB1: React.FC = () => {
 
       <section className="relative h-[80vh] md:h-[85vh] flex items-center justify-center text-center px-4 overflow-hidden">
         <div className="absolute inset-0 z-0 scale-110">
-          <img src={heroImage} className="w-full h-full object-cover" alt="Grace Way Balkans" onError={handleImageError} />
+          <img src={heroImage} className="w-full h-full object-cover" alt="Grace Way Balkans - Kotor Bay" onError={handleImageError} />
           <div className="absolute inset-0 bg-black/45 z-10"></div>
         </div>
         <div className="relative z-20 max-w-6xl animate-in fade-in slide-in-from-bottom-6 duration-1000">
@@ -435,7 +443,7 @@ const ItineraryB1: React.FC = () => {
                 <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-md px-5 py-2 rounded-full text-[10px] font-black text-slate-900 shadow-xl uppercase z-10 border border-slate-100">
                   DAY {item.day}
                 </div>
-                <img src={item.image} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt={item.title} onError={handleImageError} />
+                <img src={item.image} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt={item.title} loading="lazy" onError={handleImageError} />
               </div>
             </div>
             <div className="w-full lg:w-1/2 space-y-6 text-left">
@@ -504,6 +512,12 @@ const ItineraryB1: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <div className="bg-white py-8 px-6 border-t border-slate-100">
+        <p className="max-w-5xl mx-auto text-[11px] leading-relaxed text-slate-400 text-center">
+          图片版权：本页风光照片多来自 Wikimedia Commons，依 CC BY-SA 许可使用 —— 圣萨瓦教堂 © Petar Milošević；萨拉热窝老城、科托尔湾、塔拉大桥 © Pudelek (Marcin Szala)；莫斯塔尔古桥 © Berthold Werner；圣斯特凡岛 © Marcin Konsek；洛夫琴 © Ingo Mehling；乌瓦茨 © Srdjan Marincic；兹拉蒂博尔（如使用）© Dani. zuni；彼得罗瓦拉丁要塞 © Choinowski；泽蒙 © Petar Milošević；卡莱梅格丹 © Mickey Mystique。金色缆车图片来自 goldgondola.rs 官方网站。最终成行将替换为本社实拍照片。
+        </p>
+      </div>
     </div>
   );
 };
