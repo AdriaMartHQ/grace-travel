@@ -24,6 +24,8 @@ const Hero: React.FC = () => {
     : isTurkish
     ? 'md:text-[1.12rem] lg:text-[1.22rem] max-w-xl md:max-w-[31rem]'
     : 'md:text-[1.22rem] lg:text-[1.38rem] max-w-2xl md:max-w-[36rem]';
+  const [heroLead, ...heroVerseRest] = t.hero.subtitle.split('\n\n');
+  const heroVerse = heroVerseRest.join('\n\n');
   return (
     <section className="relative min-h-[88vh] md:min-h-screen flex items-end overflow-hidden px-4">
       <SEO 
@@ -46,9 +48,14 @@ const Hero: React.FC = () => {
         <h1 className={`mx-auto md:mx-0 font-black text-white mb-5 md:mb-7 serif leading-[1.01] tracking-tight [text-wrap:balance] drop-shadow-2xl px-2 md:px-0 ${heroTitleClasses}`}>
           {t.hero.title}
         </h1>
-        <p className={`text-[15px] sm:text-lg text-white/88 mb-8 md:mb-11 mx-auto md:mx-0 font-light leading-relaxed whitespace-pre-line [text-wrap:pretty] px-2 md:px-0 ${heroSubtitleClasses}`}>
-          {t.hero.subtitle}
+        <p className={`text-[15px] sm:text-lg text-white/88 ${heroVerse ? 'mb-5 md:mb-6' : 'mb-8 md:mb-11'} mx-auto md:mx-0 font-light leading-relaxed whitespace-pre-line [text-wrap:pretty] px-2 md:px-0 ${heroSubtitleClasses}`}>
+          {heroLead}
         </p>
+        {heroVerse && (
+          <p className={`text-[15px] sm:text-lg text-white mb-8 md:mb-11 mx-auto md:mx-0 font-light leading-relaxed whitespace-pre-line [text-wrap:pretty] px-2 md:px-0 ${heroSubtitleClasses}`}>
+            {heroVerse}
+          </p>
+        )}
         <div className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4 md:gap-5">
           <Link to="/tours" className="w-full sm:w-auto bg-[#FF9D00] text-white px-8 md:px-10 py-4 rounded-full text-[12px] md:text-sm font-black uppercase tracking-[0.16em] md:tracking-widest transition-all transform active:scale-95 shadow-xl shadow-orange-500/30">
             {t.hero.cta1}
