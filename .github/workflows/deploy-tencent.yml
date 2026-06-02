@@ -29,18 +29,36 @@ jobs:
         env:
           DEPLOY_KEY: ${{ secrets.TENCENT_DEPLOY_KEY }}
         run: |
-          # Write private key
           install -m 600 /dev/null /tmp/deploy_key
           echo "$DEPLOY_KEY" > /tmp/deploy_key
 
-          # rsync dist/ to server (no --delete so Caddy keeps serving during sync)
           rsync -avz \
             -e "ssh -i /tmp/deploy_key -o StrictHostKeyChecking=no -o PasswordAuthentication=no" \
             --exclude='.DS_Store' \
             dist/ \
             deploy@43.129.213.201:/var/www/grace/
 
-          # Clean up key
+          rm -f /tmp/deploy_key
+
+      - name: Pre-compress assets on server (Brotli + Gzip)
+        env:
+          DEPLOY_KEY: ${{ secrets.TENCENT_DEPLOY_KEY }}
+        run: |
+          install -m 600 /dev/null /tmp/deploy_key
+          echo "$DEPLOY_KEY" > /tmp/deploy_key
+
+          ssh -i /tmp/deploy_key -o StrictHostKeyChecking=no deploy@43.129.213.201 '
+            find /var/www/grace -type f \( \
+              -name "*.html" -o -name "*.js" -o -name "*.css" \
+              -o -name "*.json" -o -name "*.svg" -o -name "*.xml" \
+              -o -name "*.txt" -o -name "*.webmanifest" \
+            \) | while read f; do
+              brotli --best --keep --force "$f" -o "${f}.br" 2>/dev/null
+              gzip -k -9 -f "$f" 2>/dev/null
+            done
+            echo "Pre-compression done"
+          '
+
           rm -f /tmp/deploy_key
 
       - name: Smoke test HTTPS
@@ -49,3 +67,6 @@ jobs:
           STATUS=$(curl -sI https://grace.tr/ | head -1)
           echo "grace.tr → $STATUS"
           echo "$STATUS" | grep -q "200\|30" || (echo "Unexpected status" && exit 1)
+          # Verify Brotli is served
+          ENC=$(curl -sI -H "Accept-Encoding: br" https://grace.tr/ | grep -i content-encoding | tr -d '\r')
+          echo "Encoding: $ENC"
