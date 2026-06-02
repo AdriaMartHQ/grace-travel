@@ -239,11 +239,14 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
           </Link>
         </div>
 
+        {/* 分隔线 */}
+        <div className="w-16 border-t border-white/10 my-6 shrink-0" />
+
         {/* 联系我们 — 橙色 CTA 按钮 */}
         <Link
           to="/contact"
           onClick={onClose}
-          className="mb-8 px-10 py-3.5 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-[0.18em] text-sm shadow-xl shadow-orange-500/20 active:scale-95 transition-all shrink-0"
+          className="mb-10 px-12 py-4 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-[0.18em] text-sm shadow-xl shadow-orange-500/20 active:scale-95 transition-all shrink-0"
         >
           {t.nav?.contact || '联系我们'}
         </Link>
