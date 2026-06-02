@@ -190,29 +190,28 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
       className="fixed inset-0 z-[500] flex flex-col h-[100dvh] w-screen bg-slate-950/96 backdrop-blur-md animate-in fade-in duration-300 pointer-events-auto"
       onClick={onClose}
     >
+      {/* 上下两区布局：导航区 flex-1 居中，底部区固定底部 */}
       <div
-        className="flex flex-col items-center justify-center min-h-full py-12 px-6 space-y-0 overflow-y-auto"
+        className="flex flex-col h-full px-6 overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Logo */}
-        <BrandLogo className="w-14 h-14 mb-8 shrink-0" />
-
-        {/* ── 主导航 5 项（对齐桌面菜单）── */}
-        <div className="w-full max-w-xs flex flex-col items-center space-y-6 text-center mb-8">
+        {/* ── 上区：Logo + 导航链接（撑满剩余空间，居中对齐）── */}
+        <div className="flex-1 flex flex-col items-center justify-center gap-6 py-10 text-center">
+          <BrandLogo className="w-12 h-12 shrink-0" />
 
           {/* 首页 */}
           <Link to="/" onClick={onClose} className={linkCls('/')}>
             {t.nav?.home || '首页'}
           </Link>
 
-          {/* 行程线路 — 展开子项 */}
-          <div className="flex flex-col items-center space-y-4 w-full">
-            <p className={`text-2xl md:text-3xl font-black uppercase tracking-tight ${
+          {/* 行程线路 + 子项 */}
+          <div className="flex flex-col items-center gap-3 w-full">
+            <p className={`text-2xl font-black uppercase tracking-tight ${
               isActive('/tours') || isActive('/itineraries/') ? 'text-[#FF9D00]' : 'text-white'
             }`}>
               {t.nav?.itineraries || '行程线路'}
             </p>
-            <div className="flex flex-col items-center space-y-3 pl-0">
+            <div className="flex flex-col items-center gap-2.5">
               <Link to="/tours" onClick={onClose} className={subLinkCls('/tours')}>
                 {t.nav?.turkeyClassic || '人文经典 S系列'}
               </Link>
@@ -239,13 +238,8 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
           </Link>
         </div>
 
-        {/* 分隔线 */}
-        <div className="w-16 border-t border-white/10 my-6 shrink-0" />
-
-        {/* 底部三项：联系我们 / 语言 / 关闭 — 统一间距 */}
-        <div className="flex flex-col items-center gap-5 shrink-0">
-
-          {/* 联系我们 CTA */}
+        {/* ── 底区：联系我们 / 语言 / 关闭（固定在底部）── */}
+        <div className="flex flex-col items-center gap-4 pb-10 pt-6 border-t border-white/8 shrink-0">
           <Link
             to="/contact"
             onClick={onClose}
@@ -254,7 +248,6 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
             {t.nav?.contact || '联系我们'}
           </Link>
 
-          {/* Language switch */}
           <div className="flex space-x-6 p-1 bg-white/5 rounded-full border border-white/10">
             {languages.map((l) => (
               <button
@@ -269,14 +262,12 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
             ))}
           </div>
 
-          {/* Close */}
           <button
             onClick={onClose}
-            className="px-10 py-3.5 bg-white/5 rounded-2xl text-white/30 text-[10px] font-black uppercase tracking-[0.25em] hover:text-white hover:bg-white/10 transition-all border border-white/5 active:scale-90"
+            className="px-10 py-3 bg-white/5 rounded-2xl text-white/25 text-[10px] font-black uppercase tracking-[0.25em] hover:text-white hover:bg-white/10 transition-all border border-white/5 active:scale-90"
           >
             {t.nav?.closeMenu || '关闭'}
           </button>
-
         </div>
       </div>
     </div>,
