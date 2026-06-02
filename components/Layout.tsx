@@ -187,7 +187,7 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
 
   return createPortal(
     <div
-      className="fixed inset-0 z-[500] flex flex-col h-[100dvh] w-screen bg-slate-950 animate-in fade-in duration-300 pointer-events-auto"
+      className="fixed inset-0 z-[500] flex flex-col h-[100dvh] w-screen bg-slate-950/96 backdrop-blur-md animate-in fade-in duration-300 pointer-events-auto"
       onClick={onClose}
     >
       <div
@@ -242,37 +242,42 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
         {/* 分隔线 */}
         <div className="w-16 border-t border-white/10 my-6 shrink-0" />
 
-        {/* 联系我们 — 橙色 CTA 按钮 */}
-        <Link
-          to="/contact"
-          onClick={onClose}
-          className="mb-10 px-12 py-4 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-[0.18em] text-sm shadow-xl shadow-orange-500/20 active:scale-95 transition-all shrink-0"
-        >
-          {t.nav?.contact || '联系我们'}
-        </Link>
+        {/* 底部三项：联系我们 / 语言 / 关闭 — 统一间距 */}
+        <div className="flex flex-col items-center gap-5 shrink-0">
 
-        {/* Language switch */}
-        <div className="flex space-x-6 p-1 bg-white/5 rounded-full border border-white/10 mb-5 shrink-0">
-          {languages.map((l) => (
-            <button
-              key={l.code}
-              onClick={() => { setLanguage(l.code); onClose(); }}
-              className={`px-5 py-2 rounded-full text-[11px] font-black tracking-[0.18em] transition-all ${
-                language === l.code ? 'bg-[#FF9D00] text-white' : 'text-white/40 hover:text-white'
-              }`}
-            >
-              {l.label}
-            </button>
-          ))}
+          {/* 联系我们 CTA */}
+          <Link
+            to="/contact"
+            onClick={onClose}
+            className="px-12 py-4 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-[0.18em] text-sm shadow-xl shadow-orange-500/20 active:scale-95 transition-all"
+          >
+            {t.nav?.contact || '联系我们'}
+          </Link>
+
+          {/* Language switch */}
+          <div className="flex space-x-6 p-1 bg-white/5 rounded-full border border-white/10">
+            {languages.map((l) => (
+              <button
+                key={l.code}
+                onClick={() => { setLanguage(l.code); onClose(); }}
+                className={`px-5 py-2 rounded-full text-[11px] font-black tracking-[0.18em] transition-all ${
+                  language === l.code ? 'bg-[#FF9D00] text-white' : 'text-white/40 hover:text-white'
+                }`}
+              >
+                {l.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Close */}
+          <button
+            onClick={onClose}
+            className="px-10 py-3.5 bg-white/5 rounded-2xl text-white/30 text-[10px] font-black uppercase tracking-[0.25em] hover:text-white hover:bg-white/10 transition-all border border-white/5 active:scale-90"
+          >
+            {t.nav?.closeMenu || '关闭'}
+          </button>
+
         </div>
-
-        {/* Close */}
-        <button
-          onClick={onClose}
-          className="mt-2 px-10 py-4 bg-white/5 rounded-2xl text-white/30 text-[10px] font-black uppercase tracking-[0.25em] hover:text-white hover:bg-white/10 transition-all border border-white/5 active:scale-90 shrink-0"
-        >
-          {t.nav?.closeMenu || '关闭'}
-        </button>
       </div>
     </div>,
     document.body
