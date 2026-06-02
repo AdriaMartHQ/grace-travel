@@ -13,6 +13,20 @@ export interface BaseTranslations {
     contact: string;
     enquire: string;
     closeMenu?: string;
+    // dropdown nav additions
+    itineraries?: string;      // dropdown trigger label
+    turkeySection?: string;    // dropdown section header
+    turkeyClassic?: string;    // S-series label
+    turkeyClassicDesc?: string;
+    faithPilgrimage?: string;  // Z-series label
+    faithPilgrimageDesc?: string;
+    otherDest?: string;        // second section header
+    balkans?: string;
+    balkansDesc?: string;
+    holyland?: string;
+    holylandDesc?: string;
+    routesSection?: string;    // mobile section header
+    servicesSection?: string;  // mobile section header
   };
   seo?: Record<
     string,
@@ -50,7 +64,7 @@ export interface BaseTranslations {
 
 export const translations: Record<Language, BaseTranslations> = {
   en: {
-    nav: { home: 'Home', tours: 'Tours', faith: 'Faith', about: 'About Us', tickets: 'Tickets', contact: 'Contact', enquire: 'Enquire', closeMenu: 'Close Menu' },
+    nav: { home: 'Home', tours: 'Tours', faith: 'Faith', about: 'About Us', tickets: 'Tickets', contact: 'Contact', enquire: 'Enquire', closeMenu: 'Close', itineraries: 'Itineraries', turkeySection: 'Turkey', turkeyClassic: 'Cultural & Heritage', turkeyClassicDesc: '6–10 day S-series classics', faithPilgrimage: 'Faith Pilgrimage', faithPilgrimageDesc: 'Seven Churches · Paul\'s Footsteps', otherDest: 'Other Destinations', balkans: 'Balkans 3-Country', balkansDesc: 'Serbia · Montenegro · Bosnia', holyland: 'Holy Land', holylandDesc: 'Israel · Jerusalem · Galilee', routesSection: 'Itineraries', servicesSection: 'Services' },
     hero: {
       title: 'Discover the Soul of Turkey',
       subtitle: 'Bespoke journeys through ancient history and vibrant culture with Grace Way — your licensed boutique travel partner in Turkey.',
@@ -1047,7 +1061,7 @@ export const translations: Record<Language, BaseTranslations> = {
     }
   },
   zh: {
-    nav: { home: '首页', tours: '土耳其线路', faith: '信仰之旅', about: '关于我们', tickets: '门票体验', contact: '联系我们', enquire: '即刻定制', closeMenu: '关闭菜单' },
+    nav: { home: '首页', tours: '土耳其线路', faith: '信仰之旅', about: '关于我们', tickets: '门票体验', contact: '联系我们', enquire: '即刻定制', closeMenu: '关闭', itineraries: '行程线路', turkeySection: '土耳其精品游', turkeyClassic: '人文经典 · S系列', turkeyClassicDesc: '6–10天全景经典私家游', faithPilgrimage: '信仰朝圣 · Z系列', faithPilgrimageDesc: '七教会 · 保罗足迹 · 圣经圣迹', otherDest: '其他目的地', balkans: '巴尔干三国', balkansDesc: '塞尔维亚 · 黑山 · 波黑 12天', holyland: '以色列圣地', holylandDesc: '耶路撒冷 · 加利利 · 伯利恒', routesSection: '行程', servicesSection: '服务' },
     hero: {
       title: '探索土耳其',
       subtitle: '与恩途 · 国际旅行开启一场穿越古老历史与灿烂文化的私享定制之旅\n\n“你出你入，耶和华要保护你，\n从今时直到永远。”\n—— 诗篇 121:8',
@@ -2047,7 +2061,7 @@ export const translations: Record<Language, BaseTranslations> = {
     }
   },
   tr: {
-    nav: { home: 'Anasayfa', tours: 'Turlar', faith: 'İnanç', about: 'Hakkımızda', tickets: 'Biletler', contact: 'İletişim', enquire: 'Teklif Al', closeMenu: 'Kapat' },
+    nav: { home: 'Anasayfa', tours: 'Turlar', faith: 'İnanç', about: 'Hakkımızda', tickets: 'Biletler', contact: 'İletişim', enquire: 'Teklif Al', closeMenu: 'Kapat', itineraries: 'Rotalar', turkeySection: 'Türkiye', turkeyClassic: 'Kültürel & Tarihi', turkeyClassicDesc: '6–10 günlük S-serisi', faithPilgrimage: 'İnanç & Hac', faithPilgrimageDesc: 'Yedi Kilise · Pavlus Rotası', otherDest: 'Diğer Destinasyonlar', balkans: 'Balkanlar', balkansDesc: 'Sırbistan · Karadağ · Bosna', holyland: 'Kutsal Topraklar', holylandDesc: 'İsrail · Kudüs · Celile', routesSection: 'Rotalar', servicesSection: 'Hizmetler' },
     hero: {
       title: 'Türkiye\'nin Ruhunu Keşfedin',
       subtitle: 'Grace Way ile antik mirastan canlı kültüre uzanan butik yolculuklar.',
