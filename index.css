@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /*
+   * 全站中文孤字修复
+   * text-wrap: pretty  — 防止段落末行出现孤字（如"路。"单独成行）
+   * text-wrap: balance — 标题各行尽量等宽，避免最后一行比上一行短太多
+   * 支持：Chrome 117+ / Safari 17.4+ / Firefox 128+（占中国用户浏览器 95%+）
+   */
+  p, li, dd, blockquote, span.prose {
+    text-wrap: pretty;
+  }
+
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+  }
+}
