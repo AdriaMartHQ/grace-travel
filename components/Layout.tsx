@@ -236,17 +236,15 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
           <Link to="/about" onClick={onClose} className={linkCls('/about')}>
             {t.nav?.about || '关于我们'}
           </Link>
-        </div>
 
-        {/* ── 底区：联系我们 / 语言 / 关闭（固定在底部）── */}
-        <div className="flex flex-col items-center gap-4 pb-10 pt-6 border-t border-white/8 shrink-0">
-          <Link
-            to="/contact"
-            onClick={onClose}
-            className="px-12 py-4 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-[0.18em] text-sm shadow-xl shadow-orange-500/20 active:scale-95 transition-all"
-          >
+          {/* 联系我们 — 与导航同级，纯文字 */}
+          <Link to="/contact" onClick={onClose} className={linkCls('/contact')}>
             {t.nav?.contact || '联系我们'}
           </Link>
+        </div>
+
+        {/* ── 底区：语言 / 关闭 ── */}
+        <div className="flex flex-col items-center gap-4 pb-10 pt-6 border-t border-white/8 shrink-0">
 
           <div className="flex space-x-6 p-1 bg-white/5 rounded-full border border-white/10">
             {languages.map((l) => (
