@@ -187,11 +187,11 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
 
   return createPortal(
     <div
-      className="fixed inset-0 z-[500] flex flex-col h-[100dvh] w-screen bg-slate-950/98 backdrop-blur-2xl animate-in fade-in duration-300 pointer-events-auto"
+      className="fixed inset-0 z-[500] flex flex-col h-[100dvh] w-screen bg-slate-950 animate-in fade-in duration-300 pointer-events-auto"
       onClick={onClose}
     >
       <div
-        className="flex flex-col items-center justify-center min-h-full py-16 px-6 space-y-0 overflow-y-auto"
+        className="flex flex-col items-center justify-center min-h-full py-12 px-6 space-y-0 overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Logo */}
@@ -252,7 +252,7 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
         </Link>
 
         {/* Language switch */}
-        <div className="flex space-x-6 p-1 bg-white/5 rounded-full border border-white/10 mb-8 shrink-0">
+        <div className="flex space-x-6 p-1 bg-white/5 rounded-full border border-white/10 mb-5 shrink-0">
           {languages.map((l) => (
             <button
               key={l.code}
@@ -269,7 +269,7 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
         {/* Close */}
         <button
           onClick={onClose}
-          className="px-8 py-3.5 bg-white/5 rounded-2xl text-white/30 text-[10px] font-black uppercase tracking-[0.25em] hover:text-white hover:bg-white/10 transition-all border border-white/5 active:scale-90 shrink-0"
+          className="mt-2 px-10 py-4 bg-white/5 rounded-2xl text-white/30 text-[10px] font-black uppercase tracking-[0.25em] hover:text-white hover:bg-white/10 transition-all border border-white/5 active:scale-90 shrink-0"
         >
           {t.nav?.closeMenu || '关闭'}
         </button>
