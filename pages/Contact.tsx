@@ -24,33 +24,59 @@ const EmailIcon = ({ className = "" }) => (
   </svg>
 );
 
+const PINS: { pos: [number, number]; label: string; sub: string; primary?: boolean }[] = [
+  { pos: [40.9797, 28.8729], label: '伊斯坦布尔', sub: '土耳其总部', primary: true },
+  { pos: [44.8176, 20.4568], label: '贝尔格莱德', sub: '欧洲线路' },
+  { pos: [31.7683, 35.2137], label: '耶路撒冷',   sub: '圣地线路' },
+];
+
 const MapComponent: React.FC<{ lat: number; lng: number }> = ({ lat, lng }) => {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<L.Map | null>(null);
 
   useEffect(() => {
     if (!mapContainerRef.current || mapInstanceRef.current) return;
-    const ISTANBUL_CENTER: [number, number] = [41.0082, 28.9784];
-    const initialZoom = window.innerWidth < 768 ? 9 : 10;
+
     const map = L.map(mapContainerRef.current, {
-      center: ISTANBUL_CENTER,
-      zoom: initialZoom,
       scrollWheelZoom: false,
       zoomControl: true,
       attributionControl: true,
     });
+
+    // 自动缩放覆盖三个地点，留 padding 防止标签被裁
+    const bounds = L.latLngBounds(PINS.map(p => p.pos));
+    map.fitBounds(bounds, { padding: [56, 56], maxZoom: 6 });
+
     L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
       subdomains: 'abcd',
-      maxZoom: 20
+      maxZoom: 20,
     }).addTo(map);
-    const icon = L.divIcon({
-      className: 'custom-div-icon',
-      html: `<div class="marker-pulse"></div>`,
-      iconSize: [12, 12],
-      iconAnchor: [6, 6]
+
+    PINS.forEach(({ pos, label, sub, primary }) => {
+      const dotHtml = primary
+        ? `<div class="marker-pulse"></div>`
+        : `<div style="width:10px;height:10px;background:#FF9D00;border:2px solid #fff;border-radius:50%;box-shadow:0 1px 6px rgba(0,0,0,0.25)"></div>`;
+
+      const icon = L.divIcon({
+        className: 'custom-div-icon',
+        html: dotHtml,
+        iconSize: [12, 12],
+        iconAnchor: [6, 6],
+      });
+
+      const tooltipHtml = `<div style="line-height:1.4;text-align:center"><strong style="font-size:11px;font-weight:900;color:#0f172a">${label}</strong><br><span style="font-size:9px;color:#FF9D00;font-weight:700;letter-spacing:0.06em;text-transform:uppercase">${sub}</span></div>`;
+
+      L.marker(pos, { icon })
+        .bindTooltip(tooltipHtml, {
+          permanent: true,
+          direction: 'top',
+          offset: [0, -12],
+          className: 'grace-map-tip',
+        })
+        .addTo(map);
     });
-    L.marker([lat, lng], { icon }).addTo(map);
+
     mapInstanceRef.current = map;
     return () => {
       if (mapInstanceRef.current) {
@@ -61,8 +87,8 @@ const MapComponent: React.FC<{ lat: number; lng: number }> = ({ lat, lng }) => {
   }, [lat, lng]);
 
   return (
-    <div 
-      ref={mapContainerRef} 
+    <div
+      ref={mapContainerRef}
       className="w-full h-[420px] rounded-[16px] overflow-hidden shadow-xl border border-slate-100 z-10 gpu-layer"
     />
   );
