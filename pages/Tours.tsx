@@ -3,10 +3,11 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
 
-type TourFilter = 'all' | 'classic' | 'family' | 'balkan';
+// 'turkey' = classic + family（土耳其 S/Z 系列 + 以色列），排除巴尔干
+type TourFilter = 'all' | 'classic' | 'family' | 'balkan' | 'turkey';
 
 const parseTourFilter = (value: string | null): TourFilter => {
-  if (value === 'classic' || value === 'family' || value === 'balkan') {
+  if (value === 'classic' || value === 'family' || value === 'balkan' || value === 'turkey') {
     return value;
   }
   return 'all';
@@ -23,7 +24,9 @@ const Tours: React.FC = () => {
   const toursData = t.toursData || [];
 
   const filteredTours = useMemo(() => {
-    return filter === 'all' ? toursData : toursData.filter((tour: any) => tour.category === filter);
+    if (filter === 'all') return toursData;
+    if (filter === 'turkey') return toursData.filter((tour: any) => tour.category === 'classic' || tour.category === 'family');
+    return toursData.filter((tour: any) => tour.category === filter);
   }, [filter, toursData]);
 
   // Show only the category chips that actually have tours in the current language's data.

@@ -456,7 +456,7 @@ const Footer: React.FC = () => {
             <h4 className="font-bold text-slate-100 uppercase text-xs tracking-[0.3em] border-l-2 border-[#FF9D00] pl-3">{f.explore || 'Explore'}</h4>
             <ul className="grid grid-cols-2 gap-y-4 gap-x-6 text-sm text-slate-400 font-medium">
               <li><Link to="/" className="hover:text-[#FF9D00] transition-colors">{t.nav?.home || 'Home'}</Link></li>
-              <li><Link to="/tours?category=classic" className="hover:text-[#FF9D00] transition-colors">{t.nav?.tours || 'Tours'}</Link></li>
+              <li><Link to="/tours?category=turkey" className="hover:text-[#FF9D00] transition-colors">{t.nav?.tours || 'Tours'}</Link></li>
               <li><Link to="/tours?category=family" className="hover:text-[#FF9D00] transition-colors">{t.nav?.faith || 'Faith'}</Link></li>
               <li><Link to="/itineraries/b1-balkan-3-countries-12-days" className="hover:text-[#FF9D00] transition-colors">{t.nav?.balkans || '巴尔干三国'}</Link></li>
               <li><Link to="/itineraries/i1-israel-holyland-8-days" className="hover:text-[#FF9D00] transition-colors">{t.nav?.holyland || '以色列圣地'}</Link></li>
