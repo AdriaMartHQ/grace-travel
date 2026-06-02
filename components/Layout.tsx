@@ -197,53 +197,56 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
         {/* Logo */}
         <BrandLogo className="w-14 h-14 mb-8 shrink-0" />
 
-        {/* CTA — 顶部最显眼位置 */}
+        {/* ── 主导航 5 项（对齐桌面菜单）── */}
+        <div className="w-full max-w-xs flex flex-col items-center space-y-6 text-center mb-8">
+
+          {/* 首页 */}
+          <Link to="/" onClick={onClose} className={linkCls('/')}>
+            {t.nav?.home || '首页'}
+          </Link>
+
+          {/* 行程线路 — 展开子项 */}
+          <div className="flex flex-col items-center space-y-4 w-full">
+            <p className={`text-2xl md:text-3xl font-black uppercase tracking-tight ${
+              isActive('/tours') || isActive('/itineraries/') ? 'text-[#FF9D00]' : 'text-white'
+            }`}>
+              {t.nav?.itineraries || '行程线路'}
+            </p>
+            <div className="flex flex-col items-center space-y-3 pl-0">
+              <Link to="/tours" onClick={onClose} className={subLinkCls('/tours')}>
+                {t.nav?.turkeyClassic || '人文经典 S系列'}
+              </Link>
+              <Link to="/tours?category=family" onClick={onClose} className={subLinkCls('/tours?category=family')}>
+                {t.nav?.faithPilgrimage || '信仰朝圣 Z系列'}
+              </Link>
+              <Link to="/itineraries/b1-balkan-3-countries-12-days" onClick={onClose} className={subLinkCls('/itineraries/b1-balkan-3-countries-12-days')}>
+                {t.nav?.balkans || '巴尔干三国'}
+              </Link>
+              <Link to="/itineraries/i1-israel-holyland-8-days" onClick={onClose} className={subLinkCls('/itineraries/i1-israel-holyland-8-days')}>
+                {t.nav?.holyland || '以色列圣地'}
+              </Link>
+            </div>
+          </div>
+
+          {/* 门票体验 */}
+          <Link to="/tickets" onClick={onClose} className={linkCls('/tickets')}>
+            {t.nav?.tickets || '门票体验'}
+          </Link>
+
+          {/* 关于我们 */}
+          <Link to="/about" onClick={onClose} className={linkCls('/about')}>
+            {t.nav?.about || '关于我们'}
+          </Link>
+        </div>
+
+        {/* 联系我们 — 橙色 CTA 按钮 */}
         <Link
           to="/contact"
           onClick={onClose}
-          className="mb-10 px-10 py-3.5 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-[0.18em] text-sm shadow-xl shadow-orange-500/20 active:scale-95 transition-all shrink-0"
+          className="mb-8 px-10 py-3.5 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-[0.18em] text-sm shadow-xl shadow-orange-500/20 active:scale-95 transition-all shrink-0"
         >
-          {t.nav?.enquire || '即刻定制'}
+          {t.nav?.contact || '联系我们'}
         </Link>
-
-        {/* ── 行程 section ── */}
-        <div className="w-full max-w-xs flex flex-col items-center space-y-5 text-center mb-8">
-          <p className={sectionLabel}>{t.nav?.routesSection || '行程'}</p>
-
-          {/* Turkey Classic — 主推，最大 */}
-          <Link to="/tours" onClick={onClose} className={linkCls('/tours')}>
-            {t.nav?.turkeyClassic || '人文经典 S系列'}
-          </Link>
-
-          <Link to="/tours?category=family" onClick={onClose} className={linkCls('/tours?category=family')}>
-            {t.nav?.faithPilgrimage || '信仰朝圣 Z系列'}
-          </Link>
-
-          {/* 其他目的地 — 稍小一级 */}
-          <Link to="/itineraries/b1-balkan-3-countries-12-days" onClick={onClose} className={subLinkCls('/itineraries/b1-balkan-3-countries-12-days')}>
-            {t.nav?.balkans || '巴尔干三国'}
-          </Link>
-          <Link to="/itineraries/i1-israel-holyland-8-days" onClick={onClose} className={subLinkCls('/itineraries/i1-israel-holyland-8-days')}>
-            {t.nav?.holyland || '以色列圣地'}
-          </Link>
-        </div>
-
-        {/* divider */}
-        <div className="w-16 border-t border-white/10 mb-8 shrink-0" />
-
-        {/* ── 服务 section ── */}
-        <div className="w-full max-w-xs flex flex-col items-center space-y-4 text-center mb-10">
-          <p className={sectionLabel}>{t.nav?.servicesSection || '服务'}</p>
-          <Link to="/airport-transfer" onClick={onClose} className={subLinkCls('/airport-transfer')}>
-            {airportTransferLabel}
-          </Link>
-          <Link to="/china-inbound" onClick={onClose} className={subLinkCls('/china-inbound')}>
-            {chinaInboundLabel}
-          </Link>
-          <Link to="/tickets" onClick={onClose} className={subLinkCls('/tickets')}>
-            {ticketsLabel}
-          </Link>
-        </div>
 
         {/* Language switch */}
         <div className="flex space-x-6 p-1 bg-white/5 rounded-full border border-white/10 mb-8 shrink-0">
@@ -346,20 +349,52 @@ const Navbar: React.FC = () => {
             </div>
           </Link>
 
-          {/* Desktop nav */}
+          {/* Desktop nav — 5 fixed items + language */}
           <div className={`hidden md:flex items-center ${desktopGap} pointer-events-auto`}>
 
-            {/* 行程线路 dropdown */}
-            <ItinerariesDropdown />
-
-            {/* 接送机 */}
+            {/* 1. 首页 */}
             <Link
-              to="/airport-transfer"
+              to="/"
               className={`${linkClass} font-bold uppercase whitespace-nowrap shrink-0 transition-colors hover:text-[#FF9D00] ${
-                isTransferActive ? 'text-[#FF9D00]' : 'text-white/90'
+                location.pathname === '/' ? 'text-[#FF9D00]' : 'text-white/90'
               }`}
             >
-              {airportTransferLabel}
+              {t.nav?.home || '首页'}
+            </Link>
+
+            {/* 2. 行程线路 ▾ */}
+            <ItinerariesDropdown />
+
+            {/* 3. 门票体验 */}
+            <Link
+              to="/tickets"
+              className={`${linkClass} font-bold uppercase whitespace-nowrap shrink-0 transition-colors hover:text-[#FF9D00] ${
+                location.pathname === '/tickets' ? 'text-[#FF9D00]' : 'text-white/90'
+              }`}
+            >
+              {t.nav?.tickets || '门票体验'}
+            </Link>
+
+            {/* 4. 关于我们 */}
+            <Link
+              to="/about"
+              className={`${linkClass} font-bold uppercase whitespace-nowrap shrink-0 transition-colors hover:text-[#FF9D00] ${
+                location.pathname === '/about' ? 'text-[#FF9D00]' : 'text-white/90'
+              }`}
+            >
+              {t.nav?.about || '关于我们'}
+            </Link>
+
+            {/* 5. 联系我们 — 右侧橙色高亮，兼作 CTA */}
+            <Link
+              to="/contact"
+              className={`${linkClass} font-black uppercase whitespace-nowrap shrink-0 transition-all px-4 py-2 rounded-full border ${
+                location.pathname === '/contact'
+                  ? 'bg-[#FF9D00] text-white border-[#FF9D00]'
+                  : 'text-[#FF9D00] border-[#FF9D00]/40 hover:bg-[#FF9D00] hover:text-white hover:border-[#FF9D00]'
+              }`}
+            >
+              {t.nav?.contact || '联系我们'}
             </Link>
 
             {/* Language */}
@@ -376,14 +411,6 @@ const Navbar: React.FC = () => {
                 </button>
               ))}
             </div>
-
-            {/* CTA */}
-            <Link
-              to="/contact"
-              className={`bg-[#FF9D00] hover:bg-white hover:text-slate-900 text-white rounded-full whitespace-nowrap shrink-0 font-black uppercase transition-all shadow-xl shadow-orange-500/10 ${enquireClass}`}
-            >
-              {t.nav?.enquire || '即刻定制'}
-            </Link>
           </div>
 
           {/* Mobile hamburger */}
