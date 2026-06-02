@@ -91,9 +91,9 @@ const aboutContent: Record<'zh' | 'en' | 'tr', AboutContent> = {
       { label: '总部', value: 'Bakırköy, İstanbul, Türkiye' },
       { label: '地址', value: 'Zeytinlik Mah. Halkçı Sok. Moda Pasajı No:25/35, Kat:2 / Ofis 35, Bakırköy · İstanbul' },
       { label: '官网', value: 'grace.tr' },
-      { label: '土耳其电话', value: '+90 506 497 20 26' },
-      { label: '中国电话', value: '+86 134 2640 1777' },
-      { label: '邮箱', value: 'info@grace.tr' },
+      { label: '电话（TR）', value: '+90 554 136 6090  |  +90 212 570 15 28' },
+      { label: '电话（CN）', value: '+86 134 2640 1777' },
+      { label: '邮箱', value: 'taha@gracetravel.com.tr' },
     ],
     recognitionTitle: '我们覆盖的目的地',
     recognitionLead:
