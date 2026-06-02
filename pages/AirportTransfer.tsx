@@ -33,11 +33,11 @@ const AirportTransfer: React.FC = () => {
           subtitle: '私人接送，固定价格 $50 起',
           intro:
             '覆盖伊斯坦布尔、安塔利亚、卡帕多奇亚等热门目的地。提前确认机场、地址与时间，即可快速获取预估报价，并优先通过 Email 提交预约；如你更习惯 WhatsApp，也可一键切换。',
-          seoTitle: 'Airport Transfer Turkey | Private Pickup from $50',
+          seoTitle: '土耳其接送机服务 | 伊斯坦布尔·安塔利亚·卡帕多奇亚 中文司机 | 恩途',
           seoDescription:
-            'Book reliable airport transfer in Turkey. Istanbul, Antalya, Cappadocia & more. Fixed price from $50.',
+            '恩途土耳其接送机：中文司机接待，覆盖伊斯坦布尔、安塔利亚、卡帕多奇亚等10个核心机场，固定价格$50起，无隐藏费用，提前预约确认。',
           seoKeywords:
-            'Turkey airport transfer, Istanbul airport pickup, Antalya transfer, Cappadocia airport transfer, private transfer Turkey',
+            '土耳其接送机中文司机, 伊斯坦布尔机场接送, 安塔利亚接机服务, 卡帕多奇亚包车接机, 土耳其私人接送机',
           startingFrom: '起价',
           supportNote: '当前支持 10 个核心机场，后续可扩展至土耳其 50+ 机场。',
           benefits: ['Fixed price', 'No hidden fees', 'English-speaking driver'],

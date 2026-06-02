@@ -57,7 +57,7 @@ const ItineraryS1: React.FC = () => {
           <img 
             src={dayImages.day5.image} 
             className="w-full h-full object-cover" 
-            alt="Grace Way Turkey"
+            alt="伊斯坦布尔清真寺 — 恩途土耳其精品游"
             onError={handleImageError}
           />
           <div className="absolute inset-0 bg-black/45 z-10"></div>
@@ -113,7 +113,7 @@ const ItineraryS1: React.FC = () => {
               <img 
                 src={dayImages.day3.image} 
                 className="w-full h-full object-cover" 
-                alt="Heritage" 
+                alt="棉花堡白色钙华梯田 — 土耳其精品小团"
                 onError={handleImageError}
               />
             </div>
