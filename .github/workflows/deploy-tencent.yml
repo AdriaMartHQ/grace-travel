@@ -1,0 +1,51 @@
+name: Deploy to Tencent Cloud (grace.tr)
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (with prerender injection)
+        run: npm run build
+        # npm run build = vite build + node scripts/apply-prerender.mjs
+        # prerendered/routes.json is committed — no Chromium needed in CI
+
+      - name: Deploy to Tencent server via rsync
+        env:
+          DEPLOY_KEY: ${{ secrets.TENCENT_DEPLOY_KEY }}
+        run: |
+          # Write private key
+          install -m 600 /dev/null /tmp/deploy_key
+          echo "$DEPLOY_KEY" > /tmp/deploy_key
+
+          # rsync dist/ to server (no --delete so Caddy keeps serving during sync)
+          rsync -avz \
+            -e "ssh -i /tmp/deploy_key -o StrictHostKeyChecking=no -o PasswordAuthentication=no" \
+            --exclude='.DS_Store' \
+            dist/ \
+            deploy@43.129.213.201:/var/www/grace/
+
+          # Clean up key
+          rm -f /tmp/deploy_key
+
+      - name: Smoke test HTTPS
+        run: |
+          sleep 5
+          STATUS=$(curl -sI https://grace.tr/ | head -1)
+          echo "grace.tr → $STATUS"
+          echo "$STATUS" | grep -q "200\|30" || (echo "Unexpected status" && exit 1)

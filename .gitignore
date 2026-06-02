@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local work files (non-website)
+generated/
+outputs/
+scripts/create_parental_consent_*.py
