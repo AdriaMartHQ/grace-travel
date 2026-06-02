@@ -301,11 +301,11 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section className="mx-auto max-w-7xl px-6 py-14 md:py-24">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
-          <div className="space-y-6">
+          <div className="space-y-7">
             {content.intro.map((paragraph) => (
-              <p key={paragraph} className="text-lg leading-9 text-slate-700 md:text-[1.15rem]">
+              <p key={paragraph} className="text-base leading-8 text-slate-700 md:text-lg md:leading-9">
                 {paragraph}
               </p>
             ))}
@@ -329,7 +329,7 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-slate-50 py-24">
+      <section className="bg-slate-50 py-14 md:py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-12 max-w-3xl">
             <p className="mb-3 text-[11px] font-black uppercase tracking-[0.28em] text-orange-500">{content.serviceTitle}</p>
@@ -351,14 +351,14 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section className="mx-auto max-w-7xl px-6 py-14 md:py-24">
         <div className="grid gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <p className="mb-3 text-[11px] font-black uppercase tracking-[0.28em] text-orange-500">{content.profileTitle}</p>
-            <h2 className="mb-6 text-4xl font-black tracking-tight text-slate-900 md:text-5xl">{content.profileLead}</h2>
+            <h2 className="mb-6 text-2xl font-bold leading-snug tracking-tight text-slate-900 md:text-3xl md:leading-normal">{content.profileLead}</h2>
             <div className="space-y-5">
               {content.profileBody.map((paragraph) => (
-                <p key={paragraph} className="text-base leading-8 text-slate-700">
+                <p key={paragraph} className="text-base leading-8 text-slate-600">
                   {paragraph}
                 </p>
               ))}
@@ -379,11 +379,11 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      <section className="bg-[linear-gradient(180deg,#fff7ed_0%,#ffffff_100%)] py-24">
+      <section className="bg-[linear-gradient(180deg,#fff7ed_0%,#ffffff_100%)] py-14 md:py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-10 max-w-4xl">
             <p className="mb-3 text-[11px] font-black uppercase tracking-[0.28em] text-orange-500">{content.recognitionTitle}</p>
-            <h2 className="mb-5 text-4xl font-black tracking-tight text-slate-900 md:text-5xl">{content.recognitionLead}</h2>
+            <h2 className="mb-5 text-2xl font-bold leading-snug tracking-tight text-slate-900 md:text-3xl md:leading-normal">{content.recognitionLead}</h2>
           </div>
           <div className="grid gap-5 md:grid-cols-2">
             {content.recognitionPoints.map((point) => (
@@ -396,12 +396,12 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-24 text-center">
+      <section className="mx-auto max-w-5xl px-6 py-14 md:py-24 text-center">
         <div className="rounded-[2.5rem] bg-slate-950 px-8 py-16 text-white shadow-[0_40px_90px_-35px_rgba(15,23,42,0.8)]">
           <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-500/15 text-orange-400">
             <MapPin className="h-7 w-7" />
           </div>
-          <p className="mx-auto mb-10 max-w-3xl text-2xl font-black leading-relaxed tracking-tight md:text-4xl">{content.closing}</p>
+          <p className="mx-auto mb-10 max-w-2xl text-xl font-bold leading-loose tracking-tight md:text-2xl md:leading-[1.7]">{content.closing}</p>
           <div className="flex flex-col items-center justify-center gap-4 text-sm font-black uppercase tracking-[0.18em] text-slate-300 md:flex-row">
             <a href="tel:+905541366090" className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-6 py-3 transition-colors hover:bg-white/10">
               <Phone className="h-4 w-4 text-orange-400" />
