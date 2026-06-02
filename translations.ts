@@ -2073,10 +2073,10 @@ export const translations: Record<Language, BaseTranslations> = {
         description: '探索恩途精选土耳其旅游线路。从卡帕多奇亚热气球到以弗所古城，为您打造深度文化体验。',
         keywords: '土耳其旅游线路, 土耳其精品小团, 卡帕多奇亚旅游, 以弗所旅游, 土耳其深度游'
       },
-      about: { 
-        title: '关于恩途 | 土耳其持牌 A 组旅行社 | 资质公示', 
-        description: '了解恩途国际旅行社，一家扎根土耳其、服务全球华人的专业 A 组旅行服务商。',
-        keywords: '恩途国际旅行, 土耳其A类旅行社, 土耳其DMC, 土耳其旅游资质, 专业地接社'
+      about: {
+        title: '关于恩途 | 伊斯坦布尔华人旅行社 | TÜRSAB A 组持牌 18717',
+        description: '恩途 Grace Way Travel Agency，伊斯坦布尔本地 A 组持牌旅行社（TÜRSAB 认证 18717）。土耳其精品游、巴尔干三国、以色列圣地朝圣，全程中文服务，费用透明。',
+        keywords: '恩途旅行社, 土耳其华人旅行社, 伊斯坦布尔中文地接, TÜRSAB A组旅行社, 土耳其定制游旅行社, 巴尔干旅行社中文'
       },
       tickets: { 
         title: '土耳其景点门票预订 | 皇宫博物馆免排队', 
