@@ -21,6 +21,7 @@ import ItineraryZ2 from './pages/ItineraryZ2';
 import ItineraryZ6 from './pages/ItineraryZ6';
 import ItineraryI1 from './pages/ItineraryI1';
 import ItineraryB1 from './pages/ItineraryB1';
+import ItineraryB2 from './pages/ItineraryB2';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -50,6 +51,7 @@ const AppContent: React.FC = () => {
         <Route path="/itineraries/z6-overland-seven-churches-7-days" element={<ItineraryZ6 />} />
         <Route path="/itineraries/i1-israel-holyland-8-days" element={<ItineraryI1 />} />
         <Route path="/itineraries/b1-balkan-3-countries-12-days" element={<ItineraryB1 />} />
+        <Route path="/itineraries/b2-balkan-3-countries-10-days" element={<ItineraryB2 />} />
         <Route path="/tickets" element={<Tickets />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/style-guide" element={<StyleGuide />} />

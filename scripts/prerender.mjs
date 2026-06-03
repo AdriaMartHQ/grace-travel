@@ -20,6 +20,7 @@ const CHROME =
 const ROUTES = [
   '/', '/tours', '/china-inbound', '/airport-transfer', '/tickets', '/about', '/contact',
   '/itineraries/b1-balkan-3-countries-12-days',
+  '/itineraries/b2-balkan-3-countries-10-days',
   '/itineraries/s1-turkey-6-days', '/itineraries/s2-turkey-8-days',
   '/itineraries/s4-turkey-10-days', '/itineraries/s5-turkey-8-days',
   '/itineraries/z1-turkey-11-days', '/itineraries/z2-revelation-4-days',
