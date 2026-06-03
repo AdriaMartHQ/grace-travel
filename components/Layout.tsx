@@ -55,16 +55,10 @@ const ItinerariesDropdown: React.FC = () => {
       header: t.nav?.otherDest || '其他目的地',
       items: [
         {
-          label: 'B1 · 巴尔干线路 12天',
-          desc: '12天11晚 · 塞尔维亚 · 黑山 · 波黑',
-          path: '/itineraries/b1-balkan-3-countries-12-days',
-          exact: true,
-        },
-        {
-          label: 'B2 · 巴尔干线路 10天',
-          desc: '10天9晚 · 杜米托尔 · 乌瓦茨 · 八字小火车',
-          path: '/itineraries/b2-balkan-3-countries-10-days',
-          exact: true,
+          label: '巴尔干线路',
+          desc: '塞尔维亚 · 黑山 · 波黑 · 多线路可选',
+          path: '/tours?category=balkan',
+          exact: false,
         },
         {
           label: t.nav?.holyland || '以色列圣地',
@@ -224,11 +218,8 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
               <Link to="/tours?category=family" onClick={onClose} className={subLinkCls('/tours?category=family')}>
                 {t.nav?.faithPilgrimage || '信仰朝圣 Z系列'}
               </Link>
-              <Link to="/itineraries/b1-balkan-3-countries-12-days" onClick={onClose} className={subLinkCls('/itineraries/b1-balkan-3-countries-12-days')}>
-                巴尔干线路 B1 · 12天
-              </Link>
-              <Link to="/itineraries/b2-balkan-3-countries-10-days" onClick={onClose} className={subLinkCls('/itineraries/b2-balkan-3-countries-10-days')}>
-                巴尔干线路 B2 · 10天
+              <Link to="/tours?category=balkan" onClick={onClose} className={subLinkCls('/tours?category=balkan')}>
+                巴尔干线路
               </Link>
               <Link to="/itineraries/i1-israel-holyland-8-days" onClick={onClose} className={subLinkCls('/itineraries/i1-israel-holyland-8-days')}>
                 {t.nav?.holyland || '以色列圣地'}
@@ -467,8 +458,7 @@ const Footer: React.FC = () => {
               <li><Link to="/" className="hover:text-[#FF9D00] transition-colors">{t.nav?.home || 'Home'}</Link></li>
               <li><Link to="/tours?category=turkey" className="hover:text-[#FF9D00] transition-colors">{t.nav?.tours || 'Tours'}</Link></li>
               <li><Link to="/tours?category=family" className="hover:text-[#FF9D00] transition-colors">{t.nav?.faith || 'Faith'}</Link></li>
-              <li><Link to="/itineraries/b1-balkan-3-countries-12-days" className="hover:text-[#FF9D00] transition-colors">巴尔干线路 B1</Link></li>
-              <li><Link to="/itineraries/b2-balkan-3-countries-10-days" className="hover:text-[#FF9D00] transition-colors">巴尔干线路 B2</Link></li>
+              <li><Link to="/tours?category=balkan" className="hover:text-[#FF9D00] transition-colors">巴尔干线路</Link></li>
               <li><Link to="/itineraries/i1-israel-holyland-8-days" className="hover:text-[#FF9D00] transition-colors">{t.nav?.holyland || '以色列圣地'}</Link></li>
               <li><Link to="/airport-transfer" className="hover:text-[#FF9D00] transition-colors">{airportTransferLabel}</Link></li>
               <li><Link to="/china-inbound" className="hover:text-[#FF9D00] transition-colors">{chinaInboundLabel}</Link></li>

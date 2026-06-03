@@ -1080,7 +1080,7 @@ export const translations: Record<Language, BaseTranslations> = {
         all: '全部行程', 
         classic: '人文经典',
         family: '信仰之旅',
-        balkan: '巴尔干三国'
+        balkan: '巴尔干线路'
       },
       // 门票体验：用于门票页分类
       ticketCategories: { 
