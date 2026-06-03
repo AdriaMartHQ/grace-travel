@@ -8,16 +8,16 @@ const wc = (file: string, w = 1600) =>
 
 const IMG = {
   belgradeStSava:  wc('Church of Saint Sava (Belgrade, Serbia).jpg'),
-  sarajevo:        wc('Sarajevo - view from Baščaršija.JPG'),
+  sarajevo:        wc('Sebilj at Baščaršija (55019540284).jpg'),
   mostar:          wc('Mostar Stari Most BW 2024-10-01 13-00-05.jpg'),
   blagaj:          wc('Blagaj tekija (03).jpg'),
   kotorBay:        wc('Kotor and Boka kotorska - view from city wall.jpg'),
   budva:           wc('Budva old town from the sea.jpg'),
-  durmitor:        wc('Crno jezero, Durmitor.jpg'),
+  durmitor:        wc('Durmitor - Crno jezero.jpg'),
   taraBridge:      wc('Đurđevića Tara Bridge (by Pudelek).JPG'),
   uvac:            wc('Curving meanders in Special Nature Reserve Uvac River canyon valley, Serbia.JPG'),
   goldGondola:     '/img/zlatibor-gold-gondola.jpg',
-  drvengrad:       wc('Drvengrad1.jpg'),
+  sarganRail:      wc('Sargan Eight - Mokra Gora station 1.jpg'),
   zemun:           wc('Zemun panorama from Gardoš tower.jpg'),
 };
 
@@ -181,7 +181,7 @@ const itineraryContent = {
           day: '08',
           title: '八字小火车 · 木头城 → 贝尔格莱德',
           stay: '贝尔格莱德四星酒店',
-          image: IMG.drvengrad,
+          image: IMG.sarganRail,
           paragraphs: [
             '约1小时车程至莫克拉戈拉，乘坐沙尔干八字铁路（Šargan Eight）穿行山间，小火车在蜿蜒的8字形轨道上盘旋上升，窗外是塞尔维亚西部的原始山林。',
             '终点站步行可达库斯滕多夫——导演库斯图里卡亲手建起的木质小镇，电影《生命是个奇迹》在此拍摄，时至今日仍有人在这里生活与创作。随后约3小时车程返回贝尔格莱德。',
@@ -482,7 +482,7 @@ const ItineraryB2: React.FC = () => {
       {/* Photo credits */}
       <div className="bg-white py-8 px-6 border-t border-slate-100">
         <p className="max-w-5xl mx-auto text-[11px] leading-relaxed text-slate-400 text-center">
-          图片版权：本页风光照片多来自 Wikimedia Commons，依 CC BY-SA 许可使用 —— 圣萨瓦教堂 © Petar Milošević；萨拉热窝老城 © Arild Vågen；莫斯塔尔古桥 © Berthold Werner；布拉加伊修道院 © Diego Delso；科托尔湾 © Diego Delso；塔拉大桥 © Pudelek (Marcin Szala)；杜米托尔黑湖 © Diego Delso；乌瓦茨 © Srdjan Marincic；泽蒙 © Petar Milošević。金色缆车图片来自 goldgondola.rs 官方网站。最终成行将替换为本社实拍照片。
+          图片版权：本页风光照片多来自 Wikimedia Commons，依 CC BY-SA 许可使用 —— 圣萨瓦教堂 © Petar Milošević；萨拉热窝 Sebilj 广场 © Filip Maljković；莫斯塔尔古桥 © Berthold Werner；布拉加伊修道院 © Diego Delso；科托尔湾 © Diego Delso；杜米托尔黑湖 © Mercy；塔拉大桥 © Pudelek (Marcin Szala)；乌瓦茨 © Srdjan Marincic；沙尔干八字铁路（Mokra Gora）© Whitepixels（CC0）；泽蒙 © Petar Milošević。金色缆车图片来自 goldgondola.rs 官方网站。最终成行将替换为本社实拍照片。
         </p>
       </div>
     </div>
