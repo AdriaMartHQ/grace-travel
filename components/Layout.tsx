@@ -339,7 +339,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className={`fixed w-full z-[10] pointer-events-none transition-all duration-300 ease-in-out gpu-layer ${navBg}`}>
+      <nav className={`fixed w-full z-[100] pointer-events-none transition-all duration-300 ease-in-out gpu-layer ${navBg}`}>
         {isHome && !isScrolled && (
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-transparent pointer-events-none -z-10" />
         )}
