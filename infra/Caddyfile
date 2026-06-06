@@ -1,0 +1,68 @@
+{
+	servers {
+		protocols h1 h3
+	}
+}
+
+grace.tr www.grace.tr {
+    root * /var/www/grace
+    log {
+        output file /var/log/caddy/access.log {
+            roll_size 50MiB
+            roll_keep 5
+            roll_keep_for 720h
+        }
+        format json
+    }
+    file_server {
+        # 优先提供预压缩文件（.br / .gz），否则 on-the-fly 压缩
+        precompressed br gzip zstd
+    }
+    try_files {path} {path}/index.html /index.html
+
+    # Gzip + Zstd 动态压缩（Brotli 需 xcaddy 编译，defer 到后续）
+    encode {
+        zstd
+        gzip 6
+    }
+
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        X-Content-Type-Options    "nosniff"
+        X-Frame-Options           "SAMEORIGIN"
+        Referrer-Policy           "strict-origin-when-cross-origin"
+        Permissions-Policy        "camera=(), microphone=(), geolocation=()"
+        -Server
+        ?Cache-Control "no-cache, must-revalidate"
+    }
+
+    @assets {
+        path /assets/* /img/* /favicon.* /site.webmanifest
+    }
+    header @assets {
+        Cache-Control "public, max-age=31536000, immutable"
+        defer
+    }
+
+    @media {
+        path *.svg *.png *.jpg *.jpeg *.webp *.ico *.woff *.woff2
+    }
+    header @media {
+        Access-Control-Allow-Origin "*"
+        defer
+    }
+}
+
+gracetravel.com.tr www.gracetravel.com.tr {
+	@blocked path /xmlrpc.php /wp-trackback.php
+	respond @blocked 403
+	reverse_proxy 127.0.0.1:8080
+	encode zstd gzip
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "SAMEORIGIN"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		-Server
+	}
+}
