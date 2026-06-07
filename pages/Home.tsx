@@ -39,8 +39,8 @@ const Hero: React.FC = () => {
           alt="Grace Way Hero" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/78 via-slate-950/42 to-slate-950/20"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/72 via-transparent to-slate-950/12"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/[0.78] via-slate-950/[0.42] to-slate-950/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/[0.72] via-transparent to-slate-950/[0.12]"></div>
       </div>
       
       <div className="relative z-10 mx-auto w-full max-w-6xl pb-14 md:pb-20 lg:pb-24">
@@ -226,7 +226,7 @@ const Home: React.FC = () => {
                   decoding="async"
                   onError={handleChinaImageError}
                 />
-                <div className="absolute inset-0 bg-gradient-to-l from-slate-950/0 via-slate-950/10 to-slate-950/72"></div>
+                <div className="absolute inset-0 bg-gradient-to-l from-slate-950/0 via-slate-950/10 to-slate-950/[0.72]"></div>
           </div>
         </div>
       </section>

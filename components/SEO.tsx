@@ -18,7 +18,8 @@ const SEO: React.FC<SEOProps> = ({ title, description, keywords }) => {
   useEffect(() => {
     // 1. Title
     if (title) {
-      document.title = `${title} | Grace Way Travel`;
+      // Avoid doubling the brand when the page title already contains it.
+      document.title = title.includes('Grace Way Travel') ? title : `${title} | Grace Way Travel`;
     }
 
     // 2. Meta description
@@ -48,7 +49,7 @@ const SEO: React.FC<SEOProps> = ({ title, description, keywords }) => {
     const ogUrl = document.querySelector('meta[property="og:url"]');
     if (ogUrl) ogUrl.setAttribute('content', pageUrl);
     const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle && title) ogTitle.setAttribute('content', `${title} | Grace Way Travel`);
+    if (ogTitle && title) ogTitle.setAttribute('content', title.includes('Grace Way Travel') ? title : `${title} | Grace Way Travel`);
     const ogDesc = document.querySelector('meta[property="og:description"]');
     if (ogDesc && description) ogDesc.setAttribute('content', description);
 
