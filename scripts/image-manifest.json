@@ -320,10 +320,22 @@
       "local": "/img/remote/u-1766778834237-34aeabf4d9b2.webp"
     }
   ],
-  "deadUnsplash404_needReplacement": [
-    "1543949806-2c9935e6838d (Z1+translations)",
-    "1544737151-6e4b1d08d7a8 (I1)",
-    "1584382838634-1e651f6c5c66 (translations)",
-    "1631098983935-09a89fba42c2 (translations)"
+  "deadUnsplash404Substituted": [
+    {
+      "deadId": "1543949806-2c9935e6838d",
+      "substitute": "/img/remote/u-1527838832700-5059252407fa.webp"
+    },
+    {
+      "deadId": "1544737151-6e4b1d08d7a8",
+      "substitute": "/img/remote/u-1542743408-218cc173cda0.webp"
+    },
+    {
+      "deadId": "1584382838634-1e651f6c5c66",
+      "substitute": "/img/remote/u-1498222954553-93fc8d1941da.webp"
+    },
+    {
+      "deadId": "1631098983935-09a89fba42c2",
+      "substitute": "/img/remote/u-1605382628707-0aa0593fba19.webp"
+    }
   ]
 }

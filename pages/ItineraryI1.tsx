@@ -109,7 +109,7 @@ const itineraryContent = {
           day: '03',
           title: '加利利海一线｜从认信到跟随',
           stay: '提比利亚酒店',
-          image: 'https://images.unsplash.com/photo-1544737151-6e4b1d08d7a8?auto=format&fit=crop&w=1600&q=80',
+          image: '/img/remote/u-1542743408-218cc173cda0.webp',
           paragraphs: [
             '前往凯撒利亚腓立比，回顾彼得对基督身份的伟大认信；随后沿加利利海岸访问八福山、五饼二鱼堂、彼得授职堂与迦百农，重走耶稣最集中开展事工的区域。',
             '行程中安排加利利海游船与约旦河纪念环节，让团队在祷告、诗歌或默想中，将圣经文本与现场体验真正连接起来。',
@@ -262,7 +262,7 @@ const itineraryContent = {
           day: '03',
           title: 'Galilee core route | Confession, calling and followership',
           stay: 'Tiberias Hotel',
-          image: 'https://images.unsplash.com/photo-1544737151-6e4b1d08d7a8?auto=format&fit=crop&w=1600&q=80',
+          image: '/img/remote/u-1542743408-218cc173cda0.webp',
           paragraphs: [
             'Visit Caesarea Philippi, the Beatitudes area, Tabgha, Peter-related sites, Capernaum, and the Jordan River memorial zone.',
             'The day is especially suited for biblical background sharing, prayer, and group reflection on discipleship.',

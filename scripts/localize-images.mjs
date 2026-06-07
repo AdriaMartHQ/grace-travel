@@ -59,6 +59,13 @@ const ids = [...idToHits.keys()].sort();
 const totalHits = [...idToHits.values()].reduce((a, b) => a + b, 0);
 console.log(`Scanned ${files.length} files → ${ids.length} unique Unsplash photo-ids, ${totalHits} total references.`);
 
+// Idempotency guard: once everything is localized, source has no Unsplash URLs left.
+// Bail before touching the manifest so a re-run can't blank it.
+if (ids.length === 0) {
+  console.log('No Unsplash URLs in source — already localized. Nothing to do.');
+  process.exit(0);
+}
+
 if (DRY) {
   console.log('\n[DRY RUN] per-file reference counts:');
   for (const f of files) {
