@@ -5,25 +5,24 @@ import SEO from '../components/SEO';
 
 // 配图：逐站真实地标。多数为 Wikimedia Commons 实景照片(CC BY-SA，页脚已署名)；
 // 金色缆车无自由授权图，采用 goldgondola.rs 官方图(本地托管)。最终成行将替换为本社实拍。
-const wc = (file: string, w = 1600) =>
-  `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=${w}`;
+// (images now self-hosted under /img/remote/ — sourced from Wikimedia Commons, CC BY-SA; footer credits preserved)
 
 const IMG = {
-  belgradeStSava: wc('Church of Saint Sava (Belgrade, Serbia).jpg'),
-  sarajevo: wc('Sarajevo - view from Baščaršija.JPG'),
-  mostar: wc('Mostar Stari Most BW 2024-10-01 13-00-05.jpg'),
-  kotorBay: wc('Kotor and Boka kotorska - view from city wall.jpg'),
-  svetiStefan: wc('Sveti Stefan (06).jpg'),
-  lovcen: wc('Jezerski Vrh, Njegos mausoleum - 2.jpg'),
-  taraBridge: wc('Đurđevića Tara Bridge (by Pudelek).JPG'),
-  uvac: wc('Curving meanders in Special Nature Reserve Uvac River canyon valley, Serbia.JPG'),
+  belgradeStSava: '/img/remote/wiki-church-of-saint-sava-belgrade-serbia-bc2799.webp',
+  sarajevo: '/img/remote/wiki-sarajevo-view-from-ba-ar-ija-31ff38.webp',
+  mostar: '/img/remote/wiki-mostar-stari-most-bw-2024-10-01-13-00-05-9d7a12.webp',
+  kotorBay: '/img/remote/wiki-kotor-and-boka-kotorska-view-from-city-w-d4cb72.webp',
+  svetiStefan: '/img/remote/wiki-sveti-stefan-06-337b79.webp',
+  lovcen: '/img/remote/wiki-jezerski-vrh-njegos-mausoleum-2-d3c077.webp',
+  taraBridge: '/img/remote/wiki-ur-evi-a-tara-bridge-by-pudelek-0a1d80.webp',
+  uvac: '/img/remote/wiki-curving-meanders-in-special-nature-reser-8c5dd4.webp',
   goldGondola: '/img/zlatibor-gold-gondola.jpg', // goldgondola.rs 官方图，本地托管
-  petrovaradin: wc('Petrovaradin Fortress 2014.jpg'),
-  zemun: wc('Zemun panorama from Gardoš tower.jpg'),
-  kalemegdan: wc('Kalemegdan, a04.jpg'),
+  petrovaradin: '/img/remote/wiki-petrovaradin-fortress-2014-ae1d27.webp',
+  zemun: '/img/remote/wiki-zemun-panorama-from-gardo-tower-a18154.webp',
+  kalemegdan: '/img/remote/wiki-kalemegdan-a04-1b17bf.webp',
 };
 
-const heroImage = wc('Kotor and Boka kotorska - view from city wall.jpg', 2000);
+const heroImage = '/img/remote/wiki-kotor-and-boka-kotorska-view-from-city-w-d4cb72.webp';
 const fallbackImage = IMG.kotorBay;
 
 const itineraryContent = {

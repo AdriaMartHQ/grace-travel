@@ -3,25 +3,25 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
 
-const wc = (file: string, w = 1600) =>
-  `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=${w}`;
+// Balkan landmark photos self-hosted under /img/remote/ (sourced from Wikimedia Commons,
+// CC BY-SA — attribution preserved in the footer credits below).
 
 const IMG = {
-  belgradeStSava:  wc('Church of Saint Sava (Belgrade, Serbia).jpg'),
-  sarajevo:        wc('Sebilj at Baščaršija (55019540284).jpg'),
-  mostar:          wc('Mostar Stari Most BW 2024-10-01 13-00-05.jpg'),
-  blagaj:          wc('Blagaj tekija (03).jpg'),
-  kotorBay:        wc('Kotor and Boka kotorska - view from city wall.jpg'),
-  budva:           wc('Budva old town from the sea.jpg'),
-  durmitor:        wc('Durmitor - Crno jezero.jpg'),
-  taraBridge:      wc('Đurđevića Tara Bridge (by Pudelek).JPG'),
-  uvac:            wc('Curving meanders in Special Nature Reserve Uvac River canyon valley, Serbia.JPG'),
+  belgradeStSava:  '/img/remote/wiki-church-of-saint-sava-belgrade-serbia-bc2799.webp',
+  sarajevo:        '/img/remote/wiki-sebilj-at-ba-ar-ija-55019540284-b1aa95.webp',
+  mostar:          '/img/remote/wiki-mostar-stari-most-bw-2024-10-01-13-00-05-9d7a12.webp',
+  blagaj:          '/img/remote/wiki-blagaj-tekke-the-spring-of-the-buna-rive-a774b5.webp',
+  kotorBay:        '/img/remote/wiki-kotor-and-boka-kotorska-view-from-city-w-d4cb72.webp',
+  budva:           '/img/remote/wiki-view-of-budva-old-town-6dfaab.webp',
+  durmitor:        '/img/remote/wiki-durmitor-crno-jezero-2daf4c.webp',
+  taraBridge:      '/img/remote/wiki-ur-evi-a-tara-bridge-by-pudelek-0a1d80.webp',
+  uvac:            '/img/remote/wiki-curving-meanders-in-special-nature-reser-8c5dd4.webp',
   goldGondola:     '/img/zlatibor-gold-gondola.jpg',
-  sarganRail:      wc('Sargan Eight - Mokra Gora station 1.jpg'),
-  zemun:           wc('Zemun panorama from Gardoš tower.jpg'),
+  sarganRail:      '/img/remote/wiki-sargan-eight-mokra-gora-station-1-b8a8d8.webp',
+  zemun:           '/img/remote/wiki-zemun-panorama-from-gardo-tower-a18154.webp',
 };
 
-const heroImage = wc('Đurđevića Tara Bridge (by Pudelek).JPG', 2000);
+const heroImage = '/img/remote/wiki-ur-evi-a-tara-bridge-by-pudelek-0a1d80.webp';
 const fallbackImage = IMG.kotorBay;
 
 const itineraryContent = {
