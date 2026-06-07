@@ -12,27 +12,27 @@ const ItineraryS1: React.FC = () => {
   const dayImages = {
     day1: {
       title: "Cappadocia",
-      image: "https://images.unsplash.com/photo-1701616857654-8c56b923d80c?auto=format&fit=crop&w=1600&q=80"
+      image: "/img/remote/u-1701616857654-8c56b923d80c.webp"
     },
     day2: {
       title: "Konya · Mevlana",
-      image: "https://images.unsplash.com/photo-1759930018775-bf3c3fe9bdc6?auto=format&fit=crop&w=1600&q=80"
+      image: "/img/remote/u-1759930018775-bf3c3fe9bdc6.webp"
     },
     day3: {
       title: "Pamukkale",
-      image: "https://images.unsplash.com/photo-1708251088932-b7700e0a58b7?auto=format&fit=crop&w=1600&q=80"
+      image: "/img/remote/u-1708251088932-b7700e0a58b7.webp"
     },
     day4: {
       title: "Ephesus · Library of Celsus",
-      image: "https://images.unsplash.com/photo-1760995142780-75ee0fa82353?auto=format&fit=crop&w=1600&q=80"
+      image: "/img/remote/u-1760995142780-75ee0fa82353.webp"
     },
     day5: {
       title: "Istanbul · Hagia Sophia / Blue Mosque",
-      image: "https://images.unsplash.com/photo-1636021597151-cc28dacd915c?auto=format&fit=crop&w=1600&q=80"
+      image: "/img/remote/u-1636021597151-cc28dacd915c.webp"
     },
     day6: {
       title: "Bosphorus Cruise",
-      image: "https://images.unsplash.com/photo-1685106748514-d10288e9b535?auto=format&fit=crop&w=1600&q=80"
+      image: "/img/remote/u-1685106748514-d10288e9b535.webp"
     }
   };
 

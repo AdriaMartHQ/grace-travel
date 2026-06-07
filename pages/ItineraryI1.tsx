@@ -4,10 +4,10 @@ import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
 
 const fallbackImage =
-  'https://images.unsplash.com/photo-1542743408-218cc173cda0?auto=format&fit=crop&w=1600&q=80';
+  '/img/remote/u-1542743408-218cc173cda0.webp';
 
 const heroImage =
-  'https://images.unsplash.com/photo-1542743408-218cc173cda0?auto=format&fit=crop&w=2200&q=80';
+  '/img/remote/u-1542743408-218cc173cda0.webp';
 
 const itineraryContent = {
   zh: {
@@ -87,7 +87,7 @@ const itineraryContent = {
           day: '01',
           title: '抵达以色列｜旅程正式开始',
           stay: '特拉维夫 / 周边酒店',
-          image: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1600&q=80',
+          image: '/img/remote/u-1516483638261-f4dbaf036963.webp',
           paragraphs: [
             '抵达特拉维夫本古里安国际机场后，由当地接待人员迎接并协助团队完成入境后的集合与上车。',
             '当日以安顿休息为主，帮助团队从长途飞行中调整节奏，为接下来的圣地朝圣做好身心预备。',
@@ -98,7 +98,7 @@ const itineraryContent = {
           day: '02',
           title: '海法、凯撒利亚、米吉多、迦拿与拿撒勒｜进入圣经地理',
           stay: '提比利亚酒店',
-          image: 'https://images.unsplash.com/photo-1505763941729-634dfa346b1b?auto=format&fit=crop&w=1600&q=80',
+          image: '/img/remote/u-1505763941729-634dfa346b1b.webp',
           paragraphs: [
             '由海法迦密山开启旅程，在以利亚先知与巴力先知对峙的背景中进入旧约叙事；随后探访凯撒利亚遗址，回顾彼得向哥尼流传福音的重要节点，并经过米吉多平原体会圣经中的末世意象。',
             '下午前往迦拿与拿撒勒，围绕耶稣第一个神迹、报喜事件与圣家生活展开现场讲解，使团队从地理空间进入福音书的真实历史语境。',
@@ -120,7 +120,7 @@ const itineraryContent = {
           day: '04',
           title: '约旦河谷、耶利哥、昆兰与死海｜旷野、试炼与古卷',
           stay: '死海 / 耶路撒冷酒店',
-          image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80',
+          image: '/img/remote/u-1500530855697-b586d89ba3ee.webp',
           paragraphs: [
             '由大博尔山与伯珊开始南下，穿越约旦峡谷进入耶利哥，回顾约书亚时代与耶稣受试探、撒该蒙恩等圣经场景。',
             '之后探访昆兰遗址并体验死海漂浮，在自然地貌与《死海古卷》发现背景之间，帮助团队理解圣经文本流传与旷野传统的真实重量。',
@@ -131,7 +131,7 @@ const itineraryContent = {
           day: '05',
           title: '橄榄山与伯利恒｜从降生到受难前夜',
           stay: '耶路撒冷酒店',
-          image: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1600&q=80',
+          image: '/img/remote/u-1548013146-72479768bada.webp',
           paragraphs: [
             '在橄榄山俯瞰圣城，依次经过主哭耶路撒冷堂、客西马尼园、万国教堂、主祷文堂与圣母之墓，在地形与经文中体会耶稣进入耶路撒冷后的情感与使命。',
             '随后前往伯利恒，探访主诞堂与牧羊人野地相关圣址，将“道成肉身”的起点与耶路撒冷受难叙事衔接起来，使整条福音主线更完整。',
@@ -142,7 +142,7 @@ const itineraryContent = {
           day: '06',
           title: '耶路撒冷老城｜苦路、圣墓与复活信息',
           stay: '耶路撒冷酒店',
-          image: 'https://images.unsplash.com/photo-1528901166007-3784c7dd3653?auto=format&fit=crop&w=1600&q=80',
+          image: '/img/remote/u-1528901166007-3784c7dd3653.webp',
           paragraphs: [
             '今日聚焦耶路撒冷老城核心，访问锡安山、马可楼、鸡鸣堂、毕士大池、圣殿山与西墙，在犹太圣殿传统与耶稣受审背景中理解福音书后半程。',
             '下午依次走完苦路十四站并进入圣墓堂，最终以空坟墓信息作为属灵高潮，让整团在默想、祷告与回应中完成最重要的一日朝圣。',
@@ -153,7 +153,7 @@ const itineraryContent = {
           day: '07',
           title: '新耶路撒冷与约帕｜历史回望后的返程',
           stay: '送机返程',
-          image: 'https://images.unsplash.com/photo-1510076857177-7470076d4098?auto=format&fit=crop&w=1600&q=80',
+          image: '/img/remote/u-1510076857177-7470076d4098.webp',
           paragraphs: [
             '前往大屠杀纪念馆与以色列博物馆，从现代犹太民族记忆、圣经文物与国家重建脉络，补足团队对当代以色列的理解。',
             '最后抵达约帕，回顾彼得异象与约拿故事相关背景，在古港口为整趟旅程作温柔收束，随后前往特拉维夫机场办理离境返程。',
@@ -240,7 +240,7 @@ const itineraryContent = {
           day: '01',
           title: 'Arrival in Israel | Opening the journey',
           stay: 'Tel Aviv / Nearby Hotel',
-          image: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1600&q=80',
+          image: '/img/remote/u-1516483638261-f4dbaf036963.webp',
           paragraphs: [
             'Arrive at Ben Gurion Airport and meet the local team before transferring to the hotel.',
             'The first day is kept gentle so the group can settle after the international flight and prepare for the pilgrimage rhythm ahead.',
@@ -251,7 +251,7 @@ const itineraryContent = {
           day: '02',
           title: 'Haifa, Caesarea, Megiddo, Cana and Nazareth',
           stay: 'Tiberias Hotel',
-          image: 'https://images.unsplash.com/photo-1505763941729-634dfa346b1b?auto=format&fit=crop&w=1600&q=80',
+          image: '/img/remote/u-1505763941729-634dfa346b1b.webp',
           paragraphs: [
             'Begin at Mount Carmel and Caesarea, then continue through Megiddo, Cana, and Nazareth to enter the biblical geography in a meaningful sequence.',
             'This day connects Old Testament memory, the first miracle at Cana, and the Annunciation setting in Nazareth.',
@@ -273,7 +273,7 @@ const itineraryContent = {
           day: '04',
           title: 'Jordan Valley, Jericho, Qumran and the Dead Sea',
           stay: 'Dead Sea / Jerusalem Hotel',
-          image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80',
+          image: '/img/remote/u-1500530855697-b586d89ba3ee.webp',
           paragraphs: [
             'Travel south through the Jordan Valley into Jericho, then continue to Qumran and the Dead Sea.',
             'This day links wilderness themes, biblical memory, the Dead Sea Scrolls, and the physical landscape of the region.',
@@ -284,7 +284,7 @@ const itineraryContent = {
           day: '05',
           title: 'Mount of Olives and Bethlehem',
           stay: 'Jerusalem Hotel',
-          image: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1600&q=80',
+          image: '/img/remote/u-1548013146-72479768bada.webp',
           paragraphs: [
             'Explore the Mount of Olives line, including Gethsemane-related locations, then continue to Bethlehem.',
             'The day helps the group connect the incarnation narrative with the final Jerusalem section of the Gospel story.',
@@ -295,7 +295,7 @@ const itineraryContent = {
           day: '06',
           title: 'Jerusalem Old City | Passion route and resurrection message',
           stay: 'Jerusalem Hotel',
-          image: 'https://images.unsplash.com/photo-1528901166007-3784c7dd3653?auto=format&fit=crop&w=1600&q=80',
+          image: '/img/remote/u-1528901166007-3784c7dd3653.webp',
           paragraphs: [
             'Visit Mount Zion, Bethesda, Temple traditions, the Western Wall, Via Dolorosa, and the Holy Sepulchre setting.',
             'This is the spiritual high point of the itinerary and is ideal for prayerful reflection with the group.',
@@ -306,7 +306,7 @@ const itineraryContent = {
           day: '07',
           title: 'Modern Israel memory and Jaffa',
           stay: 'Departure',
-          image: 'https://images.unsplash.com/photo-1510076857177-7470076d4098?auto=format&fit=crop&w=1600&q=80',
+          image: '/img/remote/u-1510076857177-7470076d4098.webp',
           paragraphs: [
             'Visit Yad Vashem and the Israel Museum before heading to Jaffa to close the journey with Acts-related memory and ancient port history.',
             'After the final reflection, transfer to the airport for departure.',

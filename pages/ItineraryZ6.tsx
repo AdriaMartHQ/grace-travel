@@ -9,7 +9,7 @@ const ItineraryZ6: React.FC = () => {
   const currencySymbol = '¥';
 
   const fallbackImage =
-    'https://images.unsplash.com/photo-1527838832700-5059252407fa?auto=format&fit=crop&w=1600&q=80';
+    '/img/remote/u-1527838832700-5059252407fa.webp';
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     e.currentTarget.onerror = null;
@@ -44,7 +44,7 @@ const ItineraryZ6: React.FC = () => {
       <section className="relative h-[80vh] md:h-[85vh] flex items-center justify-center text-center px-4 overflow-hidden">
         <div className="absolute inset-0 z-0 scale-110">
           <img
-            src="https://images.unsplash.com/photo-1527838832700-5059252407fa?q=80&w=2340&auto=format&fit=crop"
+            src="/img/remote/u-1527838832700-5059252407fa.webp"
             className="w-full h-full object-cover"
             alt="Grace Way Turkey Z6"
             onError={handleImageError}

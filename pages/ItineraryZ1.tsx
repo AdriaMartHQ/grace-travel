@@ -9,7 +9,7 @@ const ItineraryZ1: React.FC = () => {
   const d = (t as any).itinerary_z1 || {};
   const currencySymbol = language === 'zh' ? '¥' : '$';
 
-  const fallbackImage = "https://images.unsplash.com/photo-1636021597151-cc28dacd915c?auto=format&fit=crop&w=1600&q=80";
+  const fallbackImage = "/img/remote/u-1636021597151-cc28dacd915c.webp";
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     e.currentTarget.onerror = null; 

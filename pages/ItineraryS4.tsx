@@ -10,8 +10,8 @@ const ItineraryS4: React.FC = () => {
   const currencySymbol = language === 'zh' ? '¥' : '$';
 
   // Use the cover image from the tour data or a fallback
-  const heroImage = "https://images.unsplash.com/photo-1689130033373-2773b6029aea?q=80&w=2148&auto=format&fit=crop";
-  const fallbackImage = "https://images.unsplash.com/photo-1636021597151-cc28dacd915c?auto=format&fit=crop&w=1600&q=80";
+  const heroImage = "/img/remote/u-1689130033373-2773b6029aea.webp";
+  const fallbackImage = "/img/remote/u-1636021597151-cc28dacd915c.webp";
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     e.currentTarget.onerror = null; 

@@ -1,0 +1,329 @@
+{
+  "generatedFor": "grace.tr Unsplash localization (self-hosted, reliability consolidation)",
+  "note": "photo-id -> local path. Re-download via https://images.unsplash.com/photo-<id>?fm=webp&w=1366&q=60&fit=crop&auto=format",
+  "count": 79,
+  "images": [
+    {
+      "id": "1433854471391-5603c019de62",
+      "local": "/img/remote/u-1433854471391-5603c019de62.webp"
+    },
+    {
+      "id": "1498222954553-93fc8d1941da",
+      "local": "/img/remote/u-1498222954553-93fc8d1941da.webp"
+    },
+    {
+      "id": "1500530855697-b586d89ba3ee",
+      "local": "/img/remote/u-1500530855697-b586d89ba3ee.webp"
+    },
+    {
+      "id": "1504713721722-f73b4ccdfe6a",
+      "local": "/img/remote/u-1504713721722-f73b4ccdfe6a.webp"
+    },
+    {
+      "id": "1505763941729-634dfa346b1b",
+      "local": "/img/remote/u-1505763941729-634dfa346b1b.webp"
+    },
+    {
+      "id": "1510076857177-7470076d4098",
+      "local": "/img/remote/u-1510076857177-7470076d4098.webp"
+    },
+    {
+      "id": "1516483638261-f4dbaf036963",
+      "local": "/img/remote/u-1516483638261-f4dbaf036963.webp"
+    },
+    {
+      "id": "1523946963389-207478f6cb2e",
+      "local": "/img/remote/u-1523946963389-207478f6cb2e.webp"
+    },
+    {
+      "id": "1524231757912-21f4fe3a7200",
+      "local": "/img/remote/u-1524231757912-21f4fe3a7200.webp"
+    },
+    {
+      "id": "1527838832700-5059252407fa",
+      "local": "/img/remote/u-1527838832700-5059252407fa.webp"
+    },
+    {
+      "id": "1528901166007-3784c7dd3653",
+      "local": "/img/remote/u-1528901166007-3784c7dd3653.webp"
+    },
+    {
+      "id": "1541432901042-2d8bd64b4a9b",
+      "local": "/img/remote/u-1541432901042-2d8bd64b4a9b.webp"
+    },
+    {
+      "id": "1542743408-218cc173cda0",
+      "local": "/img/remote/u-1542743408-218cc173cda0.webp"
+    },
+    {
+      "id": "1548013146-72479768bada",
+      "local": "/img/remote/u-1548013146-72479768bada.webp"
+    },
+    {
+      "id": "1569530593439-c5a3adda5204",
+      "local": "/img/remote/u-1569530593439-c5a3adda5204.webp"
+    },
+    {
+      "id": "1575301236982-2857a6daf71a",
+      "local": "/img/remote/u-1575301236982-2857a6daf71a.webp"
+    },
+    {
+      "id": "1577706881850-bf7c7d8906a5",
+      "local": "/img/remote/u-1577706881850-bf7c7d8906a5.webp"
+    },
+    {
+      "id": "1587506873457-b6d7d1cdad18",
+      "local": "/img/remote/u-1587506873457-b6d7d1cdad18.webp"
+    },
+    {
+      "id": "1591709976757-94efbfd3b01e",
+      "local": "/img/remote/u-1591709976757-94efbfd3b01e.webp"
+    },
+    {
+      "id": "1596093145026-f6af675846c7",
+      "local": "/img/remote/u-1596093145026-f6af675846c7.webp"
+    },
+    {
+      "id": "1601565465051-67971a2d838c",
+      "local": "/img/remote/u-1601565465051-67971a2d838c.webp"
+    },
+    {
+      "id": "1605382628707-0aa0593fba19",
+      "local": "/img/remote/u-1605382628707-0aa0593fba19.webp"
+    },
+    {
+      "id": "1605988743975-c9c5b8550a91",
+      "local": "/img/remote/u-1605988743975-c9c5b8550a91.webp"
+    },
+    {
+      "id": "1606460754287-d8b9e905d8e4",
+      "local": "/img/remote/u-1606460754287-d8b9e905d8e4.webp"
+    },
+    {
+      "id": "1608677662924-8b83590f474e",
+      "local": "/img/remote/u-1608677662924-8b83590f474e.webp"
+    },
+    {
+      "id": "1609330262490-77d0a1360bfe",
+      "local": "/img/remote/u-1609330262490-77d0a1360bfe.webp"
+    },
+    {
+      "id": "1619355419589-19790f1bf3ee",
+      "local": "/img/remote/u-1619355419589-19790f1bf3ee.webp"
+    },
+    {
+      "id": "1624786712432-e021fdf57c48",
+      "local": "/img/remote/u-1624786712432-e021fdf57c48.webp"
+    },
+    {
+      "id": "1632795042875-0c3e8671d8dc",
+      "local": "/img/remote/u-1632795042875-0c3e8671d8dc.webp"
+    },
+    {
+      "id": "1632821629445-bdc26ce3ccf0",
+      "local": "/img/remote/u-1632821629445-bdc26ce3ccf0.webp"
+    },
+    {
+      "id": "1634647626758-ad751a260e9f",
+      "local": "/img/remote/u-1634647626758-ad751a260e9f.webp"
+    },
+    {
+      "id": "1634647626782-f5fffa9fd9b1",
+      "local": "/img/remote/u-1634647626782-f5fffa9fd9b1.webp"
+    },
+    {
+      "id": "1636021597151-cc28dacd915c",
+      "local": "/img/remote/u-1636021597151-cc28dacd915c.webp"
+    },
+    {
+      "id": "1643354812958-b648b92dc6c5",
+      "local": "/img/remote/u-1643354812958-b648b92dc6c5.webp"
+    },
+    {
+      "id": "1649003175416-9ae7904371db",
+      "local": "/img/remote/u-1649003175416-9ae7904371db.webp"
+    },
+    {
+      "id": "1650610854382-ed6dc12f9b57",
+      "local": "/img/remote/u-1650610854382-ed6dc12f9b57.webp"
+    },
+    {
+      "id": "1657471250720-4e51a99aca85",
+      "local": "/img/remote/u-1657471250720-4e51a99aca85.webp"
+    },
+    {
+      "id": "1659866813094-23ea349b848f",
+      "local": "/img/remote/u-1659866813094-23ea349b848f.webp"
+    },
+    {
+      "id": "1661103112980-2ceae026f17b",
+      "local": "/img/remote/u-1661103112980-2ceae026f17b.webp"
+    },
+    {
+      "id": "1665051153829-82fc1acb59e6",
+      "local": "/img/remote/u-1665051153829-82fc1acb59e6.webp"
+    },
+    {
+      "id": "1665860789948-bfe6ea95d6cf",
+      "local": "/img/remote/u-1665860789948-bfe6ea95d6cf.webp"
+    },
+    {
+      "id": "1674715577456-49ae7a6945a8",
+      "local": "/img/remote/u-1674715577456-49ae7a6945a8.webp"
+    },
+    {
+      "id": "1675373181258-681d11e0e4c5",
+      "local": "/img/remote/u-1675373181258-681d11e0e4c5.webp"
+    },
+    {
+      "id": "1678050643669-0e67cc5a0e21",
+      "local": "/img/remote/u-1678050643669-0e67cc5a0e21.webp"
+    },
+    {
+      "id": "1680204412403-73110934f5aa",
+      "local": "/img/remote/u-1680204412403-73110934f5aa.webp"
+    },
+    {
+      "id": "1680419928106-1804e2eb432d",
+      "local": "/img/remote/u-1680419928106-1804e2eb432d.webp"
+    },
+    {
+      "id": "1680465807377-c83db592a2fc",
+      "local": "/img/remote/u-1680465807377-c83db592a2fc.webp"
+    },
+    {
+      "id": "1684214190982-f3506653f932",
+      "local": "/img/remote/u-1684214190982-f3506653f932.webp"
+    },
+    {
+      "id": "1685106748514-d10288e9b535",
+      "local": "/img/remote/u-1685106748514-d10288e9b535.webp"
+    },
+    {
+      "id": "1686257558166-a13a257b5dc1",
+      "local": "/img/remote/u-1686257558166-a13a257b5dc1.webp"
+    },
+    {
+      "id": "1686428007573-f4a91f2d8bd0",
+      "local": "/img/remote/u-1686428007573-f4a91f2d8bd0.webp"
+    },
+    {
+      "id": "1687706222092-b6545828217d",
+      "local": "/img/remote/u-1687706222092-b6545828217d.webp"
+    },
+    {
+      "id": "1689130033373-2773b6029aea",
+      "local": "/img/remote/u-1689130033373-2773b6029aea.webp"
+    },
+    {
+      "id": "1692701824634-677c652fc111",
+      "local": "/img/remote/u-1692701824634-677c652fc111.webp"
+    },
+    {
+      "id": "1696142990758-581061f2801d",
+      "local": "/img/remote/u-1696142990758-581061f2801d.webp"
+    },
+    {
+      "id": "1697457661409-0adc99b64647",
+      "local": "/img/remote/u-1697457661409-0adc99b64647.webp"
+    },
+    {
+      "id": "1699474745854-39fc35d5ba19",
+      "local": "/img/remote/u-1699474745854-39fc35d5ba19.webp"
+    },
+    {
+      "id": "1701428588034-5893b2512a68",
+      "local": "/img/remote/u-1701428588034-5893b2512a68.webp"
+    },
+    {
+      "id": "1701616857654-8c56b923d80c",
+      "local": "/img/remote/u-1701616857654-8c56b923d80c.webp"
+    },
+    {
+      "id": "1701668910380-b44dcc028525",
+      "local": "/img/remote/u-1701668910380-b44dcc028525.webp"
+    },
+    {
+      "id": "1708251088223-e56cd382e8c6",
+      "local": "/img/remote/u-1708251088223-e56cd382e8c6.webp"
+    },
+    {
+      "id": "1708251088932-b7700e0a58b7",
+      "local": "/img/remote/u-1708251088932-b7700e0a58b7.webp"
+    },
+    {
+      "id": "1712569838375-27b4eb58d05f",
+      "local": "/img/remote/u-1712569838375-27b4eb58d05f.webp"
+    },
+    {
+      "id": "1715080271610-c177c424aa6d",
+      "local": "/img/remote/u-1715080271610-c177c424aa6d.webp"
+    },
+    {
+      "id": "1716274644458-d30c57acdeb4",
+      "local": "/img/remote/u-1716274644458-d30c57acdeb4.webp"
+    },
+    {
+      "id": "1718227973712-fa3c9b1fda6e",
+      "local": "/img/remote/u-1718227973712-fa3c9b1fda6e.webp"
+    },
+    {
+      "id": "1724249367218-819f3eb2f9f7",
+      "local": "/img/remote/u-1724249367218-819f3eb2f9f7.webp"
+    },
+    {
+      "id": "1728361328959-d30d8218e38b",
+      "local": "/img/remote/u-1728361328959-d30d8218e38b.webp"
+    },
+    {
+      "id": "1737498446282-159e13bd8de9",
+      "local": "/img/remote/u-1737498446282-159e13bd8de9.webp"
+    },
+    {
+      "id": "1741225775531-035965543c95",
+      "local": "/img/remote/u-1741225775531-035965543c95.webp"
+    },
+    {
+      "id": "1742228836192-a7294496453b",
+      "local": "/img/remote/u-1742228836192-a7294496453b.webp"
+    },
+    {
+      "id": "1752865224513-17e6afc1e6c5",
+      "local": "/img/remote/u-1752865224513-17e6afc1e6c5.webp"
+    },
+    {
+      "id": "1755161440007-c3ca156edda3",
+      "local": "/img/remote/u-1755161440007-c3ca156edda3.webp"
+    },
+    {
+      "id": "1757212934677-57df0ec6d762",
+      "local": "/img/remote/u-1757212934677-57df0ec6d762.webp"
+    },
+    {
+      "id": "1757510146664-48b437cddd1a",
+      "local": "/img/remote/u-1757510146664-48b437cddd1a.webp"
+    },
+    {
+      "id": "1759930018775-bf3c3fe9bdc6",
+      "local": "/img/remote/u-1759930018775-bf3c3fe9bdc6.webp"
+    },
+    {
+      "id": "1760995142780-75ee0fa82353",
+      "local": "/img/remote/u-1760995142780-75ee0fa82353.webp"
+    },
+    {
+      "id": "1764983253036-edd0f55af679",
+      "local": "/img/remote/u-1764983253036-edd0f55af679.webp"
+    },
+    {
+      "id": "1766778834237-34aeabf4d9b2",
+      "local": "/img/remote/u-1766778834237-34aeabf4d9b2.webp"
+    }
+  ],
+  "deadUnsplash404_needReplacement": [
+    "1543949806-2c9935e6838d (Z1+translations)",
+    "1544737151-6e4b1d08d7a8 (I1)",
+    "1584382838634-1e651f6c5c66 (translations)",
+    "1631098983935-09a89fba42c2 (translations)"
+  ]
+}

@@ -57,7 +57,7 @@ const TicketModal: React.FC<TicketModalProps> = ({ isOpen, onClose }) => {
           {/* Background Image with optimized Gradients */}
           <div className="absolute inset-0 z-0 h-[450px]">
             <img 
-              src="https://images.unsplash.com/photo-1527838832700-5059252407fa?auto=format&fit=crop&w=800&q=80" 
+              src="/img/remote/u-1527838832700-5059252407fa.webp" 
               alt="Bosphorus" 
               className="w-full h-full object-cover"
             />

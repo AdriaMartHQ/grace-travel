@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
       />
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1527838832700-5059252407fa?auto=format&fit=crop&q=80&w=2400&q=80" 
+          src="/img/remote/u-1527838832700-5059252407fa.webp" 
           alt="Grace Way Hero" 
           className="w-full h-full object-cover"
         />
@@ -75,7 +75,7 @@ const TourCard: React.FC<{ tour: any; priority?: boolean }> = ({ tour, priority 
   const currencySymbol = '¥'; // 锁定为人民币
 
   // 严谨的回退图 (Istanbul Hagia Sophia)
-  const fallbackImg = "https://images.unsplash.com/photo-1636021597151-cc28dacd915c?auto=format&fit=crop&w=1200&q=80";
+  const fallbackImg = "/img/remote/u-1636021597151-cc28dacd915c.webp";
 
   const handleImgError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     const target = e.target as HTMLImageElement;

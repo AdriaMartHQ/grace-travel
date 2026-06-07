@@ -136,55 +136,55 @@ export interface SiteContent {
 
 const chinaAssetImages = {
   bayTech:
-    'https://images.unsplash.com/photo-1634647626758-ad751a260e9f?auto=format&fit=crop&fm=jpg&q=80&w=1800',
+    '/img/remote/u-1634647626758-ad751a260e9f.webp',
   bayIndustry:
-    'https://images.unsplash.com/photo-1741225775531-035965543c95?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1800',
+    '/img/remote/u-1741225775531-035965543c95.webp',
   classicChina:
-    'https://images.unsplash.com/photo-1701668910380-b44dcc028525?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1800',
+    '/img/remote/u-1701668910380-b44dcc028525.webp',
   shenzhenNight:
-    'https://images.unsplash.com/photo-1575301236982-2857a6daf71a?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1800',
+    '/img/remote/u-1575301236982-2857a6daf71a.webp',
   guangzhouNight:
-    'https://images.unsplash.com/photo-1609330262490-77d0a1360bfe?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1800',
+    '/img/remote/u-1609330262490-77d0a1360bfe.webp',
   greatWall:
-    'https://images.unsplash.com/photo-1505763941729-634dfa346b1b?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1800',
+    '/img/remote/u-1505763941729-634dfa346b1b.webp',
   greatWallAlt:
-    'https://images.unsplash.com/photo-1737498446282-159e13bd8de9?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1800',
+    '/img/remote/u-1737498446282-159e13bd8de9.webp',
   bayBridge:
-    'https://images.unsplash.com/photo-1632795042875-0c3e8671d8dc?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9uZyUyMGtvbmclMjB6aHVoYWklMjBtYWNhbyUyMGJyaWRnZXxlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.1.0&q=80&w=1800',
+    '/img/remote/u-1632795042875-0c3e8671d8dc.webp',
   apolloDrive:
-    'https://images.unsplash.com/photo-1764983253036-edd0f55af679?auto=format&fit=crop&fm=jpg&q=80&w=1800',
+    '/img/remote/u-1764983253036-edd0f55af679.webp',
   djiDrone:
-    'https://images.unsplash.com/photo-1606460754287-d8b9e905d8e4?auto=format&fit=crop&fm=jpg&q=80&w=1800',
+    '/img/remote/u-1606460754287-d8b9e905d8e4.webp',
   factoryLine:
-    'https://images.unsplash.com/photo-1649003175416-9ae7904371db?auto=format&fit=crop&fm=jpg&q=80&w=1800',
+    '/img/remote/u-1649003175416-9ae7904371db.webp',
   yongqingFang:
-    'https://images.unsplash.com/photo-1755161440007-c3ca156edda3?auto=format&fit=crop&fm=jpg&q=80&w=1800',
+    '/img/remote/u-1755161440007-c3ca156edda3.webp',
   xianHeritage:
-    'https://images.unsplash.com/photo-1523946963389-207478f6cb2e?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1800',
+    '/img/remote/u-1523946963389-207478f6cb2e.webp',
   forbiddenCityMoat:
-    'https://images.unsplash.com/photo-1757510146664-48b437cddd1a?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1800',
+    '/img/remote/u-1757510146664-48b437cddd1a.webp',
   chengduLifestyle:
-    'https://images.unsplash.com/photo-1757212934677-57df0ec6d762?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1800',
+    '/img/remote/u-1757212934677-57df0ec6d762.webp',
   pandaAlt:
-    'https://images.unsplash.com/photo-1504713721722-f73b4ccdfe6a?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1800',
+    '/img/remote/u-1504713721722-f73b4ccdfe6a.webp',
   shanghaiNight:
-    'https://images.unsplash.com/photo-1742228836192-a7294496453b?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1800',
+    '/img/remote/u-1742228836192-a7294496453b.webp',
   shanghaiNightAlt:
-    'https://images.unsplash.com/photo-1696142990758-581061f2801d?auto=format&fit=crop&fm=jpg&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&ixlib=rb-4.1.0&q=80&w=1800',
+    '/img/remote/u-1696142990758-581061f2801d.webp',
   shenzhenBayAlt:
-    'https://images.unsplash.com/photo-1634647626758-ad751a260e9f?auto=format&fit=crop&fm=jpg&q=80&w=1800',
+    '/img/remote/u-1634647626758-ad751a260e9f.webp',
   shenzhenBayAlt2:
-    'https://images.unsplash.com/photo-1634647626782-f5fffa9fd9b1?auto=format&fit=crop&fm=jpg&q=80&w=1800',
+    '/img/remote/u-1634647626782-f5fffa9fd9b1.webp',
   huaqiangbeiAlt:
-    'https://images.unsplash.com/photo-1619355419589-19790f1bf3ee?auto=format&fit=crop&fm=jpg&q=80&w=1800',
+    '/img/remote/u-1619355419589-19790f1bf3ee.webp',
   zhuhaiAlt:
-    'https://images.unsplash.com/photo-1659866813094-23ea349b848f?auto=format&fit=crop&fm=jpg&q=80&w=1800',
+    '/img/remote/u-1659866813094-23ea349b848f.webp',
   zhuhaiAlt2:
-    'https://images.unsplash.com/photo-1657471250720-4e51a99aca85?auto=format&fit=crop&fm=jpg&q=80&w=1800',
+    '/img/remote/u-1657471250720-4e51a99aca85.webp',
   forbiddenCityAlt:
-    'https://images.unsplash.com/photo-1577706881850-bf7c7d8906a5?auto=format&fit=crop&fm=jpg&q=80&w=1800',
+    '/img/remote/u-1577706881850-bf7c7d8906a5.webp',
   xianAlt:
-    'https://images.unsplash.com/photo-1591709976757-94efbfd3b01e?auto=format&fit=crop&fm=jpg&q=80&w=1800',
+    '/img/remote/u-1591709976757-94efbfd3b01e.webp',
 } as const;
 
 const chinaJourneyGalleries = {

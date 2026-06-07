@@ -262,7 +262,7 @@ const About: React.FC = () => {
       <section className="relative overflow-hidden bg-slate-950 text-white">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=2071&auto=format&fit=crop"
+            src="/img/remote/u-1524231757912-21f4fe3a7200.webp"
             alt="Istanbul skyline"
             className="h-full w-full object-cover opacity-25"
             referrerPolicy="no-referrer"

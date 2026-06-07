@@ -8,7 +8,7 @@ const ItineraryZ2: React.FC = () => {
   const d = (t as any).itinerary_z2 || {};
   const currencySymbol = '¥'; // 锁定为人民币
 
-  const fallbackImage = "https://images.unsplash.com/photo-1684214190982-f3506653f932?auto=format&fit=crop&w=1600&q=80";
+  const fallbackImage = "/img/remote/u-1684214190982-f3506653f932.webp";
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     e.currentTarget.onerror = null; 
@@ -39,7 +39,7 @@ const ItineraryZ2: React.FC = () => {
       <section className="relative h-[80vh] md:h-[85vh] flex items-center justify-center text-center px-4 overflow-hidden">
         <div className="absolute inset-0 z-0 scale-110">
           <img 
-            src="https://images.unsplash.com/photo-1684214190982-f3506653f932?q=80&w=2340&auto=format&fit=crop" 
+            src="/img/remote/u-1684214190982-f3506653f932.webp" 
             className="w-full h-full object-cover" 
             alt="Grace Way Turkey Z2"
             onError={handleImageError}

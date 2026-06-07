@@ -22,7 +22,7 @@ const ItineraryS2: React.FC = () => {
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     e.currentTarget.onerror = null; 
-    e.currentTarget.src = "https://images.unsplash.com/photo-1636021597151-cc28dacd915c?auto=format&fit=crop&w=1600&q=80";
+    e.currentTarget.src = "/img/remote/u-1636021597151-cc28dacd915c.webp";
   };
 
   return (

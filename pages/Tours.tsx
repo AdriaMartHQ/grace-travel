@@ -81,7 +81,7 @@ const Tours: React.FC = () => {
   const currencySymbol = '¥'; // 锁定为人民币
 
   // Strict Fallback Image
-  const fallbackImg = "https://images.unsplash.com/photo-1636021597151-cc28dacd915c?auto=format&fit=crop&w=1600&q=80";
+  const fallbackImg = "/img/remote/u-1636021597151-cc28dacd915c.webp";
 
   return (
     <div className="pt-24 min-h-screen animate-in fade-in duration-700">

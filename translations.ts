@@ -238,17 +238,17 @@ export const translations: Record<Language, BaseTranslations> = {
       cta_consult: "Enquire Now",
       cta_plan: "Get Plan",
       images: {
-        coverImage: "https://images.unsplash.com/photo-1596093145026-f6af675846c7?q=80&w=2148&auto=format&fit=crop",
-        heroImage: "https://images.unsplash.com/photo-1689130033373-2773b6029aea?q=80&w=2148&auto=format&fit=crop",
-        cardImage: "https://images.unsplash.com/photo-1697457661409-0adc99b64647?q=80&w=2340&auto=format&fit=crop",
-        day1Image: "https://images.unsplash.com/photo-1665051153829-82fc1acb59e6?q=80&w=2340&auto=format&fit=crop",
-        day2Image: "https://images.unsplash.com/photo-1708251088223-e56cd382e8c6?q=80&w=2832&auto=format&fit=crop",
-        day3Image: "https://images.unsplash.com/photo-1686428007573-f4a91f2d8bd0?q=80&w=2340&auto=format&fit=crop",
-        day4Image: "https://images.unsplash.com/photo-1632821629445-bdc26ce3ccf0?q=80&w=2340&auto=format&fit=crop",
-        day5Image: "https://images.unsplash.com/photo-1674715577456-49ae7a6945a8?q=80&w=2340&auto=format&fit=crop",
-        day6Image: "https://images.unsplash.com/photo-1643354812958-b648b92dc6c5?q=80&w=2340&auto=format&fit=crop",
-        day7Image: "https://images.unsplash.com/photo-1680204412403-73110934f5aa?q=80&w=2340&auto=format&fit=crop",
-        day8Image: "https://images.unsplash.com/photo-1624786712432-e021fdf57c48?q=80&w=2832&auto=format&fit=crop"
+        coverImage: "/img/remote/u-1596093145026-f6af675846c7.webp",
+        heroImage: "/img/remote/u-1689130033373-2773b6029aea.webp",
+        cardImage: "/img/remote/u-1697457661409-0adc99b64647.webp",
+        day1Image: "/img/remote/u-1665051153829-82fc1acb59e6.webp",
+        day2Image: "/img/remote/u-1708251088223-e56cd382e8c6.webp",
+        day3Image: "/img/remote/u-1686428007573-f4a91f2d8bd0.webp",
+        day4Image: "/img/remote/u-1632821629445-bdc26ce3ccf0.webp",
+        day5Image: "/img/remote/u-1674715577456-49ae7a6945a8.webp",
+        day6Image: "/img/remote/u-1643354812958-b648b92dc6c5.webp",
+        day7Image: "/img/remote/u-1680204412403-73110934f5aa.webp",
+        day8Image: "/img/remote/u-1624786712432-e021fdf57c48.webp"
       },
       audience_title: "Is this the journey you are looking for?",
       audience_list: [
@@ -336,7 +336,7 @@ export const translations: Record<Language, BaseTranslations> = {
         subtitle: "Epic Landscapes from Aegean to Anatolia",
         ctaPrimary: "Enquire Now",
         ctaSecondary: "Get Plan",
-        image: "https://images.unsplash.com/photo-1689130033373-2773b6029aea?q=80&w=2148&auto=format&fit=crop"
+        image: "/img/remote/u-1689130033373-2773b6029aea.webp"
       },
       highlights: {
         title: "Highlights",
@@ -368,7 +368,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "D1",
             title: "Istanbul → Troy → Canakkale",
             stay: "Stay: Canakkale 5-Star Hotel",
-            image: "https://images.unsplash.com/photo-1687706222092-b6545828217d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1687706222092-b6545828217d.webp",
             paragraphs: [
               "Morning departure from Istanbul, traveling west along the Sea of Marmara. Cross the 1915 Canakkale Bridge, the world's longest suspension bridge span.",
               "Visit Troy, a UNESCO site and legendary setting of the Trojan Horse. Explore archaeological layers spanning 4,000 years of civilization.",
@@ -380,7 +380,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "D2",
             title: "Canakkale → Alacati → Izmir → Kusadasi",
             stay: "Stay: Kusadasi 5-Star Hotel",
-            image: "https://images.unsplash.com/photo-1701428588034-5893b2512a68?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1701428588034-5893b2512a68.webp",
             paragraphs: [
               "Head south to the Aegean heartland. Visit the artistic town of Alacati, known for Greek-style stone houses and white-washed walls.",
               "Continue to Izmir, Turkey's third-largest city. Visit the 1901 Clock Tower and Konak Square facing the bay.",
@@ -392,7 +392,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "D3",
             title: "Ephesus → Pamukkale",
             stay: "Stay: Pamukkale 5-Star Thermal Hotel",
-            image: "https://images.unsplash.com/photo-1433854471391-5603c019de62?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1433854471391-5603c019de62.webp",
             paragraphs: [
               "Deep dive into classical antiquity at Ephesus. Walk the Roman streets and marvel at the Library of Celsus and the Grand Theater.",
               "Experience the Ephesus Experience Museum with immersive light and sound shows.",
@@ -404,7 +404,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "04",
             title: "Pamukkale → Fethiye",
             stay: "Stay: Fethiye 5-Star Hotel",
-            image: "https://images.unsplash.com/photo-1498222954553-93fc8d1941da?q=80&w=2346&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1498222954553-93fc8d1941da.webp",
             paragraphs: [
               "Journey south across the Taurus Mountains to Fethiye, the jewel of the Turquoise Coast.",
               "Visit the Blue Lagoon (Oludeniz), a Mediterranean paradise with crystal waters and Blue Flag ecology.",
@@ -417,7 +417,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "D5",
             title: "Fethiye → Kaputaş → Kas → Antalya",
             stay: "Stay: Antalya 5-Star Hotel",
-            image: "https://images.unsplash.com/photo-1697457661409-0adc99b64647?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1697457661409-0adc99b64647.webp",
             paragraphs: [
               "Drive along the legendary D400 coastal road, often called Turkey's Route 1.",
               "Photo stop at the famous Kaputaş Beach. Short break in the tranquil village of Kas, known for its Greek-style architecture.",
@@ -429,7 +429,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "D6",
             title: "Antalya → Aspendos → Konya",
             stay: "Stay: Konya 5-Star Hotel",
-            image: "https://images.unsplash.com/photo-1724249367218-819f3eb2f9f7?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1724249367218-819f3eb2f9f7.webp",
             paragraphs: [
               "Visit the Aspendos Theater (161 AD), one of the best-preserved ancient theaters in the world with incredible acoustics.",
               "Drive to Konya, the spiritual heart of Sufism. Stop at the 13th-century Sultan Han Caravanserai on the Silk Road.",
@@ -441,7 +441,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "D7",
             title: "Konya → Cappadocia",
             stay: "Stay: Cappadocia Cave Hotel",
-            image: "https://images.unsplash.com/photo-1712569838375-27b4eb58d05f?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1712569838375-27b4eb58d05f.webp",
             paragraphs: [
               "Drive to the lunar landscapes of Cappadocia. Explore the Zelve Valley and Pasabag (Monk's Valley) with its iconic fairy chimneys.",
               "Visit a pottery workshop in Avanos to watch artisans work with Red River clay.",
@@ -453,7 +453,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "D8",
             title: "Cappadocia Depth Experience",
             stay: "Stay: Cappadocia Cave Hotel",
-            image: "https://images.unsplash.com/photo-1569530593439-c5a3adda5204?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1569530593439-c5a3adda5204.webp",
             paragraphs: [
               "Optional sunrise Hot Air Balloon flight over the valleys and chimneys.",
               "Visit the Goreme Open Air Museum to see Byzantine cave churches with thousand-year-old frescoes.",
@@ -465,7 +465,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "D9",
             title: "Cappadocia → Salt Lake → Istanbul",
             stay: "Stay: Istanbul 5-Star Hotel",
-            image: "https://images.unsplash.com/photo-1587506873457-b6d7d1cdad18?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1587506873457-b6d7d1cdad18.webp",
             paragraphs: [
               "Begin the journey back to Istanbul across the Anatolian plateau. Stop at Tuz Gölü (Salt Lake), a surreal white landscape.",
               "Arrive in Istanbul. Evening view of Topkapi Palace and check into your central city hotel."
@@ -476,7 +476,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "10",
             title: "Istanbul classic 一日 → 送机返程",
             stay: "/",
-            image: "https://images.unsplash.com/photo-1608677662924-8b83590f474e?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1608677662924-8b83590f474e.webp",
             paragraphs: [
               "Final day exploring the heart of the empire: Hagia Sophia, Blue Mosque, and Sultanahmet Square. Private Bosphorus cruise viewing the Dolmabahce Palace.",
               "Taste UNESCO-listed Turkish coffee. Transfer to the airport after dinner for your journey home."
@@ -528,7 +528,7 @@ export const translations: Record<Language, BaseTranslations> = {
         subtitle: "8-Day Grand Culture Depth Journey",
         ctaPrimary: "Enquire Now",
         ctaSecondary: "Get Plan",
-        image: "https://images.unsplash.com/photo-1687706222092-b6545828217d?q=80&w=2340&auto=format&fit=crop"
+        image: "/img/remote/u-1687706222092-b6545828217d.webp"
       },
       highlights: {
         title: "Core Highlights",
@@ -563,7 +563,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "01",
             title: "Arrival in Istanbul | A Millennium Gaze Between Sea and Sky",
             stay: "Istanbul 5-Star Hotel",
-            image: "https://images.unsplash.com/photo-1636021597151-cc28dacd915c?q=80&w=2340&auto=format&fit=crop",
+            image: "/img/remote/u-1636021597151-cc28dacd915c.webp",
             paragraphs: [
               "Arrive in the millennium-old capital, Istanbul. Visit the power center of the Ottoman Empire, Topkapi Palace (exterior), followed by the architectural masterpiece Hagia Sophia (exterior).",
               "Enter the Blue Mosque to admire the exquisite Iznik tile art. Pass by the Hippodrome and take a sunset Bosphorus cruise."
@@ -574,7 +574,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "02",
             title: "Istanbul → Canakkale | Beneath the Trojan Horse, Hearing Homer's Echo",
             stay: "Canakkale 5-Star Hotel",
-            image: "https://images.unsplash.com/photo-1716274644458-d30c57acdeb4?q=80&w=1354&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1716274644458-d30c57acdeb4.webp",
             paragraphs: [
               "Cross the 1915 Canakkale Bridge. Deeply analyze the Homeric epics and the reality of ancient archaeological layers at Troy.",
               "Visit the ancient city of Alexander Troas. Evening check-in by the Dardanelles."
@@ -585,7 +585,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "03",
             title: "Canakkale → Izmir | Beneath the Clock Tower, The Aegean's Breath",
             stay: "Izmir 5-Star Hotel",
-            image: "https://images.unsplash.com/photo-1701428588034-5893b2512a68?q=80&w=2340&auto=format&fit=crop",
+            image: "/img/remote/u-1701428588034-5893b2512a68.webp",
             paragraphs: [
               "Head south into the Aegean heartland. Tour the Izmir landmarks Konak Square and the Clock Tower.",
               "Visit Ephesus, walk down marble roads and marvel at the Library of Celsus and the Grand Theater."
@@ -596,7 +596,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "04",
             title: "Izmir → Pamukkale | Walking the White Steps, Healing at Earth's Spring",
             stay: "Pamukkale 5-Star Thermal Hotel",
-            image: "https://images.unsplash.com/photo-1433854471391-5603c019de62?q=80&w=2340&auto=format&fit=crop",
+            image: "/img/remote/u-1433854471391-5603c019de62.webp",
             paragraphs: [
               "Proceed to Pamukkale. Visit the Hierapolis ruins, once a Roman thermal spa center.",
               "Walk barefoot on the white travertine terraces and feel the natural warm springs."
@@ -607,7 +607,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "05",
             title: "Pamukkale → Lake Egirdir → Konya | Alpine Lake Views, The Sufi Heart",
             stay: "Konya 5-Star Hotel",
-            image: "https://images.unsplash.com/photo-1680465807377-c83db592a2fc?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1680465807377-c83db592a2fc.webp",
             paragraphs: [
               "Travel to Lake Egirdir. Enjoy a slow-paced stroll by the shore.",
               "Continue to Konya. Visit the Mevlana Museum to learn about Sufi philosophy."
@@ -618,7 +618,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "06",
             title: "Konya → Goreme | Chiseled Stone Homes, A Fairy Tale on Earth",
             stay: "Cappadocia 5-Star / Cave Hotel",
-            image: "https://images.unsplash.com/photo-1712569838375-27b4eb58d05f?q=80&w=2340&auto=format&fit=crop",
+            image: "/img/remote/u-1712569838375-27b4eb58d05f.webp",
             paragraphs: [
               "Follow the ancient Silk Road. Arrive in the heart of Cappadocia.",
               "Visit Goreme Open Air Museum, Pigeon Valley, and Pasabag. Red River pottery workshop included."
@@ -629,7 +629,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "07",
             title: "Goreme → Ankara | Dawn in a Balloon, Where the Father of the Nation Gazed",
             stay: "Ankara 5-Star Hotel",
-            image: "https://images.unsplash.com/photo-1569530593439-c5a3adda5204?q=80&w=2340&auto=format&fit=crop",
+            image: "/img/remote/u-1569530593439-c5a3adda5204.webp",
             paragraphs: [
               "Optional sunrise Hot Air Balloon flight. Ascend Uchisar Castle for panoramic canyon views.",
               "Drive to Ankara. Visit Anitkabir to retrace the narrative of the Republic's birth."
@@ -640,7 +640,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "08",
             title: "Ankara → Iznik → Istanbul | Nicaea's Lake, Balat's Stained Glass",
             stay: "Departure",
-            image: "https://images.unsplash.com/photo-1608677662924-8b83590f474e?q=80&w=2340&auto=format&fit=crop",
+            image: "/img/remote/u-1608677662924-8b83590f474e.webp",
             paragraphs: [
               "Visit the ancient city of Iznik (Nicaea). Explore the Iznik Hagia Sophia and the grand city walls.",
               "Relax by Lake Iznik. Return to Istanbul and transfer to the airport."
@@ -716,16 +716,16 @@ export const translations: Record<Language, BaseTranslations> = {
       sections: {
         title: "Detailed Itinerary",
         days: [
-          { day: "01", title: "Arrival in Istanbul | A Millennium Gaze", stay: "Istanbul 5-Star Hotel", image: "https://images.unsplash.com/photo-1650610854382-ed6dc12f9b57", paragraphs: ["Arrive in Istanbul. Transfer to Sultanahmet for a deep tour of the historic district, witnessing the architectural dialogue between Byzantium and the Ottomans."], meals: { breakfast: "/", lunch: "Yes", dinner: "Yes" } },
-          { day: "02", title: "Cappadocia | Volcanic Landscapes", stay: "Boutique Cave Hotel", image: "https://images.unsplash.com/photo-1752865224513-17e6afc1e6c5", paragraphs: ["Fly to Cappadocia. Explore the lunar landscapes, Pigeon Valley, and Pasabag chimneys formed by millions of years of erosion."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "03", title: "Goreme & Uchisar | Cave Churches", stay: "Boutique Cave Hotel", image: "https://images.unsplash.com/photo-1686257558166-a13a257b5dc1", paragraphs: ["Visit Goreme Open Air Museum to see Byzantine cave churches and frescoes. Ascend Uchisar Castle for panoramic canyon views."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "04", title: "Underground City to Konya | Silk Road & Seljuk Echoes", stay: "Konya 5-Star Hotel", image: "https://images.unsplash.com/photo-1675373181258-681d11e0e4c5", paragraphs: ["Explore the vertical defense systems of Kaymakli Underground City. Drive along the ancient Silk Road to Konya, stopping at the 13th-century Sultan Han Caravanserai. Visit the Mevlana Museum to explore the spiritual heart of Sufism."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "05", title: "Antioch, Colossae & Laodicea | Apostolic Footsteps", stay: "Thermal 5-Star Hotel", image: "https://images.unsplash.com/photo-1718227973712-fa3c9b1fda6e", paragraphs: ["Revisit the ruins of Pisidian Antioch and the ancient city of Colossae to restore early civilization expansion routes. Continue to Laodicea, the lukewarm church, exploring its grand theaters and monumental streets."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "06", title: "Hierapolis to Thyatira | Sacred Springs & Seven Churches Nodes", stay: "Izmir 5-Star Hotel", image: "https://images.unsplash.com/photo-1728361328959-d30d8218e38b", paragraphs: ["Walk the white travertine terraces of Pamukkale and visit Hierapolis. Tour the critical nodes of Revelation: Philadelphia, Sardis with its impressive Gymnasium, and Thyatira."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "07", city: "Ephesus & Smyrna", title: "Peak of Civilization", stay: "Izmir 5-Star Hotel", image: "https://images.unsplash.com/photo-1684214190982-f3506653f932", paragraphs: ["Deep tour of Ephesus, the best-preserved ancient city. Visit St. John's Basilica and the ruins of ancient Smyrna (Izmir)."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "08", title: "Pergamum & Troy | Acropolis & Epic", stay: "Canakkale 5-Star Hotel", image: "https://images.unsplash.com/photo-1715080271610-c177c424aa6d", paragraphs: ["Visit Pergamum Acropolis with its steepest theater. Cross to Troy to see the archaeological layers spanning 4,000 years, witnessing the collision of epic and reality."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "09", title: "Istanbul | Bosphorus Narratives", stay: "Istanbul 5-Star Hotel", image: "https://images.unsplash.com/photo-1605382628707-0aa0593fba19", paragraphs: ["Return to Istanbul. Deep tour of Hagia Sophia. Evening Bosphorus cruise viewing the palaces and mansions between two continents."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "10", title: "Byzantine Arts & Departure | Final View", stay: "Departure", image: "https://images.unsplash.com/photo-1678050643669-0e67cc5a0e21", paragraphs: ["Visit Chora Church for exquisite mosaics. Final panoramic view at Uskudar viewpoint before private transfer to the Airport for departure."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "/" } }
+          { day: "01", title: "Arrival in Istanbul | A Millennium Gaze", stay: "Istanbul 5-Star Hotel", image: "/img/remote/u-1650610854382-ed6dc12f9b57.webp", paragraphs: ["Arrive in Istanbul. Transfer to Sultanahmet for a deep tour of the historic district, witnessing the architectural dialogue between Byzantium and the Ottomans."], meals: { breakfast: "/", lunch: "Yes", dinner: "Yes" } },
+          { day: "02", title: "Cappadocia | Volcanic Landscapes", stay: "Boutique Cave Hotel", image: "/img/remote/u-1752865224513-17e6afc1e6c5.webp", paragraphs: ["Fly to Cappadocia. Explore the lunar landscapes, Pigeon Valley, and Pasabag chimneys formed by millions of years of erosion."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "03", title: "Goreme & Uchisar | Cave Churches", stay: "Boutique Cave Hotel", image: "/img/remote/u-1686257558166-a13a257b5dc1.webp", paragraphs: ["Visit Goreme Open Air Museum to see Byzantine cave churches and frescoes. Ascend Uchisar Castle for panoramic canyon views."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "04", title: "Underground City to Konya | Silk Road & Seljuk Echoes", stay: "Konya 5-Star Hotel", image: "/img/remote/u-1675373181258-681d11e0e4c5.webp", paragraphs: ["Explore the vertical defense systems of Kaymakli Underground City. Drive along the ancient Silk Road to Konya, stopping at the 13th-century Sultan Han Caravanserai. Visit the Mevlana Museum to explore the spiritual heart of Sufism."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "05", title: "Antioch, Colossae & Laodicea | Apostolic Footsteps", stay: "Thermal 5-Star Hotel", image: "/img/remote/u-1718227973712-fa3c9b1fda6e.webp", paragraphs: ["Revisit the ruins of Pisidian Antioch and the ancient city of Colossae to restore early civilization expansion routes. Continue to Laodicea, the lukewarm church, exploring its grand theaters and monumental streets."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "06", title: "Hierapolis to Thyatira | Sacred Springs & Seven Churches Nodes", stay: "Izmir 5-Star Hotel", image: "/img/remote/u-1728361328959-d30d8218e38b.webp", paragraphs: ["Walk the white travertine terraces of Pamukkale and visit Hierapolis. Tour the critical nodes of Revelation: Philadelphia, Sardis with its impressive Gymnasium, and Thyatira."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "07", city: "Ephesus & Smyrna", title: "Peak of Civilization", stay: "Izmir 5-Star Hotel", image: "/img/remote/u-1684214190982-f3506653f932.webp", paragraphs: ["Deep tour of Ephesus, the best-preserved ancient city. Visit St. John's Basilica and the ruins of ancient Smyrna (Izmir)."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "08", title: "Pergamum & Troy | Acropolis & Epic", stay: "Canakkale 5-Star Hotel", image: "/img/remote/u-1715080271610-c177c424aa6d.webp", paragraphs: ["Visit Pergamum Acropolis with its steepest theater. Cross to Troy to see the archaeological layers spanning 4,000 years, witnessing the collision of epic and reality."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "09", title: "Istanbul | Bosphorus Narratives", stay: "Istanbul 5-Star Hotel", image: "/img/remote/u-1605382628707-0aa0593fba19.webp", paragraphs: ["Return to Istanbul. Deep tour of Hagia Sophia. Evening Bosphorus cruise viewing the palaces and mansions between two continents."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "10", title: "Byzantine Arts & Departure | Final View", stay: "Departure", image: "/img/remote/u-1678050643669-0e67cc5a0e21.webp", paragraphs: ["Visit Chora Church for exquisite mosaics. Final panoramic view at Uskudar viewpoint before private transfer to the Airport for departure."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "/" } }
         ]
       },
       notices: {
@@ -785,10 +785,10 @@ export const translations: Record<Language, BaseTranslations> = {
       sections: {
         title: "Detailed Itinerary",
         days: [
-          { day: "01", title: "Istanbul → Pergamum → Thyatira → Izmir", stay: "Izmir 5-Star Hotel", image: "https://images.unsplash.com/photo-1715080271610-c177c424aa6d", paragraphs: ["Depart from Istanbul at dawn, crossing the Marmara plains. First stop is the mountain city of Pergamum, exploring its grand library and steep theater ruins.", "Continue to Thyatira, reflecting on apostolic warnings. Arrive at Smyrna (Izmir) by evening, checking into a 5-star seaside hotel."], meals: { breakfast: "/", lunch: "Yes", dinner: "/" } },
-          { day: "02", title: "Smyrna → Virgin Mary House → St. John Church → Ephesus", stay: "Izmir 5-Star Hotel", image: "https://images.unsplash.com/photo-1684214190982-f3506653f932", paragraphs: ["Deep pilgrimage to the core of early Christianity. Morning visit to the serene House of Virgin Mary and St. John's Basilica.", "Afternoon tour of Ephesus ancient city. Walk the marble roads and listen to historical echoes in the ruins of one of the world's greatest archaeological sites."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "03", title: "Sardis → Philadelphia → Laodicea → Pamukkale", stay: "Pamukkale 5-Star Thermal Hotel", image: "https://images.unsplash.com/photo-1718227973712-fa3c9b1fda6e", paragraphs: ["Journey through the ancient Lydian trade routes. First visit the ruins of Sardis, once the city where the world's first gold coins were minted, and its massive Synagogue—a warning against external prosperity vs inner faith.", "Continue to Philadelphia (Alaşehir), the city of 'Brotherly Love', commended for its perseverance. Reach Laodicea in the afternoon, the 'lukewarm' city. Explore its grand theaters and council halls that witness its heavy history.", "Evening arrival at Pamukkale, check into a luxury thermal hotel to enjoy natural hot springs."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "04", title: "Hierapolis (Pamukkale) → Istanbul", stay: "Return", image: "https://images.unsplash.com/photo-1708251088223-e56cd382e8c6", paragraphs: ["Early morning exploration of Hierapolis and the 'Cotton Castle' (Pamukkale) travertines. Witness the Roman theaters, temples, and necropolis built along the mountainside.", "Walk barefoot on the white travertines where natural thermal waters flow, creating a frozen waterfall wonder. Feel the power where nature meets history.", "Depart for Istanbul, conclude the 4-day pilgrimage."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "/" } }
+          { day: "01", title: "Istanbul → Pergamum → Thyatira → Izmir", stay: "Izmir 5-Star Hotel", image: "/img/remote/u-1715080271610-c177c424aa6d.webp", paragraphs: ["Depart from Istanbul at dawn, crossing the Marmara plains. First stop is the mountain city of Pergamum, exploring its grand library and steep theater ruins.", "Continue to Thyatira, reflecting on apostolic warnings. Arrive at Smyrna (Izmir) by evening, checking into a 5-star seaside hotel."], meals: { breakfast: "/", lunch: "Yes", dinner: "/" } },
+          { day: "02", title: "Smyrna → Virgin Mary House → St. John Church → Ephesus", stay: "Izmir 5-Star Hotel", image: "/img/remote/u-1684214190982-f3506653f932.webp", paragraphs: ["Deep pilgrimage to the core of early Christianity. Morning visit to the serene House of Virgin Mary and St. John's Basilica.", "Afternoon tour of Ephesus ancient city. Walk the marble roads and listen to historical echoes in the ruins of one of the world's greatest archaeological sites."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "03", title: "Sardis → Philadelphia → Laodicea → Pamukkale", stay: "Pamukkale 5-Star Thermal Hotel", image: "/img/remote/u-1718227973712-fa3c9b1fda6e.webp", paragraphs: ["Journey through the ancient Lydian trade routes. First visit the ruins of Sardis, once the city where the world's first gold coins were minted, and its massive Synagogue—a warning against external prosperity vs inner faith.", "Continue to Philadelphia (Alaşehir), the city of 'Brotherly Love', commended for its perseverance. Reach Laodicea in the afternoon, the 'lukewarm' city. Explore its grand theaters and council halls that witness its heavy history.", "Evening arrival at Pamukkale, check into a luxury thermal hotel to enjoy natural hot springs."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "04", title: "Hierapolis (Pamukkale) → Istanbul", stay: "Return", image: "/img/remote/u-1708251088223-e56cd382e8c6.webp", paragraphs: ["Early morning exploration of Hierapolis and the 'Cotton Castle' (Pamukkale) travertines. Witness the Roman theaters, temples, and necropolis built along the mountainside.", "Walk barefoot on the white travertines where natural thermal waters flow, creating a frozen waterfall wonder. Feel the power where nature meets history.", "Depart for Istanbul, conclude the 4-day pilgrimage."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "/" } }
         ]
       },
       notices: {
@@ -855,15 +855,15 @@ export const translations: Record<Language, BaseTranslations> = {
       sections: {
         title: "Detailed Itinerary",
         days: [
-          { day: "01", title: "Arrival in Istanbul | Welcome to the Journey", stay: "Istanbul Hotel", image: "https://images.unsplash.com/photo-1527838832700-5059252407fa", paragraphs: ["Arrive in Istanbul, meet the team at the airport, and transfer to the hotel. The first evening is intentionally gentle so the group can settle into the rhythm of the pilgrimage.", "A Turkish welcome dinner marks the formal beginning of this overland Christian journey centered on Paul's footsteps and early church history."], meals: { breakfast: "/", lunch: "/", dinner: "Yes" } },
-          { day: "02", title: "Istanbul to Ankara | Bosphorus and the Road Inland", stay: "Ankara Hotel", image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b", paragraphs: ["Begin with a Bosphorus cruise and a visit to the Blue Mosque, framing Istanbul as the imperial gateway between continents, cultures, and centuries of religious memory.", "After the city program, continue by coach to Ankara, the political heart of modern Turkey, preparing for the inland chapters of the pilgrimage."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "03", title: "Ankara, Tuz Lake and Cappadocia | Republic to Wilderness", stay: "Cappadocia Hotel", image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963", paragraphs: ["Visit Anitkabir in Ankara, then continue toward Tuz Lake, one of central Anatolia's most striking landscapes.", "By afternoon arrive in Cappadocia for an ATV experience and Rose Valley sunset, introducing the unique geography that once sheltered early Christian communities."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "04", title: "Deep Cappadocia | Rock Churches and Underground Faith", stay: "Cappadocia Hotel", image: "https://images.unsplash.com/photo-1686257558166-a13a257b5dc1", paragraphs: ["Explore Goreme Open Air Museum with its rock-hewn churches and frescoes, then descend into an underground city such as Kaymakli to reflect on the survival patterns of early believers.", "This day is especially suited for Bible background sharing, prayer, and contemplation on endurance, refuge, and faithful witness."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "05", title: "Konya to Pamukkale | Silk Road Memory", stay: "Pamukkale Hotel", image: "https://images.unsplash.com/photo-1718227973712-fa3c9b1fda6e", paragraphs: ["Travel along the old Anatolian inland route, passing through Konya and stopping at Sultanhanı Caravanserai to feel the historical pulse of the Silk Road.", "Arrive in Pamukkale by evening, where the thermal landscape and ancient ruins set the stage for the next phase of the Seven Churches pilgrimage."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "06", title: "Seven Churches Trail I | Hierapolis, Laodicea, Philadelphia, Sardis", stay: "Izmir / Kusadasi Hotel", image: "https://images.unsplash.com/photo-1718227973712-fa3c9b1fda6e", paragraphs: ["Visit Hierapolis and the white travertines of Pamukkale, then continue to the Revelation sites of Laodicea, Philadelphia, and Sardis.", "This is a day of strong contrasts: healing waters, civic wealth, spiritual warning, and persevering testimony all come together in one continuous biblical landscape."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "07", title: "Seven Churches Trail II | Ephesus, Smyrna and Thyatira", stay: "Izmir / Kusadasi Hotel", image: "https://images.unsplash.com/photo-1684214190982-f3506653f932", paragraphs: ["Enter Ephesus, one of the best-preserved ancient cities in the Mediterranean world, and continue to Smyrna's historic agora and the remains connected with the church's witness.", "Later proceed to Thyatira. A local leather craft presentation may be arranged en route as part of the regional cultural experience."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "08", title: "Pergamum, Troy and Alexandria Troas | Epic and Mission", stay: "Canakkale Hotel", image: "https://images.unsplash.com/photo-1715080271610-c177c424aa6d", paragraphs: ["Take the cable car up to Pergamum Acropolis, then continue toward Troy, where myth, archaeology, and layered history meet in dramatic form.", "Also visit Alexandria Troas and its harbor, a location closely associated with the wider missionary horizon of the apostolic era, before overnighting in Canakkale."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "09", title: "Return to Istanbul | Bridge, Panorama and Departure", stay: "Departure", image: "https://images.unsplash.com/photo-1605382628707-0aa0593fba19", paragraphs: ["Cross the 1915 Canakkale Bridge back into Europe and continue to Istanbul. Before departure, ascend Camlica Hill for one final panoramic view over the city.", "The journey closes with spiritual review, thanksgiving, and airport transfer according to the flight schedule."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "/" } }
+          { day: "01", title: "Arrival in Istanbul | Welcome to the Journey", stay: "Istanbul Hotel", image: "/img/remote/u-1527838832700-5059252407fa.webp", paragraphs: ["Arrive in Istanbul, meet the team at the airport, and transfer to the hotel. The first evening is intentionally gentle so the group can settle into the rhythm of the pilgrimage.", "A Turkish welcome dinner marks the formal beginning of this overland Christian journey centered on Paul's footsteps and early church history."], meals: { breakfast: "/", lunch: "/", dinner: "Yes" } },
+          { day: "02", title: "Istanbul to Ankara | Bosphorus and the Road Inland", stay: "Ankara Hotel", image: "/img/remote/u-1541432901042-2d8bd64b4a9b.webp", paragraphs: ["Begin with a Bosphorus cruise and a visit to the Blue Mosque, framing Istanbul as the imperial gateway between continents, cultures, and centuries of religious memory.", "After the city program, continue by coach to Ankara, the political heart of modern Turkey, preparing for the inland chapters of the pilgrimage."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "03", title: "Ankara, Tuz Lake and Cappadocia | Republic to Wilderness", stay: "Cappadocia Hotel", image: "/img/remote/u-1516483638261-f4dbaf036963.webp", paragraphs: ["Visit Anitkabir in Ankara, then continue toward Tuz Lake, one of central Anatolia's most striking landscapes.", "By afternoon arrive in Cappadocia for an ATV experience and Rose Valley sunset, introducing the unique geography that once sheltered early Christian communities."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "04", title: "Deep Cappadocia | Rock Churches and Underground Faith", stay: "Cappadocia Hotel", image: "/img/remote/u-1686257558166-a13a257b5dc1.webp", paragraphs: ["Explore Goreme Open Air Museum with its rock-hewn churches and frescoes, then descend into an underground city such as Kaymakli to reflect on the survival patterns of early believers.", "This day is especially suited for Bible background sharing, prayer, and contemplation on endurance, refuge, and faithful witness."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "05", title: "Konya to Pamukkale | Silk Road Memory", stay: "Pamukkale Hotel", image: "/img/remote/u-1718227973712-fa3c9b1fda6e.webp", paragraphs: ["Travel along the old Anatolian inland route, passing through Konya and stopping at Sultanhanı Caravanserai to feel the historical pulse of the Silk Road.", "Arrive in Pamukkale by evening, where the thermal landscape and ancient ruins set the stage for the next phase of the Seven Churches pilgrimage."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "06", title: "Seven Churches Trail I | Hierapolis, Laodicea, Philadelphia, Sardis", stay: "Izmir / Kusadasi Hotel", image: "/img/remote/u-1718227973712-fa3c9b1fda6e.webp", paragraphs: ["Visit Hierapolis and the white travertines of Pamukkale, then continue to the Revelation sites of Laodicea, Philadelphia, and Sardis.", "This is a day of strong contrasts: healing waters, civic wealth, spiritual warning, and persevering testimony all come together in one continuous biblical landscape."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "07", title: "Seven Churches Trail II | Ephesus, Smyrna and Thyatira", stay: "Izmir / Kusadasi Hotel", image: "/img/remote/u-1684214190982-f3506653f932.webp", paragraphs: ["Enter Ephesus, one of the best-preserved ancient cities in the Mediterranean world, and continue to Smyrna's historic agora and the remains connected with the church's witness.", "Later proceed to Thyatira. A local leather craft presentation may be arranged en route as part of the regional cultural experience."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "08", title: "Pergamum, Troy and Alexandria Troas | Epic and Mission", stay: "Canakkale Hotel", image: "/img/remote/u-1715080271610-c177c424aa6d.webp", paragraphs: ["Take the cable car up to Pergamum Acropolis, then continue toward Troy, where myth, archaeology, and layered history meet in dramatic form.", "Also visit Alexandria Troas and its harbor, a location closely associated with the wider missionary horizon of the apostolic era, before overnighting in Canakkale."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "09", title: "Return to Istanbul | Bridge, Panorama and Departure", stay: "Departure", image: "/img/remote/u-1605382628707-0aa0593fba19.webp", paragraphs: ["Cross the 1915 Canakkale Bridge back into Europe and continue to Istanbul. Before departure, ascend Camlica Hill for one final panoramic view over the city.", "The journey closes with spiritual review, thanksgiving, and airport transfer according to the flight schedule."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "/" } }
         ]
       },
       notices: {
@@ -928,13 +928,13 @@ export const translations: Record<Language, BaseTranslations> = {
       sections: {
         title: "Detailed Itinerary",
         days: [
-          { day: "01", title: "Arrival in Istanbul | First Breath of the Imperial City", stay: "Istanbul Hotel", image: "https://images.unsplash.com/photo-1527838832700-5059252407fa", paragraphs: ["Arrival at Istanbul airport. After meet-and-greet, head into the old city to visit Sultanahmet Square and the Blue Mosque, opening the journey in the heart of the former imperial capital.", "The evening is reserved for a Turkish welcome dinner and gentle orientation, helping the group settle into the rhythm of the pilgrimage."], meals: { breakfast: "/", lunch: "/", dinner: "Yes" } },
-          { day: "02", title: "Istanbul in Depth | Bosphorus, Bazaar and Living Streets", stay: "Transit Hotel", image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b", paragraphs: ["Cruise the Bosphorus between Europe and Asia, then continue to the Spice Bazaar to experience the living commercial heart of the city.", "Ride the T1 tram, walk Istiklal Avenue, and view Galata Tower from outside. The day blends everyday Istanbul with the energy of a city shaped by many civilizations before the group continues inland by road."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "03", title: "Pergamum & Thyatira | Faith Under Pressure", stay: "Izmir Hotel", image: "https://images.unsplash.com/photo-1715080271610-c177c424aa6d", paragraphs: ["Visit ancient Pergamum, including the acropolis zone, Trajan Temple area, and the medical heritage connected with the Asklepion tradition.", "Continue to the church site of Thyatira and reflect on how early believers stood firm amid pressure from imperial cults and guild life."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "04", title: "Smyrna, Ephesus, Sardis & Philadelphia | Four Cities in One Day", stay: "Pamukkale Hotel", image: "https://images.unsplash.com/photo-1684214190982-f3506653f932", paragraphs: ["At Smyrna, visit the Roman Agora and remember Bishop Polycarp's witness. Continue to Ephesus to walk the marble streets, the Great Theatre, and the Celsus Library area.", "Later, move on to Sardis and Philadelphia, reflecting on the warning against hollow reputation and the promise of the open door."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "05", title: "Pamukkale, Hierapolis & Laodicea | Warm Water and Wake-Up Calls", stay: "Pamukkale Hotel", image: "https://images.unsplash.com/photo-1718227973712-fa3c9b1fda6e", paragraphs: ["Walk the white terraces of Pamukkale and explore Hierapolis, traditionally associated with Philip's martyrdom and the spread of early faith in the region.", "In Laodicea, consider the contrast between material abundance and spiritual lukewarmness, especially in light of the water system and civic wealth of the city."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "06", title: "Alexandria Troas | The Macedonian Call Remembered", stay: "Istanbul Hotel", image: "https://images.unsplash.com/photo-1715080271610-c177c424aa6d", paragraphs: ["Travel to Alexandria Troas and its ancient harbor zone, recalling the turning point where Paul received the Macedonian vision and the mission expanded westward.", "During the overland return to Istanbul, the group can review the spiritual lessons of the Seven Churches, with guided sharing and prayer on the coach."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
-          { day: "07", title: "Camlica Hill & Departure | Closing Reflection", stay: "Departure", image: "https://images.unsplash.com/photo-1605382628707-0aa0593fba19", paragraphs: ["On the final morning, ascend Camlica Hill for a panoramic view over Istanbul, gathering the journey into a final moment of thanksgiving and reflection.", "After a closing spiritual review and practical wrap-up, transfer to the airport for departure."], meals: { breakfast: "Hotel", lunch: "/", dinner: "/" } }
+          { day: "01", title: "Arrival in Istanbul | First Breath of the Imperial City", stay: "Istanbul Hotel", image: "/img/remote/u-1527838832700-5059252407fa.webp", paragraphs: ["Arrival at Istanbul airport. After meet-and-greet, head into the old city to visit Sultanahmet Square and the Blue Mosque, opening the journey in the heart of the former imperial capital.", "The evening is reserved for a Turkish welcome dinner and gentle orientation, helping the group settle into the rhythm of the pilgrimage."], meals: { breakfast: "/", lunch: "/", dinner: "Yes" } },
+          { day: "02", title: "Istanbul in Depth | Bosphorus, Bazaar and Living Streets", stay: "Transit Hotel", image: "/img/remote/u-1541432901042-2d8bd64b4a9b.webp", paragraphs: ["Cruise the Bosphorus between Europe and Asia, then continue to the Spice Bazaar to experience the living commercial heart of the city.", "Ride the T1 tram, walk Istiklal Avenue, and view Galata Tower from outside. The day blends everyday Istanbul with the energy of a city shaped by many civilizations before the group continues inland by road."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "03", title: "Pergamum & Thyatira | Faith Under Pressure", stay: "Izmir Hotel", image: "/img/remote/u-1715080271610-c177c424aa6d.webp", paragraphs: ["Visit ancient Pergamum, including the acropolis zone, Trajan Temple area, and the medical heritage connected with the Asklepion tradition.", "Continue to the church site of Thyatira and reflect on how early believers stood firm amid pressure from imperial cults and guild life."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "04", title: "Smyrna, Ephesus, Sardis & Philadelphia | Four Cities in One Day", stay: "Pamukkale Hotel", image: "/img/remote/u-1684214190982-f3506653f932.webp", paragraphs: ["At Smyrna, visit the Roman Agora and remember Bishop Polycarp's witness. Continue to Ephesus to walk the marble streets, the Great Theatre, and the Celsus Library area.", "Later, move on to Sardis and Philadelphia, reflecting on the warning against hollow reputation and the promise of the open door."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "05", title: "Pamukkale, Hierapolis & Laodicea | Warm Water and Wake-Up Calls", stay: "Pamukkale Hotel", image: "/img/remote/u-1718227973712-fa3c9b1fda6e.webp", paragraphs: ["Walk the white terraces of Pamukkale and explore Hierapolis, traditionally associated with Philip's martyrdom and the spread of early faith in the region.", "In Laodicea, consider the contrast between material abundance and spiritual lukewarmness, especially in light of the water system and civic wealth of the city."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "06", title: "Alexandria Troas | The Macedonian Call Remembered", stay: "Istanbul Hotel", image: "/img/remote/u-1715080271610-c177c424aa6d.webp", paragraphs: ["Travel to Alexandria Troas and its ancient harbor zone, recalling the turning point where Paul received the Macedonian vision and the mission expanded westward.", "During the overland return to Istanbul, the group can review the spiritual lessons of the Seven Churches, with guided sharing and prayer on the coach."], meals: { breakfast: "Hotel", lunch: "Yes", dinner: "Yes" } },
+          { day: "07", title: "Camlica Hill & Departure | Closing Reflection", stay: "Departure", image: "/img/remote/u-1605382628707-0aa0593fba19.webp", paragraphs: ["On the final morning, ascend Camlica Hill for a panoramic view over Istanbul, gathering the journey into a final moment of thanksgiving and reflection.", "After a closing spiritual review and practical wrap-up, transfer to the airport for departure."], meals: { breakfast: "Hotel", lunch: "/", dinner: "/" } }
         ]
       },
       notices: {
@@ -948,29 +948,29 @@ export const translations: Record<Language, BaseTranslations> = {
       }
     },
     toursData: [
-      { id: '1', title: 'S1-Istanbul & Cappadocia 6 Days Heritage', location: 'Istanbul / Cappadocia', duration: '6 Days', price: 6999, image: 'https://images.unsplash.com/photo-1636021597151-cc28dacd915c?auto=format&fit=crop&w=1200&q=80', category: 'classic', highlights: ['Sunrise Hot Air Balloon', 'Ebru Art Workshop', 'Ephesus Immersive Museum'], path: '/itineraries/s1-turkey-6-days' },
-      { id: 's2', title: 'S2-Aegean to Anatolia 8 Days Grand Tour', location: 'Multi-City / D400', duration: '8 Days', price: 8999, image: "https://images.unsplash.com/photo-1596093145026-f6af675846c7?q=80&w=2148&auto=format&fit=crop", category: 'classic', highlights: ['D400 Coastal Road', 'Ephesus & Pamukkale', 'Dual Internal Flights'], path: '/itineraries/s2-turkey-8-days' },
-      { id: 's4', title: 'S4-Istanbul to Anatolia 10 Days Culture', location: 'Multi-City / Troy', duration: '10 Days', price: 8999, image: "https://images.unsplash.com/photo-1689130033373-2773b6029aea?q=80&w=2148&auto=format&fit=crop", category: 'classic', highlights: ['Legendary Troy', 'Bosphorus Cruise', 'Ancient Heritage'], path: '/itineraries/s4-turkey-10-days' },
-      { id: 's5', title: 'S5-Troy & Fairy Road 8 Days Depth Tour', location: 'Troy / Egirdir', duration: '8 Days', price: 8999, image: "https://images.unsplash.com/photo-1687706222092-b6545828217d?q=80&w=2340&auto=format&fit=crop", category: 'classic', highlights: ['Ancient Troy', 'Lake Egirdir', 'Council of Nicaea Site'], path: '/itineraries/s5-turkey-8-days' },
+      { id: '1', title: 'S1-Istanbul & Cappadocia 6 Days Heritage', location: 'Istanbul / Cappadocia', duration: '6 Days', price: 6999, image: '/img/remote/u-1636021597151-cc28dacd915c.webp', category: 'classic', highlights: ['Sunrise Hot Air Balloon', 'Ebru Art Workshop', 'Ephesus Immersive Museum'], path: '/itineraries/s1-turkey-6-days' },
+      { id: 's2', title: 'S2-Aegean to Anatolia 8 Days Grand Tour', location: 'Multi-City / D400', duration: '8 Days', price: 8999, image: "/img/remote/u-1596093145026-f6af675846c7.webp", category: 'classic', highlights: ['D400 Coastal Road', 'Ephesus & Pamukkale', 'Dual Internal Flights'], path: '/itineraries/s2-turkey-8-days' },
+      { id: 's4', title: 'S4-Istanbul to Anatolia 10 Days Culture', location: 'Multi-City / Troy', duration: '10 Days', price: 8999, image: "/img/remote/u-1689130033373-2773b6029aea.webp", category: 'classic', highlights: ['Legendary Troy', 'Bosphorus Cruise', 'Ancient Heritage'], path: '/itineraries/s4-turkey-10-days' },
+      { id: 's5', title: 'S5-Troy & Fairy Road 8 Days Depth Tour', location: 'Troy / Egirdir', duration: '8 Days', price: 8999, image: "/img/remote/u-1687706222092-b6545828217d.webp", category: 'classic', highlights: ['Ancient Troy', 'Lake Egirdir', 'Council of Nicaea Site'], path: '/itineraries/s5-turkey-8-days' },
       { id: 'z1', title: 'Z1-Seven Churches & Apostles Path 10-Day Tour', location: 'Faith Route / Seven Churches', duration: '10 Days', price: 10999, image: "https://images.unsplash.com/photo-1543949806-2c9935e6838d?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['Seven Churches', 'Apostles Footsteps', 'Boutique Cave Hotels'], path: '/itineraries/z1-turkey-11-days' },
-      { id: 'z2', title: 'Z2-Revelation Seven Churches Essential 4-Day Tour', location: 'Seven Churches Essence', duration: '4 Days', price: 3999, image: "https://images.unsplash.com/photo-1684214190982-f3506653f932?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['Seven Churches Essence', 'Deep apostolic mission', 'Thermal Springs'], path: '/itineraries/z2-revelation-4-days' },
-      { id: 'z5', title: "Z5-9D8N Overland Christian Pilgrimage", location: "Paul's Footsteps / Seven Churches", duration: '9 Days 8 Nights', price: 11800, image: "https://images.unsplash.com/photo-1605382628707-0aa0593fba19?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ["Paul's Footsteps", 'Seven Churches Route', 'Cappadocia Faith Memory'], path: '/itineraries/z5-paul-footsteps-9-days' },
-      { id: 'z6', title: 'Z6-7D6N Overland Istanbul & Seven Churches Pilgrimage', location: 'Istanbul / Seven Churches', duration: '7 Days 6 Nights', price: 9880, image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['Historic Istanbul', 'Seven Churches Route', 'Prayer & Bible Sharing'], path: '/itineraries/z6-overland-seven-churches-7-days' },
-      { id: 'i1', title: 'I1-Israel Holy Land Journey 8 Days 7 Nights', location: 'Jerusalem / Galilee / Bethlehem', duration: '8 Days 7 Nights', price: 2165, image: "https://images.unsplash.com/photo-1542743408-218cc173cda0?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['Galilee Ministry Route', 'Jerusalem Passion Route', 'Jordan River & Dead Sea'], path: '/itineraries/i1-israel-holyland-8-days' }
+      { id: 'z2', title: 'Z2-Revelation Seven Churches Essential 4-Day Tour', location: 'Seven Churches Essence', duration: '4 Days', price: 3999, image: "/img/remote/u-1684214190982-f3506653f932.webp", category: 'family', highlights: ['Seven Churches Essence', 'Deep apostolic mission', 'Thermal Springs'], path: '/itineraries/z2-revelation-4-days' },
+      { id: 'z5', title: "Z5-9D8N Overland Christian Pilgrimage", location: "Paul's Footsteps / Seven Churches", duration: '9 Days 8 Nights', price: 11800, image: "/img/remote/u-1605382628707-0aa0593fba19.webp", category: 'family', highlights: ["Paul's Footsteps", 'Seven Churches Route', 'Cappadocia Faith Memory'], path: '/itineraries/z5-paul-footsteps-9-days' },
+      { id: 'z6', title: 'Z6-7D6N Overland Istanbul & Seven Churches Pilgrimage', location: 'Istanbul / Seven Churches', duration: '7 Days 6 Nights', price: 9880, image: "/img/remote/u-1527838832700-5059252407fa.webp", category: 'family', highlights: ['Historic Istanbul', 'Seven Churches Route', 'Prayer & Bible Sharing'], path: '/itineraries/z6-overland-seven-churches-7-days' },
+      { id: 'i1', title: 'I1-Israel Holy Land Journey 8 Days 7 Nights', location: 'Jerusalem / Galilee / Bethlehem', duration: '8 Days 7 Nights', price: 2165, image: "/img/remote/u-1542743408-218cc173cda0.webp", category: 'family', highlights: ['Galilee Ministry Route', 'Jerusalem Passion Route', 'Jordan River & Dead Sea'], path: '/itineraries/i1-israel-holyland-8-days' }
     ],
     ticketsData: [
-      { id: 't1', title: 'Dolmabahçe Palace (Dolmabahçe Sarayı)', price: 400, includes: ['Access to Ceremonial Hall, Harem and Museum of Painting', 'Official Audio Guide support', 'Contact Customer Service for details'], image: 'https://images.unsplash.com/photo-1601565465051-67971a2d838c?q=80&w=2340&auto=format&fit=crop', category: 'entry' },
+      { id: 't1', title: 'Dolmabahçe Palace (Dolmabahçe Sarayı)', price: 400, includes: ['Access to Ceremonial Hall, Harem and Museum of Painting', 'Official Audio Guide support', 'Contact Customer Service for details'], image: '/img/remote/u-1601565465051-67971a2d838c.webp', category: 'entry' },
       { id: 't2', title: 'Yıldız Palace (Yıldız Sarayı)', price: 180, includes: ['Access to complex and gardens', 'Guided tour support', 'Consult Customer Service for details'], image: 'https://cdn.istanbul.com/upload/dolmabahce-skip-the-line-7-853x480.webp', category: 'entry' },
       { id: 't3', title: 'Beylerbeyi Palace (Beylerbeyi Sarayı)', price: 150, includes: ['Access to main palace and waterfront gardens', 'Stone carving art appreciation', 'Contact Customer Service for details'], image: 'https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_828/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/alxi5drx8um7tsyhdf0l/博斯普鲁斯海峡游轮两大洲.jpg', category: 'entry' },
-      { id: 't4', title: 'Painting Museum (Resim Müzesi)', price: 110, includes: ['Access to art gallery painting collections', 'Art history guide support', 'Consult Customer Service for details'], image: 'https://images.unsplash.com/photo-1692701824634-677c652fc111?q=80&w=2346&auto=format&fit=crop', category: 'entry' },
-      { id: 't5', title: 'Museum of Islamic Civilizations (İslam Medeniyetleri Müzesi)', price: 95, includes: ['Access to Islamic civilization galleries', 'Cultural history analysis', 'Consult Customer Service for details'], image: 'https://images.unsplash.com/photo-1759930018775-bf3c3fe9bdc6?q=80&w=2340&auto=format&fit=crop', category: 'entry' },
-      { id: 't6', title: 'Beykoz Glass and Crystal Museum (Beykoz Cam ve Billur Müzesi)', price: 85, includes: ['Access to glass and crystal exhibits', 'Craftsmanship history explanation', 'Contact Customer Service for details'], image: 'https://images.unsplash.com/photo-1605988743975-c9c5b8550a91?q=80&w=2340&auto=format&fit=crop', category: 'entry' },
-      { id: 't7', title: 'Ankara Palace (Ankara Palace)', price: 58, includes: ['Access to grand halls and historic areas', 'Official guide support', 'Consult Customer Service for details'], image: 'https://images.unsplash.com/photo-1699474745854-39fc35d5ba19?q=80&w=2832&auto=format&fit=crop', category: 'entry' },
-      { id: 't8', title: 'Küçüksu Pavilion (Küçüksu Kasrı)', price: 50, includes: ['Access to pavilion main building', 'Garden area exploration', 'Contact Customer Service for details'], image: 'https://images.unsplash.com/photo-1680419928106-1804e2eb432d?q=80&w=2831&auto=format&fit=crop', category: 'entry' },
-      { id: 't9', title: 'Ihlamur Pavilion (Ihlamur Kasrı)', price: 50, includes: ['Access to pavilion area and gardens', 'Cultural heritage visit', 'Consult Customer Service for details'], image: 'https://images.unsplash.com/photo-1661103112980-2ceae026f17b?q=80&w=2340&auto=format&fit=crop', category: 'entry' },
-      { id: 't10', title: 'Beykoz Mecidiye Pavilion (Beykoz Mecidiye Kasrı)', price: 50, includes: ['Access to main pavilion and surroundings', 'Historic background info', 'Consult Customer Service for details'], image: 'https://images.unsplash.com/photo-1665860789948-bfe6ea95d6cf?q=80&w=1917&auto=format&fit=crop', category: 'entry' },
+      { id: 't4', title: 'Painting Museum (Resim Müzesi)', price: 110, includes: ['Access to art gallery painting collections', 'Art history guide support', 'Consult Customer Service for details'], image: '/img/remote/u-1692701824634-677c652fc111.webp', category: 'entry' },
+      { id: 't5', title: 'Museum of Islamic Civilizations (İslam Medeniyetleri Müzesi)', price: 95, includes: ['Access to Islamic civilization galleries', 'Cultural history analysis', 'Consult Customer Service for details'], image: '/img/remote/u-1759930018775-bf3c3fe9bdc6.webp', category: 'entry' },
+      { id: 't6', title: 'Beykoz Glass and Crystal Museum (Beykoz Cam ve Billur Müzesi)', price: 85, includes: ['Access to glass and crystal exhibits', 'Craftsmanship history explanation', 'Contact Customer Service for details'], image: '/img/remote/u-1605988743975-c9c5b8550a91.webp', category: 'entry' },
+      { id: 't7', title: 'Ankara Palace (Ankara Palace)', price: 58, includes: ['Access to grand halls and historic areas', 'Official guide support', 'Consult Customer Service for details'], image: '/img/remote/u-1699474745854-39fc35d5ba19.webp', category: 'entry' },
+      { id: 't8', title: 'Küçüksu Pavilion (Küçüksu Kasrı)', price: 50, includes: ['Access to pavilion main building', 'Garden area exploration', 'Contact Customer Service for details'], image: '/img/remote/u-1680419928106-1804e2eb432d.webp', category: 'entry' },
+      { id: 't9', title: 'Ihlamur Pavilion (Ihlamur Kasrı)', price: 50, includes: ['Access to pavilion area and gardens', 'Cultural heritage visit', 'Consult Customer Service for details'], image: '/img/remote/u-1661103112980-2ceae026f17b.webp', category: 'entry' },
+      { id: 't10', title: 'Beykoz Mecidiye Pavilion (Beykoz Mecidiye Kasrı)', price: 50, includes: ['Access to main pavilion and surroundings', 'Historic background info', 'Consult Customer Service for details'], image: '/img/remote/u-1665860789948-bfe6ea95d6cf.webp', category: 'entry' },
       { id: 't11', title: 'Aynalıkavak Pavilion (Aynalıkavak Kasrı)', price: 50, includes: ['Access to pavilion and instrument collection', 'Consult Customer Service for details'], image: 'https://cdn.kulturenvanteri.com/wp-content/uploads/2019/11/Aynalikavak-Kasri-1-1024x683.jpg', category: 'entry' },
-      { id: 't12', title: 'Maslak Pavilion (Maslak Kasrı)', price: 50, includes: ['Access to pavilion group and greenhouse', 'Consult Customer Service for details'], image: 'https://images.unsplash.com/photo-1766778834237-34aeabf4d9b2?q=80&w=2340&auto=format&fit=crop', category: 'entry' }
+      { id: 't12', title: 'Maslak Pavilion (Maslak Kasrı)', price: 50, includes: ['Access to pavilion group and greenhouse', 'Consult Customer Service for details'], image: '/img/remote/u-1766778834237-34aeabf4d9b2.webp', category: 'entry' }
     ],
     faqs: [
       { q: 'How do I book a tour with Grace Way?', a: 'Browse our tours and click "Enquire Now". We tailor every detail with you via WeChat, Email, or WhatsApp to ensure a seamless experience.' },
@@ -1235,17 +1235,17 @@ export const translations: Record<Language, BaseTranslations> = {
       cta_consult: "立即咨询",
       cta_plan: "获取方案",
       images: {
-        coverImage: "https://images.unsplash.com/photo-1596093145026-f6af675846c7?q=80&w=2148&auto=format&fit=crop",
-        heroImage: "https://images.unsplash.com/photo-1689130033373-2773b6029aea?q=80&w=2148&auto=format&fit=crop",
-        cardImage: "https://images.unsplash.com/photo-1697457661409-0adc99b64647?q=80&w=2340&auto=format&fit=crop",
-        day1Image: "https://images.unsplash.com/photo-1665051153829-82fc1acb59e6?q=80&w=2340&auto=format&fit=crop",
-        day2Image: "https://images.unsplash.com/photo-1708251088223-e56cd382e8c6?q=80&w=2832&auto=format&fit=crop",
-        day3Image: "https://images.unsplash.com/photo-1686428007573-f4a91f2d8bd0?q=80&w=2340&auto=format&fit=crop",
-        day4Image: "https://images.unsplash.com/photo-1632821629445-bdc26ce3ccf0?q=80&w=2340&auto=format&fit=crop",
-        day5Image: "https://images.unsplash.com/photo-1674715577456-49ae7a6945a8?q=80&w=2340&auto=format&fit=crop",
-        day6Image: "https://images.unsplash.com/photo-1643354812958-b648b92dc6c5?q=80&w=2340&auto=format&fit=crop",
-        day7Image: "https://images.unsplash.com/photo-1680204412403-73110934f5aa?q=80&w=2340&auto=format&fit=crop",
-        day8Image: "https://images.unsplash.com/photo-1624786712432-e021fdf57c48?q=80&w=2832&auto=format&fit=crop"
+        coverImage: "/img/remote/u-1596093145026-f6af675846c7.webp",
+        heroImage: "/img/remote/u-1689130033373-2773b6029aea.webp",
+        cardImage: "/img/remote/u-1697457661409-0adc99b64647.webp",
+        day1Image: "/img/remote/u-1665051153829-82fc1acb59e6.webp",
+        day2Image: "/img/remote/u-1708251088223-e56cd382e8c6.webp",
+        day3Image: "/img/remote/u-1686428007573-f4a91f2d8bd0.webp",
+        day4Image: "/img/remote/u-1632821629445-bdc26ce3ccf0.webp",
+        day5Image: "/img/remote/u-1674715577456-49ae7a6945a8.webp",
+        day6Image: "/img/remote/u-1643354812958-b648b92dc6c5.webp",
+        day7Image: "/img/remote/u-1680204412403-73110934f5aa.webp",
+        day8Image: "/img/remote/u-1624786712432-e021fdf57c48.webp"
       },
       audience_title: "这款行程，是否正是您所寻找的？",
       audience_list: [
@@ -1338,7 +1338,7 @@ export const translations: Record<Language, BaseTranslations> = {
         subtitle: "爱琴海至安纳托利亚的史诗画卷",
         ctaPrimary: "立即咨询",
         ctaSecondary: "获取方案",
-        image: "https://images.unsplash.com/photo-1689130033373-2773b6029aea?q=80&w=2148&auto=format&fit=crop"
+        image: "/img/remote/u-1689130033373-2773b6029aea.webp"
       },
       highlights: {
         title: "核心亮点",
@@ -1370,7 +1370,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "01",
             title: "伊斯坦布尔 → 特罗亚 → 恰纳卡莱",
             stay: "恰纳卡莱 5 星酒店",
-            image: "https://images.unsplash.com/photo-1687706222092-b6545828217d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1687706222092-b6545828217d.webp",
             paragraphs: [
               "清晨从伊斯坦布尔出发，沿马尔马拉海西行，开启史诗之旅。途经世界主跨最长的 【1915 恰纳卡莱大桥】，横跨达达尼尔海峡，气势恢宏。",
               "抵达联合国教科科组织遗产地 【特罗亚古城】，探访荷马《伊利亚特》中“木马屠城”的发生地——九层叠压的考古遗址跨越四千年文明。",
@@ -1382,7 +1382,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "02",
             title: "恰纳卡莱 → 阿拉恰特 → 伊兹密尔钟楼 → 库萨达斯",
             stay: "库萨达斯 5 星酒店",
-            image: "https://images.unsplash.com/photo-1701428588034-5893b2512a68?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1701428588034-5893b2512a68.webp",
             paragraphs: [
               "今日今日南下爱琴海腹地.首先造访文艺小镇 【阿拉恰特】，蓝窗白墙的希腊式石屋、鹅卵石街道与帆板海滩构成地中海画卷。",
               "随后抵达土耳其第三大城市 【伊兹密尔】，参观 1901 年建成的 【钟楼】 与库纳克广场，面朝海湾，城市活力铺面而来。",
@@ -1394,7 +1394,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "03",
             title: "以弗所古城 → 棉花堡",
             stay: "棉花堡 5 星温泉酒店",
-            image: "https://images.unsplash.com/photo-1433854471391-5603c019de62?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1433854471391-5603c019de62.webp",
             paragraphs: [
               "全天聚焦古典文明巅峰。深入 【以弗所古城】，漫步罗马大道，仰望塞尔苏斯图书馆残壁，在巨型大剧场遥想古城盛况。",
               "随后进入 【以弗所体验博物馆】，通过沉浸式光影“穿越”古城盛景。",
@@ -1406,7 +1406,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "04",
             title: "棉花堡 → 费特希耶",
             stay: "费特希耶 5 星酒店",
-            image: "https://images.unsplash.com/photo-1498222954553-93fc8d1941da?q=80&w=2346&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1498222954553-93fc8d1941da.webp",
             paragraphs: [
               "早餐后继续南下，穿越托罗斯山脉抵达土耳其南部明珠 【费特希耶】。",
               "首站打卡 【厄吕代尼兹蓝礁湖】，果冻般湛蓝海水被群山环抱，是浮潜与日光浴天堂。",
@@ -1419,7 +1419,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "05",
             title: "费特希耶 → Kaputaş 海滩 → 卡什 → 安塔利亚",
             stay: "安塔利亚 5 星酒店",
-            image: "https://images.unsplash.com/photo-1697457661409-0adc99b64647?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1697457661409-0adc99b64647.webp",
             paragraphs: [
               "今日驰骋被誉为“土耳其 1 号公路”的 【D400 沿海景观大道】。",
               "途中打卡网红秘境 【Kaputaş 海滩】，隐匿于悬崖之间的果冻蓝海湾。停留宁静渔村 【卡什小镇】，感受石屋错落的慢生活。",
@@ -1431,7 +1431,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "06",
             title: "安塔利亚 → Aspendos → Konya",
             stay: "孔亚 5 星酒店",
-            image: "https://images.unsplash.com/photo-1724249367218-819f3eb2f9f7?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1724249367218-819f3eb2f9f7.webp",
             paragraphs: [
               "探访 【阿斯潘多斯古剧场】，保存完好、声学效果极佳，被誉为“古代声学奇迹”。",
               "随后前往苏非主义精神中心 【孔亚】，途中外观 【苏丹大驿站】（13 世纪塞尔柱商旅遗迹）。",
@@ -1443,7 +1443,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "07",
             title: "孔亚 → 卡帕多奇亚",
             stay: "卡帕 5 星/洞穴酒店",
-            image: "https://images.unsplash.com/photo-1712569838375-27b4eb58d05f?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1712569838375-27b4eb58d05f.webp",
             paragraphs: [
               "进入奇幻地貌腹地——卡帕多奇亚.游览 【泽尔韦山谷 & 帕夏贝】，穿梭于林立的“精灵烟囱”中。",
               "随后参观 【陶艺工坊】，观看匠人以红河黏土手工拉坯.漫步 【阿瓦诺斯小镇】 感受手作之都的慢生活。",
@@ -1455,7 +1455,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "08",
             title: "卡帕多奇亚全天深度体验",
             stay: "卡帕 5 星/洞穴酒店",
-            image: "https://images.unsplash.com/photo-1569530593439-c5a3adda5204?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1569530593439-c5a3adda5204.webp",
             paragraphs: [
               "清晨可自费参加著名的 【热气球之旅】，在晨曦中俯瞰烟囱群与山谷云海。",
               "上午深度探访 【格莱梅露天博物馆】：拜占庭时期洞穴教堂群，湿壁画虽经千年风化，仍可见圣像庄严。",
@@ -1467,7 +1467,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "09",
             title: "卡帕多奇亚 → 图兹盐湖 → 伊斯坦布尔",
             stay: "伊斯坦布尔 5 星酒店",
-            image: "https://images.unsplash.com/photo-1587506873457-b6d7d1cdad18?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1587506873457-b6d7d1cdad18.webp",
             paragraphs: [
               "今日踏上返程，穿越安纳托利亚高原.特别停靠 【图兹盐湖】（Tuz Gölü）：海拔约 925 米、含盐量高。",
               "浅水季节如“天空之镜”，纯白盐滩铺展如雪原，空灵超现实，适合拍摄大片。",
@@ -1479,7 +1479,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "10",
             title: "伊斯坦布尔 classic 一日 → 送机返程",
             stay: "/",
-            image: "https://images.unsplash.com/photo-1608677662924-8b83590f474e?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1608677662924-8b83590f474e.webp",
             paragraphs: [
               "纵览千年帝都精华：深入圣索菲亚大教堂与蓝色清真寺.漫步苏丹艾哈迈德广场。",
               "乘船游览博斯普鲁斯海峡，远眺多尔玛巴赫切宫.细品非遗土耳其咖啡.晚餐后专车送机。"
@@ -1537,7 +1537,7 @@ export const translations: Record<Language, BaseTranslations> = {
         subtitle: "土耳其 8 日全景文化深度之旅",
         ctaPrimary: "立即咨询",
         ctaSecondary: "获取方案",
-        image: "https://images.unsplash.com/photo-1687706222092-b6545828217d?q=80&w=2340&auto=format&fit=crop"
+        image: "/img/remote/u-1687706222092-b6545828217d.webp"
       },
       highlights: {
         title: "行程核心亮点",
@@ -1572,7 +1572,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "01",
             title: "伊斯坦布尔｜帝国初醒，海天之间的千年对望",
             stay: "伊斯坦布尔 5 星酒店",
-            image: "https://images.unsplash.com/photo-1636021597151-cc28dacd915c?q=80&w=2340&auto=format&fit=crop",
+            image: "/img/remote/u-1636021597151-cc28dacd915c.webp",
             paragraphs: [
               "抵达千年帝都伊斯坦布尔.游览奥斯曼帝国权力中心【托普卡帕宫】（外观），随后参观见证文明叠压的【圣索菲亚清真寺】（外观）。",
               "入内参观【蓝色清真寺】，欣赏伊兹尼克瓷砖艺术.途经【古罗马竞技场】遗址，傍晚乘船游览【博斯普鲁斯海峡】，欣赏欧亚两岸城市景观。"
@@ -1583,7 +1583,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "02",
             title: "伊斯坦布尔 → 恰纳卡莱｜木马之下，听见荷马的回声",
             stay: "恰纳卡莱 5 星酒店",
-            image: "https://images.unsplash.com/photo-1716274644458-d30c57acdeb4?q=80&w=1354&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1716274644458-d30c57acdeb4.webp",
             paragraphs: [
               "今日今日跨越【1915 恰纳卡莱大桥】，抵达特洛伊地区.入内参观【特洛伊古城遗址】，深度解析《荷马史诗》与真实的战争考古。",
               "随后前往【亚历山大特洛阿斯古城】，寻访亚历山大大帝所建古港，此处亦是早期基督教传播的重要历史节点.傍晚入住海峡沿岸酒店。"
@@ -1594,7 +1594,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "03",
             title: "恰纳卡莱 → 伊兹密尔｜钟楼之下，爱琴海的呼吸",
             stay: "Izmir 5-Star Hotel",
-            image: "https://images.unsplash.com/photo-1701428588034-5893b2512a68?q=80&w=2340&auto=format&fit=crop",
+            image: "/img/remote/u-1701428588034-5893b2512a68.webp",
             paragraphs: [
               "南下进入爱琴海地区.抵达后游览伊兹密尔市区地标【库纳克广场】与【钟楼】，感受地中海城市的活力气息。",
               "随后前往世界保存最完整的古罗马城市之一【以弗所古城】（入内），漫步大理石大道，仰望塞尔苏斯图书馆及巨型大剧场遗迹。"
@@ -1605,7 +1605,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "04",
             title: "伊兹密尔 → 棉花堡｜踏过乳白阶梯，疗愈于大地之泉",
             stay: "棉花堡 5 星温泉酒店",
-            image: "https://images.unsplash.com/photo-1433854471391-5603c019de62?q=80&w=2340&auto=format&fit=crop",
+            image: "/img/remote/u-1433854471391-5603c019de62.webp",
             paragraphs: [
               "前往世界自然与文化双遗产地【棉花堡】.入内参观古罗马疗养胜地【希拉波利斯古城】遗址。",
               "随后赤足行走于乳白色的钙华梯田，感受天然温泉在层叠石阶间流淌的独特自然奇观.夜宿温泉酒店，洗去旅途疲惫。"
@@ -1616,7 +1616,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "05",
             title: "棉花堡 → 埃尔吉迪尔湖 → 孔亚｜湖光山色，苏菲之心",
             stay: "孔亚 5 星酒店",
-            image: "https://images.unsplash.com/photo-1680465807377-c83db592a2fc?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0",
+            image: "/img/remote/u-1680465807377-c83db592a2fc.webp",
             paragraphs: [
               "今日今日穿越安纳托利亚高原，抵达高原上的璀璨明珠【埃尔吉迪尔湖】.湖畔漫步，感受未被惊扰的小镇慢时光。",
               "午后继续前往苏非派圣地孔亚.入内参观【梅夫拉纳博物馆】，深度了解苏菲主义哲学与极富禅意的旋转舞文化。"
@@ -1627,7 +1627,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "06",
             title: "孔亚 → 格雷梅｜凿石为家，大地上的童话",
             stay: "卡帕多奇亚 5 星 / 洞穴酒店",
-            image: "https://images.unsplash.com/photo-1712569838375-27b4eb58d05f?q=80&w=2340&auto=format&fit=crop",
+            image: "/img/remote/u-1712569838375-27b4eb58d05f.webp",
             paragraphs: [
               "沿着古丝绸之路前行，途中外观 13 世纪塞尔柱商旅奇迹【苏丹哈尼驿站】.抵达卡帕多奇亚核心区。",
               "入内参观【格莱梅露天博物馆】洞穴教堂群，惊叹于凿石而建的信仰空间.游览【鸽子谷】与【帕夏贝精灵烟囱】.特别安排阿瓦诺斯红河陶艺体验。"
@@ -1638,7 +1638,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "07",
             title: "格雷梅 → 安卡拉 | 气球之晨 · 国父目光所及",
             stay: "Ankara 5-Star Hotel",
-            image: "https://images.unsplash.com/photo-1569530593439-c5a3adda5204?q=80&w=2340&auto=format&fit=crop",
+            image: "/img/remote/u-1569530593439-c5a3adda5204.webp",
             paragraphs: [
               "可选晨间热气球飞行.登临乌奇希萨尔城堡俯览峡谷全景.",
               "前往安卡拉，参访国父陵，深度回溯共和国诞生的历史叙事。"
@@ -1649,7 +1649,7 @@ export const translations: Record<Language, BaseTranslations> = {
             day: "08",
             title: "安卡拉 → 尼西亚 → 伊斯坦布尔 | 信仰圣湖",
             stay: "送机",
-            image: "https://images.unsplash.com/photo-1608677662924-8b83590f474e?q=80&w=2340&auto=format&fit=crop",
+            image: "/img/remote/u-1608677662924-8b83590f474e.webp",
             paragraphs: [
               "参访尼西亚古城（伊兹尼克），游览古城墙与尼西亚圣索菲亚.",
               "在伊兹尼克湖畔小憩后返回伊斯坦布尔，送往机场。"
@@ -1731,16 +1731,16 @@ export const translations: Record<Language, BaseTranslations> = {
       sections: {
         title: "行程安排详解",
         days: [
-          { day: "01", title: "抵达伊斯坦布尔｜帝国文明的千年对望", stay: "伊斯坦布尔 5 星酒店", image: "https://images.unsplash.com/photo-1650610854382-ed6dc12f9b57", paragraphs: ["抵达千年帝都伊斯坦布尔，由专属司导迎接并开启私人接驳.深度巡礼苏丹艾哈迈德历史区，实地解构拜占庭遗韵与奥斯曼辉煌在方寸之间的建筑对话.在这座欧亚交汇的文明中心，开启溯源人类历史演进的史诗序章。"], meals: { breakfast: "/", lunch: "含", dinner: "含" } },
-          { day: "02", title: "卡帕多奇亚｜大地余音，火山凝灰岩的地貌演化", stay: "特色洞穴酒店", image: "https://images.unsplash.com/photo-1752865224513-17e6afc1e6c5", paragraphs: ["飞抵安纳托利亚腹地.实地探访鸽子谷与帕夏贝，剖析由数百万年火山喷发与自然侵蚀共同锻造的“精灵烟囱”地貌.驻足德夫伦特山谷，在状如骆驼的天然岩刻中感悟自然伟力对地理空间的极致塑造，领略荒野环境下的超现实美学。"], meals: { breakfast: "酒店用", lunch: "含", dinner: "含" } },
-          { day: "03", title: "格雷梅与乌奇希萨｜石窟圣迹，岩凿空间的信仰叙事", stay: "特色洞穴酒店", image: "https://images.unsplash.com/photo-1686257558166-a13a257b5dc1", paragraphs: ["深入联合国教科文组织遗产——格雷梅露天博物馆，探寻岩层之下保存完好的拜占庭岩窟教堂群及其珍贵湿壁画.登临区域制高点乌奇希萨尔城堡，俯瞰古代岩凿堡垒体系与类月地貌全景.随后造访陶艺之都阿瓦诺斯，解析自赫梯时期传承至今的红土拉坯技艺。"], meals: { breakfast: "酒店用", lunch: "含", dinner: "含" } },
-          { day: "04", title: "地下城至孔亚｜深层避难所与苏菲主义精神原点", stay: "科尼亚 5 星酒店", image: "https://images.unsplash.com/photo-1675373181258-681d11e0e4c5", paragraphs: ["探访凯马克勒地下城，剖析早期文明在动荡岁月中构建的精密垂直防御体系.沿古丝绸之路西行，停留苏丹哈尼驿站，实地感知 13 世纪塞尔柱商旅贸易的壮阔脉络.抵达苏菲派圣地孔亚，参访梅夫拉纳博物馆，深入解析旋转舞背后的生命哲学与静谧叙事。"], meals: { breakfast: "酒店用", lunch: "含", dinner: "含" } },
-          { day: "05", title: "安提阿、歌罗西与老底嘉｜使徒脚踪与早期文明动线", stay: "棉花堡温泉 5 星酒店", image: "https://images.unsplash.com/photo-1718227973712-fa3c9b1fda6e", paragraphs: ["重访彼西底的安提阿与歌罗西遗址，实地复原早期使徒在小亚细亚扩展文明边界的关键动线.随后前往老底嘉古城，在宏大的剧场与街道遗迹中，探寻启示录中所记载的富庶之城在古典晚期的信仰变迁与历史印记。"], meals: { breakfast: "酒店用", lunch: "含", dinner: "含" } },
-          { day: "06", title: "希拉波利斯至推雅推喇｜圣泉遗迹与启示录七教会巡礼", stay: "伊兹密尔 5 星酒店", image: "https://images.unsplash.com/photo-1728361328959-d30d8218e38b", paragraphs: ["巡礼希拉波利斯古城，在古罗马温泉疗养中心感受自然圣泉与历史遗存的交融.随后依次走访非拉铁非、撒狄与推雅推喇.作为启示录七教会的重要节点，通过实地考察 these古城遗址，深度解构其在安纳托利亚历史枢纽地位及精神信仰的演进逻辑。"], meals: { breakfast: "酒店用", lunch: "含", dinner: "含" } },
-          { day: "07", title: "以弗所、圣约翰大教堂与士每拿｜古典文明巅峰与使徒足迹", stay: "伊兹密尔 5 星酒店", image: "https://images.unsplash.com/photo-1684214190982-f3506653f932", paragraphs: ["深度探访古典文明的瑰宝——以弗所古城，在塞尔苏斯图书馆与大剧场遗迹间，复原古罗马时期地中海东岸的繁荣图景.随后造访圣约翰大教堂，寻迹使徒晚年的宣教终点.抵达士每拿古城遗址，在现存的断壁残垣中解构启示录七教会中这座“受难之城”的信仰原点。"], meals: { breakfast: "酒店用", lunch: "含", dinner: "含" } },
-          { day: "08", title: "别加摩、特罗亚与亚历山大特洛阿斯｜卫城叙事与史诗现场", stay: "恰纳卡莱 5 星酒店", image: "https://images.unsplash.com/photo-1715080271610-c177c424aa6d", paragraphs: ["登临别加摩卫城，考察山顶剧场与祭坛遗址，感悟帕加马王国的建筑美学.跨越达达尼尔海峡抵达特罗亚，在跨越四千年的九层考古叠压中，见证荷马史诗与历史现实的碰撞.随后停留亚历山大特洛阿斯古港，实地复原保罗在异象指引下由小亚细亚启航赴欧的历史性时刻。"], meals: { breakfast: "酒店用", lunch: "含", dinner: "含" } },
-          { day: "09", title: "伊斯坦布尔｜文明叠压逻辑与海峡空间叙事", stay: "伊斯坦布尔 5 星酒店", image: "https://images.unsplash.com/photo-1605382628707-0aa0593fba19", paragraphs: ["步入圣索菲亚大教堂，深度解析其从拜占庭建筑巅峰向奥斯曼宗教空间转化的文明叠压逻辑.漫步居尔哈奈公园，感知昔日帝国花园的宁静脉络.傍晚乘船巡游博斯普鲁斯海峡，在欧亚大陆的几何交汇点，纵览两岸宫殿、要塞与现代城市构成的宏大空间叙事。"], meals: { breakfast: "酒店用", lunch: "含", dinner: "含" } },
-          { day: "10", title: "拜占庭艺术瑰宝与海峡闭环｜送机返程", stay: "送机返程", image: "https://images.unsplash.com/photo-1678050643669-0e67cc5a0e21", paragraphs: ["深入科拉教堂（卡里耶博物馆），实地解析其精美的拜占庭马赛克与湿壁画遗存.随后前往亚洲区于斯屈达尔观景点，远眺历史半岛完成视角闭环.最后由专属司导提供私人送机服务，前往机场结束本次深度文化信仰之旅。"], meals: { breakfast: "酒店用", lunch: "含", dinner: "/" } }
+          { day: "01", title: "抵达伊斯坦布尔｜帝国文明的千年对望", stay: "伊斯坦布尔 5 星酒店", image: "/img/remote/u-1650610854382-ed6dc12f9b57.webp", paragraphs: ["抵达千年帝都伊斯坦布尔，由专属司导迎接并开启私人接驳.深度巡礼苏丹艾哈迈德历史区，实地解构拜占庭遗韵与奥斯曼辉煌在方寸之间的建筑对话.在这座欧亚交汇的文明中心，开启溯源人类历史演进的史诗序章。"], meals: { breakfast: "/", lunch: "含", dinner: "含" } },
+          { day: "02", title: "卡帕多奇亚｜大地余音，火山凝灰岩的地貌演化", stay: "特色洞穴酒店", image: "/img/remote/u-1752865224513-17e6afc1e6c5.webp", paragraphs: ["飞抵安纳托利亚腹地.实地探访鸽子谷与帕夏贝，剖析由数百万年火山喷发与自然侵蚀共同锻造的“精灵烟囱”地貌.驻足德夫伦特山谷，在状如骆驼的天然岩刻中感悟自然伟力对地理空间的极致塑造，领略荒野环境下的超现实美学。"], meals: { breakfast: "酒店用", lunch: "含", dinner: "含" } },
+          { day: "03", title: "格雷梅与乌奇希萨｜石窟圣迹，岩凿空间的信仰叙事", stay: "特色洞穴酒店", image: "/img/remote/u-1686257558166-a13a257b5dc1.webp", paragraphs: ["深入联合国教科文组织遗产——格雷梅露天博物馆，探寻岩层之下保存完好的拜占庭岩窟教堂群及其珍贵湿壁画.登临区域制高点乌奇希萨尔城堡，俯瞰古代岩凿堡垒体系与类月地貌全景.随后造访陶艺之都阿瓦诺斯，解析自赫梯时期传承至今的红土拉坯技艺。"], meals: { breakfast: "酒店用", lunch: "含", dinner: "含" } },
+          { day: "04", title: "地下城至孔亚｜深层避难所与苏菲主义精神原点", stay: "科尼亚 5 星酒店", image: "/img/remote/u-1675373181258-681d11e0e4c5.webp", paragraphs: ["探访凯马克勒地下城，剖析早期文明在动荡岁月中构建的精密垂直防御体系.沿古丝绸之路西行，停留苏丹哈尼驿站，实地感知 13 世纪塞尔柱商旅贸易的壮阔脉络.抵达苏菲派圣地孔亚，参访梅夫拉纳博物馆，深入解析旋转舞背后的生命哲学与静谧叙事。"], meals: { breakfast: "酒店用", lunch: "含", dinner: "含" } },
+          { day: "05", title: "安提阿、歌罗西与老底嘉｜使徒脚踪与早期文明动线", stay: "棉花堡温泉 5 星酒店", image: "/img/remote/u-1718227973712-fa3c9b1fda6e.webp", paragraphs: ["重访彼西底的安提阿与歌罗西遗址，实地复原早期使徒在小亚细亚扩展文明边界的关键动线.随后前往老底嘉古城，在宏大的剧场与街道遗迹中，探寻启示录中所记载的富庶之城在古典晚期的信仰变迁与历史印记。"], meals: { breakfast: "酒店用", lunch: "含", dinner: "含" } },
+          { day: "06", title: "希拉波利斯至推雅推喇｜圣泉遗迹与启示录七教会巡礼", stay: "伊兹密尔 5 星酒店", image: "/img/remote/u-1728361328959-d30d8218e38b.webp", paragraphs: ["巡礼希拉波利斯古城，在古罗马温泉疗养中心感受自然圣泉与历史遗存的交融.随后依次走访非拉铁非、撒狄与推雅推喇.作为启示录七教会的重要节点，通过实地考察 these古城遗址，深度解构其在安纳托利亚历史枢纽地位及精神信仰的演进逻辑。"], meals: { breakfast: "酒店用", lunch: "含", dinner: "含" } },
+          { day: "07", title: "以弗所、圣约翰大教堂与士每拿｜古典文明巅峰与使徒足迹", stay: "伊兹密尔 5 星酒店", image: "/img/remote/u-1684214190982-f3506653f932.webp", paragraphs: ["深度探访古典文明的瑰宝——以弗所古城，在塞尔苏斯图书馆与大剧场遗迹间，复原古罗马时期地中海东岸的繁荣图景.随后造访圣约翰大教堂，寻迹使徒晚年的宣教终点.抵达士每拿古城遗址，在现存的断壁残垣中解构启示录七教会中这座“受难之城”的信仰原点。"], meals: { breakfast: "酒店用", lunch: "含", dinner: "含" } },
+          { day: "08", title: "别加摩、特罗亚与亚历山大特洛阿斯｜卫城叙事与史诗现场", stay: "恰纳卡莱 5 星酒店", image: "/img/remote/u-1715080271610-c177c424aa6d.webp", paragraphs: ["登临别加摩卫城，考察山顶剧场与祭坛遗址，感悟帕加马王国的建筑美学.跨越达达尼尔海峡抵达特罗亚，在跨越四千年的九层考古叠压中，见证荷马史诗与历史现实的碰撞.随后停留亚历山大特洛阿斯古港，实地复原保罗在异象指引下由小亚细亚启航赴欧的历史性时刻。"], meals: { breakfast: "酒店用", lunch: "含", dinner: "含" } },
+          { day: "09", title: "伊斯坦布尔｜文明叠压逻辑与海峡空间叙事", stay: "伊斯坦布尔 5 星酒店", image: "/img/remote/u-1605382628707-0aa0593fba19.webp", paragraphs: ["步入圣索菲亚大教堂，深度解析其从拜占庭建筑巅峰向奥斯曼宗教空间转化的文明叠压逻辑.漫步居尔哈奈公园，感知昔日帝国花园的宁静脉络.傍晚乘船巡游博斯普鲁斯海峡，在欧亚大陆的几何交汇点，纵览两岸宫殿、要塞与现代城市构成的宏大空间叙事。"], meals: { breakfast: "酒店用", lunch: "含", dinner: "含" } },
+          { day: "10", title: "拜占庭艺术瑰宝与海峡闭环｜送机返程", stay: "送机返程", image: "/img/remote/u-1678050643669-0e67cc5a0e21.webp", paragraphs: ["深入科拉教堂（卡里耶博物馆），实地解析其精美的拜占庭马赛克与湿壁画遗存.随后前往亚洲区于斯屈达尔观景点，远眺历史半岛完成视角闭环.最后由专属司导提供私人送机服务，前往机场结束本次深度文化信仰之旅。"], meals: { breakfast: "酒店用", lunch: "含", dinner: "/" } }
         ]
       },
       notices: {
@@ -1805,10 +1805,10 @@ export const translations: Record<Language, BaseTranslations> = {
       sections: {
         title: "行程详情解析",
         days: [
-          { day: "01", title: "伊斯坦布尔 → 别迦摩 → 推雅推喇 → 伊兹密尔", stay: "伊兹密尔 5 星级酒店", image: "https://images.unsplash.com/photo-1715080271610-c177c424aa6d", paragraphs: ["清晨由伊斯坦布尔启程.首站抵达山巅之城【别迦摩】，探访这座曾拥有古代世界级图书馆的文明枢纽.", "随后前往以染布业闻名的【推雅推喇】，在古城遗迹中默思使徒书信对属灵生活的深刻警示。"], meals: { breakfast: "/", lunch: "含", dinner: "/" } },
-          { day: "02", title: "士每拿 → 圣母玛利亚之家 → 圣约翰大教堂 → 以弗所", stay: "伊兹密尔 5 星级酒店", image: "https://images.unsplash.com/photo-1684214190982-f3506653f932", paragraphs: ["上午造访松林环抱、环境静谧的【圣母玛利亚之家】.随后前往【圣约翰大教堂】，追溯使徒约翰对信仰的至死忠心.", "下午步入文化遗产【以弗所古城】.漫步在大理石铺就的街道上，仰望壮丽的塞尔苏斯图书馆。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
-          { day: "03", title: "撒狄 → 非拉铁非 → 老底嘉 → 棉花堡", stay: "棉花堡 5 星温泉酒店", image: "https://images.unsplash.com/photo-1718227973712-fa3c9b1fda6e", paragraphs: ["沿吕底亚王国商道前行.首站【撒狄古城】，提醒人警惕外在繁荣与内在生命的落差.", "午后抵达【老底嘉古城】，见证“不冷不热之城”的历史重量.傍晚抵达棉花堡。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
-          { day: "04", title: "希拉波利斯古城（棉花堡） → 伊斯坦布尔", stay: "圆满结束", image: "https://images.unsplash.com/photo-1708251088223-e56cd382e8c6", paragraphs: ["清晨参观【棉花堡】白色钙华梯田.感受自然与历史交汇的宁静力量.", "随后启程返回伊斯坦布尔，朝圣之旅圆满结束。"], meals: { breakfast: "酒店", lunch: "含", dinner: "/" } }
+          { day: "01", title: "伊斯坦布尔 → 别迦摩 → 推雅推喇 → 伊兹密尔", stay: "伊兹密尔 5 星级酒店", image: "/img/remote/u-1715080271610-c177c424aa6d.webp", paragraphs: ["清晨由伊斯坦布尔启程.首站抵达山巅之城【别迦摩】，探访这座曾拥有古代世界级图书馆的文明枢纽.", "随后前往以染布业闻名的【推雅推喇】，在古城遗迹中默思使徒书信对属灵生活的深刻警示。"], meals: { breakfast: "/", lunch: "含", dinner: "/" } },
+          { day: "02", title: "士每拿 → 圣母玛利亚之家 → 圣约翰大教堂 → 以弗所", stay: "伊兹密尔 5 星级酒店", image: "/img/remote/u-1684214190982-f3506653f932.webp", paragraphs: ["上午造访松林环抱、环境静谧的【圣母玛利亚之家】.随后前往【圣约翰大教堂】，追溯使徒约翰对信仰的至死忠心.", "下午步入文化遗产【以弗所古城】.漫步在大理石铺就的街道上，仰望壮丽的塞尔苏斯图书馆。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
+          { day: "03", title: "撒狄 → 非拉铁非 → 老底嘉 → 棉花堡", stay: "棉花堡 5 星温泉酒店", image: "/img/remote/u-1718227973712-fa3c9b1fda6e.webp", paragraphs: ["沿吕底亚王国商道前行.首站【撒狄古城】，提醒人警惕外在繁荣与内在生命的落差.", "午后抵达【老底嘉古城】，见证“不冷不热之城”的历史重量.傍晚抵达棉花堡。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
+          { day: "04", title: "希拉波利斯古城（棉花堡） → 伊斯坦布尔", stay: "圆满结束", image: "/img/remote/u-1708251088223-e56cd382e8c6.webp", paragraphs: ["清晨参观【棉花堡】白色钙华梯田.感受自然与历史交汇的宁静力量.", "随后启程返回伊斯坦布尔，朝圣之旅圆满结束。"], meals: { breakfast: "酒店", lunch: "含", dinner: "/" } }
         ]
       },
       notices: {
@@ -1880,15 +1880,15 @@ export const translations: Record<Language, BaseTranslations> = {
       sections: {
         title: "行程安排详解",
         days: [
-          { day: "01", title: "抵达伊斯坦布尔｜朝圣旅程正式开启", stay: "伊斯坦布尔酒店", image: "https://images.unsplash.com/photo-1527838832700-5059252407fa", paragraphs: ["抵达伊斯坦布尔后由专人接机并送往酒店休息。首日节奏相对舒缓，帮助团队完成时差调整并进入朝圣状态。", "晚间安排土耳其欢迎晚餐，为这次以“追寻保罗足迹、感受早期教会历史”为主题的陆路之旅揭开序幕。"], meals: { breakfast: "/", lunch: "/", dinner: "含" } },
-          { day: "02", title: "伊斯坦布尔至安卡拉｜海峡与帝都之后向内陆前行", stay: "安卡拉酒店", image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b", paragraphs: ["上午乘坐博斯普鲁斯海峡游船，并参观蓝色清真寺，从欧亚交汇与帝国记忆中为全程建立更广阔的历史视角。", "随后乘坐大巴前往安卡拉，进入安纳托利亚内陆，为接下来与保罗时代背景相关的地理纵深作铺垫。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
-          { day: "03", title: "安卡拉、盐湖与卡帕多奇亚｜共和国与荒野地貌", stay: "卡帕多奇亚酒店", image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963", paragraphs: ["在安卡拉参观国父纪念馆，随后前往图兹盐湖，感受安纳托利亚中部辽阔而极简的自然景观。", "下午抵达卡帕多奇亚，安排 ATV 探险与玫瑰谷日落，在奇异地貌中体会信仰旅程的另一种张力。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
-          { day: "04", title: "卡帕多奇亚深度游｜岩窟教堂与地下城的信仰记忆", stay: "卡帕多奇亚酒店", image: "https://images.unsplash.com/photo-1686257558166-a13a257b5dc1", paragraphs: ["深入格雷梅露天博物馆，观看岩石教堂与壁画遗存，并进入凯马克利等深井地下城，理解早期基督徒在动荡时代中的生存与聚会方式。", "这一天特别适合安排圣经背景讲解、祷告时间与小组默想，让地貌与信仰记忆真正对应起来。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
-          { day: "05", title: "孔亚至棉花堡｜古丝绸之路的纵深推进", stay: "棉花堡酒店", image: "https://images.unsplash.com/photo-1718227973712-fa3c9b1fda6e", paragraphs: ["沿安纳托利亚腹地向西推进，途经孔亚并停靠苏丹大旅馆，在古商路节点上感受千年往来的交通与文明记忆。", "傍晚抵达温泉之乡棉花堡，为次日进入七教会与相关古城遗址做完整准备。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
-          { day: "06", title: "七教会遗址巡踪（一）｜希拉波利斯、老底嘉、非拉铁非、撒狄", stay: "伊兹密尔 / 库萨达斯酒店", image: "https://images.unsplash.com/photo-1718227973712-fa3c9b1fda6e", paragraphs: ["先游览希拉波利斯古城及棉花堡钙化池，随后依次探访《启示录》中出现的老底嘉、非拉铁非与撒狄遗址。", "这是一段非常适合灵修默想的线路：从富足中的冷淡，到坚守中的得胜，再到“名存实亡”的警醒，都在同一日中形成强烈对照。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
-          { day: "07", title: "七教会遗址巡踪（二）｜以弗所、士每拿与推雅推喇", stay: "伊兹密尔 / 库萨达斯酒店", image: "https://images.unsplash.com/photo-1684214190982-f3506653f932", paragraphs: ["参观保存极佳的以弗所古城，并继续前往士每拿古集市与推雅推喇遗址，在古典城市与早期教会记忆之间切换视角。", "途中可安排特色皮革工艺展示作为当地文化体验的一部分，使行程在朝圣之外也保留对地方生活与传统工艺的观察。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
-          { day: "08", title: "别加摩、特洛伊与亚历山大特罗亚斯｜史诗与宣教地平线", stay: "恰纳卡莱酒店", image: "https://images.unsplash.com/photo-1715080271610-c177c424aa6d", paragraphs: ["乘缆车登上别加摩卫城，随后探访特洛伊遗址，在神话、考古与现实历史之间看见安纳托利亚的层层叠压。", "并前往亚历山大特罗亚斯古城与港口，从更广阔的宣教视角回望保罗时代福音外展的边界。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
-          { day: "09", title: "返回伊斯坦布尔｜跨桥归欧与全程总结", stay: "送机返程", image: "https://images.unsplash.com/photo-1605382628707-0aa0593fba19", paragraphs: ["跨越 1915 恰纳卡莱大桥重回欧洲，在地理层面完成由亚洲到欧洲的象征性闭环。随后登上恰姆勒贾山，俯瞰整座伊斯坦布尔。", "最后根据航班时间送机，并以属灵回顾、感恩祷告和全程整理为这次深度基督教朝圣之旅收尾。"], meals: { breakfast: "酒店", lunch: "含", dinner: "/" } }
+          { day: "01", title: "抵达伊斯坦布尔｜朝圣旅程正式开启", stay: "伊斯坦布尔酒店", image: "/img/remote/u-1527838832700-5059252407fa.webp", paragraphs: ["抵达伊斯坦布尔后由专人接机并送往酒店休息。首日节奏相对舒缓，帮助团队完成时差调整并进入朝圣状态。", "晚间安排土耳其欢迎晚餐，为这次以“追寻保罗足迹、感受早期教会历史”为主题的陆路之旅揭开序幕。"], meals: { breakfast: "/", lunch: "/", dinner: "含" } },
+          { day: "02", title: "伊斯坦布尔至安卡拉｜海峡与帝都之后向内陆前行", stay: "安卡拉酒店", image: "/img/remote/u-1541432901042-2d8bd64b4a9b.webp", paragraphs: ["上午乘坐博斯普鲁斯海峡游船，并参观蓝色清真寺，从欧亚交汇与帝国记忆中为全程建立更广阔的历史视角。", "随后乘坐大巴前往安卡拉，进入安纳托利亚内陆，为接下来与保罗时代背景相关的地理纵深作铺垫。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
+          { day: "03", title: "安卡拉、盐湖与卡帕多奇亚｜共和国与荒野地貌", stay: "卡帕多奇亚酒店", image: "/img/remote/u-1516483638261-f4dbaf036963.webp", paragraphs: ["在安卡拉参观国父纪念馆，随后前往图兹盐湖，感受安纳托利亚中部辽阔而极简的自然景观。", "下午抵达卡帕多奇亚，安排 ATV 探险与玫瑰谷日落，在奇异地貌中体会信仰旅程的另一种张力。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
+          { day: "04", title: "卡帕多奇亚深度游｜岩窟教堂与地下城的信仰记忆", stay: "卡帕多奇亚酒店", image: "/img/remote/u-1686257558166-a13a257b5dc1.webp", paragraphs: ["深入格雷梅露天博物馆，观看岩石教堂与壁画遗存，并进入凯马克利等深井地下城，理解早期基督徒在动荡时代中的生存与聚会方式。", "这一天特别适合安排圣经背景讲解、祷告时间与小组默想，让地貌与信仰记忆真正对应起来。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
+          { day: "05", title: "孔亚至棉花堡｜古丝绸之路的纵深推进", stay: "棉花堡酒店", image: "/img/remote/u-1718227973712-fa3c9b1fda6e.webp", paragraphs: ["沿安纳托利亚腹地向西推进，途经孔亚并停靠苏丹大旅馆，在古商路节点上感受千年往来的交通与文明记忆。", "傍晚抵达温泉之乡棉花堡，为次日进入七教会与相关古城遗址做完整准备。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
+          { day: "06", title: "七教会遗址巡踪（一）｜希拉波利斯、老底嘉、非拉铁非、撒狄", stay: "伊兹密尔 / 库萨达斯酒店", image: "/img/remote/u-1718227973712-fa3c9b1fda6e.webp", paragraphs: ["先游览希拉波利斯古城及棉花堡钙化池，随后依次探访《启示录》中出现的老底嘉、非拉铁非与撒狄遗址。", "这是一段非常适合灵修默想的线路：从富足中的冷淡，到坚守中的得胜，再到“名存实亡”的警醒，都在同一日中形成强烈对照。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
+          { day: "07", title: "七教会遗址巡踪（二）｜以弗所、士每拿与推雅推喇", stay: "伊兹密尔 / 库萨达斯酒店", image: "/img/remote/u-1684214190982-f3506653f932.webp", paragraphs: ["参观保存极佳的以弗所古城，并继续前往士每拿古集市与推雅推喇遗址，在古典城市与早期教会记忆之间切换视角。", "途中可安排特色皮革工艺展示作为当地文化体验的一部分，使行程在朝圣之外也保留对地方生活与传统工艺的观察。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
+          { day: "08", title: "别加摩、特洛伊与亚历山大特罗亚斯｜史诗与宣教地平线", stay: "恰纳卡莱酒店", image: "/img/remote/u-1715080271610-c177c424aa6d.webp", paragraphs: ["乘缆车登上别加摩卫城，随后探访特洛伊遗址，在神话、考古与现实历史之间看见安纳托利亚的层层叠压。", "并前往亚历山大特罗亚斯古城与港口，从更广阔的宣教视角回望保罗时代福音外展的边界。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
+          { day: "09", title: "返回伊斯坦布尔｜跨桥归欧与全程总结", stay: "送机返程", image: "/img/remote/u-1605382628707-0aa0593fba19.webp", paragraphs: ["跨越 1915 恰纳卡莱大桥重回欧洲，在地理层面完成由亚洲到欧洲的象征性闭环。随后登上恰姆勒贾山，俯瞰整座伊斯坦布尔。", "最后根据航班时间送机，并以属灵回顾、感恩祷告和全程整理为这次深度基督教朝圣之旅收尾。"], meals: { breakfast: "酒店", lunch: "含", dinner: "/" } }
         ]
       },
       notices: {
@@ -1958,13 +1958,13 @@ export const translations: Record<Language, BaseTranslations> = {
       sections: {
         title: "行程安排详解",
         days: [
-          { day: "01", title: "抵达伊斯坦布尔｜世界之都的第一印象", stay: "伊斯坦布尔酒店", image: "https://images.unsplash.com/photo-1527838832700-5059252407fa", paragraphs: ["抵达伊斯坦布尔后由专人接机，前往苏丹艾哈迈德历史核心区，走入苏丹艾哈迈德广场与蓝色清真寺，初步感受这座“世界之都”的呼吸节奏。", "当晚享用土耳其欢迎晚餐，为接下来的七教会陆路朝圣之旅做好身心预备。"], meals: { breakfast: "/", lunch: "/", dinner: "含" } },
-          { day: "02", title: "伊斯坦布尔深度游｜海峡、市场与城市脉搏", stay: "中转酒店", image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b", paragraphs: ["乘船游览博斯普鲁斯海峡，纵览欧亚两岸风貌；随后探访香料市场，在香气与人流交织中感受伊斯坦布尔的市井层次。", "之后搭乘 T1 电车，漫步独立大街，并在加拉太石塔外观前定格城市天际线。晚间根据陆路行程节奏前往中转酒店休息。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
-          { day: "03", title: "别加摩与推雅推喇｜夹击之中持守真道", stay: "伊兹密尔酒店", image: "https://images.unsplash.com/photo-1715080271610-c177c424aa6d", paragraphs: ["探访别加摩古城，涵盖卫城、图拉真神殿与医神中心一带遗址，在古代政治、宗教与医疗文化的交汇处理解城市的历史重量。", "随后前往推雅推喇教会遗址，在灵修分享中思考基督徒在皇帝崇拜与商业行会双重压力下，如何依然持守真道。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
-          { day: "04", title: "四城连访｜殉道、警醒与敞开的门", stay: "棉花堡酒店", image: "https://images.unsplash.com/photo-1684214190982-f3506653f932", paragraphs: ["当日连访士每拿、以弗所、撒狄与非拉铁非。于士每拿古罗马市集纪念波利卡普的殉道见证，在以弗所重访塞尔苏斯图书馆、大理石街道与古剧场。", "随后前往撒狄与非拉铁非，分别默想“名存实亡”的警戒与“敞开的门”的应许，使这一天成为行程中最浓缩的一次属灵对照。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
-          { day: "05", title: "希拉波利斯与老底嘉｜在丰盛中保持火热", stay: "棉花堡酒店", image: "https://images.unsplash.com/photo-1718227973712-fa3c9b1fda6e", paragraphs: ["游览棉花堡白色钙化梯田与希拉波利斯古城，在自然奇观与古代疗愈中心之间体会历史与地貌的双重震撼。", "随后进入老底嘉古城，通过引水渠与城市遗迹反思物质富足与灵性贫乏之间的反差，提醒自己持续保持火热的信心。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
-          { day: "06", title: "亚历山大特罗亚斯｜回应异象的转折点", stay: "伊斯坦布尔酒店", image: "https://images.unsplash.com/photo-1715080271610-c177c424aa6d", paragraphs: ["前往亚历山大特罗亚斯古城及港口，追忆保罗领受“马其顿呼声”异象的历史转折点，并在现场回顾福音由小亚细亚走向欧洲的重要节点。", "返程途中由领队带领回顾七教会带来的属灵镜鉴，可安排简短分享与祷告，为旅程进入最后一日做总结。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
-          { day: "07", title: "恰姆勒贾山与送机｜属灵整理与差遣收尾", stay: "送机返程", image: "https://images.unsplash.com/photo-1605382628707-0aa0593fba19", paragraphs: ["登上恰姆勒贾山俯瞰晨光下的伊斯坦布尔，在高处以更完整的视角回顾整个朝圣旅程。", "最后进行属灵整理、总结祷告与返程提醒，带着对圣经历史更深的理解结束本次信仰之旅。"], meals: { breakfast: "酒店", lunch: "/", dinner: "/" } }
+          { day: "01", title: "抵达伊斯坦布尔｜世界之都的第一印象", stay: "伊斯坦布尔酒店", image: "/img/remote/u-1527838832700-5059252407fa.webp", paragraphs: ["抵达伊斯坦布尔后由专人接机，前往苏丹艾哈迈德历史核心区，走入苏丹艾哈迈德广场与蓝色清真寺，初步感受这座“世界之都”的呼吸节奏。", "当晚享用土耳其欢迎晚餐，为接下来的七教会陆路朝圣之旅做好身心预备。"], meals: { breakfast: "/", lunch: "/", dinner: "含" } },
+          { day: "02", title: "伊斯坦布尔深度游｜海峡、市场与城市脉搏", stay: "中转酒店", image: "/img/remote/u-1541432901042-2d8bd64b4a9b.webp", paragraphs: ["乘船游览博斯普鲁斯海峡，纵览欧亚两岸风貌；随后探访香料市场，在香气与人流交织中感受伊斯坦布尔的市井层次。", "之后搭乘 T1 电车，漫步独立大街，并在加拉太石塔外观前定格城市天际线。晚间根据陆路行程节奏前往中转酒店休息。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
+          { day: "03", title: "别加摩与推雅推喇｜夹击之中持守真道", stay: "伊兹密尔酒店", image: "/img/remote/u-1715080271610-c177c424aa6d.webp", paragraphs: ["探访别加摩古城，涵盖卫城、图拉真神殿与医神中心一带遗址，在古代政治、宗教与医疗文化的交汇处理解城市的历史重量。", "随后前往推雅推喇教会遗址，在灵修分享中思考基督徒在皇帝崇拜与商业行会双重压力下，如何依然持守真道。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
+          { day: "04", title: "四城连访｜殉道、警醒与敞开的门", stay: "棉花堡酒店", image: "/img/remote/u-1684214190982-f3506653f932.webp", paragraphs: ["当日连访士每拿、以弗所、撒狄与非拉铁非。于士每拿古罗马市集纪念波利卡普的殉道见证，在以弗所重访塞尔苏斯图书馆、大理石街道与古剧场。", "随后前往撒狄与非拉铁非，分别默想“名存实亡”的警戒与“敞开的门”的应许，使这一天成为行程中最浓缩的一次属灵对照。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
+          { day: "05", title: "希拉波利斯与老底嘉｜在丰盛中保持火热", stay: "棉花堡酒店", image: "/img/remote/u-1718227973712-fa3c9b1fda6e.webp", paragraphs: ["游览棉花堡白色钙化梯田与希拉波利斯古城，在自然奇观与古代疗愈中心之间体会历史与地貌的双重震撼。", "随后进入老底嘉古城，通过引水渠与城市遗迹反思物质富足与灵性贫乏之间的反差，提醒自己持续保持火热的信心。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
+          { day: "06", title: "亚历山大特罗亚斯｜回应异象的转折点", stay: "伊斯坦布尔酒店", image: "/img/remote/u-1715080271610-c177c424aa6d.webp", paragraphs: ["前往亚历山大特罗亚斯古城及港口，追忆保罗领受“马其顿呼声”异象的历史转折点，并在现场回顾福音由小亚细亚走向欧洲的重要节点。", "返程途中由领队带领回顾七教会带来的属灵镜鉴，可安排简短分享与祷告，为旅程进入最后一日做总结。"], meals: { breakfast: "酒店", lunch: "含", dinner: "含" } },
+          { day: "07", title: "恰姆勒贾山与送机｜属灵整理与差遣收尾", stay: "送机返程", image: "/img/remote/u-1605382628707-0aa0593fba19.webp", paragraphs: ["登上恰姆勒贾山俯瞰晨光下的伊斯坦布尔，在高处以更完整的视角回顾整个朝圣旅程。", "最后进行属灵整理、总结祷告与返程提醒，带着对圣经历史更深的理解结束本次信仰之旅。"], meals: { breakfast: "酒店", lunch: "/", dinner: "/" } }
         ]
       },
       notices: {
@@ -1978,31 +1978,31 @@ export const translations: Record<Language, BaseTranslations> = {
       }
     },
     toursData: [
-      { id: '1', title: 'S1-伊斯坦布尔飞机-卡帕多奇亚 6日', location: '伊斯坦布尔 / 卡帕多奇亚', duration: '6天', price: 8049, image: 'https://images.unsplash.com/photo-1636021597151-cc28dacd915c?auto=format&fit=crop&w=1200&q=80', category: 'classic', highlights: ['热气球晨光飞行', '湿拓画 Ebru 手作', '以弗所沉浸式博物馆'], path: '/itineraries/s1-turkey-6-days' },
-      { id: 's2', title: 'S2-爱琴海至安纳托利亚 8日全景', location: '全境环线 / D400', duration: '8天', price: 10349, image: "https://images.unsplash.com/photo-1596093145026-f6af675846c7?q=80&w=2148&auto=format&fit=crop", category: 'classic', highlights: ['D400 最美公路', '地中海滑翔伞', '内陆双飞接驳'], path: '/itineraries/s2-turkey-8-days' },
-      { id: 's4', title: 'S4-土耳其 10 日全景文化之旅', location: '全境环线 / 特罗亚', duration: '10天', price: 10349, image: "https://images.unsplash.com/photo-1689130033373-2773b6029aea?q=80&w=2148&auto=format&fit=crop", category: 'classic', highlights: ['特罗亚古城', '全景文化深度', 'D400最美公路'], path: '/itineraries/s4-turkey-10-days' },
-      { id: 's5', title: 'S5-土耳其 8 日全景文化深度之旅', location: '特罗亚 / 精灵之路', duration: '8天', price: 10349, image: "https://images.unsplash.com/photo-1687706222092-b6545828217d?q=80&w=2340&auto=format&fit=crop", category: 'classic', highlights: ['特罗亚古城', '精灵烟囱', '伊兹尼克古城'], path: '/itineraries/s5-turkey-8-days' },
+      { id: '1', title: 'S1-伊斯坦布尔飞机-卡帕多奇亚 6日', location: '伊斯坦布尔 / 卡帕多奇亚', duration: '6天', price: 8049, image: '/img/remote/u-1636021597151-cc28dacd915c.webp', category: 'classic', highlights: ['热气球晨光飞行', '湿拓画 Ebru 手作', '以弗所沉浸式博物馆'], path: '/itineraries/s1-turkey-6-days' },
+      { id: 's2', title: 'S2-爱琴海至安纳托利亚 8日全景', location: '全境环线 / D400', duration: '8天', price: 10349, image: "/img/remote/u-1596093145026-f6af675846c7.webp", category: 'classic', highlights: ['D400 最美公路', '地中海滑翔伞', '内陆双飞接驳'], path: '/itineraries/s2-turkey-8-days' },
+      { id: 's4', title: 'S4-土耳其 10 日全景文化之旅', location: '全境环线 / 特罗亚', duration: '10天', price: 10349, image: "/img/remote/u-1689130033373-2773b6029aea.webp", category: 'classic', highlights: ['特罗亚古城', '全景文化深度', 'D400最美公路'], path: '/itineraries/s4-turkey-10-days' },
+      { id: 's5', title: 'S5-土耳其 8 日全景文化深度之旅', location: '特罗亚 / 精灵之路', duration: '8天', price: 10349, image: "/img/remote/u-1687706222092-b6545828217d.webp", category: 'classic', highlights: ['特罗亚古城', '精灵烟囱', '伊兹尼克古城'], path: '/itineraries/s5-turkey-8-days' },
       { id: 'z1', title: 'Z1-启示录七教会与圣徒之径 10日', location: '全境巡礼 / 七教会', duration: '10天', price: 12649, image: "https://images.unsplash.com/photo-1543949806-2c9935e6838d?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['启示录七教会', '使徒脚踪探访', '特色洞穴酒店'], path: '/itineraries/z1-turkey-11-days' },
-      { id: 'z2', title: 'Z2-启示录七教会精华 4日朝圣之旅', location: '七教会核心区', duration: '4天', price: 4999, image: "https://images.unsplash.com/photo-1684214190982-f3506653f932?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['七教会精华', '使徒脚踪探访', '温泉圣迹之旅'], path: '/itineraries/z2-revelation-4-days' },
-      { id: 'z5', title: 'Z5-9天8晚·陆路深度基督教朝圣之旅', location: '保罗足迹 / 七教会', duration: '9天8晚', price: 11800, image: "https://images.unsplash.com/photo-1605382628707-0aa0593fba19?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['保罗足迹寻访', '七教会双日巡踪', '卡帕多奇亚信仰记忆'], path: '/itineraries/z5-paul-footsteps-9-days' },
-      { id: 'z6', title: 'Z6-7天6晚·陆路伊城+7教会朝圣之旅', location: '伊斯坦布尔 / 七教会', duration: '7天6晚', price: 9880, image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['伊城深度探访', '七教会陆路朝圣', '圣经讲解祷告'], path: '/itineraries/z6-overland-seven-churches-7-days' },
-      { id: 'i1', title: 'I1-8天7晚·以色列圣地灵修之旅', location: '耶路撒冷 / 加利利 / 伯利恒', duration: '8天7晚', price: 14890, image: "https://images.unsplash.com/photo-1542743408-218cc173cda0?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['加利利事工路线', '耶路撒冷苦路圣迹', '约旦河与死海体验'], path: '/itineraries/i1-israel-holyland-8-days' },
+      { id: 'z2', title: 'Z2-启示录七教会精华 4日朝圣之旅', location: '七教会核心区', duration: '4天', price: 4999, image: "/img/remote/u-1684214190982-f3506653f932.webp", category: 'family', highlights: ['七教会精华', '使徒脚踪探访', '温泉圣迹之旅'], path: '/itineraries/z2-revelation-4-days' },
+      { id: 'z5', title: 'Z5-9天8晚·陆路深度基督教朝圣之旅', location: '保罗足迹 / 七教会', duration: '9天8晚', price: 11800, image: "/img/remote/u-1605382628707-0aa0593fba19.webp", category: 'family', highlights: ['保罗足迹寻访', '七教会双日巡踪', '卡帕多奇亚信仰记忆'], path: '/itineraries/z5-paul-footsteps-9-days' },
+      { id: 'z6', title: 'Z6-7天6晚·陆路伊城+7教会朝圣之旅', location: '伊斯坦布尔 / 七教会', duration: '7天6晚', price: 9880, image: "/img/remote/u-1527838832700-5059252407fa.webp", category: 'family', highlights: ['伊城深度探访', '七教会陆路朝圣', '圣经讲解祷告'], path: '/itineraries/z6-overland-seven-churches-7-days' },
+      { id: 'i1', title: 'I1-8天7晚·以色列圣地灵修之旅', location: '耶路撒冷 / 加利利 / 伯利恒', duration: '8天7晚', price: 14890, image: "/img/remote/u-1542743408-218cc173cda0.webp", category: 'family', highlights: ['加利利事工路线', '耶路撒冷苦路圣迹', '约旦河与死海体验'], path: '/itineraries/i1-israel-holyland-8-days' },
       { id: 'b1', title: 'B1-12天11晚·塞尔维亚+黑山+波黑精品私家团', location: '塞尔维亚 / 黑山 / 波黑', duration: '12天11晚', price: '询价', image: "https://commons.wikimedia.org/wiki/Special:FilePath/Kotor%20and%20Boka%20kotorska%20-%20view%20from%20city%20wall.jpg?width=1200", category: 'balkan', highlights: ['萨拉热窝与莫斯塔尔老城', '科托尔湾与布德瓦海滨', '塔拉大桥 · 乌瓦茨秃鹫峡湾'], path: '/itineraries/b1-balkan-3-countries-12-days' },
       { id: 'b2', title: 'B2-10天9晚·塞尔维亚+黑山+波黑精品团', location: '塞尔维亚 / 黑山 / 波黑', duration: '10天9晚', price: '询价', image: "https://commons.wikimedia.org/wiki/Special:FilePath/%C4%90ur%C4%91evi%C4%87a%20Tara%20Bridge%20(by%20Pudelek).JPG?width=1200", category: 'balkan', highlights: ['杜米托尔黑湖与塔拉大桥', '乌瓦茨蛇形峡谷游船', '八字小火车与木头城'], path: '/itineraries/b2-balkan-3-countries-10-days' }
     ],
     ticketsData: [
-      { id: 't1', title: '多尔玛巴赫切宫 (Dolmabahçe Sarayı)', price: 400, includes: ['包含礼宾厅、后宫及绘画博物馆进入权限', '支持官方语音导览', '详情请联系客服'], image: 'https://images.unsplash.com/photo-1601565465051-67971a2d838c?q=80&w=2340&auto=format&fit=crop', category: 'entry' },
+      { id: 't1', title: '多尔玛巴赫切宫 (Dolmabahçe Sarayı)', price: 400, includes: ['包含礼宾厅、后宫及绘画博物馆进入权限', '支持官方语音导览', '详情请联系客服'], image: '/img/remote/u-1601565465051-67971a2d838c.webp', category: 'entry' },
       { id: 't2', title: '耶尔德兹宫 (Yıldız Sarayı)', price: 180, includes: ['包含建筑群及园区参观权限', '支持导览服务', '详情请咨询客服'], image: 'https://cdn.istanbul.com/upload/dolmabahce-skip-the-line-7-853x480.webp', category: 'entry' },
       { id: 't3', title: '贝勒贝伊宫 (Beylerbeyi Sarayı)', price: 150, includes: ['包含宫殿主建筑及海滨花园进入', '精美石雕艺术赏析', '详情请联系客服'], image: 'https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_828/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/alxi5drx8um7tsyhdf0l/博斯普鲁斯海峡游轮两大洲.jpg', category: 'entry' },
-      { id: 't4', title: '绘画博物馆 (Resim Müzesi)', price: 110, includes: ['包含美术馆绘画藏品区域进入权限', '艺术史导览支持', '详情请咨询客服'], image: 'https://images.unsplash.com/photo-1692701824634-677c652fc111?q=80&w=2346&auto=format&fit=crop', category: 'entry' },
-      { id: 't5', title: '伊斯兰文明博物馆 (İslam Medeniyetleri Müzesi)', price: 95, includes: ['包含伊斯兰文明藏品展厅进入权限', '文化历史解读', '详情请咨询客服'], image: 'https://images.unsplash.com/photo-1759930018775-bf3c3fe9bdc6?q=80&w=2340&auto=format&fit=crop', category: 'entry' },
-      { id: 't6', title: '贝伊科兹玻璃与水晶博物馆 (Beykoz Cam ve Billur Müzesi)', price: 85, includes: ['包含玻璃及水晶制品展厅进入权限', '工艺历史讲解', '详情请联系客服'], image: 'https://images.unsplash.com/photo-1605988743975-c9c5b8550a91?q=80&w=2340&auto=format&fit=crop', category: 'entry' },
-      { id: 't7', title: '安卡拉宫 (Ankara Palace)', price: 58, includes: ['包含宫殿大厅及历史区域进入权限', '官方导览支持', '详情请咨询客服'], image: 'https://images.unsplash.com/photo-1699474745854-39fc35d5ba19?q=80&w=2832&auto=format&fit=crop', category: 'entry' },
-      { id: 't8', title: '库楚克苏行宫 (Küçüksu Kasrı)', price: 50, includes: ['包含行宫主建筑进入权限', '花园区域漫步', '详情请联系客服'], image: 'https://images.unsplash.com/photo-1680419928106-1804e2eb432d?q=80&w=2831&auto=format&fit=crop', category: 'entry' },
-      { id: 't9', title: '伊赫拉穆尔行宫 (Ihlamur Kasrı)', price: 50, includes: ['包含行宫区域及花园进入权限', '文化遗产参观', '详情请咨询客服'], image: 'https://images.unsplash.com/photo-1661103112980-2ceae026f17b?q=80&w=2340&auto=format&fit=crop', category: 'entry' },
-      { id: 't10', title: '贝伊科兹梅吉迪耶行宫 (Beykoz Mecidiye Kasrı)', price: 50, includes: ['包含行宫主体及周边区域进入权限', '历史背景说明', '详情请咨询客服'], image: 'https://images.unsplash.com/photo-1665860789948-bfe6ea95d6cf?q=80&w=1917&auto=format&fit=crop', category: 'entry' },
+      { id: 't4', title: '绘画博物馆 (Resim Müzesi)', price: 110, includes: ['包含美术馆绘画藏品区域进入权限', '艺术史导览支持', '详情请咨询客服'], image: '/img/remote/u-1692701824634-677c652fc111.webp', category: 'entry' },
+      { id: 't5', title: '伊斯兰文明博物馆 (İslam Medeniyetleri Müzesi)', price: 95, includes: ['包含伊斯兰文明藏品展厅进入权限', '文化历史解读', '详情请咨询客服'], image: '/img/remote/u-1759930018775-bf3c3fe9bdc6.webp', category: 'entry' },
+      { id: 't6', title: '贝伊科兹玻璃与水晶博物馆 (Beykoz Cam ve Billur Müzesi)', price: 85, includes: ['包含玻璃及水晶制品展厅进入权限', '工艺历史讲解', '详情请联系客服'], image: '/img/remote/u-1605988743975-c9c5b8550a91.webp', category: 'entry' },
+      { id: 't7', title: '安卡拉宫 (Ankara Palace)', price: 58, includes: ['包含宫殿大厅及历史区域进入权限', '官方导览支持', '详情请咨询客服'], image: '/img/remote/u-1699474745854-39fc35d5ba19.webp', category: 'entry' },
+      { id: 't8', title: '库楚克苏行宫 (Küçüksu Kasrı)', price: 50, includes: ['包含行宫主建筑进入权限', '花园区域漫步', '详情请联系客服'], image: '/img/remote/u-1680419928106-1804e2eb432d.webp', category: 'entry' },
+      { id: 't9', title: '伊赫拉穆尔行宫 (Ihlamur Kasrı)', price: 50, includes: ['包含行宫区域及花园进入权限', '文化遗产参观', '详情请咨询客服'], image: '/img/remote/u-1661103112980-2ceae026f17b.webp', category: 'entry' },
+      { id: 't10', title: '贝伊科兹梅吉迪耶行宫 (Beykoz Mecidiye Kasrı)', price: 50, includes: ['包含行宫主体及周边区域进入权限', '历史背景说明', '详情请咨询客服'], image: '/img/remote/u-1665860789948-bfe6ea95d6cf.webp', category: 'entry' },
       { id: 't11', title: '艾纳勒卡瓦克行宫 (Aynalıkavak Kasrı)', price: 50, includes: ['包含行宫建筑及乐器收藏区域进入', '详情请咨询客服'], image: 'https://cdn.kulturenvanteri.com/wp-content/uploads/2019/11/Aynalikavak-Kasri-1-1024x683.jpg', category: 'entry' },
-      { id: 't12', title: '马斯拉克行宫 (Maslak Kasrı)', price: 50, includes: ['包含行宫群落及温室区域进入权限', '详情请咨询客服'], image: 'https://images.unsplash.com/photo-1766778834237-34aeabf4d9b2?q=80&w=2340&auto=format&fit=crop', category: 'entry' }
+      { id: 't12', title: '马斯拉克行宫 (Maslak Kasrı)', price: 50, includes: ['包含行宫群落及温室区域进入权限', '详情请咨询客服'], image: '/img/remote/u-1766778834237-34aeabf4d9b2.webp', category: 'entry' }
     ],
     faqs: [
       { q: '如何预订恩途的旅行服务？', a: '您可以浏览线路并点击“立即定制”.我们将优先通过微信、邮件与您确认细节，确保行程完美衔接。' },
@@ -2235,10 +2235,10 @@ export const translations: Record<Language, BaseTranslations> = {
       sections: {
         title: "Detaylı Program",
         days: [
-          { day: "01", title: "İstanbul → Bergama → Thyatira → İzmir", stay: "İzmir 5 Yıldızlı Otel", image: "https://images.unsplash.com/photo-1715080271610-c177c424aa6d", paragraphs: ["İstanbul'dan yola çıkarak Batı Anadolu'ya giriyoruz. İlk durağımız antik dünyanın en büyük kütüphanelerinden birine ev sahipliği yapan Bergama.", "Ardından elçilerin mektuplarında adı geçen Thyatira'yı ziyaret ederek İzmir'e ulaşıyoruz."], meals: { breakfast: "/", lunch: "Var", dinner: "/" } },
-          { day: "02", title: "İzmir → Meryem Ana → Aziz Yuhanna → Efes", stay: "İzmir 5 Yıldızlı Otel", image: "https://images.unsplash.com/photo-1684214190982-f3506653f932", paragraphs: ["Hristiyanlık tarihinin kalbine yolculuk. Meryem Ana Evi ve Aziz Yuhanna Bazilikası'nda ruhani bir deneyim.", "Öğleden sonra Efes Antik Kenti'nde Roma döneminin ihtişamını keşfediyoruz."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
-          { day: "03", title: "Sardis → Philadelphia → Laodikya → Pamukkale", stay: "Termal Otel", image: "https://images.unsplash.com/photo-1718227973712-fa3c9b1fda6e", paragraphs: ["Antik Lidya krallığının başkenti Sardis ve 'Kardeşlik Sevgisi' şehri Philadelphia ziyaretleri.", "Öğleden sonra Laodikya'yı gezip Pamukkale'deki termal otelimizde dinleniyoruz."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
-          { day: "04", title: "Hierapolis (Pamukkale) → İstanbul", stay: "Dönüş", image: "https://images.unsplash.com/photo-1708251088223-e56cd382e8c6", paragraphs: ["Hierapolis antik kenti ve Pamukkale travertenlerinde sabah yürüyüşü.", "Ardından İstanbul'a dönüş yolculuğuna başlıyoruz."], meals: { breakfast: "Otel", lunch: "Var", dinner: "/" } }
+          { day: "01", title: "İstanbul → Bergama → Thyatira → İzmir", stay: "İzmir 5 Yıldızlı Otel", image: "/img/remote/u-1715080271610-c177c424aa6d.webp", paragraphs: ["İstanbul'dan yola çıkarak Batı Anadolu'ya giriyoruz. İlk durağımız antik dünyanın en büyük kütüphanelerinden birine ev sahipliği yapan Bergama.", "Ardından elçilerin mektuplarında adı geçen Thyatira'yı ziyaret ederek İzmir'e ulaşıyoruz."], meals: { breakfast: "/", lunch: "Var", dinner: "/" } },
+          { day: "02", title: "İzmir → Meryem Ana → Aziz Yuhanna → Efes", stay: "İzmir 5 Yıldızlı Otel", image: "/img/remote/u-1684214190982-f3506653f932.webp", paragraphs: ["Hristiyanlık tarihinin kalbine yolculuk. Meryem Ana Evi ve Aziz Yuhanna Bazilikası'nda ruhani bir deneyim.", "Öğleden sonra Efes Antik Kenti'nde Roma döneminin ihtişamını keşfediyoruz."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
+          { day: "03", title: "Sardis → Philadelphia → Laodikya → Pamukkale", stay: "Termal Otel", image: "/img/remote/u-1718227973712-fa3c9b1fda6e.webp", paragraphs: ["Antik Lidya krallığının başkenti Sardis ve 'Kardeşlik Sevgisi' şehri Philadelphia ziyaretleri.", "Öğleden sonra Laodikya'yı gezip Pamukkale'deki termal otelimizde dinleniyoruz."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
+          { day: "04", title: "Hierapolis (Pamukkale) → İstanbul", stay: "Dönüş", image: "/img/remote/u-1708251088223-e56cd382e8c6.webp", paragraphs: ["Hierapolis antik kenti ve Pamukkale travertenlerinde sabah yürüyüşü.", "Ardından İstanbul'a dönüş yolculuğuna başlıyoruz."], meals: { breakfast: "Otel", lunch: "Var", dinner: "/" } }
         ]
       },
       notices: {
@@ -2305,15 +2305,15 @@ export const translations: Record<Language, BaseTranslations> = {
       sections: {
         title: "Detaylı Program",
         days: [
-          { day: "01", title: "İstanbul'a Varış | Yolculuğun Resmi Başlangıcı", stay: "İstanbul Oteli", image: "https://images.unsplash.com/photo-1527838832700-5059252407fa", paragraphs: ["İstanbul'a varışın ardından havalimanında karşılama ve otele transfer gerçekleştirilir. İlk gün, grubun ritmine uyum sağlaması için daha sakin tutulur.", "Akşam Türk usulü karşılama yemeği ile Pavlus'un izlerini ve ilk kilise tarihini merkeze alan bu kara yolu yolculuğu resmen başlar."], meals: { breakfast: "/", lunch: "/", dinner: "Var" } },
-          { day: "02", title: "İstanbul'dan Ankara'ya | Boğaz ve İç Anadolu'ya Geçiş", stay: "Ankara Oteli", image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b", paragraphs: ["Güne Boğaz turu ve Sultanahmet Camii ziyareti ile başlanır. Böylece yolculuk, iki kıta ve çok katmanlı imparatorluk hafızası eşliğinde derin bir tarih duygusuyla açılır.", "Ardından otobüsle Ankara'ya geçilerek Anadolu iç hatlarına giriş yapılır."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
-          { day: "03", title: "Ankara, Tuz Gölü ve Kapadokya | Cumhuriyet ve Bozkır", stay: "Kapadokya Oteli", image: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963", paragraphs: ["Ankara'da Anıtkabir ziyaretinin ardından Tuz Gölü'ne geçilir ve İç Anadolu'nun geniş coğrafi karakteri hissedilir.", "Öğleden sonra Kapadokya'da ATV deneyimi ve Gül Vadisi gün batımı ile, erken Hristiyan hafızasının taş ve ışıkla birleştiği bölgeye giriş yapılır."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
-          { day: "04", title: "Kapadokya Derinliği | Kaya Kiliseleri ve Yeraltı İnancı", stay: "Kapadokya Oteli", image: "https://images.unsplash.com/photo-1686257558166-a13a257b5dc1", paragraphs: ["Göreme Açık Hava Müzesi'nde kaya kiliseleri ve freskler incelenir; ardından Kaymaklı benzeri bir yeraltı şehrine inilerek ilk imanlıların korunma ve ibadet düzeni düşünülür.", "Bu gün, Kutsal Kitap paylaşımı, dua zamanı ve sessiz tefekkür için özellikle uygundur."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
-          { day: "05", title: "Konya'dan Pamukkale'ye | İpek Yolu Hatırası", stay: "Pamukkale Oteli", image: "https://images.unsplash.com/photo-1718227973712-fa3c9b1fda6e", paragraphs: ["Konya üzerinden ilerlenir ve Sultanhanı Kervansarayı'nda mola verilerek Anadolu'nun eski ticaret yolları hissedilir.", "Akşam Pamukkale'ye varışla birlikte Yedi Kilise eksenli ikinci bölüm için hazırlık tamamlanır."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
-          { day: "06", title: "Yedi Kilise İzleri I | Hierapolis, Laodikya, Philadelphia, Sardis", stay: "İzmir / Kuşadası Oteli", image: "https://images.unsplash.com/photo-1718227973712-fa3c9b1fda6e", paragraphs: ["Hierapolis ve Pamukkale travertenlerinden sonra Laodikya, Philadelphia ve Sardis ziyaret edilir.", "Şifa, zenginlik, ruhsal uyanıklık ve sadakat gibi temalar, aynı gün içinde tek bir kutsal coğrafya çizgisinde görünür hale gelir."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
-          { day: "07", title: "Yedi Kilise İzleri II | Efes, İzmir ve Thyatira", stay: "İzmir / Kuşadası Oteli", image: "https://images.unsplash.com/photo-1684214190982-f3506653f932", paragraphs: ["Efes Antik Kenti gezilir; ardından İzmir Agorası ve Thyatira kalıntıları üzerinden erken kilise hafızası izlenir.", "Yol üzerinde bölgesel kültürel deneyimin bir parçası olarak deri işçiliği gösterimi düzenlenebilir."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
-          { day: "08", title: "Bergama, Troya ve İskenderiye Troas | Destan ve Misyon Ufku", stay: "Çanakkale Oteli", image: "https://images.unsplash.com/photo-1715080271610-c177c424aa6d", paragraphs: ["Teleferikle Bergama Akropolü'ne çıkılır; ardından Troya kalıntılarında efsane, arkeoloji ve tarih yan yana okunur.", "İskenderiye Troas liman alanı ile birlikte bakıldığında gün, erken Hristiyanlığın daha geniş hareket sahasını da görünür kılar."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
-          { day: "09", title: "İstanbul'a Dönüş | Köprü, Panorama ve Kapanış", stay: "Dönüş", image: "https://images.unsplash.com/photo-1605382628707-0aa0593fba19", paragraphs: ["1915 Çanakkale Köprüsü üzerinden yeniden Avrupa yakasına geçilir ve İstanbul'a ulaşılır. Çamlıca Tepesi'nde son panorama ve değerlendirme yapılır.", "Uçuş saatine göre havalimanı transferi gerçekleştirilir; dua, şükran ve genel toparlama ile tur sona erer."], meals: { breakfast: "Otel", lunch: "Var", dinner: "/" } }
+          { day: "01", title: "İstanbul'a Varış | Yolculuğun Resmi Başlangıcı", stay: "İstanbul Oteli", image: "/img/remote/u-1527838832700-5059252407fa.webp", paragraphs: ["İstanbul'a varışın ardından havalimanında karşılama ve otele transfer gerçekleştirilir. İlk gün, grubun ritmine uyum sağlaması için daha sakin tutulur.", "Akşam Türk usulü karşılama yemeği ile Pavlus'un izlerini ve ilk kilise tarihini merkeze alan bu kara yolu yolculuğu resmen başlar."], meals: { breakfast: "/", lunch: "/", dinner: "Var" } },
+          { day: "02", title: "İstanbul'dan Ankara'ya | Boğaz ve İç Anadolu'ya Geçiş", stay: "Ankara Oteli", image: "/img/remote/u-1541432901042-2d8bd64b4a9b.webp", paragraphs: ["Güne Boğaz turu ve Sultanahmet Camii ziyareti ile başlanır. Böylece yolculuk, iki kıta ve çok katmanlı imparatorluk hafızası eşliğinde derin bir tarih duygusuyla açılır.", "Ardından otobüsle Ankara'ya geçilerek Anadolu iç hatlarına giriş yapılır."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
+          { day: "03", title: "Ankara, Tuz Gölü ve Kapadokya | Cumhuriyet ve Bozkır", stay: "Kapadokya Oteli", image: "/img/remote/u-1516483638261-f4dbaf036963.webp", paragraphs: ["Ankara'da Anıtkabir ziyaretinin ardından Tuz Gölü'ne geçilir ve İç Anadolu'nun geniş coğrafi karakteri hissedilir.", "Öğleden sonra Kapadokya'da ATV deneyimi ve Gül Vadisi gün batımı ile, erken Hristiyan hafızasının taş ve ışıkla birleştiği bölgeye giriş yapılır."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
+          { day: "04", title: "Kapadokya Derinliği | Kaya Kiliseleri ve Yeraltı İnancı", stay: "Kapadokya Oteli", image: "/img/remote/u-1686257558166-a13a257b5dc1.webp", paragraphs: ["Göreme Açık Hava Müzesi'nde kaya kiliseleri ve freskler incelenir; ardından Kaymaklı benzeri bir yeraltı şehrine inilerek ilk imanlıların korunma ve ibadet düzeni düşünülür.", "Bu gün, Kutsal Kitap paylaşımı, dua zamanı ve sessiz tefekkür için özellikle uygundur."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
+          { day: "05", title: "Konya'dan Pamukkale'ye | İpek Yolu Hatırası", stay: "Pamukkale Oteli", image: "/img/remote/u-1718227973712-fa3c9b1fda6e.webp", paragraphs: ["Konya üzerinden ilerlenir ve Sultanhanı Kervansarayı'nda mola verilerek Anadolu'nun eski ticaret yolları hissedilir.", "Akşam Pamukkale'ye varışla birlikte Yedi Kilise eksenli ikinci bölüm için hazırlık tamamlanır."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
+          { day: "06", title: "Yedi Kilise İzleri I | Hierapolis, Laodikya, Philadelphia, Sardis", stay: "İzmir / Kuşadası Oteli", image: "/img/remote/u-1718227973712-fa3c9b1fda6e.webp", paragraphs: ["Hierapolis ve Pamukkale travertenlerinden sonra Laodikya, Philadelphia ve Sardis ziyaret edilir.", "Şifa, zenginlik, ruhsal uyanıklık ve sadakat gibi temalar, aynı gün içinde tek bir kutsal coğrafya çizgisinde görünür hale gelir."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
+          { day: "07", title: "Yedi Kilise İzleri II | Efes, İzmir ve Thyatira", stay: "İzmir / Kuşadası Oteli", image: "/img/remote/u-1684214190982-f3506653f932.webp", paragraphs: ["Efes Antik Kenti gezilir; ardından İzmir Agorası ve Thyatira kalıntıları üzerinden erken kilise hafızası izlenir.", "Yol üzerinde bölgesel kültürel deneyimin bir parçası olarak deri işçiliği gösterimi düzenlenebilir."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
+          { day: "08", title: "Bergama, Troya ve İskenderiye Troas | Destan ve Misyon Ufku", stay: "Çanakkale Oteli", image: "/img/remote/u-1715080271610-c177c424aa6d.webp", paragraphs: ["Teleferikle Bergama Akropolü'ne çıkılır; ardından Troya kalıntılarında efsane, arkeoloji ve tarih yan yana okunur.", "İskenderiye Troas liman alanı ile birlikte bakıldığında gün, erken Hristiyanlığın daha geniş hareket sahasını da görünür kılar."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
+          { day: "09", title: "İstanbul'a Dönüş | Köprü, Panorama ve Kapanış", stay: "Dönüş", image: "/img/remote/u-1605382628707-0aa0593fba19.webp", paragraphs: ["1915 Çanakkale Köprüsü üzerinden yeniden Avrupa yakasına geçilir ve İstanbul'a ulaşılır. Çamlıca Tepesi'nde son panorama ve değerlendirme yapılır.", "Uçuş saatine göre havalimanı transferi gerçekleştirilir; dua, şükran ve genel toparlama ile tur sona erer."], meals: { breakfast: "Otel", lunch: "Var", dinner: "/" } }
         ]
       },
       notices: {
@@ -2378,13 +2378,13 @@ export const translations: Record<Language, BaseTranslations> = {
       sections: {
         title: "Detaylı Program",
         days: [
-          { day: "01", title: "İstanbul'a Varış | İmparatorluk Şehrine İlk Bakış", stay: "İstanbul Oteli", image: "https://images.unsplash.com/photo-1527838832700-5059252407fa", paragraphs: ["İstanbul havalimanında karşılamanın ardından Sultanahmet bölgesine geçilir. Sultanahmet Meydanı ve Sultanahmet Camii ziyareti ile yolculuk, eski imparatorluk başkentinin kalbinde başlar.", "Akşam Türk usulü karşılama yemeği ile grubun ritmi kurulur ve sonraki hac günlerine hazırlık yapılır."], meals: { breakfast: "/", lunch: "/", dinner: "Var" } },
-          { day: "02", title: "İstanbul Derinliği | Boğaz, Çarşı ve Şehrin Nabzı", stay: "Aktarma Oteli", image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b", paragraphs: ["Boğaz tekne turu ile Avrupa ve Asya kıyıları birlikte görülür; ardından Mısır Çarşısı'nda İstanbul'un gündelik ticaret hayatı deneyimlenir.", "T1 hattı ve İstiklal Caddesi çevresinde yapılan yürüyüşten sonra Galata Kulesi dışarıdan görülür. Akşam kara yolu planına göre iç hatlara doğru ilerlenir."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
-          { day: "03", title: "Bergama ve Thyatira | Baskı Altında Sadakat", stay: "İzmir Oteli", image: "https://images.unsplash.com/photo-1715080271610-c177c424aa6d", paragraphs: ["Bergama antik alanında akropol, Trajan Tapınağı çevresi ve Asklepion mirası üzerinden kentin siyasi ve ruhani etkisi ele alınır.", "Daha sonra Thyatira kalıntılarına geçilir ve erken dönem imanlılarının imparatorluk kültü ile ticari baskılar arasında nasıl direndiği üzerine paylaşım yapılır."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
-          { day: "04", title: "Dört Şehir Ziyareti | Şehadet, Uyanış ve Açık Kapı", stay: "Pamukkale Oteli", image: "https://images.unsplash.com/photo-1684214190982-f3506653f932", paragraphs: ["İzmir Roma Agorası'nda Polikarp'ın tanıklığı hatırlanır. Ardından Efes'te mermer caddeler, büyük tiyatro ve Celsus Kütüphanesi alanı ziyaret edilir.", "Günün ikinci yarısında Sardis ve Philadelphia üzerinden, ruhsal olarak 'adı var ama özü yok' uyarısı ile 'açık kapı' vaadi birlikte değerlendirilir."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
-          { day: "05", title: "Pamukkale, Hierapolis ve Laodikya | Bereket İçinde Uyanık Kalmak", stay: "Pamukkale Oteli", image: "https://images.unsplash.com/photo-1718227973712-fa3c9b1fda6e", paragraphs: ["Pamukkale travertenleri ve Hierapolis antik kenti gezilir; doğal güzellik ile erken kilise tarihinde şifa, tanıklık ve sabır temaları birlikte düşünülür.", "Sonrasında Laodikya'ya geçilerek su kanalları ve kent kalıntıları üzerinden maddi zenginlik ile ruhsal soğukluk arasındaki tezat üzerinde durulur."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
-          { day: "06", title: "İskenderiye Troas | Makedonya Çağrısının Eşiği", stay: "İstanbul Oteli", image: "https://images.unsplash.com/photo-1715080271610-c177c424aa6d", paragraphs: ["İskenderiye Troas ve antik liman alanında Pavlus'un Makedonya çağrısı vizyonu hatırlanır; müjdenin yön değiştiren tarihsel eşiği sahada değerlendirilir.", "İstanbul'a dönüş yolunda ekip lideri, Yedi Kilise boyunca öne çıkan ruhsal dersleri paylaşım ve dua ile özetleyebilir."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
-          { day: "07", title: "Çamlıca Tepesi ve Dönüş | Son Ruhani Toparlanma", stay: "Dönüş", image: "https://images.unsplash.com/photo-1605382628707-0aa0593fba19", paragraphs: ["Sabah Çamlıca Tepesi'nden İstanbul panoraması izlenir ve yolculuğun tamamı için son bir şükran ve değerlendirme zamanı ayrılır.", "Ruhani kapanış, kısa dua ve pratik bilgilendirmenin ardından havalimanına transfer gerçekleştirilir."], meals: { breakfast: "Otel", lunch: "/", dinner: "/" } }
+          { day: "01", title: "İstanbul'a Varış | İmparatorluk Şehrine İlk Bakış", stay: "İstanbul Oteli", image: "/img/remote/u-1527838832700-5059252407fa.webp", paragraphs: ["İstanbul havalimanında karşılamanın ardından Sultanahmet bölgesine geçilir. Sultanahmet Meydanı ve Sultanahmet Camii ziyareti ile yolculuk, eski imparatorluk başkentinin kalbinde başlar.", "Akşam Türk usulü karşılama yemeği ile grubun ritmi kurulur ve sonraki hac günlerine hazırlık yapılır."], meals: { breakfast: "/", lunch: "/", dinner: "Var" } },
+          { day: "02", title: "İstanbul Derinliği | Boğaz, Çarşı ve Şehrin Nabzı", stay: "Aktarma Oteli", image: "/img/remote/u-1541432901042-2d8bd64b4a9b.webp", paragraphs: ["Boğaz tekne turu ile Avrupa ve Asya kıyıları birlikte görülür; ardından Mısır Çarşısı'nda İstanbul'un gündelik ticaret hayatı deneyimlenir.", "T1 hattı ve İstiklal Caddesi çevresinde yapılan yürüyüşten sonra Galata Kulesi dışarıdan görülür. Akşam kara yolu planına göre iç hatlara doğru ilerlenir."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
+          { day: "03", title: "Bergama ve Thyatira | Baskı Altında Sadakat", stay: "İzmir Oteli", image: "/img/remote/u-1715080271610-c177c424aa6d.webp", paragraphs: ["Bergama antik alanında akropol, Trajan Tapınağı çevresi ve Asklepion mirası üzerinden kentin siyasi ve ruhani etkisi ele alınır.", "Daha sonra Thyatira kalıntılarına geçilir ve erken dönem imanlılarının imparatorluk kültü ile ticari baskılar arasında nasıl direndiği üzerine paylaşım yapılır."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
+          { day: "04", title: "Dört Şehir Ziyareti | Şehadet, Uyanış ve Açık Kapı", stay: "Pamukkale Oteli", image: "/img/remote/u-1684214190982-f3506653f932.webp", paragraphs: ["İzmir Roma Agorası'nda Polikarp'ın tanıklığı hatırlanır. Ardından Efes'te mermer caddeler, büyük tiyatro ve Celsus Kütüphanesi alanı ziyaret edilir.", "Günün ikinci yarısında Sardis ve Philadelphia üzerinden, ruhsal olarak 'adı var ama özü yok' uyarısı ile 'açık kapı' vaadi birlikte değerlendirilir."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
+          { day: "05", title: "Pamukkale, Hierapolis ve Laodikya | Bereket İçinde Uyanık Kalmak", stay: "Pamukkale Oteli", image: "/img/remote/u-1718227973712-fa3c9b1fda6e.webp", paragraphs: ["Pamukkale travertenleri ve Hierapolis antik kenti gezilir; doğal güzellik ile erken kilise tarihinde şifa, tanıklık ve sabır temaları birlikte düşünülür.", "Sonrasında Laodikya'ya geçilerek su kanalları ve kent kalıntıları üzerinden maddi zenginlik ile ruhsal soğukluk arasındaki tezat üzerinde durulur."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
+          { day: "06", title: "İskenderiye Troas | Makedonya Çağrısının Eşiği", stay: "İstanbul Oteli", image: "/img/remote/u-1715080271610-c177c424aa6d.webp", paragraphs: ["İskenderiye Troas ve antik liman alanında Pavlus'un Makedonya çağrısı vizyonu hatırlanır; müjdenin yön değiştiren tarihsel eşiği sahada değerlendirilir.", "İstanbul'a dönüş yolunda ekip lideri, Yedi Kilise boyunca öne çıkan ruhsal dersleri paylaşım ve dua ile özetleyebilir."], meals: { breakfast: "Otel", lunch: "Var", dinner: "Var" } },
+          { day: "07", title: "Çamlıca Tepesi ve Dönüş | Son Ruhani Toparlanma", stay: "Dönüş", image: "/img/remote/u-1605382628707-0aa0593fba19.webp", paragraphs: ["Sabah Çamlıca Tepesi'nden İstanbul panoraması izlenir ve yolculuğun tamamı için son bir şükran ve değerlendirme zamanı ayrılır.", "Ruhani kapanış, kısa dua ve pratik bilgilendirmenin ardından havalimanına transfer gerçekleştirilir."], meals: { breakfast: "Otel", lunch: "/", dinner: "/" } }
         ]
       },
       notices: {
@@ -2398,29 +2398,29 @@ export const translations: Record<Language, BaseTranslations> = {
       }
     },
     toursData: [
-      { id: '1', title: 'S1-Istanbul & Kapadokya 6 Gün', location: 'Istanbul / Kapadokya', duration: '6 Gün', price: 6999, image: 'https://images.unsplash.com/photo-1636021597151-cc28dacd915c?auto=format&fit=crop&w=1200&q=80', category: 'classic', highlights: ['Gün Doğumu Balonları', 'Ebru Atölyesi', 'Dijital Efes Müzesi'], path: '/itineraries/s1-turkey-6-days' },
-      { id: 's2', title: 'S2-Ege’den Anadolu’ya 8 Günlük Panorama', location: 'Çok Şehirli / D400', duration: '8 Gün', price: 8999, image: "https://images.unsplash.com/photo-1596093145026-f6af675846c7?q=80&w=2148&auto=format&fit=crop", category: 'classic', highlights: ['D400 Sahil Yolu', 'Efes ve Pamukkale', 'Çift İç Hat Uçuşu'], path: '/itineraries/s2-turkey-8-days' },
-      { id: 's4', title: 'S4-Türkiye 10 Günlük Panorama Kültür Turu', location: 'Çok Şehirli / Troy', duration: '10 Gün', price: 8999, image: "https://images.unsplash.com/photo-1689130033373-2773b6029aea?q=80&w=2148&auto=format&fit=crop", category: 'classic', highlights: ['Efsanevi Troy', 'Boğaz Gezisi', 'Antik Miras'], path: '/itineraries/s4-turkey-10-days' },
-      { id: 's5', title: 'S5-Türkiye 8 Günlük Derin Kültür Yolculuğu', location: 'Troy / Eğirdir', duration: '8 Gün', price: 8999, image: "https://images.unsplash.com/photo-1687706222092-b6545828217d?q=80&w=2340&auto=format&fit=crop", category: 'classic', highlights: ['Antik Troy', 'Eğirdir Gölü', 'İznik Konsili İzleri'], path: '/itineraries/s5-turkey-8-days' },
+      { id: '1', title: 'S1-Istanbul & Kapadokya 6 Gün', location: 'Istanbul / Kapadokya', duration: '6 Gün', price: 6999, image: '/img/remote/u-1636021597151-cc28dacd915c.webp', category: 'classic', highlights: ['Gün Doğumu Balonları', 'Ebru Atölyesi', 'Dijital Efes Müzesi'], path: '/itineraries/s1-turkey-6-days' },
+      { id: 's2', title: 'S2-Ege’den Anadolu’ya 8 Günlük Panorama', location: 'Çok Şehirli / D400', duration: '8 Gün', price: 8999, image: "/img/remote/u-1596093145026-f6af675846c7.webp", category: 'classic', highlights: ['D400 Sahil Yolu', 'Efes ve Pamukkale', 'Çift İç Hat Uçuşu'], path: '/itineraries/s2-turkey-8-days' },
+      { id: 's4', title: 'S4-Türkiye 10 Günlük Panorama Kültür Turu', location: 'Çok Şehirli / Troy', duration: '10 Gün', price: 8999, image: "/img/remote/u-1689130033373-2773b6029aea.webp", category: 'classic', highlights: ['Efsanevi Troy', 'Boğaz Gezisi', 'Antik Miras'], path: '/itineraries/s4-turkey-10-days' },
+      { id: 's5', title: 'S5-Türkiye 8 Günlük Derin Kültür Yolculuğu', location: 'Troy / Eğirdir', duration: '8 Gün', price: 8999, image: "/img/remote/u-1687706222092-b6545828217d.webp", category: 'classic', highlights: ['Antik Troy', 'Eğirdir Gölü', 'İznik Konsili İzleri'], path: '/itineraries/s5-turkey-8-days' },
       { id: 'z1', title: 'Z1-Yedi Kilise ve Azizler Yolu 10 Gün', location: 'İnanç Rotası / Yedi Kilise', duration: '10 Gün', price: 10999, image: "https://images.unsplash.com/photo-1543949806-2c9935e6838d?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['Yedi Kilise', 'Elçilerin İzleri', 'Butik Mağara Otelleri'], path: '/itineraries/z1-turkey-11-days' },
-      { id: 'z2', title: 'Z2-Vahiy Yedi Kilise Özeti 4 Günlük Hac Turu', location: 'Yedi Kilise Ana Hattı', duration: '4 Gün', price: 3999, image: "https://images.unsplash.com/photo-1684214190982-f3506653f932?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['Yedi Kilise Özeti', 'Elçisel İzler', 'Termal Kutsal Rota'], path: '/itineraries/z2-revelation-4-days' },
-      { id: 'z5', title: 'Z5-9 Gün 8 Gece Kara Yolu Derin Hac Turu', location: "Pavlus'un İzleri / Yedi Kilise", duration: '9 Gün 8 Gece', price: 11800, image: "https://images.unsplash.com/photo-1605382628707-0aa0593fba19?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ["Pavlus'un İzleri", 'Yedi Kilise Rotası', 'Kapadokya İnanç Hafızası'], path: '/itineraries/z5-paul-footsteps-9-days' },
-      { id: 'z6', title: 'Z6-7 Gün 6 Gece Kara Yolu İstanbul + 7 Kilise', location: 'İstanbul / Yedi Kilise', duration: '7 Gün 6 Gece', price: 9880, image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['İstanbul Derinliği', 'Yedi Kilise Hac Rotası', 'Dua ve Kutsal Kitap Paylaşımı'], path: '/itineraries/z6-overland-seven-churches-7-days' },
-      { id: 'i1', title: 'I1-Israil Kutsal Topraklar Yolculugu 8 Gun 7 Gece', location: 'Kudus / Celile / Beytullahim', duration: '8 Gun 7 Gece', price: 2165, image: "https://images.unsplash.com/photo-1542743408-218cc173cda0?q=80&w=1200&auto=format&fit=crop", category: 'family', highlights: ['Celile Hizmet Rotasi', 'Kudus Cilehane Hatti', 'Urdun Nehri ve Olu Deniz'], path: '/itineraries/i1-israel-holyland-8-days' }
+      { id: 'z2', title: 'Z2-Vahiy Yedi Kilise Özeti 4 Günlük Hac Turu', location: 'Yedi Kilise Ana Hattı', duration: '4 Gün', price: 3999, image: "/img/remote/u-1684214190982-f3506653f932.webp", category: 'family', highlights: ['Yedi Kilise Özeti', 'Elçisel İzler', 'Termal Kutsal Rota'], path: '/itineraries/z2-revelation-4-days' },
+      { id: 'z5', title: 'Z5-9 Gün 8 Gece Kara Yolu Derin Hac Turu', location: "Pavlus'un İzleri / Yedi Kilise", duration: '9 Gün 8 Gece', price: 11800, image: "/img/remote/u-1605382628707-0aa0593fba19.webp", category: 'family', highlights: ["Pavlus'un İzleri", 'Yedi Kilise Rotası', 'Kapadokya İnanç Hafızası'], path: '/itineraries/z5-paul-footsteps-9-days' },
+      { id: 'z6', title: 'Z6-7 Gün 6 Gece Kara Yolu İstanbul + 7 Kilise', location: 'İstanbul / Yedi Kilise', duration: '7 Gün 6 Gece', price: 9880, image: "/img/remote/u-1527838832700-5059252407fa.webp", category: 'family', highlights: ['İstanbul Derinliği', 'Yedi Kilise Hac Rotası', 'Dua ve Kutsal Kitap Paylaşımı'], path: '/itineraries/z6-overland-seven-churches-7-days' },
+      { id: 'i1', title: 'I1-Israil Kutsal Topraklar Yolculugu 8 Gun 7 Gece', location: 'Kudus / Celile / Beytullahim', duration: '8 Gun 7 Gece', price: 2165, image: "/img/remote/u-1542743408-218cc173cda0.webp", category: 'family', highlights: ['Celile Hizmet Rotasi', 'Kudus Cilehane Hatti', 'Urdun Nehri ve Olu Deniz'], path: '/itineraries/i1-israel-holyland-8-days' }
     ],
     ticketsData: [
-      { id: 't1', title: 'Dolmabahçe Palace (Dolmabahçe Sarayı)', price: 400, includes: ['Access to main sections', 'Consult CS for details'], image: 'https://images.unsplash.com/photo-1601565465051-67971a2d838c?q=80&w=2340&auto=format&fit=crop', category: 'entry' },
+      { id: 't1', title: 'Dolmabahçe Palace (Dolmabahçe Sarayı)', price: 400, includes: ['Access to main sections', 'Consult CS for details'], image: '/img/remote/u-1601565465051-67971a2d838c.webp', category: 'entry' },
       { id: 't2', title: 'Yıldız Palace (Yıldız Sarayı)', price: 180, includes: ['Access to complex', 'Consult CS for details'], image: 'https://cdn.istanbul.com/upload/dolmabahce-skip-the-line-7-853x480.webp', category: 'entry' },
       { id: 't3', title: 'Beylerbeyi Palace (Beylerbeyi Sarayı)', price: 150, includes: ['Main palace access', 'Consult CS for details'], image: 'https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_828/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/alxi5drx8um7tsyhdf0l/博斯普鲁斯海峡游轮两大洲.jpg', category: 'entry' },
-      { id: 't4', title: 'Painting Museum (Resim Müzesi)', price: 110, includes: ['Art gallery access', 'Consult CS for details'], image: 'https://images.unsplash.com/photo-1692701824634-677c652fc111?q=80&w=2346&auto=format&fit=crop', category: 'entry' },
-      { id: 't5', title: 'Museum of Islamic Civilizations (İslam Medeniyetleri Müzesi)', price: 95, includes: ['Galleries access', 'Consult CS for details'], image: 'https://images.unsplash.com/photo-1759930018775-bf3c3fe9bdc6?q=80&w=2340&auto=format&fit=crop', category: 'entry' },
-      { id: 't6', title: 'Beykoz Glass Museum (Beykoz Cam Müzesi)', price: 85, includes: ['Museum access', 'Consult CS for details'], image: 'https://images.unsplash.com/photo-1605988743975-c9c5b8550a91?q=80&w=2340&auto=format&fit=crop', category: 'entry' },
-      { id: 't7', title: 'Ankara Palace (Ankara Palace)', price: 58, includes: ['Historic halls access', 'Consult CS for details'], image: 'https://images.unsplash.com/photo-1699474745854-39fc35d5ba19?q=80&w=2832&auto=format&fit=crop', category: 'entry' },
-      { id: 't8', title: 'Küçüksu Pavilion (Küçüksu Kasrı)', price: 50, includes: ['Pavilion access', 'Consult CS for details'], image: 'https://images.unsplash.com/photo-1680419928106-1804e2eb432d?q=80&w=2831&auto=format&fit=crop', category: 'entry' },
-      { id: 't9', title: 'Ihlamur Pavilion (Ihlamur Kasrı)', price: 50, includes: ['Pavilion access', 'Consult CS for details'], image: 'https://images.unsplash.com/photo-1661103112980-2ceae026f17b?q=80&w=2340&auto=format&fit=crop', category: 'entry' },
-      { id: 't10', title: 'Beykoz Mecidiye Pavilion (Beykoz Mecidiye Kasrı)', price: 50, includes: ['Pavilion access', 'Consult CS for details'], image: 'https://images.unsplash.com/photo-1665860789948-bfe6ea95d6cf?q=80&w=1917&auto=format&fit=crop', category: 'entry' },
+      { id: 't4', title: 'Painting Museum (Resim Müzesi)', price: 110, includes: ['Art gallery access', 'Consult CS for details'], image: '/img/remote/u-1692701824634-677c652fc111.webp', category: 'entry' },
+      { id: 't5', title: 'Museum of Islamic Civilizations (İslam Medeniyetleri Müzesi)', price: 95, includes: ['Galleries access', 'Consult CS for details'], image: '/img/remote/u-1759930018775-bf3c3fe9bdc6.webp', category: 'entry' },
+      { id: 't6', title: 'Beykoz Glass Museum (Beykoz Cam Müzesi)', price: 85, includes: ['Museum access', 'Consult CS for details'], image: '/img/remote/u-1605988743975-c9c5b8550a91.webp', category: 'entry' },
+      { id: 't7', title: 'Ankara Palace (Ankara Palace)', price: 58, includes: ['Historic halls access', 'Consult CS for details'], image: '/img/remote/u-1699474745854-39fc35d5ba19.webp', category: 'entry' },
+      { id: 't8', title: 'Küçüksu Pavilion (Küçüksu Kasrı)', price: 50, includes: ['Pavilion access', 'Consult CS for details'], image: '/img/remote/u-1680419928106-1804e2eb432d.webp', category: 'entry' },
+      { id: 't9', title: 'Ihlamur Pavilion (Ihlamur Kasrı)', price: 50, includes: ['Pavilion access', 'Consult CS for details'], image: '/img/remote/u-1661103112980-2ceae026f17b.webp', category: 'entry' },
+      { id: 't10', title: 'Beykoz Mecidiye Pavilion (Beykoz Mecidiye Kasrı)', price: 50, includes: ['Pavilion access', 'Consult CS for details'], image: '/img/remote/u-1665860789948-bfe6ea95d6cf.webp', category: 'entry' },
       { id: 't11', title: 'Aynalıkavak Pavilion (Aynalıkavak Kasrı)', price: 50, includes: ['Pavilion access', 'Consult CS for details'], image: 'https://cdn.kulturenvanteri.com/wp-content/uploads/2019/11/Aynalikavak-Kasri-1-1024x683.jpg', category: 'entry' },
-      { id: 't12', title: 'Maslak Pavilion (Maslak Kasrı)', price: 50, includes: ['Pavilion access', 'Consult CS for details'], image: 'https://images.unsplash.com/photo-1766778834237-34aeabf4d9b2?q=80&w=2340&auto=format&fit=crop', category: 'entry' }
+      { id: 't12', title: 'Maslak Pavilion (Maslak Kasrı)', price: 50, includes: ['Pavilion access', 'Consult CS for details'], image: '/img/remote/u-1766778834237-34aeabf4d9b2.webp', category: 'entry' }
     ],
     faqs: [
       { q: 'Turkiye giris seyahat sigortasi var mi?', a: 'Turkiye giris seyahat sigortasi kisi basi gunluk 20 CNY referans fiyatla sunulur. Teminatlar: Tibbi Tedavi Teminati, Tibbi Nakil ve Cenaze Nakli. Azami odeme tutari 240.000 CNY\'dir.' }
@@ -2621,27 +2621,27 @@ export const translations: Record<Language, BaseTranslations> = {
       cta_plan: 'Detay Plan İste',
       images: {
         coverImage:
-          'https://images.unsplash.com/photo-1596093145026-f6af675846c7?q=80&w=2148&auto=format&fit=crop',
+          '/img/remote/u-1596093145026-f6af675846c7.webp',
         heroImage:
-          'https://images.unsplash.com/photo-1689130033373-2773b6029aea?q=80&w=2148&auto=format&fit=crop',
+          '/img/remote/u-1689130033373-2773b6029aea.webp',
         cardImage:
-          'https://images.unsplash.com/photo-1697457661409-0adc99b64647?q=80&w=2340&auto=format&fit=crop',
+          '/img/remote/u-1697457661409-0adc99b64647.webp',
         day1Image:
-          'https://images.unsplash.com/photo-1665051153829-82fc1acb59e6?q=80&w=2340&auto=format&fit=crop',
+          '/img/remote/u-1665051153829-82fc1acb59e6.webp',
         day2Image:
-          'https://images.unsplash.com/photo-1708251088223-e56cd382e8c6?q=80&w=2832&auto=format&fit=crop',
+          '/img/remote/u-1708251088223-e56cd382e8c6.webp',
         day3Image:
-          'https://images.unsplash.com/photo-1686428007573-f4a91f2d8bd0?q=80&w=2340&auto=format&fit=crop',
+          '/img/remote/u-1686428007573-f4a91f2d8bd0.webp',
         day4Image:
-          'https://images.unsplash.com/photo-1632821629445-bdc26ce3ccf0?q=80&w=2340&auto=format&fit=crop',
+          '/img/remote/u-1632821629445-bdc26ce3ccf0.webp',
         day5Image:
-          'https://images.unsplash.com/photo-1674715577456-49ae7a6945a8?q=80&w=2340&auto=format&fit=crop',
+          '/img/remote/u-1674715577456-49ae7a6945a8.webp',
         day6Image:
-          'https://images.unsplash.com/photo-1643354812958-b648b92dc6c5?q=80&w=2340&auto=format&fit=crop',
+          '/img/remote/u-1643354812958-b648b92dc6c5.webp',
         day7Image:
-          'https://images.unsplash.com/photo-1680204412403-73110934f5aa?q=80&w=2340&auto=format&fit=crop',
+          '/img/remote/u-1680204412403-73110934f5aa.webp',
         day8Image:
-          'https://images.unsplash.com/photo-1624786712432-e021fdf57c48?q=80&w=2832&auto=format&fit=crop'
+          '/img/remote/u-1624786712432-e021fdf57c48.webp'
       },
       audience_title: 'Bu rota kimler için ideal?',
       audience_list: [
@@ -2862,7 +2862,7 @@ export const translations: Record<Language, BaseTranslations> = {
         ctaPrimary: 'Teklif Al',
         ctaSecondary: 'Detay Plan',
         image:
-          'https://images.unsplash.com/photo-1689130033373-2773b6029aea?q=80&w=2148&auto=format&fit=crop'
+          '/img/remote/u-1689130033373-2773b6029aea.webp'
       },
       highlights: {
         title: 'Öne Çıkanlar',
@@ -2966,7 +2966,7 @@ export const translations: Record<Language, BaseTranslations> = {
             title: 'İstanbul → Troy → Çanakkale',
             stay: 'Konaklama: Çanakkale 5★',
             image:
-              'https://images.unsplash.com/photo-1687706222092-b6545828217d?q=80&w=2340&auto=format&fit=crop',
+              '/img/remote/u-1687706222092-b6545828217d.webp',
             paragraphs: [
               'Sabah İstanbul’dan hareketle Marmara Denizi boyunca batıya ilerleyip 1915 Çanakkale Köprüsü’nden geçiyoruz.',
               'UNESCO listesinde yer alan Truva antik kentini gezip, Troya Atı efsanesinin geçtiği toprakları ziyaret ediyoruz.'
@@ -2978,7 +2978,7 @@ export const translations: Record<Language, BaseTranslations> = {
             title: 'Çanakkale → Alaçatı → İzmir → Kuşadası',
             stay: 'Konaklama: Kuşadası 5★',
             image:
-              'https://images.unsplash.com/photo-1701428588034-5893b2512a68?q=80&w=2340&auto=format&fit=crop',
+              '/img/remote/u-1701428588034-5893b2512a68.webp',
             paragraphs: [
               'Sabah Ege’nin sanat köylerinden Alaçatı’da taş evler ve rüzgar gülleri arasında yürüyüş.',
               'İzmir şehir merkezinde kısa tur sonrası, Ege kıyısındaki Kuşadası’na geçiş.'
@@ -2990,7 +2990,7 @@ export const translations: Record<Language, BaseTranslations> = {
             title: 'Efes → Pamukkale',
             stay: 'Konaklama: Pamukkale Termal 5★',
             image:
-              'https://images.unsplash.com/photo-1433854471391-5603c019de62?q=80&w=2340&auto=format&fit=crop',
+              '/img/remote/u-1433854471391-5603c019de62.webp',
             paragraphs: [
               'Sabah Efes antik kentinde Celsus Kütüphanesi ve Büyük Tiyatroyu ziyaret.',
               'Öğleden sonra Pamukkale’ye hareket, travertenler ve Hierapolis antik kentinde gezinti.'
@@ -3002,7 +3002,7 @@ export const translations: Record<Language, BaseTranslations> = {
             title: 'Pamukkale → Fethiye',
             stay: 'Konaklama: Fethiye 5★',
             image:
-              'https://images.unsplash.com/photo-1498222954553-93fc8d1941da?q=80&w=2346&auto=format&fit=crop',
+              '/img/remote/u-1498222954553-93fc8d1941da.webp',
             paragraphs: [
               'Toros Dağları üzerinden Fethiye’ye iniş; Ölüdeniz Mavi Lagün’de fotoğraf ve serbest zaman.',
               'Akşam Fethiye’de sahil yürüyüşü ve eski şehirde keyifli bir akşam.'
@@ -3038,7 +3038,7 @@ export const translations: Record<Language, BaseTranslations> = {
             title: 'Konya → Kapadokya',
             stay: 'Konaklama: Kapadokya Mağara Otel',
             image:
-              'https://images.unsplash.com/photo-1701616857654-8c56b923d80c?q=80&w=1600&auto=format&fit=crop',
+              '/img/remote/u-1701616857654-8c56b923d80c.webp',
             paragraphs: [
               'Sultan Han kervansarayında kısa mola sonrası Kapadokya’ya varış.',
               'Akşam mağara otelde konaklama ve bölgeye alışma.'
@@ -3050,7 +3050,7 @@ export const translations: Record<Language, BaseTranslations> = {
             title: 'Kapadokya Derin Keşif',
             stay: 'Konaklama: Kapadokya Mağara Otel',
             image:
-              'https://images.unsplash.com/photo-1685106748514-d10288e9b535?auto=format&fit=crop&w=1600&q=80',
+              '/img/remote/u-1685106748514-d10288e9b535.webp',
             paragraphs: [
               'Opsiyonel balon deneyimi, Göreme Açık Hava Müzesi ve yeraltı şehirlerinde derin keşif.',
               'Gün batımında vadilerde manzara noktalarına ziyaret.'
@@ -3062,7 +3062,7 @@ export const translations: Record<Language, BaseTranslations> = {
             title: 'Kapadokya → Tuz Gölü → İstanbul',
             stay: 'Konaklama: İstanbul 5★',
             image:
-              'https://images.unsplash.com/photo-1636021597151-cc28dacd915c?auto=format&fit=crop&w=1600&q=80',
+              '/img/remote/u-1636021597151-cc28dacd915c.webp',
             paragraphs: [
               'Kapadokya’dan ayrılıp Tuz Gölü kıyısında fotoğraf molası.',
               'Akşam saatlerinde İstanbul’a varış ve şehir otelinde konaklama.'
@@ -3074,7 +3074,7 @@ export const translations: Record<Language, BaseTranslations> = {
             title: 'İstanbul Klasik Tur → Dönüş',
             stay: 'Konaklama: /',
             image:
-              'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=2148&auto=format&fit=crop',
+              '/img/remote/u-1524231757912-21f4fe3a7200.webp',
             paragraphs: [
               'Ayasofya, Sultanahmet ve Boğaz bölgesinde klasik İstanbul turu.',
               'Uçuş saatine göre serbest zaman ve havalimanına transfer.'
@@ -3130,7 +3130,7 @@ export const translations: Record<Language, BaseTranslations> = {
         ctaPrimary: 'Teklif Al',
         ctaSecondary: 'Plan Görüntüle',
         image:
-          'https://images.unsplash.com/photo-1687706222092-b6545828217d?q=80&w=2340&auto=format&fit=crop'
+          '/img/remote/u-1687706222092-b6545828217d.webp'
       },
       highlights: {
         title: 'Çekirdek Öne Çıkanlar',
@@ -3222,7 +3222,7 @@ export const translations: Record<Language, BaseTranslations> = {
             title: 'İstanbul | İmparatorluk Başkentiyle Tanışma',
             stay: 'Konaklama: İstanbul 5★',
             image:
-              'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=2148&auto=format&fit=crop',
+              '/img/remote/u-1524231757912-21f4fe3a7200.webp',
             paragraphs: [
               'Varış saatine göre Sultanahmet ve çevresinde yumuşak bir şehir yürüyüşü; Ayasofya ve Hipodrom çevresinde dıştan tanıtım.',
               'Akşam, misafirlerin durumuna göre erken dinlenme veya kısa bir Boğaz manzara turu.'
@@ -3234,7 +3234,7 @@ export const translations: Record<Language, BaseTranslations> = {
             title: 'İstanbul → Truva → Çanakkale',
             stay: 'Konaklama: Çanakkale 5★',
             image:
-              'https://images.unsplash.com/photo-1687706222092-b6545828217d?q=80&w=2340&auto=format&fit=crop',
+              '/img/remote/u-1687706222092-b6545828217d.webp',
             paragraphs: [
               '1915 Çanakkale Köprüsü üzerinden geçerek, Asya ve Avrupa kıtalarını birleştiren mühendislik harikasını deneyimliyoruz.',
               'Truva antik kentinde rehber eşliğinde gezi; efsanelerle tarihin nasıl iç içe geçtiğini dinliyorsunuz.'
@@ -3246,7 +3246,7 @@ export const translations: Record<Language, BaseTranslations> = {
             title: 'Çanakkale → İzmir',
             stay: 'Konaklama: İzmir 5★',
             image:
-              'https://images.unsplash.com/photo-1701428588034-5893b2512a68?q=80&w=2340&auto=format&fit=crop',
+              '/img/remote/u-1701428588034-5893b2512a68.webp',
             paragraphs: [
               'Ege kıyı güzergâhı üzerinden İzmir’e yolculuk; Konak Meydanı ve Saat Kulesi çevresinde kısa şehir turu.',
               'Akşam Kordonboyu’nda serbest zaman ve Ege atmosferini hissetme imkânı.'
@@ -3258,7 +3258,7 @@ export const translations: Record<Language, BaseTranslations> = {
             title: 'İzmir → Pamukkale',
             stay: 'Konaklama: Pamukkale 5★',
             image:
-              'https://images.unsplash.com/photo-1708251088223-e56cd382e8c6?q=80&w=2832&auto=format&fit=crop',
+              '/img/remote/u-1708251088223-e56cd382e8c6.webp',
             paragraphs: [
               'İzmir’den ayrılarak iç bölgelere yöneliyoruz; öğleden sonra Pamukkale travertenlerinde yürüyüş ve Hierapolis gezisi.',
               'Akşam termal otelde dinlenme ve spa imkânı.'
@@ -3270,7 +3270,7 @@ export const translations: Record<Language, BaseTranslations> = {
             title: 'Pamukkale → Eğirdir Gölü → Konya',
             stay: 'Konaklama: Konya 5★',
             image:
-              'https://images.unsplash.com/photo-1718227973712-fa3c9b1fda6e?q=80&w=2340&auto=format&fit=crop',
+              '/img/remote/u-1718227973712-fa3c9b1fda6e.webp',
             paragraphs: [
               'Toroslar üzerinden Eğirdir Gölü’ne varış; göl kıyısında sakin yürüyüş ve fotoğraf molası.',
               'Öğleden sonra Anadolu platosu üzerinden Konya’ya geçiş ve Mevlana çevresinde akşam gezisi.'
@@ -3282,7 +3282,7 @@ export const translations: Record<Language, BaseTranslations> = {
             title: 'Konya → Kapadokya (Göreme)',
             stay: 'Konaklama: Kapadokya Mağara Otel',
             image:
-              'https://images.unsplash.com/photo-1701616857654-8c56b923d80c?auto=format&fit=crop&w=1600&q=80',
+              '/img/remote/u-1701616857654-8c56b923d80c.webp',
             paragraphs: [
               'Mevlana Müzesi ziyaretiyle Sufi geleneğini daha yakından tanıyoruz.',
               'Sultan Han kervansarayı üzerinden Kapadokya’ya giriş ve akşam mağara otelde konaklama.'
@@ -3294,7 +3294,7 @@ export const translations: Record<Language, BaseTranslations> = {
             title: 'Kapadokya → Ankara',
             stay: 'Konaklama: Ankara 5★',
             image:
-              'https://images.unsplash.com/photo-1685106748514-d10288e9b535?auto=format&fit=crop&w=1600&q=80',
+              '/img/remote/u-1685106748514-d10288e9b535.webp',
             paragraphs: [
               'Gün doğumunda opsiyonel balon uçuşu imkânı; ardından Göreme Açık Hava Müzesi ve çevre vadiler ziyareti.',
               'Öğleden sonra Ankara’ya hareket ve akşam Anıtkabir panoramik ziyareti.'
@@ -3306,7 +3306,7 @@ export const translations: Record<Language, BaseTranslations> = {
             title: 'Ankara → İznik → İstanbul',
             stay: 'Konaklama: /',
             image:
-              'https://images.unsplash.com/photo-1684214190982-f3506653f932?q=80&w=2340&auto=format&fit=crop',
+              '/img/remote/u-1684214190982-f3506653f932.webp',
             paragraphs: [
               'Ankara’dan ayrılarak İznik’e varış; göl kıyısında yürüyüş ve tarihi surlar çevresinde kısa tanıtım.',
               'Akşamüstü İstanbul’a dönüş ve uçuş saatine göre havalimanına transfer.'
