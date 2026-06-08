@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
-import L from 'leaflet';
+import type { Map as LeafletMap } from 'leaflet'; // type-only (erased at build); runtime L is lazy-imported in MapComponent
 
 // 真实微信图标：双气泡结构 + 圆点眼睛，品牌标准色 #07C160
 const WeChatIcon = ({ className = "" }) => (
@@ -32,53 +32,65 @@ const PINS: { pos: [number, number]; label: string; sub: string; primary?: boole
 
 const MapComponent: React.FC<{ lat: number; lng: number }> = ({ lat, lng }) => {
   const mapContainerRef = useRef<HTMLDivElement>(null);
-  const mapInstanceRef = useRef<L.Map | null>(null);
+  const mapInstanceRef = useRef<LeafletMap | null>(null);
 
   useEffect(() => {
+    let cancelled = false;
     if (!mapContainerRef.current || mapInstanceRef.current) return;
 
-    const map = L.map(mapContainerRef.current, {
-      scrollWheelZoom: false,
-      zoomControl: true,
-      attributionControl: true,
-    });
+    (async () => {
+      // Lazy-load Leaflet (JS + CSS) only when the map actually mounts (Contact-only):
+      // keeps ~140KB off the main bundle for every other page, and self-bundles the
+      // CSS (was an unpkg.com hotlink — slow/blocked in mainland China).
+      const L = (await import('leaflet')).default;
+      await import('leaflet/dist/leaflet.css');
+      if (cancelled || !mapContainerRef.current || mapInstanceRef.current) return;
 
-    // 自动缩放覆盖三个地点，留 padding 防止标签被裁
-    const bounds = L.latLngBounds(PINS.map(p => p.pos));
-    map.fitBounds(bounds, { padding: [56, 56], maxZoom: 6 });
-
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-      subdomains: 'abcd',
-      maxZoom: 20,
-    }).addTo(map);
-
-    PINS.forEach(({ pos, label, sub, primary }) => {
-      const dotHtml = primary
-        ? `<div class="marker-pulse"></div>`
-        : `<div style="width:10px;height:10px;background:#FF9D00;border:2px solid #fff;border-radius:50%;box-shadow:0 1px 6px rgba(0,0,0,0.25)"></div>`;
-
-      const icon = L.divIcon({
-        className: 'custom-div-icon',
-        html: dotHtml,
-        iconSize: [12, 12],
-        iconAnchor: [6, 6],
+      const map = L.map(mapContainerRef.current, {
+        scrollWheelZoom: false,
+        zoomControl: true,
+        attributionControl: true,
       });
 
-      const tooltipHtml = `<div style="line-height:1.4;text-align:center"><strong style="font-size:11px;font-weight:900;color:#0f172a">${label}</strong><br><span style="font-size:9px;color:#FF9D00;font-weight:700;letter-spacing:0.06em;text-transform:uppercase">${sub}</span></div>`;
+      // 自动缩放覆盖三个地点，留 padding 防止标签被裁
+      const bounds = L.latLngBounds(PINS.map(p => p.pos));
+      map.fitBounds(bounds, { padding: [56, 56], maxZoom: 6 });
 
-      L.marker(pos, { icon })
-        .bindTooltip(tooltipHtml, {
-          permanent: true,
-          direction: 'top',
-          offset: [0, -12],
-          className: 'grace-map-tip',
-        })
-        .addTo(map);
-    });
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 20,
+      }).addTo(map);
 
-    mapInstanceRef.current = map;
+      PINS.forEach(({ pos, label, sub, primary }) => {
+        const dotHtml = primary
+          ? `<div class="marker-pulse"></div>`
+          : `<div style="width:10px;height:10px;background:#FF9D00;border:2px solid #fff;border-radius:50%;box-shadow:0 1px 6px rgba(0,0,0,0.25)"></div>`;
+
+        const icon = L.divIcon({
+          className: 'custom-div-icon',
+          html: dotHtml,
+          iconSize: [12, 12],
+          iconAnchor: [6, 6],
+        });
+
+        const tooltipHtml = `<div style="line-height:1.4;text-align:center"><strong style="font-size:11px;font-weight:900;color:#0f172a">${label}</strong><br><span style="font-size:9px;color:#FF9D00;font-weight:700;letter-spacing:0.06em;text-transform:uppercase">${sub}</span></div>`;
+
+        L.marker(pos, { icon })
+          .bindTooltip(tooltipHtml, {
+            permanent: true,
+            direction: 'top',
+            offset: [0, -12],
+            className: 'grace-map-tip',
+          })
+          .addTo(map);
+      });
+
+      mapInstanceRef.current = map;
+    })();
+
     return () => {
+      cancelled = true;
       if (mapInstanceRef.current) {
         mapInstanceRef.current.remove();
         mapInstanceRef.current = null;
