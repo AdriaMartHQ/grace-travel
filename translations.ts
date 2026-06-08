@@ -1002,7 +1002,7 @@ export const translations: Record<Language, BaseTranslations> = {
       wechatPhone: 'WeChat / Phone',
       dmcDirector: 'DMC Operations Director',
       licensedSpecialist: 'Licensed Senior Specialist',
-      hqLocation: 'Official HQ: Bakırköy, Istanbul',
+      hqLocation: 'Official HQ: Istanbul',
       viewGoogleMaps: 'View on Google Maps',
       viewOSM: 'View on OpenStreetMap'
     },
@@ -2033,7 +2033,7 @@ export const translations: Record<Language, BaseTranslations> = {
       wechatPhone: '微信 / 手机号',
       dmcDirector: '地接社运营总监',
       licensedSpecialist: '持牌高级专家',
-      hqLocation: '官方总部：伊斯坦布尔 · 巴克科伊',
+      hqLocation: '官方总部：伊斯坦布尔',
       viewGoogleMaps: '在 Google Maps 中查看',
       viewOSM: '在 OpenStreetMap 中查看'
     },
@@ -2448,7 +2448,7 @@ export const translations: Record<Language, BaseTranslations> = {
       wechatPhone: 'WeChat / Telefon',
       dmcDirector: 'DMC Operasyon Direktörü',
       licensedSpecialist: 'Lisanslı Kıdemli Uzman',
-      hqLocation: 'Resmi Merkez: Bakırköy, İstanbul',
+      hqLocation: 'Resmi Merkez: İstanbul',
       viewGoogleMaps: 'Google Maps\'te Görüntüle',
       viewOSM: 'OpenStreetMap\'te Görüntüle'
     },
