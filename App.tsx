@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
+import type { Language, BaseTranslations } from './translations';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Tours from './pages/Tours';
@@ -60,9 +61,9 @@ const AppContent: React.FC = () => {
   );
 };
 
-const App: React.FC = () => {
+const App: React.FC<{ initialLang: Language; initialT: BaseTranslations }> = ({ initialLang, initialT }) => {
   return (
-    <LanguageProvider>
+    <LanguageProvider initialLang={initialLang} initialT={initialT}>
       <ScrollToTop />
       <AppContent />
     </LanguageProvider>

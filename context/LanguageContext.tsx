@@ -1,11 +1,13 @@
 
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
-import { translations, type Language, type BaseTranslations } from '../translations';
+import type { Language, BaseTranslations } from '../translations';
+import { loadTranslations } from '../i18n';
 
 interface LanguageContextProps {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: BaseTranslations;
+  isLanguageLoading: boolean;
 }
 
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
@@ -16,41 +18,41 @@ const HINT_MESSAGES = {
   tr: 'Dil tarayıcı ayarlarınıza göre Türkçe olarak ayarlandı'
 };
 
-export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  // 1. Initial detection logic
-  const getInitialLanguage = (): Language => {
-    // Priority 1: URL Parameter
-    const params = new URLSearchParams(window.location.search);
-    const langParam = params.get('lang') as Language;
-    if (langParam && ['en', 'zh', 'tr'].includes(langParam)) return langParam;
-
-    // Priority 2: Local Storage
-    const stored = localStorage.getItem('gw_lang') as Language;
-    if (stored && ['en', 'zh', 'tr'].includes(stored)) return stored;
-
-    // Priority 3: Browser Language
-    const browserLangs = navigator.languages || [navigator.language];
-    for (const bl of browserLangs) {
-      const l = bl.toLowerCase();
-      if (l.startsWith('zh')) return 'zh';
-      if (l.startsWith('tr')) return 'tr';
-    }
-
-    // Priority 4: Default
-    return 'en';
-  };
-
-  const [language, setLanguageState] = useState<Language>(getInitialLanguage());
+// initialLang + initialT come from the index.tsx bootstrap, which awaits the active
+// language's chunk BEFORE createRoot — so `t` is synchronous from the first render
+// (no fallback flash, prerendered content stays until React takes over).
+export const LanguageProvider: React.FC<{
+  children: ReactNode;
+  initialLang: Language;
+  initialT: BaseTranslations;
+}> = ({ children, initialLang, initialT }) => {
+  const [language, setLanguageState] = useState<Language>(initialLang);
+  const [t, setT] = useState<BaseTranslations>(initialT);
+  const [isLanguageLoading, setIsLanguageLoading] = useState(false);
   const [showHint, setShowHint] = useState(false);
   const [hintText, setHintText] = useState('');
+
   const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
-    localStorage.setItem('gw_lang', lang);
-    localStorage.setItem('gw_lang_hint_shown', 'true');
+    if (lang === language || isLanguageLoading) return;
+    // Load the target chunk FIRST, keep current language/t until it's ready, then commit
+    // language + t ATOMICALLY so consumers never render a mixed-language frame.
+    setIsLanguageLoading(true);
+    loadTranslations(lang)
+      .then((next) => {
+        setLanguageState(lang);
+        setT(next);
+        localStorage.setItem('gw_lang', lang);
+        localStorage.setItem('gw_lang_hint_shown', 'true');
+      })
+      .catch(() => {
+        /* keep current language/t on load failure */
+      })
+      .finally(() => setIsLanguageLoading(false));
   };
 
   useEffect(() => {
-    document.documentElement.lang = language;
+    // BCP-47 value, matching components/SEO.tsx so the two effects never fight over <html lang>.
+    document.documentElement.lang = language === 'zh' ? 'zh-CN' : language === 'tr' ? 'tr-TR' : 'en';
     const hasChosenBefore = localStorage.getItem('gw_lang');
     const hintShown = localStorage.getItem('gw_lang_hint_shown');
 
@@ -58,16 +60,14 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
       setHintText(HINT_MESSAGES[language]);
       setShowHint(true);
       localStorage.setItem('gw_lang_hint_shown', 'true');
-      
+
       const timer = setTimeout(() => setShowHint(false), 5000);
       return () => clearTimeout(timer);
     }
   }, [language]);
 
-  const t: BaseTranslations = translations[language] || translations.en;
-
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, isLanguageLoading }}>
       {children}
       {/* Syncing Toast Z-index to 90 to be below Navbar (100) */}
       {showHint && (

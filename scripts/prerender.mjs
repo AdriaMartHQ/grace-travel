@@ -65,7 +65,11 @@ for (const route of ROUTES) {
     await page.goto(`http://localhost:${PORT}${route}?lang=zh`, { waitUntil: 'domcontentloaded', timeout: 45000 });
     await page.waitForFunction(() => {
       const r = document.getElementById('root');
-      return r && r.children.length > 0 && r.innerText.trim().length > 50;
+      if (!r || r.children.length === 0 || r.innerText.trim().length <= 50) return false;
+      // i18n is now lazy-loaded per language: wait until the ZH chunk has actually
+      // committed (lang flips to 'zh' in an effect) AND CJK text is present — so we never
+      // snapshot an empty/pre-bootstrap or wrong-language frame.
+      return document.documentElement.lang.startsWith('zh') && /[一-鿿]/.test(r.innerText);
     }, { timeout: 30000 });
     await new Promise((r) => setTimeout(r, 600));
   } catch (e) {
