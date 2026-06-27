@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
-import { chinaInboundContent } from '../chinaInboundContent';
-import { getChinaFallbackImage } from '../chinaImageFallback';
 
 const EMPHASIZED_FAQ_LINES = new Set([
   'İptal Koşulları（取消条件）',
@@ -125,27 +123,24 @@ const TourCard: React.FC<{ tour: any; priority?: boolean }> = ({ tour, priority 
 const Home: React.FC = () => {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
   const { t, language } = useLanguage();
-  const chinaContent = chinaInboundContent[language];
-  const chinaTitle =
-    language === 'zh' ? '中国入境游' : language === 'tr' ? 'Çin Turları' : 'China Travel';
-  const chinaIntro =
+  const operationsKicker =
+    language === 'zh' ? 'Turkey Operations' : language === 'tr' ? 'Türkiye Operasyonları' : 'Turkey Operations';
+  const operationsTitle =
+    language === 'zh' ? '土耳其本地服务中心' : language === 'tr' ? 'Türkiye Odaklı Yerel Hizmetler' : 'Turkey-Focused Local Services';
+  const operationsIntro =
     language === 'zh'
-      ? '为海外客人设计的中国入境旅行系列，涵盖经典城市文化、科技考察与高端定制线路。'
+      ? 'grace.tr 的公开服务范围收敛为土耳其主轴：精品线路、中文司导、接送包车、商务与会展接待均围绕土耳其本地执行。巴尔干与以色列仅作为旅行线路延伸，按项目单独确认。'
       : language === 'tr'
-      ? 'Uluslararası misafirler için tasarlanan Çin seyahatleri; şehir kültürü, teknoloji keşfi ve üst segment özel rotaları bir araya getirir.'
-      : 'China journeys designed for international guests, spanning classic city culture, innovation visits, and premium tailor-made routes.';
-  const chinaCta = language === 'zh' ? '进入中国入境游' : language === 'tr' ? 'Çin’i Keşfet' : 'Explore China';
-  const chinaFallbackImage = getChinaFallbackImage(chinaTitle, 'Grace Way China Inbound');
-  const chinaFeatureImage =
-    chinaContent.routes.find((route) => route.id === 'r3')?.gallery[0] ||
-    chinaContent.routes.find((route) => route.id === 'r3')?.heroImage ||
-    chinaContent.routes[0]?.image;
-
-  const handleChinaImageError = (event: React.SyntheticEvent<HTMLImageElement>) => {
-    const target = event.currentTarget;
-    target.onerror = null;
-    target.src = chinaFallbackImage;
-  };
+      ? 'grace.tr kamu kapsamını Türkiye ekseninde tutar: butik rotalar, Çince rehberlik, transferler, araç hizmetleri, iş ziyareti ve fuar desteği Türkiye içinde yürütülür. Balkanlar ve İsrail yalnızca seyahat uzantısı olarak proje bazında değerlendirilir.'
+      : 'grace.tr keeps its public scope anchored in Turkey: boutique itineraries, Chinese-speaking guides, transfers, vehicle service, business visits, and exhibition support are executed locally in Turkey. The Balkans and Israel remain travel extensions only, confirmed project by project.';
+  const operationsCta =
+    language === 'zh' ? '咨询土耳其方案' : language === 'tr' ? 'Teklif Al' : 'Plan a Turkey Service';
+  const operationsChips =
+    language === 'zh'
+      ? ['伊斯坦布尔总部', '土耳其全境包车', '中文司导团队', '商务与会展接待']
+      : language === 'tr'
+      ? ['Istanbul merkezi', 'Türkiye geneli araç', 'Çince ekip', 'Fuar ve iş ziyareti']
+      : ['Istanbul base', 'Turkey-wide vehicles', 'Chinese-speaking team', 'Business & exhibition support'];
 
   const renderFaqAnswer = (answer: string) =>
     answer.split('\n').map((line, idx) => {
@@ -191,40 +186,39 @@ const Home: React.FC = () => {
           <div className="w-full lg:justify-self-end">
             <div className="mx-auto max-w-3xl px-6 py-20 md:px-10 md:py-24 lg:px-14 lg:py-28 text-left">
                 <span className="text-[11px] md:text-[10px] font-black text-[#FF9D00] uppercase tracking-[0.22em] md:tracking-[0.4em] mb-4 block">
-                  {language === 'en' ? 'China Travel' : language === 'tr' ? 'Çin Turları' : 'China Inbound'}
+                  {operationsKicker}
                 </span>
                 <h3 className="max-w-[14ch] text-[28px] md:text-5xl font-black serif leading-[1.04] tracking-tight [text-wrap:balance]">
-                  {chinaTitle}
+                  {operationsTitle}
                 </h3>
                 <p className="mt-5 text-white/70 text-base md:text-lg leading-relaxed [text-wrap:pretty] max-w-2xl">
-                  {chinaIntro}
+                  {operationsIntro}
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
-                  {chinaContent.routes.map((route) => (
+                  {operationsChips.map((item) => (
                     <span
-                      key={route.id}
+                      key={item}
                       className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.12em] md:tracking-[0.18em] px-4 py-2 rounded-full bg-white/10 border border-white/10 text-white/80"
                     >
-                      {route.duration} · {route.location}
+                      {item}
                     </span>
                   ))}
                 </div>
                 <Link
-                  to="/china-inbound"
+                  to="/contact"
                   className="mt-10 inline-flex items-center justify-center bg-[#FF9D00] text-white px-8 md:px-10 py-4 rounded-full text-[12px] md:text-sm font-black uppercase tracking-[0.16em] md:tracking-widest transition-all shadow-xl shadow-orange-500/20"
                 >
-                  {chinaCta}
+                  {operationsCta}
                 </Link>
               </div>
           </div>
           <div className="relative min-h-[320px] md:min-h-[420px] lg:min-h-full">
                 <img
-                  src={chinaFeatureImage}
-                  alt={chinaTitle}
+                  src="/img/remote/u-1636021597151-cc28dacd915c.webp"
+                  alt={operationsTitle}
                   className="w-full h-full object-cover object-center"
                   loading="lazy"
                   decoding="async"
-                  onError={handleChinaImageError}
                 />
                 <div className="absolute inset-0 bg-gradient-to-l from-slate-950/0 via-slate-950/10 to-slate-950/[0.72]"></div>
           </div>

@@ -35,7 +35,7 @@ const aboutContent: Record<'zh' | 'en' | 'tr', AboutContent> = {
       '土耳其本地 A 组持牌旅行社，扎根伊斯坦布尔。土耳其精品定制游与信仰朝圣，全程中文，费用透明，专注服务全球华人。',
     intro: [
       '来土耳其，需要的不只是一张行程表，而是一个真正能托付的人。',
-      '恩途 Grace Way Travel Agency 是一家总部位于伊斯坦布尔的本地持牌旅行社，TÜRSAB A 组认证，证书编号 18717，依法运营，公开可查。我们专注于服务中国及全球华人旅客，以土耳其精品定制游与朝圣之旅为核心，同时提供欧洲及圣地方向的延伸线路。',
+      '恩途 Grace Way Travel Agency 是一家总部位于伊斯坦布尔的本地持牌旅行社，TÜRSAB A 组认证，证书编号 18717，依法运营，公开可查。我们专注于服务中国及全球华人旅客，以土耳其精品定制游、信仰朝圣、中文地接与在土商务接待为核心。',
       '从第一次询价到旅程结束，全程中文对接。不用你猜规则，不用你担心临时状况——因为在你出发前，我们已经把大部分不确定性处理完毕。',
     ],
     promiseTitle: '我们坚持的标准',
@@ -53,9 +53,8 @@ const aboutContent: Record<'zh' | 'en' | 'tr', AboutContent> = {
       '土耳其精品定制游（S系列 · 人文经典 · 6–10天）',
       '信仰朝圣之旅（Z系列 · 启示录七教会 · 保罗足迹）',
       '机场接送 & 土耳其全境包车',
-      '商务考察、展会接待与 MICE 会奖项目',
-      '欧洲延伸线路（巴尔干方向）',
-      '圣地灵修之旅（以色列方向）',
+      '土耳其本地商务考察、展会接待与 MICE 会奖协助',
+      '巴尔干与以色列作为旅游线路延伸，按项目单独确认',
     ],
     strengths: [
       {
@@ -76,17 +75,18 @@ const aboutContent: Record<'zh' | 'en' | 'tr', AboutContent> = {
     ],
     profileTitle: '企业简介',
     profileLead:
-      '恩途 Grace Way Travel Agency 是面向全球华人提供土耳其及周边目的地旅游与地接管理服务的本地旅行社。',
+      '恩途 Grace Way Travel Agency 是面向全球华人提供土耳其旅游、中文地接与目的地管理服务的本地旅行社。',
     profileBody: [
       '公司依法在土耳其注册，取得文化与旅游部批准的 A 类旅行社经营资质（Belge No: 18717），具备旅游接待、国际旅游组织及目的地管理的合法资格。',
-      '服务网络覆盖土耳其全境（伊斯坦布尔、卡帕多奇亚、棉花堡、以弗所、安塔利亚、费特希耶、特罗亚等），并提供欧洲及中东方向的延伸线路。',
-      '依托本地长期运营团队与稳定供应商网络，保障跨区域、多场景项目的稳定交付与合规执行。',
+      '服务网络覆盖土耳其全境（伊斯坦布尔、卡帕多奇亚、棉花堡、以弗所、安塔利亚、费特希耶、特罗亚等）。巴尔干与以色列仅作为现有旅行产品的延伸线路，不作为泛区域出海服务承诺。',
+      '依托本地长期运营团队与稳定供应商网络，保障土耳其境内多场景项目的稳定交付与合规执行。',
     ],
     factsTitle: '资质与联系方式',
     facts: [
       { label: '公司名称', value: 'GRACE TRAVEL TURIZM VE TIC. LTD. STI.' },
       { label: '品牌名称', value: 'GRACE WAY TRAVEL AGENCY / 恩途国际旅行' },
       { label: '旅行社资质', value: 'TÜRSAB A 组旅行社经营许可（Belge No: 18717）' },
+      { label: '资质边界', value: 'TÜRSAB 旅行社资质用于旅游接待、目的地管理与相关旅行服务；投资顾问、法律财税咨询等事项需另行确认适格主体或持牌合作方。' },
       { label: '主管部门', value: 'T.C. Kültür ve Turizm Bakanlığı（土耳其文化与旅游部）' },
       { label: '总部', value: 'Bakırköy, İstanbul, Türkiye' },
       { label: '地址', value: 'Zeytinlik Mah. Halkçı Sok. Moda Pasajı No:25/35, Kat:2 / Ofis 35, Bakırköy · İstanbul' },
@@ -95,16 +95,15 @@ const aboutContent: Record<'zh' | 'en' | 'tr', AboutContent> = {
       { label: '电话（CN）', value: '+86 134 2640 1777' },
       { label: '邮箱', value: 'taha@gracetravel.com.tr' },
     ],
-    recognitionTitle: '我们覆盖的目的地',
+    recognitionTitle: '服务范围边界',
     recognitionLead:
-      '以土耳其为核心，兼提供欧洲与圣地延伸线路',
+      '以土耳其为主轴，延伸线路只作为旅游产品处理',
     recognitionPoints: [
       '土耳其全境：伊斯坦布尔 · 卡帕多奇亚 · 棉花堡 · 以弗所 · 安塔利亚 · 费特希耶 · 特罗亚 · 伊兹密尔',
       '信仰之旅：启示录七教会（以弗所 · 士每拿 · 别迦摩等）· 保罗足迹 · 卡帕多奇亚洞穴教堂',
-      '欧洲延伸线路：巴尔干方向（东欧深度游）',
-      '圣地灵修：以色列方向（耶路撒冷 · 加利利 · 死海）',
-      '商务 & 会展：商务考察 · 展会接待 · MICE 会奖旅游',
-      '中国入境游：粤港澳大湾区 · 经典中国线路（协作安排）',
+      '旅游延伸线路：巴尔干方向与以色列圣地方向，按项目确认资源、风险与交付主体',
+      '商务 & 会展：仅展示土耳其本地商务考察、展会接待与 MICE 会奖旅游协助',
+      '不在本站承诺范围内：非土耳其本地执行的商务、投资、法律财税或受监管咨询服务',
     ],
     closing:
       '如果你在寻找的，不是”便宜一次”，而是”安心很多次”，那么恩途 Grace Way Travel Agency 值得被认真选择。',
@@ -133,8 +132,8 @@ const aboutContent: Record<'zh' | 'en' | 'tr', AboutContent> = {
       'Chinese-speaking guides and drivers',
       'Airport transfers and vehicle dispatch',
       'Family and senior-friendly travel design',
-      'Business visits and trade reception',
-      'Exhibition and MICE support',
+      'Turkey-based business visits and trade reception',
+      'Exhibition and MICE support inside Turkey',
     ],
     strengthTitle: 'Why Grace Way',
     strengths: [
@@ -157,24 +156,27 @@ const aboutContent: Record<'zh' | 'en' | 'tr', AboutContent> = {
     profileBody: [
       'The company is legally registered in Turkey and holds an A-group travel agency operating license approved by the Ministry of Culture and Tourism.',
       'Its service network covers Istanbul, Cappadocia, the Aegean coast, the Mediterranean region, and key destinations across Anatolia.',
+      'The Balkans and Israel are treated only as travel extensions to existing itineraries, not as a broad regional consulting or outbound-service promise.',
     ],
     factsTitle: 'Credentials & Public Identification',
     facts: [
       { label: 'Legal entity', value: 'GRACE TRAVEL TURIZM VE TIC. LTD. STI.' },
       { label: 'Brand', value: 'GRACE WAY TRAVEL AGENCY' },
       { label: 'License type', value: 'A Grubu Seyahat Acentasi Isletme Belgesi' },
+      { label: 'Scope boundary', value: 'TURSAB licensing supports travel agency, destination management, and tourism services. Investment, legal, tax, and regulated consulting matters require a separately qualified entity or licensed partner.' },
       { label: 'Authority', value: 'T.C. Kultur ve Turizm Bakanligi' },
       { label: 'License no.', value: '18717' },
       { label: 'Website', value: 'https://www.gracetravel.com.tr  |  https://grace.tr' },
       { label: 'Email', value: 'taha@gracetravel.com.tr' },
     ],
-    recognitionTitle: 'Search & AI Reference Notes',
+    recognitionTitle: 'Service Scope Boundary',
     recognitionLead:
-      'These public identifiers are organized to help platforms clearly recognize the company name, license status, and service scope.',
+      'The public grace.tr scope is anchored in Turkey, with non-Turkey itineraries treated only as travel extensions.',
     recognitionPoints: [
       'Common Chinese name: En Tu Turkey Travel Agency',
-      'Business scope: inbound Turkey travel, Chinese-speaking ground handling, transfers, business reception, exhibitions, and DMC services',
+      'Business scope: Turkey travel, Chinese-speaking ground handling, transfers, business reception, exhibitions, and DMC services inside Turkey',
       'Coverage: major destinations across Turkey',
+      'Balkans and Israel remain travel extensions confirmed project by project',
     ],
     closing:
       'If you are looking for long-term reliability rather than one-time convenience, Grace Way Travel Agency is a serious choice.',
@@ -203,8 +205,8 @@ const aboutContent: Record<'zh' | 'en' | 'tr', AboutContent> = {
       'Cince rehber ve sofor hizmeti',
       'Havalimani transfer ve arac planlama',
       'Aile ve ileri yas misafir odakli programlar',
-      'Is ziyaretleri ve ticari karsilama',
-      'Fuar ve MICE destegi',
+      'Turkiye icinde is ziyaretleri ve ticari karsilama',
+      'Turkiye icinde fuar ve MICE destegi',
     ],
     strengthTitle: 'Neden Grace Way',
     strengths: [
@@ -227,24 +229,27 @@ const aboutContent: Record<'zh' | 'en' | 'tr', AboutContent> = {
     profileBody: [
       'Sirket Turkiye’de yasal olarak kayitlidir ve Kultur ve Turizm Bakanligi onayli A grubu seyahat acentesi lisansina sahiptir.',
       'Hizmet agimiz Istanbul, Kapadokya, Ege kiyilari, Akdeniz bolgesi ve Anadolu’daki onemli destinasyonlari kapsar.',
+      'Balkanlar ve Israil yalnizca mevcut seyahat urunlerinin uzantisi olarak degerlendirilir; genis bolgesel danismanlik veya cikis hizmeti taahhudu degildir.',
     ],
     factsTitle: 'Kurumsal Bilgiler',
     facts: [
       { label: 'Sirket unvani', value: 'GRACE TRAVEL TURIZM VE TIC. LTD. STI.' },
       { label: 'Marka', value: 'GRACE WAY TRAVEL AGENCY' },
       { label: 'Belge tipi', value: 'A Grubu Seyahat Acentasi Isletme Belgesi' },
+      { label: 'Kapsam siniri', value: 'TURSAB belgesi seyahat acentesi, destinasyon yonetimi ve turizm hizmetlerini kapsar. Yatirim, hukuk, vergi ve duzenlemeye tabi danismanlik konulari icin ayri yetkin kurum veya lisansli ortak gerekir.' },
       { label: 'Yetkili kurum', value: 'T.C. Kultur ve Turizm Bakanligi' },
       { label: 'Belge no', value: '18717' },
       { label: 'Web', value: 'https://www.gracetravel.com.tr  |  https://grace.tr' },
       { label: 'E-posta', value: 'taha@gracetravel.com.tr' },
     ],
-    recognitionTitle: 'Arama ve AI Tanima Notlari',
+    recognitionTitle: 'Hizmet Kapsami Siniri',
     recognitionLead:
-      'Bu kamusal bilgiler, sirket adinin, lisans durumunun ve hizmet alanlarinin dijital platformlarda daha net taninmasi icin duzenlenmistir.',
+      'grace.tr kamu kapsami Turkiye odaklidir; Turkiye disi rotalar sadece seyahat uzantisi olarak degerlendirilir.',
     recognitionPoints: [
       'Yerel lisansli acente kimligi',
-      'Cince odakli yer hizmetleri ve destinasyon yonetimi',
+      'Turkiye icinde Cince odakli yer hizmetleri ve destinasyon yonetimi',
       'Turkiye geneli hizmet kapsami',
+      'Balkanlar ve Israil rotalari proje bazinda teyit edilen seyahat uzantilaridir',
     ],
     closing:
       'Tek seferlik ucuzluk degil, tekrar tekrar guven ariyorsaniz Grace Way Travel Agency dogru tercihtir.',

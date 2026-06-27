@@ -22,7 +22,7 @@ const OUT_DIR = join(ROOT, 'public/img/remote');
 const MANIFEST = join(ROOT, 'scripts/image-manifest.json');
 
 // Source files/dirs to scan + rewrite.
-const ROOT_FILES = ['translations.ts', 'chinaInboundContent.ts', 'constants.tsx', 'App.tsx'];
+const ROOT_FILES = ['translations.ts', 'constants.tsx', 'App.tsx'];
 const SCAN_DIRS = ['pages', 'components', 'data', 'lib', 'context'];
 const EXT_OK = new Set(['.ts', '.tsx', '.js', '.jsx']);
 

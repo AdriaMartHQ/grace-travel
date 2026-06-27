@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 import type { Language, BaseTranslations } from './translations';
 import Layout from './components/Layout';
@@ -9,8 +9,6 @@ import Tickets from './pages/Tickets';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import StyleGuide from './pages/StyleGuide';
-import ChinaInbound from './pages/ChinaInbound';
-import JourneyDetail from './pages/JourneyDetail';
 import AirportTransfer from './pages/AirportTransfer';
 import ItineraryS1 from './pages/ItineraryS1';
 import ItineraryS2 from './pages/ItineraryS2';
@@ -39,8 +37,7 @@ const AppContent: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/tours" element={<Tours />} />
         <Route path="/airport-transfer" element={<AirportTransfer />} />
-        <Route path="/china-inbound" element={<ChinaInbound />} />
-        <Route path="/china-inbound/:slug" element={<JourneyDetail />} />
+        <Route path="/china-inbound/*" element={<Navigate to="/tours" replace />} />
         <Route path="/about" element={<About />} />
         <Route path="/itineraries/s1-turkey-6-days" element={<ItineraryS1 />} />
         <Route path="/itineraries/s2-turkey-8-days" element={<ItineraryS2 />} />

@@ -1,7 +1,7 @@
 import type { BaseTranslations } from '../translations';
 
 const en: BaseTranslations = {
-    nav: { home: 'Home', tours: 'Tours', faith: 'Faith', about: 'About Us', tickets: 'Tickets', contact: 'Contact', enquire: 'Enquire', closeMenu: 'Close', itineraries: 'Itineraries', turkeySection: 'Turkey', turkeyClassic: 'Cultural & Heritage', turkeyClassicDesc: '6–10 day S-series classics', faithPilgrimage: 'Faith Pilgrimage', faithPilgrimageDesc: 'Seven Churches · Paul\'s Footsteps', otherDest: 'Other Destinations', balkans: 'Balkans 3-Country', balkansDesc: 'Serbia · Montenegro · Bosnia', holyland: 'Holy Land', holylandDesc: 'Israel · Jerusalem · Galilee', routesSection: 'Itineraries', servicesSection: 'Services' },
+    nav: { home: 'Home', tours: 'Tours', faith: 'Faith', about: 'About Us', tickets: 'Tickets', contact: 'Contact', enquire: 'Enquire', closeMenu: 'Close', itineraries: 'Itineraries', turkeySection: 'Turkey', turkeyClassic: 'Cultural & Heritage', turkeyClassicDesc: '6–10 day S-series classics', faithPilgrimage: 'Faith Pilgrimage', faithPilgrimageDesc: 'Seven Churches · Paul\'s Footsteps', otherDest: 'Travel Extensions', balkans: 'Balkans 3-Country', balkansDesc: 'Serbia · Montenegro · Bosnia travel extension', holyland: 'Holy Land', holylandDesc: 'Israel · Jerusalem · Galilee travel extension', routesSection: 'Itineraries', servicesSection: 'Services' },
     hero: {
       title: 'Discover the Soul of Turkey',
       subtitle: 'Bespoke journeys through ancient history and vibrant culture with Grace Way — your licensed boutique travel partner in Turkey.',
@@ -139,8 +139,8 @@ const en: BaseTranslations = {
           'Chartered cars and transfers in Istanbul and throughout Turkey',
           'Group tour and land operation execution',
           'Private customized tours (Parent-child / Family / Elders)',
-          'Business inspection, trade reception, exhibition services',
-          'China-Turkey all-category local service coordination'
+          'Turkey-based business visits, trade reception, and exhibition support',
+          'Balkans and Israel travel extensions, confirmed project by project'
         ]
       },
       trust: {

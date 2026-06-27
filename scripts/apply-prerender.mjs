@@ -39,7 +39,6 @@ const NAV_LABEL = {
   '/contact': '联系我们',
   '/tickets': '门票体验',
   '/airport-transfer': '接送机服务',
-  '/china-inbound': '中国入境游',
 };
 
 // Home FAQ (mirrors zh translations faqs) — real Q&A, FAQPage-eligible

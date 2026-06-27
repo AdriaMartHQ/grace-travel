@@ -52,11 +52,11 @@ const ItinerariesDropdown: React.FC = () => {
       ],
     },
     {
-      header: t.nav?.otherDest || '其他目的地',
+      header: t.nav?.otherDest || '旅游延伸线路',
       items: [
         {
-          label: '巴尔干线路',
-          desc: '塞尔维亚 · 黑山 · 波黑 · 多线路可选',
+          label: t.nav?.balkans || '巴尔干三国',
+          desc: t.nav?.balkansDesc || '塞尔维亚 · 黑山 · 波黑旅游延伸',
           path: '/tours?category=balkan',
           exact: false,
         },
@@ -137,12 +137,6 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
   const { language, setLanguage, t } = useLanguage();
   const location = useLocation();
 
-  const airportTransferLabel =
-    language === 'zh' ? '接送机服务' : language === 'tr' ? 'Transfer' : 'Transfers';
-  const chinaInboundLabel =
-    language === 'zh' ? '中国入境游' : language === 'tr' ? 'Çin Turları' : 'China Travel';
-  const ticketsLabel = t.nav?.tickets || '门票体验';
-
   const isActive = (path: string) => {
     const search = new URLSearchParams(location.search);
     const cat = search.get('category');
@@ -219,7 +213,7 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
                 {t.nav?.faithPilgrimage || '信仰朝圣 Z系列'}
               </Link>
               <Link to="/tours?category=balkan" onClick={onClose} className={subLinkCls('/tours?category=balkan')}>
-                巴尔干线路
+                {t.nav?.balkans || '巴尔干三国'}
               </Link>
               <Link to="/itineraries/i1-israel-holyland-8-days" onClick={onClose} className={subLinkCls('/itineraries/i1-israel-holyland-8-days')}>
                 {t.nav?.holyland || '以色列圣地'}
@@ -434,8 +428,6 @@ const Footer: React.FC = () => {
   const { t, language } = useLanguage();
   const airportTransferLabel =
     language === 'zh' ? '接送机服务' : language === 'tr' ? 'Transfer' : 'Transfers';
-  const chinaInboundLabel =
-    language === 'zh' ? '中国入境游' : language === 'tr' ? 'Çin Turları' : 'China Travel';
   const f = t?.footer || {};
 
   return (
@@ -458,10 +450,9 @@ const Footer: React.FC = () => {
               <li><Link to="/" className="hover:text-[#FF9D00] transition-colors">{t.nav?.home || 'Home'}</Link></li>
               <li><Link to="/tours?category=turkey" className="hover:text-[#FF9D00] transition-colors">{t.nav?.tours || 'Tours'}</Link></li>
               <li><Link to="/tours?category=family" className="hover:text-[#FF9D00] transition-colors">{t.nav?.faith || 'Faith'}</Link></li>
-              <li><Link to="/tours?category=balkan" className="hover:text-[#FF9D00] transition-colors">巴尔干线路</Link></li>
+              <li><Link to="/tours?category=balkan" className="hover:text-[#FF9D00] transition-colors">{t.nav?.balkans || '巴尔干三国'}</Link></li>
               <li><Link to="/itineraries/i1-israel-holyland-8-days" className="hover:text-[#FF9D00] transition-colors">{t.nav?.holyland || '以色列圣地'}</Link></li>
               <li><Link to="/airport-transfer" className="hover:text-[#FF9D00] transition-colors">{airportTransferLabel}</Link></li>
-              <li><Link to="/china-inbound" className="hover:text-[#FF9D00] transition-colors">{chinaInboundLabel}</Link></li>
               <li><Link to="/tickets" className="hover:text-[#FF9D00] transition-colors">{t.nav?.tickets || 'Tickets'}</Link></li>
               <li><Link to="/contact" className="hover:text-[#FF9D00] transition-colors">{t.nav?.contact || 'Contact'}</Link></li>
               <li><Link to="/about" className="text-slate-500 hover:text-[#FF9D00] transition-colors">{t.nav?.about || 'About Us'}</Link></li>

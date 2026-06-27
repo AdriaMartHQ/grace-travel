@@ -53,16 +53,11 @@ grace.tr www.grace.tr {
     }
 }
 
+# gracetravel.com.tr → forward to grace.tr (2026-06-21).
+# User dissatisfied with the WordPress site; domain forwards to the SPA instead.
+# 302 (temporary) on purpose: fully reversible — WP containers (wordpress-1/db-1)
+# are kept running + intact. Upgrade to 301 only once the cutover is confirmed permanent.
+# To manage WP: SSH tunnel to 127.0.0.1:8080, or temporarily restore the reverse_proxy block.
 gracetravel.com.tr www.gracetravel.com.tr {
-	@blocked path /xmlrpc.php /wp-trackback.php
-	respond @blocked 403
-	reverse_proxy 127.0.0.1:8080
-	encode zstd gzip
-	header {
-		Strict-Transport-Security "max-age=31536000; includeSubDomains"
-		X-Content-Type-Options "nosniff"
-		X-Frame-Options "SAMEORIGIN"
-		Referrer-Policy "strict-origin-when-cross-origin"
-		-Server
-	}
+	redir https://grace.tr/ 302
 }

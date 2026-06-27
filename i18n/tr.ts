@@ -1,7 +1,7 @@
 import type { BaseTranslations } from '../translations';
 
 const tr: BaseTranslations = {
-    nav: { home: 'Anasayfa', tours: 'Turlar', faith: 'İnanç', about: 'Hakkımızda', tickets: 'Biletler', contact: 'İletişim', enquire: 'Teklif Al', closeMenu: 'Kapat', itineraries: 'Rotalar', turkeySection: 'Türkiye', turkeyClassic: 'Kültürel & Tarihi', turkeyClassicDesc: '6–10 günlük S-serisi', faithPilgrimage: 'İnanç & Hac', faithPilgrimageDesc: 'Yedi Kilise · Pavlus Rotası', otherDest: 'Diğer Destinasyonlar', balkans: 'Balkanlar', balkansDesc: 'Sırbistan · Karadağ · Bosna', holyland: 'Kutsal Topraklar', holylandDesc: 'İsrail · Kudüs · Celile', routesSection: 'Rotalar', servicesSection: 'Hizmetler' },
+    nav: { home: 'Anasayfa', tours: 'Turlar', faith: 'İnanç', about: 'Hakkımızda', tickets: 'Biletler', contact: 'İletişim', enquire: 'Teklif Al', closeMenu: 'Kapat', itineraries: 'Rotalar', turkeySection: 'Türkiye', turkeyClassic: 'Kültürel & Tarihi', turkeyClassicDesc: '6–10 günlük S-serisi', faithPilgrimage: 'İnanç & Hac', faithPilgrimageDesc: 'Yedi Kilise · Pavlus Rotası', otherDest: 'Seyahat Uzantıları', balkans: 'Balkanlar', balkansDesc: 'Sırbistan · Karadağ · Bosna seyahat uzantısı', holyland: 'Kutsal Topraklar', holylandDesc: 'İsrail · Kudüs · Celile seyahat uzantısı', routesSection: 'Rotalar', servicesSection: 'Hizmetler' },
     hero: {
       title: 'Türkiye\'nin Ruhunu Keşfedin',
       subtitle: 'Grace Way ile antik mirastan canlı kültüre uzanan butik yolculuklar.',
@@ -69,8 +69,8 @@ const tr: BaseTranslations = {
           'İstanbul ve tüm Türkiye genelinde özel araç ve transferler',
           'Grup turları ve yerel operasyon yönetimi',
           'Özel butik turlar (Aile / Çocuk / Yaşlı)',
-          'İş gezileri, ticari karşılama ve fuar hizmetleri',
-          'Çin-Türkiye arası yerel hizmet koordinasyonu'
+          'Türkiye içinde iş gezileri, ticari karşılama ve fuar desteği',
+          'Balkanlar ve İsrail seyahat uzantıları proje bazında değerlendirilir'
         ]
       },
       trust: {

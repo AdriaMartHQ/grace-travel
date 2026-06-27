@@ -18,7 +18,7 @@ const CHROME =
   '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
 const ROUTES = [
-  '/', '/tours', '/china-inbound', '/airport-transfer', '/tickets', '/about', '/contact',
+  '/', '/tours', '/airport-transfer', '/tickets', '/about', '/contact',
   '/itineraries/b1-balkan-3-countries-12-days',
   '/itineraries/b2-balkan-3-countries-10-days',
   '/itineraries/s1-turkey-6-days', '/itineraries/s2-turkey-8-days',

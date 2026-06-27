@@ -1,7 +1,7 @@
 import type { BaseTranslations } from '../translations';
 
 const zh: BaseTranslations = {
-    nav: { home: '首页', tours: '土耳其线路', faith: '信仰之旅', about: '关于我们', tickets: '门票体验', contact: '联系我们', enquire: '即刻定制', closeMenu: '关闭', itineraries: '行程线路', turkeySection: '土耳其精品游', turkeyClassic: '人文经典 · S系列', turkeyClassicDesc: '6–10天全景经典私家游', faithPilgrimage: '信仰朝圣 · Z系列', faithPilgrimageDesc: '七教会 · 保罗足迹 · 圣经圣迹', otherDest: '其他目的地', balkans: '巴尔干三国', balkansDesc: '塞尔维亚 · 黑山 · 波黑 12天', holyland: '以色列圣地', holylandDesc: '耶路撒冷 · 加利利 · 伯利恒', routesSection: '行程', servicesSection: '服务' },
+    nav: { home: '首页', tours: '土耳其线路', faith: '信仰之旅', about: '关于我们', tickets: '门票体验', contact: '联系我们', enquire: '即刻定制', closeMenu: '关闭', itineraries: '行程线路', turkeySection: '土耳其精品游', turkeyClassic: '人文经典 · S系列', turkeyClassicDesc: '6–10天全景经典私家游', faithPilgrimage: '信仰朝圣 · Z系列', faithPilgrimageDesc: '七教会 · 保罗足迹 · 圣经圣迹', otherDest: '旅游延伸线路', balkans: '巴尔干三国', balkansDesc: '塞尔维亚 · 黑山 · 波黑旅游延伸', holyland: '以色列圣地', holylandDesc: '耶路撒冷 · 加利利 · 伯利恒旅游延伸', routesSection: '行程', servicesSection: '服务' },
     hero: {
       title: '探索土耳其',
       subtitle: '与恩途 · 国际旅行开启一场穿越古老历史与灿烂文化的私享定制之旅\n\n“你出你入，耶和华要保护你，\n从今时直到永远。”\n—— 诗篇 121:8',
@@ -139,8 +139,8 @@ const zh: BaseTranslations = {
           '伊斯坦布尔及土耳其全境包车、接送',
           '团队组团与地接执行',
           '私人定制游（亲子 / 家庭 / 长辈）',
-          '商务考察、贸易接待、展会服务',
-          '中国—土耳其全品类在地服务协调'
+          '土耳其本地商务考察、贸易接待与会展协助',
+          '巴尔干与以色列作为旅游线路延伸，按项目单独确认'
         ]
       },
       trust: {
@@ -1016,8 +1016,8 @@ const zh: BaseTranslations = {
       },
       about: {
         title: '关于恩途 | 伊斯坦布尔华人旅行社 | TÜRSAB A 组持牌 18717',
-        description: '恩途 Grace Way Travel Agency，伊斯坦布尔本地 A 组持牌旅行社（TÜRSAB 认证 18717）。土耳其精品游、巴尔干三国、以色列圣地朝圣，全程中文服务，费用透明。',
-        keywords: '恩途旅行社, 土耳其华人旅行社, 伊斯坦布尔中文地接, TÜRSAB A组旅行社, 土耳其定制游旅行社, 巴尔干旅行社中文'
+        description: '恩途 Grace Way Travel Agency，伊斯坦布尔本地 A 组持牌旅行社（TÜRSAB 认证 18717）。专注土耳其精品游、信仰朝圣、中文地接、包车与商务会展接待。',
+        keywords: '恩途旅行社, 土耳其华人旅行社, 伊斯坦布尔中文地接, TÜRSAB A组旅行社, 土耳其定制游旅行社, 土耳其商务接待'
       },
       tickets: { 
         title: '土耳其景点门票预订 | 皇宫博物馆免排队', 
