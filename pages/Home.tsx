@@ -32,9 +32,14 @@ const Hero: React.FC = () => {
         keywords={t.seo.home.keywords} 
       />
       <div className="absolute inset-0 z-0">
-        <img 
-          src="/img/remote/u-1527838832700-5059252407fa.webp" 
-          alt="Grace Way Hero" 
+        <img
+          src="/img/remote/u-1527838832700-5059252407fa.webp"
+          srcSet="/img/remote/u-1527838832700-5059252407fa-768.webp 768w, /img/remote/u-1527838832700-5059252407fa-1080.webp 1080w, /img/remote/u-1527838832700-5059252407fa.webp 1366w"
+          sizes="100vw"
+          alt="Grace Way Hero"
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/[0.78] via-slate-950/[0.42] to-slate-950/20"></div>
