@@ -80,6 +80,11 @@ const TourCard: React.FC<{ tour: any; priority?: boolean }> = ({ tour, priority 
   // 严谨的回退图 (Istanbul Hagia Sophia)
   const fallbackImg = "/img/remote/u-1636021597151-cc28dacd915c.webp";
 
+  // 首张(priority)= LCP 关键图,用响应式 srcset 让移动端取更小变体
+  const heroSrcSet = priority && tour.image
+    ? `${tour.image.replace(/\.webp$/, '')}-768.webp 768w, ${tour.image.replace(/\.webp$/, '')}-1080.webp 1080w, ${tour.image} 1366w`
+    : undefined;
+
   const handleImgError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     const target = e.target as HTMLImageElement;
     target.onerror = null;
@@ -94,6 +99,10 @@ const TourCard: React.FC<{ tour: any; priority?: boolean }> = ({ tour, priority 
             src={tour.image} 
             alt={tour.title} 
             loading={priority ? "eager" : "lazy"}
+            srcSet={heroSrcSet}
+            sizes={priority ? "(min-width: 768px) 33vw, 100vw" : undefined}
+            fetchPriority={priority ? "high" : undefined}
+            decoding="async"
             onError={handleImgError}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
           />
@@ -114,7 +123,7 @@ const TourCard: React.FC<{ tour: any; priority?: boolean }> = ({ tour, priority 
         </Link>
         <div className="flex flex-wrap gap-2 mb-8 flex-grow">
           {(tour.highlights || []).slice(0, 3).map((h: string, i: number) => (
-            <span key={i} className="text-[10px] md:text-[9px] font-black bg-slate-50 text-slate-400 px-3 py-1.5 rounded-lg border border-slate-50 tracking-[0.08em] md:tracking-widest h-fit leading-snug">{h}</span>
+            <span key={i} className="text-[10px] md:text-[9px] font-black bg-slate-50 text-slate-500 px-3 py-1.5 rounded-lg border border-slate-50 tracking-[0.08em] md:tracking-widest h-fit leading-snug">{h}</span>
           ))}
         </div>
         <Link to={tour.path || "/contact"} className="block w-full text-center bg-slate-50 hover:bg-[#FF9D00] hover:text-white text-slate-900 py-4 rounded-xl font-black uppercase tracking-[0.16em] md:tracking-widest text-[11px] md:text-[10px] transition-all">
@@ -172,7 +181,7 @@ const Home: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-24 gap-6">
           <div className="text-left">
             <span className="text-[11px] md:text-[10px] font-black text-[#FF9D00] uppercase tracking-[0.22em] md:tracking-[0.4em] mb-4 block">{t.sections.featuredTours}</span>
-            <h3 className="max-w-[18ch] text-[28px] md:text-5xl lg:text-6xl font-black serif text-slate-900 leading-[1.08] [text-wrap:balance]">{t.sections.featuredSubtitle}</h3>
+            <h2 className="max-w-[18ch] text-[28px] md:text-5xl lg:text-6xl font-black serif text-slate-900 leading-[1.08] [text-wrap:balance]">{t.sections.featuredSubtitle}</h2>
           </div>
           <Link to="/tours" className="text-slate-900 font-black uppercase tracking-[0.16em] md:tracking-widest text-[11px] md:text-[10px] border-b-2 border-[#FF9D00] pb-2 w-fit">
             {t.sections.viewAll}
@@ -247,7 +256,7 @@ const Home: React.FC = () => {
               <div key={i} className="bg-white/5 border border-white/10 p-8 md:p-10 rounded-[2.5rem] backdrop-blur-md">
                 <div className="text-4xl mb-6">{f.icon}</div>
                 <h4 className="text-lg md:text-xl font-black mb-4 uppercase tracking-tight leading-snug">{f.title}</h4>
-                <p className="text-slate-400 text-sm font-light leading-relaxed">{f.desc}</p>
+                <p className="text-slate-500 text-sm font-light leading-relaxed">{f.desc}</p>
               </div>
             ))}
           </div>

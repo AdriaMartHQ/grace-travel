@@ -75,7 +75,7 @@ export const LanguageProvider: React.FC<{
           <div className="bg-slate-900/90 backdrop-blur-md text-white px-6 py-3 rounded-2xl shadow-2xl border border-white/10 flex items-center gap-3">
             <div className="w-1.5 h-1.5 bg-[#FF9D00] rounded-full animate-pulse"></div>
             <span className="text-xs font-bold tracking-wide uppercase">{hintText}</span>
-            <button onClick={() => setShowHint(false)} className="ml-2 text-white/40 hover:text-white transition-colors">
+            <button onClick={() => setShowHint(false)} aria-label={t?.nav?.closeMenu || 'Close'} className="ml-2 text-white/40 hover:text-white transition-colors">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
           </div>
