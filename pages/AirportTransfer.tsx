@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { ArrowRight, CheckCircle2, PlaneTakeoff, ShieldCheck, Stars } from 'lucide-react';
+import { ArrowRight, CheckCircle2, PlaneTakeoff, ShieldCheck } from 'lucide-react';
 import SEO from '../components/SEO';
 import TransferBookingForm from '../components/transfer/TransferBookingForm';
 import TransferPriceCard from '../components/transfer/TransferPriceCard';
@@ -304,9 +304,6 @@ const AirportTransfer: React.FC = () => {
 
           <div className="rounded-[2.5rem] border border-white/10 bg-white/5 p-6 backdrop-blur-md md:p-8">
             <div className="flex items-start gap-4">
-              <div className="rounded-full bg-[#FF9D00]/10 p-3">
-                <Stars className="h-6 w-6 text-[#FF9D00]" />
-              </div>
               <div>
                 <div className="text-[11px] font-black uppercase tracking-[0.18em] text-[#FF9D00]">
                   {content.readyLabel}

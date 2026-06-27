@@ -249,12 +249,12 @@ const Home: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: '🛡️', title: t.features.f1.title, desc: t.features.f1.desc },
-              { icon: '✨', title: t.features.f2.title, desc: t.features.f2.desc },
-              { icon: '🎓', title: t.features.f3.title, desc: t.features.f3.desc }
+              { title: t.features.f1.title, desc: t.features.f1.desc },
+              { title: t.features.f2.title, desc: t.features.f2.desc },
+              { title: t.features.f3.title, desc: t.features.f3.desc }
             ].map((f, i) => (
               <div key={i} className="bg-white/5 border border-white/10 p-8 md:p-10 rounded-[2.5rem] backdrop-blur-md">
-                <div className="text-4xl mb-6">{f.icon}</div>
+                <div className="mb-6 text-xl md:text-2xl font-black tracking-[0.25em] text-[#FF9D00]">{String(i + 1).padStart(2, '0')}</div>
                 <h4 className="text-lg md:text-xl font-black mb-4 uppercase tracking-tight leading-snug">{f.title}</h4>
                 <p className="text-slate-500 text-sm font-light leading-relaxed">{f.desc}</p>
               </div>

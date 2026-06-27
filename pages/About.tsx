@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Award, Building2, CheckCircle2, Globe, MapPin, Phone, Shield, Sparkles } from 'lucide-react';
+import { Award, CheckCircle2, Globe, MapPin, Phone } from 'lucide-react';
 import SEO from '../components/SEO';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -278,7 +278,6 @@ const About: React.FC = () => {
         <div className="relative mx-auto flex max-w-7xl flex-col gap-10 px-6 py-24 md:py-32">
           <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
             <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-5 py-2 text-[10px] font-black uppercase tracking-[0.28em] text-orange-300">
-              <Sparkles className="h-4 w-4" />
               <span>{content.heroBadge}</span>
             </div>
             <h1 className="mb-6 text-5xl font-black tracking-tight md:text-7xl">{content.title}</h1>
@@ -295,9 +294,6 @@ const About: React.FC = () => {
                 transition={{ delay: index * 0.08 }}
                 className="rounded-[2rem] border border-white/10 bg-white/5 p-7 backdrop-blur-md"
               >
-                <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-500/15 text-orange-300">
-                  <Shield className="h-6 w-6" />
-                </div>
                 <h2 className="mb-3 text-xl font-black text-white">{item.title}</h2>
                 <p className="text-sm leading-7 text-slate-300">{item.description}</p>
               </motion.div>
@@ -346,9 +342,6 @@ const About: React.FC = () => {
                 key={service}
                 className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl"
               >
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-900 text-white">
-                  <Building2 className="h-5 w-5" />
-                </div>
                 <p className="text-base font-bold leading-8 text-slate-800">{service}</p>
               </div>
             ))}
@@ -393,7 +386,6 @@ const About: React.FC = () => {
           <div className="grid gap-5 md:grid-cols-2">
             {content.recognitionPoints.map((point) => (
               <div key={point} className="flex gap-4 rounded-[1.75rem] border border-orange-100 bg-white p-6">
-                <Globe className="mt-1 h-5 w-5 shrink-0 text-orange-500" />
                 <p className="text-sm font-bold leading-7 text-slate-800">{point}</p>
               </div>
             ))}
