@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
+import { BOOKING_URLS } from '../lib/bookingLinks';
 
 const ItineraryZ6: React.FC = () => {
   const { t, language } = useLanguage();
