@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
+import { BOOKING_URLS } from '../lib/bookingLinks';
 
 const ItineraryS4: React.FC = () => {
   const { t, language } = useLanguage();
@@ -51,9 +52,9 @@ const ItineraryS4: React.FC = () => {
             {d.hero.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link to="/contact" className="w-full sm:w-auto px-8 md:px-10 py-4 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-[0.16em] md:tracking-widest text-[12px] md:text-sm shadow-2xl">
-              {d.hero.ctaPrimary}
-            </Link>
+            <a href={BOOKING_URLS.S4} className="w-full sm:w-auto px-8 md:px-10 py-4 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-[0.16em] md:tracking-widest text-[12px] md:text-sm shadow-2xl">
+              {t.nav.bookOnline}
+            </a>
             <Link to="/contact" className="w-full sm:w-auto px-8 md:px-10 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full font-black uppercase tracking-[0.16em] md:tracking-widest text-[12px] md:text-sm">
               {d.hero.ctaSecondary}
             </Link>
@@ -243,9 +244,9 @@ const ItineraryS4: React.FC = () => {
         <div className="relative z-10 max-w-4xl mx-auto space-y-10">
           <h2 className="text-3xl md:text-6xl font-black serif italic">{d.meta.footer_cta_title}</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="w-full sm:w-auto px-12 py-5 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-widest text-sm shadow-xl">
+            <a href={BOOKING_URLS.S4} className="w-full sm:w-auto px-12 py-5 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-widest text-sm shadow-xl">
               {d.meta.cta_consult}
-            </Link>
+            </a>
             <Link to="/contact" className="w-full sm:w-auto px-12 py-5 bg-white text-slate-900 rounded-full font-black uppercase tracking-widest text-sm">
               {d.meta.cta_plan}
             </Link>
@@ -255,12 +256,12 @@ const ItineraryS4: React.FC = () => {
 
       {/* Mobile Sticky Action Bar */}
       <div className="md:hidden fixed bottom-6 left-6 right-6 z-[60] animate-in slide-in-from-bottom-12 duration-1000">
-        <Link to="/contact" className="flex items-center justify-between bg-white/95 backdrop-blur-xl border border-slate-200 text-slate-900 p-2 pl-6 rounded-full shadow-2xl">
+        <a href={BOOKING_URLS.S4} className="flex items-center justify-between bg-white/95 backdrop-blur-xl border border-slate-200 text-slate-900 p-2 pl-6 rounded-full shadow-2xl">
           <span className="text-[10px] font-black uppercase tracking-widest">{d.meta.sticky_cta}</span>
           <div className="w-10 h-10 bg-[#FF9D00] rounded-full flex items-center justify-center text-white shadow-lg">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
           </div>
-        </Link>
+        </a>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
+import { BOOKING_URLS } from '../lib/bookingLinks';
 
 const ItineraryS2: React.FC = () => {
   const { t } = useLanguage();
@@ -50,7 +51,7 @@ const ItineraryS2: React.FC = () => {
           </h1>
           <p className="text-white/80 text-base md:text-[1.35rem] font-light mb-10 tracking-[0.12em] md:tracking-[0.22em] uppercase">{d.description}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link to="/contact" className="w-full sm:w-auto px-8 md:px-10 py-4 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-[0.16em] md:tracking-widest text-[12px] md:text-sm shadow-2xl">{d.cta_consult}</Link>
+            <a href={BOOKING_URLS.S2} className="w-full sm:w-auto px-8 md:px-10 py-4 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-[0.16em] md:tracking-widest text-[12px] md:text-sm shadow-2xl">{t.nav.bookOnline}</a>
             <Link to="/contact" className="w-full sm:w-auto px-8 md:px-10 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full font-black uppercase tracking-[0.16em] md:tracking-widest text-[12px] md:text-sm">{d.cta_plan}</Link>
           </div>
         </div>
@@ -161,16 +162,16 @@ const ItineraryS2: React.FC = () => {
       <section className="py-32 bg-slate-950 text-white text-center px-6">
         <h2 className="text-3xl md:text-6xl font-black serif italic mb-10">{d.footer_cta}</h2>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/contact" className="px-12 py-5 bg-[#FF9D00] text-white rounded-full font-black uppercase text-sm shadow-xl">{d.cta_consult}</Link>
+          <a href={BOOKING_URLS.S2} className="px-12 py-5 bg-[#FF9D00] text-white rounded-full font-black uppercase text-sm shadow-xl">{t.nav.bookOnline}</a>
           <Link to="/contact" className="px-12 py-5 bg-white text-slate-900 rounded-full font-black uppercase text-sm">{d.cta_plan}</Link>
         </div>
       </section>
       
       <div className="md:hidden fixed bottom-6 left-6 right-6 z-[60]">
-        <Link to="/contact" className="flex items-center justify-between bg-white/95 backdrop-blur-xl border border-slate-200 p-2 pl-6 rounded-full shadow-2xl">
-          <span className="text-[10px] font-black uppercase tracking-widest">{d.sticky_cta}</span>
+        <a href={BOOKING_URLS.S2} className="flex items-center justify-between bg-white/95 backdrop-blur-xl border border-slate-200 p-2 pl-6 rounded-full shadow-2xl">
+          <span className="text-[10px] font-black uppercase tracking-widest">{t.nav.bookOnline}</span>
           <div className="w-10 h-10 bg-[#FF9D00] rounded-full flex items-center justify-center text-white"><svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg></div>
-        </Link>
+        </a>
       </div>
     </div>
   );

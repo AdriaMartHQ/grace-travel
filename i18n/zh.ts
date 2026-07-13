@@ -1,7 +1,7 @@
 import type { BaseTranslations } from '../translations';
 
 const zh: BaseTranslations = {
-    nav: { home: '首页', tours: '土耳其线路', faith: '信仰之旅', about: '关于我们', tickets: '门票体验', contact: '联系我们', enquire: '即刻定制', closeMenu: '关闭', itineraries: '行程线路', turkeySection: '土耳其精品游', turkeyClassic: '人文经典 · S系列', turkeyClassicDesc: '6–10天全景经典私家游', faithPilgrimage: '信仰朝圣 · Z系列', faithPilgrimageDesc: '七教会 · 保罗足迹 · 圣经圣迹', otherDest: '旅游延伸线路', balkans: '巴尔干三国', balkansDesc: '塞尔维亚 · 黑山 · 波黑旅游延伸', holyland: '以色列圣地', holylandDesc: '耶路撒冷 · 加利利 · 伯利恒旅游延伸', routesSection: '行程', servicesSection: '服务' },
+    nav: { home: '首页', bookOnline: '在线预订', tours: '土耳其线路', faith: '信仰之旅', about: '关于我们', tickets: '门票体验', contact: '联系我们', enquire: '即刻定制', closeMenu: '关闭', itineraries: '行程线路', turkeySection: '土耳其精品游', turkeyClassic: '人文经典 · S系列', turkeyClassicDesc: '6–10天全景经典私家游', faithPilgrimage: '信仰朝圣 · Z系列', faithPilgrimageDesc: '七教会 · 保罗足迹 · 圣经圣迹', otherDest: '旅游延伸线路', balkans: '巴尔干三国', balkansDesc: '塞尔维亚 · 黑山 · 波黑旅游延伸', holyland: '以色列圣地', holylandDesc: '耶路撒冷 · 加利利 · 伯利恒旅游延伸', routesSection: '行程', servicesSection: '服务' },
     hero: {
       title: '探索土耳其',
       subtitle: '与恩途 · 国际旅行开启一场穿越古老历史与灿烂文化的私享定制之旅\n\n“你出你入，耶和华要保护你，\n从今时直到永远。”\n—— 诗篇 121:8',
@@ -313,7 +313,7 @@ const zh: BaseTranslations = {
             image: "/img/remote/u-1687706222092-b6545828217d.webp",
             paragraphs: [
               "清晨从伊斯坦布尔出发，沿马尔马拉海西行，开启史诗之旅。途经世界主跨最长的 【1915 恰纳卡莱大桥】，横跨达达尼尔海峡，气势恢宏。",
-              "抵达联合国教科科组织遗产地 【特罗亚古城】，探访荷马《伊利亚特》中“木马屠城”的发生地——九层叠压的考古遗址跨越四千年文明。",
+              "抵达联合国教科文组织遗产地 【特罗亚古城】，探访荷马《伊利亚特》中“木马屠城”的发生地——九层叠压的考古遗址跨越四千年文明。",
               "随后前往鲜为人知却意义非凡的 【亚历山大特洛阿斯古城】：亚历山大大帝所建古港，更是使徒保罗启航赴欧的出发地。"
             ],
             meals: { breakfast: "/", lunch: "含", dinner: "含" }
@@ -324,8 +324,8 @@ const zh: BaseTranslations = {
             stay: "库萨达斯 5 星酒店",
             image: "/img/remote/u-1701428588034-5893b2512a68.webp",
             paragraphs: [
-              "今日今日南下爱琴海腹地.首先造访文艺小镇 【阿拉恰特】，蓝窗白墙的希腊式石屋、鹅卵石街道与帆板海滩构成地中海画卷。",
-              "随后抵达土耳其第三大城市 【伊兹密尔】，参观 1901 年建成的 【钟楼】 与库纳克广场，面朝海湾，城市活力铺面而来。",
+              "今日南下爱琴海腹地.首先造访文艺小镇 【阿拉恰特】，蓝窗白墙的希腊式石屋、鹅卵石街道与帆板海滩构成地中海画卷。",
+              "随后抵达土耳其第三大城市 【伊兹密尔】，参观 1901 年建成的 【钟楼】 与库纳克广场，面朝海湾，城市活力扑面而来。",
               "随后安排 【土耳其皮衣时尚秀】（自由参观）。傍晚抵达度假胜地库萨达斯，夜宿海滨五星酒店。"
             ],
             meals: { breakfast: "酒店", lunch: "含", dinner: "含" }
@@ -375,7 +375,7 @@ const zh: BaseTranslations = {
             paragraphs: [
               "探访 【阿斯潘多斯古剧场】，保存完好、声学效果极佳，被誉为“古代声学奇迹”。",
               "随后前往苏非主义精神中心 【孔亚】，途中外观 【苏丹大驿站】（13 世纪塞尔柱商旅遗迹）。",
-              "下午参访 【梅夫拉纳博物馆】，馆内沉列旋转舞法衣、手稿与玫瑰花园，静谧中流淌哲思。"
+              "下午参访 【梅夫拉纳博物馆】，馆内陈列旋转舞法衣、手稿与玫瑰花园，静谧中流淌哲思。"
             ],
             meals: { breakfast: "酒店", lunch: "含", dinner: "含" }
           },
@@ -525,7 +525,7 @@ const zh: BaseTranslations = {
             stay: "恰纳卡莱 5 星酒店",
             image: "/img/remote/u-1716274644458-d30c57acdeb4.webp",
             paragraphs: [
-              "今日今日跨越【1915 恰纳卡莱大桥】，抵达特洛伊地区.入内参观【特洛伊古城遗址】，深度解析《荷马史诗》与真实的战争考古。",
+              "今日跨越【1915 恰纳卡莱大桥】，抵达特洛伊地区.入内参观【特洛伊古城遗址】，深度解析《荷马史诗》与真实的战争考古。",
               "随后前往【亚历山大特洛阿斯古城】，寻访亚历山大大帝所建古港，此处亦是早期基督教传播的重要历史节点.傍晚入住海峡沿岸酒店。"
             ],
             meals: { breakfast: "酒店", lunch: "含", dinner: "含" }
@@ -558,7 +558,7 @@ const zh: BaseTranslations = {
             stay: "孔亚 5 星酒店",
             image: "/img/remote/u-1680465807377-c83db592a2fc.webp",
             paragraphs: [
-              "今日今日穿越安纳托利亚高原，抵达高原上的璀璨明珠【埃尔吉迪尔湖】.湖畔漫步，感受未被惊扰的小镇慢时光。",
+              "今日穿越安纳托利亚高原，抵达高原上的璀璨明珠【埃尔吉迪尔湖】.湖畔漫步，感受未被惊扰的小镇慢时光。",
               "午后继续前往苏非派圣地孔亚.入内参观【梅夫拉纳博物馆】，深度了解苏菲主义哲学与极富禅意的旋转舞文化。"
             ],
             meals: { breakfast: "酒店", lunch: "含", dinner: "含" }

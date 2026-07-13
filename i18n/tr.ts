@@ -1,7 +1,7 @@
 import type { BaseTranslations } from '../translations';
 
 const tr: BaseTranslations = {
-    nav: { home: 'Anasayfa', tours: 'Turlar', faith: 'İnanç', about: 'Hakkımızda', tickets: 'Biletler', contact: 'İletişim', enquire: 'Teklif Al', closeMenu: 'Kapat', itineraries: 'Rotalar', turkeySection: 'Türkiye', turkeyClassic: 'Kültürel & Tarihi', turkeyClassicDesc: '6–10 günlük S-serisi', faithPilgrimage: 'İnanç & Hac', faithPilgrimageDesc: 'Yedi Kilise · Pavlus Rotası', otherDest: 'Seyahat Uzantıları', balkans: 'Balkanlar', balkansDesc: 'Sırbistan · Karadağ · Bosna seyahat uzantısı', holyland: 'Kutsal Topraklar', holylandDesc: 'İsrail · Kudüs · Celile seyahat uzantısı', routesSection: 'Rotalar', servicesSection: 'Hizmetler' },
+    nav: { home: 'Anasayfa', bookOnline: 'Online Rezervasyon', tours: 'Turlar', faith: 'İnanç', about: 'Hakkımızda', tickets: 'Biletler', contact: 'İletişim', enquire: 'Teklif Al', closeMenu: 'Kapat', itineraries: 'Rotalar', turkeySection: 'Türkiye', turkeyClassic: 'Kültürel & Tarihi', turkeyClassicDesc: '6–10 günlük S-serisi', faithPilgrimage: 'İnanç & Hac', faithPilgrimageDesc: 'Yedi Kilise · Pavlus Rotası', otherDest: 'Seyahat Uzantıları', balkans: 'Balkanlar', balkansDesc: 'Sırbistan · Karadağ · Bosna seyahat uzantısı', holyland: 'Kutsal Topraklar', holylandDesc: 'İsrail · Kudüs · Celile seyahat uzantısı', routesSection: 'Rotalar', servicesSection: 'Hizmetler' },
     hero: {
       title: 'Türkiye\'nin Ruhunu Keşfedin',
       subtitle: 'Grace Way ile antik mirastan canlı kültüre uzanan butik yolculuklar.',

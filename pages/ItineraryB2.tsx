@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
+import { BOOKING_URLS } from '../lib/bookingLinks';
 
 // Balkan landmark photos self-hosted under /img/remote/ (sourced from Wikimedia Commons,
 // CC BY-SA — attribution preserved in the footer credits below).
@@ -284,9 +285,9 @@ const ItineraryB2: React.FC = () => {
             {page.meta.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link to="/contact" className="w-full sm:w-auto px-8 md:px-10 py-4 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-[0.16em] md:tracking-widest text-[12px] md:text-sm shadow-2xl">
+            <a href={BOOKING_URLS.B2} className="w-full sm:w-auto px-8 md:px-10 py-4 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-[0.16em] md:tracking-widest text-[12px] md:text-sm shadow-2xl">
               {page.meta.cta_consult}
-            </Link>
+            </a>
             <Link to="/contact" className="w-full sm:w-auto px-8 md:px-10 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full font-black uppercase tracking-[0.16em] md:tracking-widest text-[12px] md:text-sm">
               {page.meta.cta_plan}
             </Link>
@@ -464,9 +465,9 @@ const ItineraryB2: React.FC = () => {
         <div className="relative z-10 max-w-4xl mx-auto space-y-10">
           <h2 className="text-3xl md:text-6xl font-black serif italic">{page.meta.footer_cta_title}</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="w-full sm:w-auto px-12 py-5 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-widest text-sm shadow-xl">
+            <a href={BOOKING_URLS.B2} className="w-full sm:w-auto px-12 py-5 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-widest text-sm shadow-xl">
               {page.meta.cta_consult}
-            </Link>
+            </a>
             <Link to="/itineraries/b1-balkan-3-countries-12-days" className="w-full sm:w-auto px-12 py-5 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full font-black uppercase tracking-widest text-sm">
               查看 B1 · 12天线路
             </Link>

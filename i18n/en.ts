@@ -1,7 +1,7 @@
 import type { BaseTranslations } from '../translations';
 
 const en: BaseTranslations = {
-    nav: { home: 'Home', tours: 'Tours', faith: 'Faith', about: 'About Us', tickets: 'Tickets', contact: 'Contact', enquire: 'Enquire', closeMenu: 'Close', itineraries: 'Itineraries', turkeySection: 'Turkey', turkeyClassic: 'Cultural & Heritage', turkeyClassicDesc: '6–10 day S-series classics', faithPilgrimage: 'Faith Pilgrimage', faithPilgrimageDesc: 'Seven Churches · Paul\'s Footsteps', otherDest: 'Travel Extensions', balkans: 'Balkans 3-Country', balkansDesc: 'Serbia · Montenegro · Bosnia travel extension', holyland: 'Holy Land', holylandDesc: 'Israel · Jerusalem · Galilee travel extension', routesSection: 'Itineraries', servicesSection: 'Services' },
+    nav: { home: 'Home', bookOnline: 'Book Online', tours: 'Tours', faith: 'Faith', about: 'About Us', tickets: 'Tickets', contact: 'Contact', enquire: 'Enquire', closeMenu: 'Close', itineraries: 'Itineraries', turkeySection: 'Turkey', turkeyClassic: 'Cultural & Heritage', turkeyClassicDesc: '6–10 day S-series classics', faithPilgrimage: 'Faith Pilgrimage', faithPilgrimageDesc: 'Seven Churches · Paul\'s Footsteps', otherDest: 'Travel Extensions', balkans: 'Balkans 3-Country', balkansDesc: 'Serbia · Montenegro · Bosnia travel extension', holyland: 'Holy Land', holylandDesc: 'Israel · Jerusalem · Galilee travel extension', routesSection: 'Itineraries', servicesSection: 'Services' },
     hero: {
       title: 'Discover the Soul of Turkey',
       subtitle: 'Bespoke journeys through ancient history and vibrant culture with Grace Way — your licensed boutique travel partner in Turkey.',

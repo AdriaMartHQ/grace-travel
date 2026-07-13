@@ -6,6 +6,7 @@ import type { Tour, Ticket } from './types';
 export interface BaseTranslations {
   nav: {
     home: string;
+    bookOnline: string;
     tours: string;
     faith: string;
     about: string;
