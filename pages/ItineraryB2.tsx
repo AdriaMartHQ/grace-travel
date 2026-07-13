@@ -219,7 +219,7 @@ const itineraryContent = {
 };
 
 const ItineraryB2: React.FC = () => {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     e.currentTarget.onerror = null;
@@ -286,7 +286,7 @@ const ItineraryB2: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a href={BOOKING_URLS.B2} className="w-full sm:w-auto px-8 md:px-10 py-4 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-[0.16em] md:tracking-widest text-[12px] md:text-sm shadow-2xl">
-              {page.meta.cta_consult}
+              {t.nav.bookOnline}
             </a>
             <Link to="/contact" className="w-full sm:w-auto px-8 md:px-10 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full font-black uppercase tracking-[0.16em] md:tracking-widest text-[12px] md:text-sm">
               {page.meta.cta_plan}
@@ -466,7 +466,7 @@ const ItineraryB2: React.FC = () => {
           <h2 className="text-3xl md:text-6xl font-black serif italic">{page.meta.footer_cta_title}</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={BOOKING_URLS.B2} className="w-full sm:w-auto px-12 py-5 bg-[#FF9D00] text-white rounded-full font-black uppercase tracking-widest text-sm shadow-xl">
-              {page.meta.cta_consult}
+              {t.nav.bookOnline}
             </a>
             <Link to="/itineraries/b1-balkan-3-countries-12-days" className="w-full sm:w-auto px-12 py-5 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-full font-black uppercase tracking-widest text-sm">
               查看 B1 · 12天线路
