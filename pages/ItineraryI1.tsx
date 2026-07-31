@@ -99,7 +99,7 @@ const itineraryContent = {
           day: '02',
           title: '海法、凯撒利亚、米吉多、迦拿与拿撒勒｜进入圣经地理',
           stay: '提比利亚酒店',
-          image: '/img/remote/u-1505763941729-634dfa346b1b.webp',
+          image: '/img/remote/wiki-caesarea-aqueduct.webp',
           paragraphs: [
             '由海法迦密山开启旅程，在以利亚先知与巴力先知对峙的背景中进入旧约叙事；随后探访凯撒利亚遗址，回顾彼得向哥尼流传福音的重要节点，并经过米吉多平原体会圣经中的末世意象。',
             '下午前往迦拿与拿撒勒，围绕耶稣第一个神迹、报喜事件与圣家生活展开现场讲解，使团队从地理空间进入福音书的真实历史语境。',
@@ -110,7 +110,7 @@ const itineraryContent = {
           day: '03',
           title: '加利利海一线｜从认信到跟随',
           stay: '提比利亚酒店',
-          image: '/img/remote/u-1542743408-218cc173cda0.webp',
+          image: '/img/remote/wiki-sea-of-galilee.webp',
           paragraphs: [
             '前往凯撒利亚腓立比，回顾彼得对基督身份的伟大认信；随后沿加利利海岸访问八福山、五饼二鱼堂、彼得授职堂与迦百农，重走耶稣最集中开展事工的区域。',
             '行程中安排加利利海游船与约旦河纪念环节，让团队在祷告、诗歌或默想中，将圣经文本与现场体验真正连接起来。',
@@ -252,7 +252,7 @@ const itineraryContent = {
           day: '02',
           title: 'Haifa, Caesarea, Megiddo, Cana and Nazareth',
           stay: 'Tiberias Hotel',
-          image: '/img/remote/u-1505763941729-634dfa346b1b.webp',
+          image: '/img/remote/wiki-caesarea-aqueduct.webp',
           paragraphs: [
             'Begin at Mount Carmel and Caesarea, then continue through Megiddo, Cana, and Nazareth to enter the biblical geography in a meaningful sequence.',
             'This day connects Old Testament memory, the first miracle at Cana, and the Annunciation setting in Nazareth.',
@@ -263,7 +263,7 @@ const itineraryContent = {
           day: '03',
           title: 'Galilee core route | Confession, calling and followership',
           stay: 'Tiberias Hotel',
-          image: '/img/remote/u-1542743408-218cc173cda0.webp',
+          image: '/img/remote/wiki-sea-of-galilee.webp',
           paragraphs: [
             'Visit Caesarea Philippi, the Beatitudes area, Tabgha, Peter-related sites, Capernaum, and the Jordan River memorial zone.',
             'The day is especially suited for biblical background sharing, prayer, and group reflection on discipleship.',
@@ -598,6 +598,14 @@ const ItineraryI1: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <div className="bg-white py-8 px-6 border-t border-slate-100">
+        <p className="max-w-5xl mx-auto text-[11px] leading-relaxed text-slate-400 text-center">
+          {language === 'zh'
+            ? '图片版权：加利利海（第 3 天）© Aner Ottolenghi，来自 Wikimedia Commons，依 CC BY-SA 3.0 许可使用；凯撒利亚罗马水道（第 2 天）来自 Wikimedia Commons，公有领域。其余照片为授权图库素材。最终成行将替换为本社实拍照片。'
+            : 'Photo credits: Sea of Galilee (Day 3) © Aner Ottolenghi, via Wikimedia Commons, used under CC BY-SA 3.0; Caesarea Roman aqueduct (Day 2) via Wikimedia Commons, public domain. Remaining photos are licensed stock. These will be replaced with our own photography once the tour operates.'}
+        </p>
+      </div>
     </div>
   );
 };
