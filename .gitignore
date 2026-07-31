@@ -27,3 +27,22 @@ dist-ssr
 generated/
 outputs/
 scripts/create_parental_consent_*.py
+
+# Build/audit scratch (Lighthouse runs, build logs)
+tmp/
+
+# WordPress-era leftovers. The WP site at gracetravel.com.tr was deleted on
+# 2026-07-02 (containers, volumes and images) and replaced by the Odoo stack,
+# so none of this is wired to anything. Kept on disk rather than deleted
+# because the WP backup was already lost once to a /tmp sweep and these
+# mu-plugins are the last surviving copy. Delete them whenever you like.
+scripts/wp-*.php
+scripts/grace-*.php
+scripts/grace-*.css
+scripts/grace-hero.html
+scripts/altair-zh_CN.*
+
+# Local work files (non-website), matching the intent of the block above
+scripts/build_a_plan_quote_docx.py
+scripts/fix-logo-chinese.py
+scripts/make-logo-header-variant.py
