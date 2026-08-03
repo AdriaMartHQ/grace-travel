@@ -18,7 +18,16 @@ grace.tr www.grace.tr {
         # 优先提供预压缩文件（.br / .gz），否则 on-the-fly 压缩
         precompressed br gzip zstd
     }
-    try_files {path} {path}/index.html /index.html
+    # Retired with the 2026-06-27 Turkey repositioning. Server-side 301 so crawlers and
+    # cold hits get a real redirect — the client-side <Navigate> only covers in-app nav.
+    redir /china-inbound /tours 301
+    redir /china-inbound/* /tours 301
+
+    # `=404` replaces the old `/index.html` SPA fallback. Every real route is a physical
+    # dist/<route>/index.html, enforced at build time by scripts/apply-prerender.mjs
+    # against lib/routes.manifest.mjs — so anything missing here genuinely does not exist.
+    # This kills the soft-404s and takes /style-guide offline with them.
+    try_files {path} {path}/index.html =404
 
     # Gzip + Zstd 动态压缩（Brotli 需 xcaddy 编译，defer 到后续）
     encode {
@@ -51,13 +60,35 @@ grace.tr www.grace.tr {
         Access-Control-Allow-Origin "*"
         defer
     }
+
+    # Serve the branded static 404 page while preserving the 404 status. A small static
+    # page on purpose: a garbage URL should not pull down the 617 KB SPA bundle.
+    handle_errors {
+        @404 expression {err.status_code} == 404
+        handle @404 {
+            rewrite * /404.html
+            file_server {
+                status 404
+            }
+        }
+    }
 }
 
-# gracetravel.com.tr → forward to grace.tr (2026-06-21).
-# User dissatisfied with the WordPress site; domain forwards to the SPA instead.
-# 302 (temporary) on purpose: fully reversible — WP containers (wordpress-1/db-1)
-# are kept running + intact. Upgrade to 301 only once the cutover is confirmed permanent.
-# To manage WP: SSH tunnel to 127.0.0.1:8080, or temporarily restore the reverse_proxy block.
-gracetravel.com.tr www.gracetravel.com.tr {
-	redir https://grace.tr/ 302
+# gracetravel.com.tr → Odoo 18 (docker, 127.0.0.1:8077 http / 8078 websocket). Live since 2026-07-10.
+# Rollback: restore the redir block from Caddyfile.bak.* and reload.
+gracetravel.com.tr {
+	encode zstd gzip
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		-Server
+	}
+	@websocket path /websocket /websocket/*
+	reverse_proxy @websocket 127.0.0.1:8078
+	reverse_proxy 127.0.0.1:8077
+}
+
+www.gracetravel.com.tr {
+	redir https://gracetravel.com.tr{uri} 308
 }

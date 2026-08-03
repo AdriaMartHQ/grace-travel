@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/apply-prerender.mjs",
+    "build": "vite build && node scripts/apply-prerender.mjs && node scripts/generate-sitemap.mjs && node scripts/generate-404.mjs",
     "prerender": "vite build && node scripts/prerender.mjs",
     "preview": "vite preview",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "smoke": "node scripts/smoke-routes.mjs"
   },
   "dependencies": {
     "@rollup/wasm-node": "^4.59.0",

@@ -7,16 +7,19 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { PAGE_ROUTES, ORIGIN } from '../lib/routes.manifest.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 const SNAP = path.join(ROOT, 'prerendered', 'routes.json');
-const ORIGIN = 'https://grace.tr';
 
+// Hard failure, not a skip: routes.json is committed, and Caddy now serves a real 404 for
+// paths with no dist/<route>/index.html. Silently shipping an SPA-only build would 404 the
+// entire site.
 if (!fs.existsSync(SNAP)) {
-  console.warn('[apply-prerender] prerendered/routes.json missing — skipping (SPA only).');
-  process.exit(0);
+  console.error('[apply-prerender] FATAL: prerendered/routes.json missing. Run `npm run prerender` and commit it.');
+  process.exit(1);
 }
 
 const routes = JSON.parse(fs.readFileSync(SNAP, 'utf8'));
@@ -150,3 +153,33 @@ for (const [route, data] of Object.entries(routes)) {
   n++;
 }
 console.log(`[apply-prerender] injected ${n} prerendered route(s) + per-route JSON-LD into dist/`);
+
+// ── Route-completeness invariant ──────────────────────────────────────────────
+// Every `page` route in the manifest must exist on disk. This is what makes the strict
+// Caddy `=404` safe: a route that reaches production without a prerendered file would
+// otherwise hard-404 for real visitors instead of degrading to the SPA shell.
+const missingFile = PAGE_ROUTES.filter((route) => {
+  const dir = route === '/' ? DIST : path.join(DIST, route.replace(/^\//, ''));
+  return !fs.existsSync(path.join(dir, 'index.html'));
+});
+
+// Snapshots for routes that no longer exist mean routes.json is stale relative to the
+// manifest — the same drift that once shipped a new-About snapshot against an old bundle.
+const stale = Object.keys(routes).filter((route) => !PAGE_ROUTES.includes(route));
+
+if (missingFile.length || stale.length) {
+  if (missingFile.length) {
+    console.error(`[apply-prerender] FATAL: ${missingFile.length} page route(s) produced no dist/<route>/index.html:`);
+    missingFile.forEach((r) => console.error(`  ✗ ${r}`));
+    console.error('  → the route is in lib/routes.manifest.mjs but has no snapshot.');
+    console.error('  → run `npm run prerender` (with a clean working tree) and commit prerendered/routes.json.');
+  }
+  if (stale.length) {
+    console.error(`[apply-prerender] FATAL: ${stale.length} snapshot(s) not in the manifest:`);
+    stale.forEach((r) => console.error(`  ✗ ${r}`));
+    console.error('  → re-run `npm run prerender` to drop them.');
+  }
+  process.exit(1);
+}
+
+console.log(`[apply-prerender] ✓ route invariant holds — all ${PAGE_ROUTES.length} page route(s) present on disk`);

@@ -1,14 +1,14 @@
 import React from 'react';
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { Navigate, useLocation, useRoutes, type RouteObject } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 import type { Language, BaseTranslations } from './translations';
+import { ROUTES } from './lib/routes.manifest.mjs';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Tours from './pages/Tours';
 import Tickets from './pages/Tickets';
 import Contact from './pages/Contact';
 import About from './pages/About';
-import StyleGuide from './pages/StyleGuide';
 import AirportTransfer from './pages/AirportTransfer';
 import ItineraryS1 from './pages/ItineraryS1';
 import ItineraryS2 from './pages/ItineraryS2';
@@ -22,6 +22,35 @@ import ItineraryI1 from './pages/ItineraryI1';
 import ItineraryB1 from './pages/ItineraryB1';
 import ItineraryB2 from './pages/ItineraryB2';
 
+// Keyed by the `id` field in lib/routes.manifest.mjs. The manifest owns the paths;
+// this map owns the components. apply-prerender.mjs fails the build if the two drift.
+const PAGES: Record<string, React.ComponentType> = {
+  Home,
+  Tours,
+  AirportTransfer,
+  Tickets,
+  About,
+  Contact,
+  ItineraryS1,
+  ItineraryS2,
+  ItineraryS4,
+  ItineraryS5,
+  ItineraryZ1,
+  ItineraryZ2,
+  ItineraryZ5,
+  ItineraryZ6,
+  ItineraryI1,
+  ItineraryB1,
+  ItineraryB2,
+};
+
+// Dev-only pages are loaded through a DEV-gated dynamic import so Rollup drops them from
+// the production bundle entirely — a static import would ship the code even if the route
+// were guarded, leaving it reachable via the SPA fallback.
+const DEV_PAGES: Record<string, React.LazyExoticComponent<React.ComponentType>> = import.meta.env.DEV
+  ? { StyleGuide: React.lazy(() => import('./pages/StyleGuide')) }
+  : {};
+
 const ScrollToTop = () => {
   const { pathname } = useLocation();
   React.useEffect(() => {
@@ -30,32 +59,53 @@ const ScrollToTop = () => {
   return null;
 };
 
+// Built as route *objects* rather than <Route> JSX: this table is data, and useRoutes
+// consumes it without the per-element `key` that JSX lists require.
+const buildRouteObjects = (): RouteObject[] => {
+  const objects: RouteObject[] = [];
+
+  for (const route of ROUTES) {
+    if (route.kind === 'redirect') {
+      objects.push({ path: route.path, element: <Navigate to={route.to!} replace /> });
+      continue;
+    }
+
+    if (route.kind === 'devOnly') {
+      const DevPage = DEV_PAGES[route.id!];
+      if (!DevPage) continue; // production: the route does not exist at all
+      objects.push({
+        path: route.path,
+        element: (
+          <React.Suspense fallback={null}>
+            <DevPage />
+          </React.Suspense>
+        ),
+      });
+      continue;
+    }
+
+    const Page = PAGES[route.id!];
+    if (!Page) {
+      // Throw rather than skip. Skipping would render the Layout shell for that path —
+      // large enough to satisfy prerender's "root too small" check and to produce a
+      // dist/<route>/index.html, so the build invariant would pass and an empty page
+      // would ship with a 200. Failing here instead makes `npm run prerender` and the
+      // CI build stop, which is the only safe outcome.
+      throw new Error(
+        `[routes] manifest entry "${route.path}" has no component for id "${route.id}" — ` +
+          `add it to the PAGES map in App.tsx or remove the entry from lib/routes.manifest.mjs`,
+      );
+    }
+    objects.push({ path: route.path, element: <Page /> });
+  }
+
+  return objects;
+};
+
+const ROUTE_OBJECTS = buildRouteObjects();
+
 const AppContent: React.FC = () => {
-  return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/tours" element={<Tours />} />
-        <Route path="/airport-transfer" element={<AirportTransfer />} />
-        <Route path="/china-inbound/*" element={<Navigate to="/tours" replace />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/itineraries/s1-turkey-6-days" element={<ItineraryS1 />} />
-        <Route path="/itineraries/s2-turkey-8-days" element={<ItineraryS2 />} />
-        <Route path="/itineraries/s4-turkey-10-days" element={<ItineraryS4 />} />
-        <Route path="/itineraries/s5-turkey-8-days" element={<ItineraryS5 />} />
-        <Route path="/itineraries/z5-paul-footsteps-9-days" element={<ItineraryZ5 />} />
-        <Route path="/itineraries/z1-turkey-11-days" element={<ItineraryZ1 />} />
-        <Route path="/itineraries/z2-revelation-4-days" element={<ItineraryZ2 />} />
-        <Route path="/itineraries/z6-overland-seven-churches-7-days" element={<ItineraryZ6 />} />
-        <Route path="/itineraries/i1-israel-holyland-8-days" element={<ItineraryI1 />} />
-        <Route path="/itineraries/b1-balkan-3-countries-12-days" element={<ItineraryB1 />} />
-        <Route path="/itineraries/b2-balkan-3-countries-10-days" element={<ItineraryB2 />} />
-        <Route path="/tickets" element={<Tickets />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/style-guide" element={<StyleGuide />} />
-      </Routes>
-    </Layout>
-  );
+  return <Layout>{useRoutes(ROUTE_OBJECTS)}</Layout>;
 };
 
 const App: React.FC<{ initialLang: Language; initialT: BaseTranslations }> = ({ initialLang, initialT }) => {

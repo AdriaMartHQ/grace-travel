@@ -7,6 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import puppeteer from 'puppeteer-core';
+import { PAGE_ROUTES } from '../lib/routes.manifest.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -17,16 +18,9 @@ const CHROME =
   process.env.CHROME_PATH ||
   '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
-const ROUTES = [
-  '/', '/tours', '/airport-transfer', '/tickets', '/about', '/contact',
-  '/itineraries/b1-balkan-3-countries-12-days',
-  '/itineraries/b2-balkan-3-countries-10-days',
-  '/itineraries/s1-turkey-6-days', '/itineraries/s2-turkey-8-days',
-  '/itineraries/s4-turkey-10-days', '/itineraries/s5-turkey-8-days',
-  '/itineraries/z1-turkey-11-days', '/itineraries/z2-revelation-4-days',
-  '/itineraries/z5-paul-footsteps-9-days', '/itineraries/z6-overland-seven-churches-7-days',
-  '/itineraries/i1-israel-holyland-8-days',
-];
+// Route list comes from lib/routes.manifest.mjs — the same source App.tsx builds its
+// <Route> table from, so a new page can no longer ship without a snapshot.
+const ROUTES = PAGE_ROUTES;
 
 const MIME = { '.html':'text/html;charset=utf-8','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.json':'application/json','.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.webp':'image/webp','.ico':'image/x-icon','.webmanifest':'application/manifest+json','.txt':'text/plain','.xml':'application/xml' };
 
@@ -61,6 +55,19 @@ const out = {};
 let fail = 0;
 for (const route of ROUTES) {
   const page = await browser.newPage();
+  // Surface in-page errors. Without this a bootstrap failure (e.g. a manifest entry whose
+  // component is missing from App.tsx's PAGES map, which throws) shows up only as an
+  // opaque "root too small" on every route — 30s of timeout each before you learn nothing.
+  const pageErrors = [];
+  page.on('pageerror', (err) => pageErrors.push(err.message));
+  page.on('console', (msg) => {
+    if (msg.type() === 'error') pageErrors.push(msg.text());
+  });
+  // The wait below asserts the ZH chunk committed AND CJK text is present. A timeout means
+  // that assertion failed, so the route MUST be treated as failed even if the root happens
+  // to exceed the size threshold — otherwise wrong-language or half-initialised content
+  // silently becomes the committed snapshot.
+  let routeFailed = false;
   try {
     await page.goto(`http://localhost:${PORT}${route}?lang=zh`, { waitUntil: 'domcontentloaded', timeout: 45000 });
     await page.waitForFunction(() => {
@@ -74,6 +81,7 @@ for (const route of ROUTES) {
     await new Promise((r) => setTimeout(r, 600));
   } catch (e) {
     console.error(`✗ ${route} — render wait failed: ${e.message}`);
+    routeFailed = true;
   }
   const data = await page.evaluate(() => ({
     rootHtml: document.getElementById('root')?.innerHTML || '',
@@ -81,14 +89,32 @@ for (const route of ROUTES) {
     description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
   }));
   await page.close();
-  if (data.rootHtml.length < 1000) { console.error(`✗ ${route} — root too small (${data.rootHtml.length})`); fail++; }
-  else console.log(`✓ ${route} — ${data.rootHtml.length} chars · "${data.title.slice(0, 46)}"`);
+  const tooSmall = data.rootHtml.length < 1000;
+  if (routeFailed || tooSmall) {
+    console.error(
+      `✗ ${route} — ${tooSmall ? `root too small (${data.rootHtml.length})` : 'render assertion not met (see wait failure above)'}`,
+    );
+    if (pageErrors.length) {
+      console.error(`  ↳ in-page error: ${[...new Set(pageErrors)].slice(0, 2).join(' | ')}`);
+    }
+    fail++;
+  } else console.log(`✓ ${route} — ${data.rootHtml.length} chars · "${data.title.slice(0, 46)}"`);
   out[route] = data;
 }
 
 await browser.close();
 server.close();
+
+// Never overwrite a good snapshot with a broken run. This used to write unconditionally:
+// a failed prerender clobbered the committed routes.json with empty/partial content, and
+// only the exit code said so — so a subsequent `git add -A` could ship blank SEO content.
+if (fail) {
+  console.error(
+    `\n✗ ${fail} route(s) failed — prerendered/routes.json left UNCHANGED. Fix the errors above and re-run.`,
+  );
+  process.exit(1);
+}
+
 fs.mkdirSync(OUT, { recursive: true });
 fs.writeFileSync(path.join(OUT, 'routes.json'), JSON.stringify(out));
-console.log(`\nWrote prerendered/routes.json — ${ROUTES.length} routes, ${fail} failure(s)`);
-process.exit(fail ? 1 : 0);
+console.log(`\nWrote prerendered/routes.json — ${Object.keys(out).length} routes, 0 failure(s)`);
