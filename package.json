@@ -9,7 +9,9 @@
     "prerender": "vite build && node scripts/prerender.mjs",
     "preview": "vite preview",
     "lint": "tsc --noEmit",
-    "smoke": "node scripts/smoke-routes.mjs"
+    "smoke": "node scripts/smoke-routes.mjs && node scripts/smoke-booking.mjs",
+    "smoke:routes": "node scripts/smoke-routes.mjs",
+    "smoke:booking": "node scripts/smoke-booking.mjs"
   },
   "dependencies": {
     "@rollup/wasm-node": "^4.59.0",
