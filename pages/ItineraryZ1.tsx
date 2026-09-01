@@ -140,7 +140,7 @@ const ItineraryZ1: React.FC = () => {
                 <span className="text-xl">💰</span>
                 <span className="text-[10px] font-black text-orange-400 uppercase tracking-widest">{d.meta?.price_label}</span>
               </div>
-              <p className="text-3xl font-black text-[#FF9D00] tracking-tight">{currencySymbol}{d.meta?.price}</p>
+              <p className="text-3xl font-black text-[#FF9D00] tracking-tight">{d.meta?.price}</p>
             </div>
           </div>
         </div>

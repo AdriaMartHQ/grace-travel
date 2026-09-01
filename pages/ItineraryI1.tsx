@@ -23,8 +23,8 @@ const itineraryContent = {
       hotels: '当地四星标准双人间为主，含早餐与晚餐；部分中午安排当地特色餐，兼顾团体执行与旅途舒适度。',
       transport_label: '交通服务',
       hotels_label: '住宿与餐饮',
-      price_label: '参考团费',
-      price: '14890',
+      price_label: '团费',
+      price: '询价定制',
       meals_label: '餐饮安排',
       stay_label: '入住参考',
       footer_cta_title: '开启您的以色列圣地朝圣之旅',
@@ -196,8 +196,8 @@ const itineraryContent = {
       hotels: 'Mainly local 4-star standard twin rooms with breakfast and dinner included, plus selected local lunches.',
       transport_label: 'Transport Service',
       hotels_label: 'Stay & Dining',
-      price_label: 'Reference Price',
-      price: '2165',
+      price_label: 'Pricing',
+      price: 'Request a Custom Quote',
       meals_label: 'Dining',
       stay_label: 'Stay Reference',
       footer_cta_title: 'Begin Your Holy Land Pilgrimage',
@@ -452,7 +452,7 @@ const ItineraryI1: React.FC = () => {
                 <span className="text-xl">💰</span>
                 <span className="text-[10px] font-black text-orange-400 uppercase tracking-widest">{page.meta.price_label}</span>
               </div>
-              <p className="text-3xl font-black text-[#FF9D00] tracking-tight">{currencySymbol}{page.meta.price}</p>
+              <p className="text-3xl font-black text-[#FF9D00] tracking-tight">{page.meta.price}</p>
             </div>
           </div>
         </div>

@@ -39,7 +39,7 @@ const itineraryContent = {
       transport_label: '交通服务',
       hotels_label: '住宿与早餐',
       price_label: '参考团费',
-      price: '询价',
+      price: '询价定制',
       meals_label: '餐饮安排',
       stay_label: '入住参考',
       footer_cta_title: '开启你的巴尔干10天之旅',
