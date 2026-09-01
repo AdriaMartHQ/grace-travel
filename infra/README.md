@@ -3,8 +3,10 @@
 Backup of the live server config for **grace.tr**, hosted on Tencent Cloud
 **Hong Kong** (`43.129.213.201`, Ubuntu). The web server is **Caddy**, which:
 
-- serves the static `grace.tr` site from `/var/www/grace`, and
-- reverse-proxies `gracetravel.com.tr` → local WordPress on `127.0.0.1:8080`.
+- serves the static `grace.tr` site from `/var/www/grace`,
+- reverse-proxies `gracetravel.com.tr` → local **Odoo 18** on `127.0.0.1:8077`
+  (HTTP) and `127.0.0.1:8078` (websocket), and
+- 308-redirects `www.gracetravel.com.tr` → `gracetravel.com.tr`.
 
 So `infra/Caddyfile` is the **whole-machine** Caddy config (both sites), kept here
 verbatim so the hard-won crawl fix survives a server rebuild or an accidental edit.
@@ -12,10 +14,31 @@ verbatim so the hard-won crawl fix survives a server rebuild or an accidental ed
 > **What this is:** a dated, manual **snapshot** of the production Caddyfile — a
 > restore artifact, **not** an auto-deployed source of truth. The live config is
 > edited directly on the host; refresh this copy by hand (re-`scp`) after server
-> changes. **Snapshot: 2026-06-06.** Checked for secrets before committing — none
-> (no keys/passwords; the only `reverse_proxy` target is `127.0.0.1`). The
-> `gracetravel.com.tr` block is included because that site shares this machine; it
+> changes. **Snapshot: 2026-08-03.** Checked for secrets before committing — none
+> (no keys/passwords; every `reverse_proxy` target is `127.0.0.1`). The
+> `gracetravel.com.tr` blocks are included because that site shares this machine; it
 > lives in the grace.tr repo as grace.tr is the machine's primary site.
+
+## gracetravel.com.tr is Odoo, not WordPress
+
+WordPress was **retired**; `gracetravel.com.tr` has been served by Odoo 18 since
+**2026-07-10**. The stack lives on the same host at `/opt/gracetravel-odoo`
+(docker compose: `odoo:18.0` + `postgres:15`); the repo-side copy of that stack is
+`gracetravel-odoo/`, and its production credentials are in that repo's
+untracked `.env.production.secrets`.
+
+Verified live 2026-09-01:
+
+| Probe | Result |
+| --- | --- |
+| `https://gracetravel.com.tr/` | `200`, sets Odoo's `session_id` + `frontend_lang` cookies |
+| `https://gracetravel.com.tr/web/login` | `200` |
+| `https://gracetravel.com.tr/wp-login.php` | `404` — no WordPress left |
+| `https://www.gracetravel.com.tr/` | `308` → `https://gracetravel.com.tr/` |
+
+If you are reading an older copy of this file that describes a WordPress
+reverse-proxy on `127.0.0.1:8080`, that is stale — it described the pre-2026-07-10
+machine and misled at least one debugging session.
 
 ## Restore
 
