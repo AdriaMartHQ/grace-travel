@@ -8,7 +8,6 @@ import { BOOKING_URLS } from '../lib/bookingLinks';
 const ItineraryS4: React.FC = () => {
   const { t, language } = useLanguage();
   const d = t.itinerary_s4;
-  const currencySymbol = language === 'zh' ? '¥' : '$';
 
   // Use the cover image from the tour data or a fallback
   const heroImage = "/img/remote/u-1689130033373-2773b6029aea.webp";

@@ -8,7 +8,6 @@ const ItineraryZ1: React.FC = () => {
   const { t, language } = useLanguage();
   // 使用安全获取方式，如果 z1 整体缺失，回退到空对象防止 crash
   const d = (t as any).itinerary_z1 || {};
-  const currencySymbol = language === 'zh' ? '¥' : '$';
 
   const fallbackImage = "/img/remote/u-1636021597151-cc28dacd915c.webp";
 

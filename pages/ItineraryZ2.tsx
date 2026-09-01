@@ -7,7 +7,6 @@ import { BOOKING_URLS } from '../lib/bookingLinks';
 const ItineraryZ2: React.FC = () => {
   const { t, language } = useLanguage();
   const d = (t as any).itinerary_z2 || {};
-  const currencySymbol = '¥'; // 锁定为人民币
 
   const fallbackImage = "/img/remote/u-1684214190982-f3506653f932.webp";
 

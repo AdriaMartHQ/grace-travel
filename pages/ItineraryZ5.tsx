@@ -7,7 +7,6 @@ import { BOOKING_URLS } from '../lib/bookingLinks';
 const ItineraryZ5: React.FC = () => {
   const { t, language } = useLanguage();
   const d = (t as any).itinerary_z5 || {};
-  const currencySymbol = '¥';
 
   const fallbackImage =
     '/img/remote/u-1605382628707-0aa0593fba19.webp';
@@ -119,7 +118,6 @@ const ItineraryZ5: React.FC = () => {
                 </span>
               </div>
               <p className="text-3xl font-black text-[#FF9D00] tracking-tight">
-                {currencySymbol}
                 {d.meta?.price}
               </p>
             </div>

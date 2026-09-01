@@ -343,7 +343,6 @@ const itineraryContent = {
 const ItineraryI1: React.FC = () => {
   const { language, t } = useLanguage();
   const content = itineraryContent[language as keyof typeof itineraryContent] || itineraryContent.en;
-  const currencySymbol = language === 'zh' ? '¥' : '$';
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     e.currentTarget.onerror = null;

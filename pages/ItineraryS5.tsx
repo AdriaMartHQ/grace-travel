@@ -7,7 +7,6 @@ import { BOOKING_URLS } from '../lib/bookingLinks';
 const ItineraryS5: React.FC = () => {
   const { t, language } = useLanguage();
   const d = (t as any).itinerary_s5;
-  const currencySymbol = language === 'zh' ? '¥' : '$';
 
   const fallbackImage = "/img/remote/u-1636021597151-cc28dacd915c.webp";
 
