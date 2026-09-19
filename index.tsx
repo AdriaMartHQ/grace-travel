@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import App from './App';
+import App, { preloadRoute } from './App';
 import './index.css';
 import { getInitialLanguage, loadTranslations } from './i18n';
 
@@ -17,6 +17,9 @@ if (!rootElement) {
 (async () => {
   let lang = getInitialLanguage();
   let initialT;
+  // Pages are code-split; fetch the landing page's chunk alongside the translations so the
+  // first frame already contains it (see EAGER in App.tsx). preloadRoute never rejects.
+  const pageReady = preloadRoute(window.location.pathname);
   try {
     initialT = await loadTranslations(lang);
   } catch {
@@ -25,6 +28,7 @@ if (!rootElement) {
     lang = 'en';
     initialT = await loadTranslations('en');
   }
+  await pageReady;
   const root = ReactDOM.createRoot(rootElement);
   root.render(
     <React.StrictMode>

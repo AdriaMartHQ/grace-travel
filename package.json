@@ -11,7 +11,8 @@
     "lint": "tsc --noEmit",
     "smoke": "node scripts/smoke-routes.mjs && node scripts/smoke-booking.mjs",
     "smoke:routes": "node scripts/smoke-routes.mjs",
-    "smoke:booking": "node scripts/smoke-booking.mjs"
+    "smoke:booking": "node scripts/smoke-booking.mjs",
+    "smoke:spa": "node scripts/smoke-spa.mjs"
   },
   "dependencies": {
     "@rollup/wasm-node": "^4.59.0",
