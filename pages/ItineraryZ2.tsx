@@ -189,6 +189,8 @@ const ItineraryZ2: React.FC = () => {
                     src={item.image || fallbackImage} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                     alt={item.title} 
+                    loading="lazy"
+                    decoding="async"
                     onError={handleImageError}
                   />
                 </div>
