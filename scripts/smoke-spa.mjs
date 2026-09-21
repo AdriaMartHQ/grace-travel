@@ -10,6 +10,10 @@
 //   2. SPA NAVIGATION — a page reached by clicking a link must load its chunk and render.
 //
 // Usage:  npm run build && npm run smoke:spa
+//
+// Set CSP="<policy>" to serve every response with that Content-Security-Policy ENFORCED
+// and fail on any violation — a dry run for the policy in infra/README.md before it goes
+// anywhere near Caddy.
 import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -24,6 +28,8 @@ const CHROME =
   process.env.CHROME_PATH ||
   '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
+const CSP = process.env.CSP || '';
+
 const MIME = { '.html':'text/html;charset=utf-8','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.json':'application/json','.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.webp':'image/webp','.ico':'image/x-icon','.webmanifest':'application/manifest+json','.txt':'text/plain','.xml':'application/xml' };
 
 // Mirrors Caddy's `try_files {path} {path}/index.html =404`: no SPA fallback, so a route
@@ -36,7 +42,9 @@ const server = http.createServer((req, res) => {
     res.writeHead(404);
     return res.end('not found');
   }
-  res.writeHead(200, { 'Content-Type': MIME[path.extname(fp)] || 'application/octet-stream' });
+  const headers = { 'Content-Type': MIME[path.extname(fp)] || 'application/octet-stream' };
+  if (CSP) headers['Content-Security-Policy'] = CSP;
+  res.writeHead(200, headers);
   res.end(fs.readFileSync(fp));
 });
 
@@ -63,6 +71,9 @@ for (const route of PAGE_ROUTES) {
   const page = await browser.newPage();
   const errors = [];
   page.on('pageerror', (e) => errors.push(e.message));
+  page.on('console', (m) => {
+    if (CSP && /Content Security Policy/i.test(m.text())) errors.push(`CSP: ${m.text().slice(0, 200)}`);
+  });
   // Slow the network down so a chunk that is awaited too late has time to show as a gap.
   const cdp = await page.createCDPSession();
   await cdp.send('Network.enable');
@@ -128,6 +139,9 @@ for (const route of PAGE_ROUTES) {
   const page = await browser.newPage();
   const errors = [];
   page.on('pageerror', (e) => errors.push(e.message));
+  page.on('console', (m) => {
+    if (CSP && /Content Security Policy/i.test(m.text())) errors.push(`CSP: ${m.text().slice(0, 200)}`);
+  });
   await page.goto(`http://localhost:${PORT}/?lang=zh`, { waitUntil: 'networkidle0', timeout: 60000 });
   for (const route of PAGE_ROUTES.filter((r) => r !== '/')) {
     // The router commits navigations inside startTransition, so the previous page is still
@@ -158,7 +172,7 @@ for (const route of PAGE_ROUTES) {
     if (!ok || alert) bad(`spa ${route} — ${alert ? 'chunk error boundary shown' : 'did not render'}`);
     else console.log(`✓ spa    ${route}`);
   }
-  if (errors.length) bad(`spa — page error: ${errors[0]}`);
+  for (const e of new Set(errors)) bad(`spa — page error: ${e}`);
   await page.close();
 }
 
@@ -169,4 +183,4 @@ if (fail) {
   console.error(`\n✗ ${fail} check(s) failed`);
   process.exit(1);
 }
-console.log('\nAll SPA smoke checks passed');
+console.log(`\nAll SPA smoke checks passed${CSP ? ' (CSP enforced)' : ''}`);
