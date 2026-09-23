@@ -59,11 +59,26 @@ rsync -a dist/ "${HOST}:${STAGE}/"
 echo "  staged at ${STAGE}"
 
 say "verify staging"
-LOCAL_SUM=$(cd dist && find . -type f -print0 | sort -z | xargs -0 shasum -a 256 | shasum -a 256 | cut -c1-16)
-REMOTE_SUM=$(ssh -o BatchMode=yes "$HOST" "cd '$STAGE' && find . -type f -print0 | sort -z | xargs -0 sha256sum | sha256sum | cut -c1-16")
-echo "  local  $LOCAL_SUM"
-echo "  remote $REMOTE_SUM"
-[ "$LOCAL_SUM" = "$REMOTE_SUM" ] || { echo "  staging differs from dist/ — aborting"; exit 1; }
+# Per-file manifests, normalised to "hash<TAB>path" and sorted bytewise on BOTH sides.
+# A hash-of-hashes was tried first and disagreed purely because GNU sort under the
+# host's UTF-8 locale orders "ItineraryB1-…" and "index-…" differently from macOS.
+manifest_local() {
+  (cd dist && LC_ALL=C find . -type f -print0 | LC_ALL=C sort -z | xargs -0 shasum -a 256 \
+    | LC_ALL=C sed -E 's/^([0-9a-f]+) [ *]/\1\t/' | LC_ALL=C sort -k2)
+}
+manifest_remote() {
+  ssh -o BatchMode=yes "$HOST" "cd '$STAGE' && LC_ALL=C find . -type f -print0 | LC_ALL=C sort -z | xargs -0 sha256sum \
+    | LC_ALL=C sed -E 's/^([0-9a-f]+) [ *]/\1\t/' | LC_ALL=C sort -k2"
+}
+LOCAL_LINKS=$(find dist -type l | wc -l | tr -d ' ')
+[ "$LOCAL_LINKS" = 0 ] || { echo "  dist/ contains $LOCAL_LINKS symlink(s) — not covered by the check, aborting"; exit 1; }
+if DIFF=$(diff <(manifest_local) <(manifest_remote)); then
+  echo "  $(manifest_local | wc -l | tr -d ' ') files match dist/ byte for byte"
+else
+  echo "  staging differs from dist/ — aborting"
+  echo "$DIFF" | head -20
+  exit 1
+fi
 
 say "precompress (brotli + gzip, forced)"
 ssh -o BatchMode=yes "$HOST" "
