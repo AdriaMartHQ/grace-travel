@@ -51,8 +51,19 @@ ssh -o BatchMode=yes "$HOST" "
 "
 
 say "upload to staging"
-rsync -a --delete-excluded dist/ "${HOST}:${STAGE}/"
+# Plain -a on purpose. macOS ships openrsync as /usr/bin/rsync, and any flag that makes
+# it send filter rules (--delete-excluded, --exclude, ...) crashes the receiving rsync
+# 3.2.7 on the host with "buffer overflow: recv_rules". The staging dir is fresh per tag,
+# so there is nothing to delete anyway. Seen 2026-09-23 on the first real run.
+rsync -a dist/ "${HOST}:${STAGE}/"
 echo "  staged at ${STAGE}"
+
+say "verify staging"
+LOCAL_SUM=$(cd dist && find . -type f -print0 | sort -z | xargs -0 shasum -a 256 | shasum -a 256 | cut -c1-16)
+REMOTE_SUM=$(ssh -o BatchMode=yes "$HOST" "cd '$STAGE' && find . -type f -print0 | sort -z | xargs -0 sha256sum | sha256sum | cut -c1-16")
+echo "  local  $LOCAL_SUM"
+echo "  remote $REMOTE_SUM"
+[ "$LOCAL_SUM" = "$REMOTE_SUM" ] || { echo "  staging differs from dist/ — aborting"; exit 1; }
 
 say "precompress (brotli + gzip, forced)"
 ssh -o BatchMode=yes "$HOST" "
