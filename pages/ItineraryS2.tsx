@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
 import { BOOKING_URLS } from '../lib/bookingLinks';
+import CardImage from '../components/CardImage';
 
 const ItineraryS2: React.FC = () => {
   const { t } = useLanguage();
@@ -132,7 +133,7 @@ const ItineraryS2: React.FC = () => {
               <div className="w-full lg:w-1/2">
                 <div className="aspect-[16/9] bg-slate-100 rounded-[2rem] overflow-hidden shadow-lg relative group">
                   <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-md px-5 py-2 rounded-full text-[10px] font-black text-slate-900 z-10">DAY {item.day}</div>
-                  <img src={dayImages[dayKey]?.image} className="w-full h-full object-cover transition-transform group-hover:scale-105" alt={item.city} loading="lazy" decoding="async" onError={handleImageError} />
+                  <CardImage src={dayImages[dayKey]?.image} className="w-full h-full object-cover transition-transform group-hover:scale-105" alt={item.city} loading="lazy" decoding="async" fallback="/img/remote/u-1636021597151-cc28dacd915c.webp" />
                 </div>
               </div>
               <div className="w-full lg:w-1/2 text-left space-y-6">

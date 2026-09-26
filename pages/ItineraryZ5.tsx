@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
 import { BOOKING_URLS } from '../lib/bookingLinks';
+import CardImage from '../components/CardImage';
 
 const ItineraryZ5: React.FC = () => {
   const { t, language } = useLanguage();
@@ -227,13 +228,13 @@ const ItineraryZ5: React.FC = () => {
                 <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-md px-5 py-2 rounded-full text-[10px] font-black text-slate-900 shadow-xl uppercase z-10 border border-slate-100">
                   DAY {item.day}
                 </div>
-                <img
+                <CardImage
                   src={item.image || fallbackImage}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   alt={item.title}
                   loading="lazy"
                   decoding="async"
-                  onError={handleImageError}
+                  fallback={fallbackImage}
                 />
               </div>
             </div>
