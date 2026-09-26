@@ -42,5 +42,11 @@ jobs:
         # prerendered/routes.json is committed — no Chromium needed in CI, and
         # apply-prerender fails the build if any manifest route has no snapshot.
 
+      - name: Browser smoke test (no blank first frame, SPA navigation)
+        run: npm run smoke:spa
+        env:
+          # ubuntu-latest ships Google Chrome; puppeteer-core needs an explicit binary.
+          CHROME_PATH: /usr/bin/google-chrome
+
       - name: Audit production dependencies
         run: npm audit --omit=dev --audit-level=high

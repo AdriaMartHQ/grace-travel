@@ -13,11 +13,16 @@
 # — a failure mode that hides from any check that only reads the .html.
 #
 # --delete is deliberately never passed to rsync; /var/www/grace holds assets that
-# are not build outputs.
+# are not build outputs. Consequence: removing a route from lib/routes.manifest.mjs does
+# NOT remove /var/www/grace/<route>/index.html — it keeps being served with a 200 until
+# you delete that directory on the host by hand (and old hashed assets/ accumulate).
 
 set -euo pipefail
 
 TAG="${1:-$(date +%Y%m%d-%H%M%S)}"
+# TAG is spliced into remote shell strings and paths below; allow nothing that could
+# break out of the single quotes there.
+[[ "$TAG" =~ ^[A-Za-z0-9._-]+$ ]] || { echo "tag must match [A-Za-z0-9._-]+, got: $TAG"; exit 1; }
 HOST="grace-server"
 STAGE="/tmp/grace-dist-${TAG}"
 LIVE="/var/www/grace"
