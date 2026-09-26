@@ -74,9 +74,16 @@ These are part of the same cross-border fix and must be preserved alongside the 
 
 ## Deploy note
 
-The static site deploys via local `rsync` (GitHub Actions deploy is blocked by the
-Tencent security group). The Caddyfile itself is edited directly on the server;
-this copy is a backup, not the deploy source.
+The static site is deployed by hand with `scripts/deploy.sh` (stage → verify per-file
+sha256 → precompress → back up live → install; it prints the rollback command).
+GitHub Actions no longer deploys: `.github/workflows/ci.yml` only typechecks, builds
+and audits. The old workflow rsynced to production on every push to main with no
+backup or integrity check; it was removed on 2026-09-26. (An older version of this
+note claimed the Actions deploy was blocked by the Tencent security group — it was
+not, it succeeded on every push through 2026-08-05.)
+
+The Caddyfile itself is edited directly on the server; this copy is a backup, not
+the deploy source.
 
 ## Content-Security-Policy (proposed — NOT live yet)
 
