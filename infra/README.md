@@ -14,7 +14,7 @@ verbatim so the hard-won crawl fix survives a server rebuild or an accidental ed
 > **What this is:** a dated, manual **snapshot** of the production Caddyfile — a
 > restore artifact, **not** an auto-deployed source of truth. The live config is
 > edited directly on the host; refresh this copy by hand (re-`scp`) after server
-> changes. **Snapshot: 2026-08-03.** Checked for secrets before committing — none
+> changes. **Snapshot: 2026-09-26** (previous: 2026-08-03). Checked for secrets before committing — none
 > (no keys/passwords; every `reverse_proxy` target is `127.0.0.1`). The
 > `gracetravel.com.tr` blocks are included because that site shares this machine; it
 > lives in the grace.tr repo as grace.tr is the machine's primary site.
@@ -48,6 +48,13 @@ ssh ubuntu@43.129.213.201 'sudo cp /tmp/Caddyfile /etc/caddy/Caddyfile && sudo s
 ```
 
 ## ⚠️ Do NOT re-enable HTTP/2
+
+> **Status 2026-09-26: the live config HAS h2 again** (`protocols h1 h2 h3`). It changed
+> together with the Cloudflare switch on 2026-09-06 (`trusted_proxies`, `cn.grace.tr`),
+> when grace.tr / www moved behind Cloudflare's proxy — Baidu then talks to a Cloudflare
+> edge rather than this HK origin, which may make the reasoning below moot for those
+> hosts. `cn.grace.tr` is still served directly from HK (and is `noindex`). Nobody has
+> re-run Baidu's 抓取诊断 since; do that before relying on either setting.
 
 The global block forces `protocols h1 h3` (HTTP/1.1 + HTTP/3, **no h2**). This is
 the fix for Baidu's `socket 读写错误` crawl failures.
@@ -85,7 +92,7 @@ not, it succeeded on every push through 2026-08-05.)
 The Caddyfile itself is edited directly on the server; this copy is a backup, not
 the deploy source.
 
-## Content-Security-Policy (proposed — NOT live yet)
+## Content-Security-Policy (live in REPORT-ONLY mode since 2026-09-26)
 
 grace.tr sends no CSP today. The policy below was derived from what the built site
 actually loads (2026-09-21 inventory of `dist/` plus the live HTML):
@@ -124,7 +131,7 @@ Add to BOTH the site-level `header { … }` block and the one inside `handle_err
 (error responses are a separate route tree, see the comment in the Caddyfile):
 
 ```
-Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.basemaps.cartocdn.com https://res.klook.com https://cdn.kulturenvanteri.com https://cdn.istanbul.com https://picsum.photos; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.basemaps.cartocdn.com https://res.klook.com https://cdn.kulturenvanteri.com https://cdn.istanbul.com https://picsum.photos; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
 ```
 
 `sudo caddy validate --config /etc/caddy/Caddyfile && sudo systemctl reload caddy`, then
@@ -133,14 +140,19 @@ open these with DevTools → Console and look for `[Report Only]` violations:
 `/about` (motion animations), one itinerary, `/airport-transfer` (submit the form through
 to the Odoo hand-off), and a garbage URL (404 page).
 
-Cloudflare features that inject scripts would show up here. Email Obfuscation is on and
-is same-origin. **Rocket Loader and Web Analytics / Browser Insights are off as of
-2026-09-21** — turning either on later needs `script-src`/`connect-src` additions
-(`https://static.cloudflareinsights.com`, `https://cloudflareinsights.com`) or it will be
-blocked once the policy is enforced.
+Cloudflare features that inject scripts show up here. Email Obfuscation is on and is
+same-origin. **Web Analytics was found ON on 2026-09-26** (it was not in the HTML on
+09-21) — its `static.cloudflareinsights.com` script was the only violation across all
+17 pages + 404 + cn.grace.tr, so the policy above now allows it and its beacon host.
+Rocket Loader is off; turning it on would need further additions.
+
+**Done 2026-09-26:** applied to both header blocks on the host (backups:
+`/etc/caddy/Caddyfile.bak-20260926`, `…-2`), validated, reloaded. A Chrome pass over
+every page afterwards: 0 violations, 0 console errors, analytics beacons still firing.
 
 ### Step 2 — enforce
 
-After a clean pass, rename the header to `Content-Security-Policy` in both blocks, reload,
+After about a week of clean report-only running (so Cloudflare challenge pages and
+other edge features have had a chance to show up), rename the header to `Content-Security-Policy` in both blocks, reload,
 re-run `npm run smoke`, and refresh the `infra/Caddyfile` snapshot in this repo.
 

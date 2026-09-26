@@ -1,10 +1,24 @@
 {
 	servers {
-		protocols h1 h3
+		protocols h1 h2 h3
+
+		# Cloudflare 橙云代理下才有意义：没有这两行，access.log 里的 remote_ip
+		# 全是 CF 边缘节点的地址，真实访客 IP 丢失。static 列表来自
+		# https://www.cloudflare.com/ips-v4 + ips-v6（2026-09-06 拉取）。
+		# 官方 apt 版 Caddy 只有 http.ip_sources.static，没有动态 cloudflare 源，
+		# 所以 CF 增减网段时需要手动更新这里。
+		trusted_proxies static \
+			173.245.48.0/20 103.21.244.0/22 103.22.200.0/22 103.31.4.0/22 \
+			141.101.64.0/18 108.162.192.0/18 190.93.240.0/20 188.114.96.0/20 \
+			197.234.240.0/22 198.41.128.0/17 162.158.0.0/15 104.16.0.0/13 \
+			104.24.0.0/14 172.64.0.0/13 131.0.72.0/22 \
+			2400:cb00::/32 2606:4700::/32 2803:f800::/32 2405:b500::/32 \
+			2405:8100::/32 2a06:98c0::/29 2c0f:f248::/32
+		client_ip_headers CF-Connecting-IP
 	}
 }
 
-grace.tr www.grace.tr {
+grace.tr www.grace.tr cn.grace.tr {
     root * /var/www/grace
     log {
         output file /var/log/caddy/access.log {
@@ -41,9 +55,24 @@ grace.tr www.grace.tr {
         X-Frame-Options           "SAMEORIGIN"
         Referrer-Policy           "strict-origin-when-cross-origin"
         Permissions-Policy        "camera=(), microphone=(), geolocation=()"
+        # 2026-09-26: report-only first — see grace.tr repo infra/README.md before switching to enforce.
+        # cloudflareinsights = Cloudflare Web Analytics, injected at the edge (on since ~2026-09-22).
+        Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.basemaps.cartocdn.com https://res.klook.com https://cdn.kulturenvanteri.com https://cdn.istanbul.com https://picsum.photos; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
         -Server
         ?Cache-Control "no-cache, must-revalidate"
     }
+
+    # cn.grace.tr = 给中国大陆访客的灰云直连入口（2026-09-06 加）。
+    # 背景：grace.tr / www.grace.tr 已切 Cloudflare 橙云代理，但 CF 免费版不接入
+    # 大陆网络，大陆访客会被 anycast 甩到境外 PoP，质量不可控；而源站是腾讯云香港，
+    # 对大陆本来就是最优直连路径之一。所以给微信服务号等自投链接留一个不经过 CF 的入口。
+    # 日志统计（全量 access.log）：大陆真人请求占 5.36%，445 个独立 IP。
+    #
+    # 内容与主站完全相同，所以必须 noindex —— 否则和 grace.tr 构成重复内容，
+    # 会稀释主站排名。如果哪天想吃百度/搜狗的自然流量，把这条去掉并给主站加
+    # canonical 再说，别只删这行。
+    @cn host cn.grace.tr
+    header @cn X-Robots-Tag "noindex, nofollow"
 
     @assets {
         path /assets/* /img/* /favicon.* /site.webmanifest
@@ -73,6 +102,8 @@ grace.tr www.grace.tr {
             X-Frame-Options           "SAMEORIGIN"
             Referrer-Policy           "strict-origin-when-cross-origin"
             Permissions-Policy        "camera=(), microphone=(), geolocation=()"
+            # 2026-09-26: report-only first — see grace.tr repo infra/README.md before switching to enforce.
+            Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.basemaps.cartocdn.com https://res.klook.com https://cdn.kulturenvanteri.com https://cdn.istanbul.com https://picsum.photos; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
             -Server
         }
         @404 expression {err.status_code} == 404
@@ -93,6 +124,8 @@ gracetravel.com.tr {
 		Strict-Transport-Security "max-age=31536000; includeSubDomains"
 		X-Content-Type-Options "nosniff"
 		Referrer-Policy "strict-origin-when-cross-origin"
+		X-Frame-Options "SAMEORIGIN"
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
 		-Server
 	}
 	@websocket path /websocket /websocket/*
