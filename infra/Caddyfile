@@ -57,7 +57,7 @@ grace.tr www.grace.tr cn.grace.tr {
         Permissions-Policy        "camera=(), microphone=(), geolocation=()"
         # 2026-09-26: report-only first — see grace.tr repo infra/README.md before switching to enforce.
         # cloudflareinsights = Cloudflare Web Analytics, injected at the edge (on since ~2026-09-22).
-        Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.basemaps.cartocdn.com https://res.klook.com https://cdn.kulturenvanteri.com https://cdn.istanbul.com https://picsum.photos; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+        Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.basemaps.cartocdn.com https://picsum.photos; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
         -Server
         ?Cache-Control "no-cache, must-revalidate"
     }
@@ -103,7 +103,7 @@ grace.tr www.grace.tr cn.grace.tr {
             Referrer-Policy           "strict-origin-when-cross-origin"
             Permissions-Policy        "camera=(), microphone=(), geolocation=()"
             # 2026-09-26: report-only first — see grace.tr repo infra/README.md before switching to enforce.
-            Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.basemaps.cartocdn.com https://res.klook.com https://cdn.kulturenvanteri.com https://cdn.istanbul.com https://picsum.photos; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+            Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.basemaps.cartocdn.com https://picsum.photos; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
             -Server
         }
         @404 expression {err.status_code} == 404

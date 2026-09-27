@@ -102,7 +102,7 @@ actually loads (2026-09-21 inventory of `dist/` plus the live HTML):
 | scripts | own `/assets/*.js`, plus Cloudflare Email Obfuscation's `/cdn-cgi/scripts/…/email-decode.min.js` — same origin, so `'self'` covers it |
 | styles | own CSS, the inline `<style>` in `index.html`, and inline `style=""` attributes written by the `motion` library → `'unsafe-inline'` is unavoidable for styles |
 | fonts | Google Fonts (`fonts.googleapis.com` stylesheet, `fonts.gstatic.com` files) |
-| images | own `/img`, `data:`, Carto map tiles on /contact, three hot-linked ticket photos (`res.klook.com`, `cdn.kulturenvanteri.com`, `cdn.istanbul.com`), `picsum.photos` as the itinerary `onError` fallback |
+| images | own `/img`, `data:`, Carto map tiles on /contact, `picsum.photos` as an `onError` fallback. (Three hot-linked ticket photos from klook / istanbul.com / kulturenvanteri were replaced by self-hosted Commons images on 2026-09-27 and their hosts dropped from the policy.) |
 | connect | nothing but same-origin chunk loads — the site makes no fetch/XHR calls |
 | forms / frames | no `<form action>` and no iframes; booking CTAs are plain links to gracetravel.com.tr |
 
@@ -131,7 +131,7 @@ Add to BOTH the site-level `header { … }` block and the one inside `handle_err
 (error responses are a separate route tree, see the comment in the Caddyfile):
 
 ```
-Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.basemaps.cartocdn.com https://res.klook.com https://cdn.kulturenvanteri.com https://cdn.istanbul.com https://picsum.photos; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.basemaps.cartocdn.com https://picsum.photos; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
 ```
 
 `sudo caddy validate --config /etc/caddy/Caddyfile && sudo systemctl reload caddy`, then
