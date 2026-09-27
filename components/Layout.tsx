@@ -4,6 +4,12 @@ import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import type { Language } from '../translations';
 
+// The Balkan itineraries (B1/B2) are Chinese-only, so en/tr toursData has no 'balkan'
+// entries and /tours?category=balkan is an empty list there. Only link to it when the
+// current language actually has Balkan tours — the same rule the /tours category chips use.
+const hasBalkanTours = (t: { toursData?: { category: string }[] }) =>
+  (t.toursData || []).some((tour) => tour.category === 'balkan');
+
 const BrandLogo = ({ className = "w-10 h-10" }) => (
   <img
     src="/favicon.svg"
@@ -54,12 +60,16 @@ const ItinerariesDropdown: React.FC = () => {
     {
       header: t.nav?.otherDest || '旅游延伸线路',
       items: [
-        {
-          label: t.nav?.balkans || '巴尔干三国',
-          desc: t.nav?.balkansDesc || '塞尔维亚 · 黑山 · 波黑旅游延伸',
-          path: '/tours?category=balkan',
-          exact: false,
-        },
+        ...(hasBalkanTours(t)
+          ? [
+              {
+                label: t.nav?.balkans || '巴尔干三国',
+                desc: t.nav?.balkansDesc || '塞尔维亚 · 黑山 · 波黑旅游延伸',
+                path: '/tours?category=balkan',
+                exact: false,
+              },
+            ]
+          : []),
         {
           label: t.nav?.holyland || '以色列圣地',
           desc: t.nav?.holylandDesc || '耶路撒冷 · 加利利 · 伯利恒',
@@ -212,9 +222,11 @@ const MobileMenuPortal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ 
               <Link to="/tours?category=family" onClick={onClose} className={subLinkCls('/tours?category=family')}>
                 {t.nav?.faithPilgrimage || '信仰朝圣 Z系列'}
               </Link>
-              <Link to="/tours?category=balkan" onClick={onClose} className={subLinkCls('/tours?category=balkan')}>
-                {t.nav?.balkans || '巴尔干三国'}
-              </Link>
+              {hasBalkanTours(t) && (
+                <Link to="/tours?category=balkan" onClick={onClose} className={subLinkCls('/tours?category=balkan')}>
+                  {t.nav?.balkans || '巴尔干三国'}
+                </Link>
+              )}
               <Link to="/itineraries/i1-israel-holyland-8-days" onClick={onClose} className={subLinkCls('/itineraries/i1-israel-holyland-8-days')}>
                 {t.nav?.holyland || '以色列圣地'}
               </Link>
@@ -450,7 +462,9 @@ const Footer: React.FC = () => {
               <li><Link to="/" className="hover:text-[#FF9D00] transition-colors">{t.nav?.home || 'Home'}</Link></li>
               <li><Link to="/tours?category=turkey" className="hover:text-[#FF9D00] transition-colors">{t.nav?.tours || 'Tours'}</Link></li>
               <li><Link to="/tours?category=family" className="hover:text-[#FF9D00] transition-colors">{t.nav?.faith || 'Faith'}</Link></li>
-              <li><Link to="/tours?category=balkan" className="hover:text-[#FF9D00] transition-colors">{t.nav?.balkans || '巴尔干三国'}</Link></li>
+              {hasBalkanTours(t) && (
+                <li><Link to="/tours?category=balkan" className="hover:text-[#FF9D00] transition-colors">{t.nav?.balkans || '巴尔干三国'}</Link></li>
+              )}
               <li><Link to="/itineraries/i1-israel-holyland-8-days" className="hover:text-[#FF9D00] transition-colors">{t.nav?.holyland || '以色列圣地'}</Link></li>
               <li><Link to="/airport-transfer" className="hover:text-[#FF9D00] transition-colors">{airportTransferLabel}</Link></li>
               <li><Link to="/tickets" className="hover:text-[#FF9D00] transition-colors">{t.nav?.tickets || 'Tickets'}</Link></li>

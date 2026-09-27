@@ -173,6 +173,27 @@ const Tours: React.FC = () => {
             </div>
           ))}
         </div>
+        {filteredTours.length === 0 && (
+          // Reachable by URL even where the nav hides the link, e.g. ?category=balkan in
+          // en/tr, where the Balkan itineraries exist only in Chinese.
+          <div className="text-center py-16 max-w-xl mx-auto space-y-6">
+            <p className="text-slate-500 leading-relaxed">
+              {language === 'zh'
+                ? '该分类暂无行程，欢迎联系我们定制。'
+                : language === 'tr'
+                  ? 'Bu kategoride şu anda Türkçe rota bulunmuyor. Size özel bir plan için bize ulaşın.'
+                  : 'There are no itineraries in this category in English yet. Contact us for a tailored plan.'}
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button type="button" onClick={() => handleFilterChange('all')} className="px-8 py-3 rounded-full bg-slate-900 text-white text-xs font-black uppercase tracking-widest">
+                {t.sections?.categories?.all || 'All'}
+              </button>
+              <Link to="/contact" className="px-8 py-3 rounded-full border border-slate-200 text-slate-900 text-xs font-black uppercase tracking-widest">
+                {t.nav.contact}
+              </Link>
+            </div>
+          </div>
+        )}
       </section>
     </div>
   );
