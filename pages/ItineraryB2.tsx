@@ -75,7 +75,7 @@ const zh = {
         },
         {
           title: '黑山海岸黄金线',
-          desc: '乘船出海探蓝洞，登科托尔城墙俯瞰湾景，黄昏走落日飞车（Sunset Drive）看亚得里亚海从橙红到深蓝，布德瓦是巴尔干最美的海滨。',
+          desc: '乘船出海探蓝洞，登科托尔城墙俯瞰湾景，黄昏乘科托尔缆车赶一场“落日飞车”，看亚得里亚海从橙红到深蓝；随后入住巴尔干最美的海滨布德瓦。',
         },
         {
           title: '杜米托尔国家公园',
@@ -102,7 +102,7 @@ const zh = {
         { day: 'D1', route: '出发城市 → 贝尔格莱德（BEG）抵达，市区自由活动', breakfast: '/', lunch: '/', dinner: '/', hotel: '贝尔格莱德 ★★★★' },
         { day: 'D2', route: '贝尔格莱德 → 萨拉热窝（巴什察尔希亚老城 · 拉丁桥 · 黄堡观景台）', breakfast: '含', lunch: '—', dinner: '—', hotel: '萨拉热窝 ★★★★' },
         { day: 'D3', route: '萨拉热窝 → 莫斯塔尔（古桥 · 老城 · 布拉加伊修道院）', breakfast: '含', lunch: '—', dinner: '—', hotel: '莫斯塔尔 ★★★★' },
-        { day: 'D4', route: '莫斯塔尔 → 科托尔（蓝洞出海 · 古城 · 缆车）→ 布德瓦（落日飞车）', breakfast: '含', lunch: '—', dinner: '—', hotel: '布德瓦 ★★★★' },
+        { day: 'D4', route: '莫斯塔尔 → 科托尔（蓝洞出海 · 古城 · 科托尔缆车“落日飞车”）→ 布德瓦', breakfast: '含', lunch: '—', dinner: '—', hotel: '布德瓦 ★★★★' },
         { day: 'D5', route: '布德瓦 → 扎布利亚克（杜米托尔国家公园 · 黑湖 · 塔拉大桥）', breakfast: '含', lunch: '—', dinner: '—', hotel: '扎布利亚克（小木屋）' },
         { day: 'D6', route: '塔拉大桥 → 乌瓦茨（游船5h · 蛇形峡谷 · 冰洞 · 观景台）', breakfast: '含', lunch: '—', dinner: '—', hotel: '布尔多（小木屋）' },
         { day: 'D7', route: '布尔多 → 兹拉蒂博尔（金色缆车 · 山顶观景）', breakfast: '含', lunch: '—', dinner: '—', hotel: '兹拉蒂博尔 ★★★★' },
@@ -153,7 +153,7 @@ const zh = {
           image: IMG.kotorBay,
           paragraphs: [
             '乘船出海约3小时，探访科托尔湾的蓝洞——阳光从水面折射进洞，一切都在蓝光里悬浮。上岸后进入科托尔古城，沿城墙拾级而上，湾区全景在脚下铺开。',
-            '傍晚出发，沿着传说中的"落日飞车"海岸公路驶向布德瓦，橙红色的落日从亚得里亚海面缓缓下沉，这段路或许是整趟旅程里最让人沉默的时刻。',
+            '傍晚乘科托尔缆车升上山顶，赶一场“落日飞车”：橙红色的落日从亚得里亚海面缓缓下沉，整片湾区在脚下由金转蓝，或许是整趟旅程里最让人沉默的时刻。随后前往布德瓦入住。',
           ],
           meals: { breakfast: '含', lunch: '—', dinner: '—' },
         },
@@ -249,7 +249,7 @@ const en: typeof zh = {
     title: 'B2 · Serbia + Montenegro + Bosnia, 10 Days 9 Nights',
     subtitle: 'In and out of Belgrade — from Sarajevo’s old town to Montenegro’s canyons, from the Uvac meanders to the Zlatibor highlands',
     tagline:
-      'Belgrade in & out | Sarajevo and the Old Bridge of Mostar | Bay of Kotor and the Sunset Drive | Black Lake in Durmitor National Park | The Uvac meanders | Zlatibor Gold Gondola | Šargan Eight railway and the wooden village',
+      'Belgrade in & out | Sarajevo and the Old Bridge of Mostar | Bay of Kotor and a sunset cable-car ride | Black Lake in Durmitor National Park | The Uvac meanders | Zlatibor Gold Gondola | Šargan Eight railway and the wooden village',
     transport: 'Air-conditioned coach throughout with a professional tour leader. Private small-group format, so the pace can be adjusted as you go. Tell us your preferred guiding language when you enquire.',
     hotels: 'Selected comfortable 4-star hotels with daily breakfast; in the mountains you stay in characterful wooden chalets for a taste of Balkan highland life.',
     transport_label: 'Transport',
@@ -278,7 +278,7 @@ const en: typeof zh = {
       },
       {
         title: 'Montenegro’s golden coast',
-        desc: 'A boat trip to the Blue Cave, the walls of Kotor above the bay, and at dusk the Sunset Drive as the Adriatic turns from orange to deep blue on the way to Budva.',
+        desc: 'A boat trip to the Blue Cave, the walls of Kotor above the bay, and at dusk the Kotor cable car for a sunset ride as the Adriatic turns from orange to deep blue — then on to Budva.',
       },
       {
         title: 'Durmitor National Park',
@@ -305,10 +305,10 @@ const en: typeof zh = {
       { day: 'D1', route: 'Your city → arrive Belgrade (BEG); free time in town', breakfast: '/', lunch: '/', dinner: '/', hotel: 'Belgrade ★★★★' },
       { day: 'D2', route: 'Belgrade → Sarajevo (Baščaršija old town · Latin Bridge · Yellow Fortress viewpoint)', breakfast: 'Incl.', lunch: '—', dinner: '—', hotel: 'Sarajevo ★★★★' },
       { day: 'D3', route: 'Sarajevo → Mostar (Old Bridge · old town · Blagaj Tekke)', breakfast: 'Incl.', lunch: '—', dinner: '—', hotel: 'Mostar ★★★★' },
-      { day: 'D4', route: 'Mostar → Kotor (Blue Cave boat trip · old town · cable car) → Budva (Sunset Drive)', breakfast: 'Incl.', lunch: '—', dinner: '—', hotel: 'Budva ★★★★' },
+      { day: 'D4', route: 'Mostar → Kotor (Blue Cave boat trip · old town · sunset ride on the Kotor cable car) → Budva', breakfast: 'Incl.', lunch: '—', dinner: '—', hotel: 'Budva ★★★★' },
       { day: 'D5', route: 'Budva → Žabljak (Durmitor National Park · Black Lake · Tara Bridge)', breakfast: 'Incl.', lunch: '—', dinner: '—', hotel: 'Žabljak (chalet)' },
-      { day: 'D6', route: 'Tara Bridge → Uvac (5-hour boat trip · meanders · ice cave · viewpoint)', breakfast: 'Incl.', lunch: '—', dinner: '—', hotel: 'Near Uvac (chalet)' },
-      { day: 'D7', route: 'Uvac → Zlatibor (Gold Gondola · summit views)', breakfast: 'Incl.', lunch: '—', dinner: '—', hotel: 'Zlatibor ★★★★' },
+      { day: 'D6', route: 'Tara Bridge → Uvac (5-hour boat trip · meanders · ice cave · viewpoint)', breakfast: 'Incl.', lunch: '—', dinner: '—', hotel: 'Brdo (chalet)' },
+      { day: 'D7', route: 'Brdo → Zlatibor (Gold Gondola · summit views)', breakfast: 'Incl.', lunch: '—', dinner: '—', hotel: 'Zlatibor ★★★★' },
       { day: 'D8', route: 'Zlatibor → Mokra Gora (Šargan Eight · wooden village · Küstendorf) → Belgrade', breakfast: 'Incl.', lunch: '—', dinner: '—', hotel: 'Belgrade ★★★★' },
       { day: 'D9', route: 'Belgrade (National Museum · Church of Saint Sava · Zemun · Danube promenade)', breakfast: 'Incl.', lunch: '—', dinner: '—', hotel: '— (overnight flight)' },
       { day: 'D10', route: 'Belgrade → home (early-morning flight)', breakfast: '/', lunch: '/', dinner: '/', hotel: 'Home' },
@@ -356,7 +356,7 @@ const en: typeof zh = {
         image: IMG.kotorBay,
         paragraphs: [
           'A three-hour boat trip takes you to the Blue Cave, where sunlight refracts through the water and everything seems to float in blue. Back on shore, enter Kotor’s old town and climb the walls until the whole bay opens up below.',
-          'In the evening take the coastal road known as the Sunset Drive to Budva as the sun sinks into the Adriatic — perhaps the quietest, most memorable stretch of the whole journey.',
+          'At dusk ride the Kotor cable car up the mountain for the sunset: the sun sinks into the Adriatic and the whole bay turns from gold to blue beneath you — perhaps the quietest, most memorable moment of the trip. Then on to Budva for the night.',
         ],
         meals: { breakfast: 'Incl.', lunch: '—', dinner: '—' },
       },
@@ -374,7 +374,7 @@ const en: typeof zh = {
       {
         day: '06',
         title: 'Uvac | The snake canyon and griffon vultures',
-        stay: 'Mountain chalet near Uvac',
+        stay: 'Mountain chalet, Brdo',
         image: IMG.uvac,
         paragraphs: [
           'About two and a half hours to the Uvac Special Nature Reserve, then roughly five hours by boat into the “snake” canyon, where the river coils between the mountains and every bend hides another. Uvac is one of the most important breeding grounds of the griffon vulture in the Balkans, and with luck you will see them circling on the thermals.',
@@ -449,7 +449,7 @@ const tr: typeof zh = {
     title: 'B2 · Sırbistan + Karadağ + Bosna-Hersek, 10 Gün 9 Gece',
     subtitle: 'Belgrad giriş-çıkışlı — Saraybosna’nın eski çarşısından Karadağ kanyonlarına, Uvac kıvrımlarından Zlatibor yaylalarına',
     tagline:
-      'Belgrad giriş-çıkış | Saraybosna ve Mostar Köprüsü | Kotor Körfezi ve gün batımı yolu | Durmitor Milli Parkı’nda Kara Göl | Uvac menderesleri | Zlatibor Altın Teleferik | Şargan Sekizi treni ve ahşap köy',
+      'Belgrad giriş-çıkış | Saraybosna ve Mostar Köprüsü | Kotor Körfezi ve teleferikle gün batımı | Durmitor Milli Parkı’nda Kara Göl | Uvac menderesleri | Zlatibor Altın Teleferik | Şargan Sekizi treni ve ahşap köy',
     transport: 'Tüm tur boyunca klimalı otobüs ve profesyonel tur lideri. Özel küçük grup formatı sayesinde tempo yol boyunca ayarlanabilir. Tercih ettiğiniz rehberlik dilini talebinizde belirtmeniz yeterli.',
     hotels: 'Kahvaltı dahil, özenle seçilmiş konforlu 4 yıldızlı oteller; dağlık bölümde Balkan yayla yaşamını yansıtan ahşap dağ evlerinde konaklama.',
     transport_label: 'Ulaşım',
@@ -478,7 +478,7 @@ const tr: typeof zh = {
       },
       {
         title: 'Karadağ’ın altın kıyısı',
-        desc: 'Mavi Mağara’ya tekne turu, körfeze tepeden bakan Kotor surları ve akşamüstü Adriyatik’in turuncudan laciverte döndüğü Budva yolunda gün batımı sürüşü.',
+        desc: 'Mavi Mağara’ya tekne turu, körfeze tepeden bakan Kotor surları ve akşamüstü Kotor teleferiğiyle gün batımı: Adriyatik turuncudan laciverte döner — ardından Budva’ya geçiş.',
       },
       {
         title: 'Durmitor Milli Parkı',
@@ -505,10 +505,10 @@ const tr: typeof zh = {
       { day: 'D1', route: 'Şehriniz → Belgrad (BEG) varış; şehirde serbest zaman', breakfast: '/', lunch: '/', dinner: '/', hotel: 'Belgrad ★★★★' },
       { day: 'D2', route: 'Belgrad → Saraybosna (Başçarşı · Latin Köprüsü · Sarı Tabya seyir noktası)', breakfast: 'Dahil', lunch: '—', dinner: '—', hotel: 'Saraybosna ★★★★' },
       { day: 'D3', route: 'Saraybosna → Mostar (Mostar Köprüsü · eski şehir · Blagay Tekkesi)', breakfast: 'Dahil', lunch: '—', dinner: '—', hotel: 'Mostar ★★★★' },
-      { day: 'D4', route: 'Mostar → Kotor (Mavi Mağara tekne turu · eski şehir · teleferik) → Budva (gün batımı yolu)', breakfast: 'Dahil', lunch: '—', dinner: '—', hotel: 'Budva ★★★★' },
+      { day: 'D4', route: 'Mostar → Kotor (Mavi Mağara tekne turu · eski şehir · Kotor teleferiğiyle gün batımı) → Budva', breakfast: 'Dahil', lunch: '—', dinner: '—', hotel: 'Budva ★★★★' },
       { day: 'D5', route: 'Budva → Žabljak (Durmitor Milli Parkı · Kara Göl · Tara Köprüsü)', breakfast: 'Dahil', lunch: '—', dinner: '—', hotel: 'Žabljak (dağ evi)' },
-      { day: 'D6', route: 'Tara Köprüsü → Uvac (5 saatlik tekne turu · menderesler · buz mağarası · seyir noktası)', breakfast: 'Dahil', lunch: '—', dinner: '—', hotel: 'Uvac yakını (dağ evi)' },
-      { day: 'D7', route: 'Uvac → Zlatibor (Altın Teleferik · zirve manzarası)', breakfast: 'Dahil', lunch: '—', dinner: '—', hotel: 'Zlatibor ★★★★' },
+      { day: 'D6', route: 'Tara Köprüsü → Uvac (5 saatlik tekne turu · menderesler · buz mağarası · seyir noktası)', breakfast: 'Dahil', lunch: '—', dinner: '—', hotel: 'Brdo (dağ evi)' },
+      { day: 'D7', route: 'Brdo → Zlatibor (Altın Teleferik · zirve manzarası)', breakfast: 'Dahil', lunch: '—', dinner: '—', hotel: 'Zlatibor ★★★★' },
       { day: 'D8', route: 'Zlatibor → Mokra Gora (Şargan Sekizi · ahşap köy · Küstendorf) → Belgrad', breakfast: 'Dahil', lunch: '—', dinner: '—', hotel: 'Belgrad ★★★★' },
       { day: 'D9', route: 'Belgrad (Ulusal Müze · Aziz Sava Kilisesi · Zemun · Tuna kıyısı)', breakfast: 'Dahil', lunch: '—', dinner: '—', hotel: '— (gece uçuşu)' },
       { day: 'D10', route: 'Belgrad → dönüş (sabah erken uçuş)', breakfast: '/', lunch: '/', dinner: '/', hotel: 'Evinize dönüş' },
@@ -556,7 +556,7 @@ const tr: typeof zh = {
         image: IMG.kotorBay,
         paragraphs: [
           'Üç saatlik tekne turuyla Mavi Mağara’ya: güneş ışığı sudan kırılarak içeri süzülür, her şey maviliğin içinde asılı kalmış gibidir. Karaya döndükten sonra Kotor eski şehrine girip surlara tırmanın; körfezin tamamı ayaklarınızın altına serilir.',
-          'Akşam, gün batımı yolu olarak bilinen sahil yolundan Budva’ya geçerken güneş Adriyatik’e gömülür — belki de yolculuğun en sessiz, en unutulmaz anı.',
+          'Akşamüstü Kotor teleferiğiyle dağa çıkıp gün batımını izleyin: güneş Adriyatik’e gömülürken tüm körfez ayaklarınızın altında altın renginden maviye döner — belki de yolculuğun en sessiz, en unutulmaz anı. Ardından geceyi geçirmek üzere Budva’ya geçiş.',
         ],
         meals: { breakfast: 'Dahil', lunch: '—', dinner: '—' },
       },
@@ -574,7 +574,7 @@ const tr: typeof zh = {
       {
         day: '06',
         title: 'Uvac | Yılan kanyonu ve kızıl akbabalar',
-        stay: 'Uvac yakınında dağ evi',
+        stay: 'Brdo, dağ evi',
         image: IMG.uvac,
         paragraphs: [
           'Yaklaşık iki buçuk saatte Uvac Özel Doğa Koruma Alanı’na, ardından yaklaşık beş saat tekneyle “yılan” kanyonunun içlerine: nehir dağların arasında kıvrılır, her dönemeç bir başkasını saklar. Uvac, Balkanlar’daki kızıl akbabaların en önemli üreme alanlarından biridir; şansınız varsa sıcak hava akımlarında süzüldüklerini görürsünüz.',
