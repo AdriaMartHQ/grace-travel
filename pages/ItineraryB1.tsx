@@ -4,6 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
 import { BOOKING_URLS } from '../lib/bookingLinks';
 import CardImage from '../components/CardImage';
+import { itineraryPrice } from '../lib/pricing';
 
 // 配图：逐站真实地标。多数为 Wikimedia Commons 实景照片(CC BY-SA，页脚已署名)；
 // 金色缆车无自由授权图，采用 goldgondola.rs 官方图(本地托管)。最终成行将替换为本社实拍。
@@ -41,7 +42,6 @@ const itineraryContent = {
       transport_label: '交通服务',
       hotels_label: '住宿与早餐',
       price_label: '参考团费',
-      price: '询价定制',
       meals_label: '餐饮安排',
       stay_label: '入住参考',
       footer_cta_title: '开启您的巴尔干三国深度之旅',
@@ -369,7 +369,7 @@ const ItineraryB1: React.FC = () => {
                 <span className="text-xl">💰</span>
                 <span className="text-[10px] font-black text-orange-400 uppercase tracking-widest">{page.meta.price_label}</span>
               </div>
-              <p className="text-3xl font-black text-[#FF9D00] tracking-tight group-hover:underline">{page.meta.price}</p>
+              <p className="text-3xl font-black text-[#FF9D00] tracking-tight group-hover:underline">{itineraryPrice(language)}</p>
             </Link>
           </div>
         </div>

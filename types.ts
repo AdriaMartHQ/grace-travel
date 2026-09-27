@@ -4,7 +4,8 @@ export interface Tour {
   title: string;
   location: string;
   duration: string;
-  price: number | string;
+  /** Fixed price in CNY. Omit for inquiry-only itineraries — see lib/pricing.ts. */
+  price?: number;
   image: string;
   category: 'classic' | 'luxury' | 'family' | 'balkan';
   highlights: string[];

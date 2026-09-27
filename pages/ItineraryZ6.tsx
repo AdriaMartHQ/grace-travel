@@ -4,6 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
 import { BOOKING_URLS } from '../lib/bookingLinks';
 import CardImage from '../components/CardImage';
+import { itineraryPrice } from '../lib/pricing';
 
 const ItineraryZ6: React.FC = () => {
   const { t, language } = useLanguage();
@@ -119,7 +120,7 @@ const ItineraryZ6: React.FC = () => {
                 </span>
               </div>
               <p className="text-3xl font-black text-[#FF9D00] tracking-tight">
-                {d.meta?.price}
+                {itineraryPrice(language)}
               </p>
             </div>
           </div>

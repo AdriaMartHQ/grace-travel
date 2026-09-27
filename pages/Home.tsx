@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
+import { itineraryPrice } from '../lib/pricing';
 
 const EMPHASIZED_FAQ_LINES = new Set([
   'İptal Koşulları（取消条件）',
@@ -74,7 +75,7 @@ const Hero: React.FC = () => {
 };
 
 const TourCard: React.FC<{ tour: any; priority?: boolean }> = ({ tour, priority = false }) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const currencySymbol = '¥'; // 锁定为人民币
 
   // 严谨的回退图 (Istanbul Hagia Sophia)
@@ -114,7 +115,7 @@ const TourCard: React.FC<{ tour: any; priority?: boolean }> = ({ tour, priority 
       <div className="p-8 md:p-10 flex flex-col flex-grow">
         <div className="flex justify-between items-center mb-4">
           <span className="text-[10px] md:text-[9px] font-black text-[#FF9D00] uppercase tracking-[0.16em] md:tracking-widest">{tour.duration}</span>
-          <span className="text-lg md:text-[1.7rem] font-black text-slate-900 tracking-tight">{typeof tour.price === 'number' ? `${currencySymbol}${tour.price}` : tour.price}</span>
+          <span className="text-lg md:text-[1.7rem] font-black text-slate-900 tracking-tight">{typeof tour.price === 'number' ? `${currencySymbol}${tour.price}` : itineraryPrice(language)}</span>
         </div>
         <Link to={tour.path || "/contact"}>
           <h3 className="text-base sm:text-lg md:text-[1.5rem] font-black mb-4 text-slate-900 leading-[1.12] tracking-tight [text-wrap:balance] group-hover:text-[#FF9D00] transition-colors line-clamp-2">

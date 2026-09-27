@@ -4,6 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
 import { BOOKING_URLS } from '../lib/bookingLinks';
 import CardImage from '../components/CardImage';
+import { itineraryPrice } from '../lib/pricing';
 
 const fallbackImage =
   '/img/remote/u-1542743408-218cc173cda0.webp';
@@ -25,7 +26,6 @@ const itineraryContent = {
       transport_label: '交通服务',
       hotels_label: '住宿与餐饮',
       price_label: '团费',
-      price: '询价定制',
       meals_label: '餐饮安排',
       stay_label: '入住参考',
       footer_cta_title: '开启您的以色列圣地朝圣之旅',
@@ -198,7 +198,6 @@ const itineraryContent = {
       transport_label: 'Transport Service',
       hotels_label: 'Stay & Dining',
       price_label: 'Pricing',
-      price: 'Request a Custom Quote',
       meals_label: 'Dining',
       stay_label: 'Stay Reference',
       footer_cta_title: 'Begin Your Holy Land Pilgrimage',
@@ -452,7 +451,7 @@ const ItineraryI1: React.FC = () => {
                 <span className="text-xl">💰</span>
                 <span className="text-[10px] font-black text-orange-400 uppercase tracking-widest">{page.meta.price_label}</span>
               </div>
-              <p className="text-3xl font-black text-[#FF9D00] tracking-tight">{page.meta.price}</p>
+              <p className="text-3xl font-black text-[#FF9D00] tracking-tight">{itineraryPrice(language)}</p>
             </div>
           </div>
         </div>

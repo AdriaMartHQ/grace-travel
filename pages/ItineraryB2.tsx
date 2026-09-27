@@ -4,6 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
 import { BOOKING_URLS } from '../lib/bookingLinks';
 import CardImage from '../components/CardImage';
+import { itineraryPrice } from '../lib/pricing';
 
 // Balkan landmark photos self-hosted under /img/remote/ (sourced from Wikimedia Commons,
 // CC BY-SA — attribution preserved in the footer credits below).
@@ -40,7 +41,6 @@ const itineraryContent = {
       transport_label: '交通服务',
       hotels_label: '住宿与早餐',
       price_label: '参考团费',
-      price: '询价定制',
       meals_label: '餐饮安排',
       stay_label: '入住参考',
       footer_cta_title: '开启你的巴尔干10天之旅',
@@ -327,7 +327,7 @@ const ItineraryB2: React.FC = () => {
                 <span className="text-xl">💰</span>
                 <span className="text-[10px] font-black text-orange-400 uppercase tracking-widest">{page.meta.price_label}</span>
               </div>
-              <p className="text-3xl font-black text-[#FF9D00] tracking-tight group-hover:underline">{page.meta.price}</p>
+              <p className="text-3xl font-black text-[#FF9D00] tracking-tight group-hover:underline">{itineraryPrice(language)}</p>
             </Link>
           </div>
         </div>

@@ -5,6 +5,7 @@ import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
 import { BOOKING_URLS } from '../lib/bookingLinks';
 import CardImage from '../components/CardImage';
+import { itineraryPrice } from '../lib/pricing';
 
 const ItineraryS4: React.FC = () => {
   const { t, language } = useLanguage();
@@ -96,7 +97,7 @@ const ItineraryS4: React.FC = () => {
                 <span className="text-xl">💰</span>
                 <span className="text-[10px] font-black text-orange-400 uppercase tracking-widest">{d.meta.price_label}</span>
               </div>
-              <p className="text-3xl font-black text-[#FF9D00] tracking-tight">{d.meta.price}</p>
+              <p className="text-3xl font-black text-[#FF9D00] tracking-tight">{itineraryPrice(language)}</p>
             </div>
           </div>
         </div>

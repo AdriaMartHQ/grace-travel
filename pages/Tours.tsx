@@ -3,6 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
 import CardImage, { CARD_SIZES } from '../components/CardImage';
+import { itineraryPrice } from '../lib/pricing';
 
 // 'turkey' = classic + family（土耳其 S/Z 系列 + 以色列），排除巴尔干
 type TourFilter = 'all' | 'classic' | 'family' | 'balkan' | 'turkey';
@@ -15,7 +16,7 @@ const parseTourFilter = (value: string | null): TourFilter => {
 };
 
 const Tours: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [searchParams, setSearchParams] = useSearchParams();
   const filter = parseTourFilter(searchParams.get('category'));
   const [isHidden, setIsHidden] = useState(false);
@@ -162,7 +163,7 @@ const Tours: React.FC = () => {
                 </div>
                 <div className="flex items-center justify-between pt-8 border-t border-slate-50">
                   <div className="flex flex-col">
-                    <span className="text-xl md:text-[1.7rem] font-black text-slate-900 tracking-tight">{typeof tour.price === 'number' ? `${currencySymbol}${tour.price}` : tour.price}</span>
+                    <span className="text-xl md:text-[1.7rem] font-black text-slate-900 tracking-tight">{typeof tour.price === 'number' ? `${currencySymbol}${tour.price}` : itineraryPrice(language)}</span>
                   </div>
                   <Link to={tour.path || "/contact"} className="bg-slate-900 text-white px-5 md:px-8 py-4 rounded-2xl text-[11px] md:text-[10px] font-black uppercase tracking-[0.14em] md:tracking-[0.2em] hover:bg-[#FF9D00] transition-all shadow-lg whitespace-nowrap">
                     {tour.path ? (t.nav.home === '首页' ? '行程详情' : 'Details') : t.nav.enquire}
