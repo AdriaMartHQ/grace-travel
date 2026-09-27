@@ -410,7 +410,7 @@ const en: BaseTranslations = {
           },
           {
             day: "10",
-            title: "Istanbul classic 一日 → 送机返程",
+            title: "Classic Istanbul day → airport transfer home",
             stay: "/",
             image: "/img/remote/u-1608677662924-8b83590f474e.webp",
             paragraphs: [

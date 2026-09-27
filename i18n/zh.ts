@@ -416,7 +416,7 @@ const zh: BaseTranslations = {
           },
           {
             day: "10",
-            title: "伊斯坦布尔 classic 一日 → 送机返程",
+            title: "伊斯坦布尔经典一日 → 送机返程",
             stay: "/",
             image: "/img/remote/u-1608677662924-8b83590f474e.webp",
             paragraphs: [

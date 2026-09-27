@@ -78,7 +78,17 @@ for (const route of ROUTES) {
       // snapshot an empty/pre-bootstrap or wrong-language frame.
       return document.documentElement.lang.startsWith('zh') && /[一-鿿]/.test(r.innerText);
     }, { timeout: 30000 });
-    await new Promise((r) => setTimeout(r, 600));
+    // Wait for the page to settle rather than a fixed delay. A fixed 600 ms twice
+    // snapshotted /about with a motion stat card mid-fade (style="opacity: 0"), so the
+    // committed HTML flipped between runs. Poll until #root is unchanged across two
+    // consecutive samples, 300 ms apart, giving up after 6 s.
+    let prevHtml = '';
+    for (let i = 0, stable = 0; i < 20 && stable < 2; i++) {
+      await new Promise((r) => setTimeout(r, 300));
+      const html = await page.evaluate(() => document.getElementById('root')?.innerHTML || '');
+      stable = html === prevHtml ? stable + 1 : 0;
+      prevHtml = html;
+    }
   } catch (e) {
     console.error(`✗ ${route} — render wait failed: ${e.message}`);
     routeFailed = true;
