@@ -2,7 +2,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
-import type { Map as LeafletMap } from 'leaflet'; // type-only (erased at build); runtime L is lazy-imported in MapComponent
+import type { Map as LeafletMap, Marker as LeafletMarker } from 'leaflet'; // type-only (erased at build); runtime L is lazy-imported in MapComponent
+import type { Language } from '../translations';
 
 // 真实微信图标：双气泡结构 + 圆点眼睛，品牌标准色 #07C160
 const WeChatIcon = ({ className = "" }) => (
@@ -24,15 +25,39 @@ const EmailIcon = ({ className = "" }) => (
   </svg>
 );
 
-const PINS: { pos: [number, number]; label: string; sub: string; primary?: boolean }[] = [
-  { pos: [40.9797, 28.8729], label: '伊斯坦布尔', sub: '土耳其总部', primary: true },
-  { pos: [44.8176, 20.4568], label: '贝尔格莱德', sub: '欧洲线路' },
-  { pos: [31.7683, 35.2137], label: '耶路撒冷',   sub: '圣地线路' },
+type Localized = Record<Language, string>;
+
+// Map pin labels. These were Chinese-only, so the en/tr pages showed 伊斯坦布尔 / 土耳其总部
+// on the map (found 2026-09-27 by scanning every page in each language for CJK text).
+const PINS: { pos: [number, number]; label: Localized; sub: Localized; primary?: boolean }[] = [
+  {
+    pos: [40.9797, 28.8729],
+    label: { zh: '伊斯坦布尔', en: 'Istanbul', tr: 'İstanbul' },
+    sub: { zh: '土耳其总部', en: 'Turkey HQ', tr: 'Türkiye Merkez' },
+    primary: true,
+  },
+  {
+    pos: [44.8176, 20.4568],
+    label: { zh: '贝尔格莱德', en: 'Belgrade', tr: 'Belgrad' },
+    sub: { zh: '欧洲线路', en: 'Balkan Tours', tr: 'Balkan Turları' },
+  },
+  {
+    pos: [31.7683, 35.2137],
+    label: { zh: '耶路撒冷', en: 'Jerusalem', tr: 'Kudüs' },
+    sub: { zh: '圣地线路', en: 'Holy Land Tours', tr: 'Kutsal Topraklar' },
+  },
 ];
 
-const MapComponent: React.FC<{ lat: number; lng: number }> = ({ lat, lng }) => {
+const pinTooltipHtml = (label: string, sub: string) =>
+  `<div style="line-height:1.4;text-align:center"><strong style="font-size:11px;font-weight:900;color:#0f172a">${label}</strong><br><span style="font-size:9px;color:#FF9D00;font-weight:700;letter-spacing:0.06em;text-transform:uppercase">${sub}</span></div>`;
+
+const MapComponent: React.FC<{ lat: number; lng: number; language: Language }> = ({ lat, lng, language }) => {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<LeafletMap | null>(null);
+  const markersRef = useRef<LeafletMarker[]>([]);
+  // Read by the async map setup, which runs once; the effect below keeps labels in sync.
+  const languageRef = useRef(language);
+  languageRef.current = language;
 
   useEffect(() => {
     let cancelled = false;
@@ -74,16 +99,16 @@ const MapComponent: React.FC<{ lat: number; lng: number }> = ({ lat, lng }) => {
           iconAnchor: [6, 6],
         });
 
-        const tooltipHtml = `<div style="line-height:1.4;text-align:center"><strong style="font-size:11px;font-weight:900;color:#0f172a">${label}</strong><br><span style="font-size:9px;color:#FF9D00;font-weight:700;letter-spacing:0.06em;text-transform:uppercase">${sub}</span></div>`;
-
-        L.marker(pos, { icon })
-          .bindTooltip(tooltipHtml, {
+        const lang = languageRef.current;
+        const marker = L.marker(pos, { icon })
+          .bindTooltip(pinTooltipHtml(label[lang], sub[lang]), {
             permanent: true,
             direction: 'top',
             offset: [0, -12],
             className: 'grace-map-tip',
           })
           .addTo(map);
+        markersRef.current.push(marker);
       });
 
       mapInstanceRef.current = map;
@@ -91,12 +116,20 @@ const MapComponent: React.FC<{ lat: number; lng: number }> = ({ lat, lng }) => {
 
     return () => {
       cancelled = true;
+      markersRef.current = [];
       if (mapInstanceRef.current) {
         mapInstanceRef.current.remove();
         mapInstanceRef.current = null;
       }
     };
   }, [lat, lng]);
+
+  // The map is built once; relabel its pins in place when the visitor switches language.
+  useEffect(() => {
+    markersRef.current.forEach((marker, i) => {
+      marker.setTooltipContent(pinTooltipHtml(PINS[i].label[language], PINS[i].sub[language]));
+    });
+  }, [language]);
 
   return (
     <div
@@ -265,7 +298,7 @@ const Contact: React.FC = () => {
         <div className="space-y-8 pb-12">
           <div className="relative">
             <>
-              <MapComponent lat={lat} lng={lng} />
+              <MapComponent lat={lat} lng={lng} language={language} />
               <div className="absolute top-6 right-6 z-20 bg-white/95 backdrop-blur-md px-5 py-2.5 rounded-2xl border border-slate-200 shadow-xl flex items-center gap-3 animate-in fade-in slide-in-from-right-4 duration-1000">
                 <div className="w-2 h-2 bg-[#FF9D00] rounded-full animate-pulse shadow-[0_0_8px_rgba(255,157,0,0.6)]"></div>
                 <span className="text-[11px] font-black uppercase tracking-widest text-slate-900">
