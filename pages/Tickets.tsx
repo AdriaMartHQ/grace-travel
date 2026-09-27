@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
+import CardImage, { CARD_SIZES } from '../components/CardImage';
 
 const Tickets: React.FC = () => {
   const { t, language } = useLanguage();
@@ -90,15 +91,14 @@ const Tickets: React.FC = () => {
           {filteredTickets.map((ticket: any) => (
             <div key={ticket.id} className="bg-white p-6 rounded-[3rem] border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 text-left">
               <div className="relative h-56 rounded-[2rem] overflow-hidden mb-8 group bg-slate-100">
-                <img 
-                  src={ticket.image} 
-                  alt={ticket.title} 
+                <CardImage
+                  src={ticket.image}
+                  alt={ticket.title}
                   loading="lazy"
                   decoding="async"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = `https://picsum.photos/seed/${ticket.id}/600/400`;
-                  }}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                  fallback={`https://picsum.photos/seed/${ticket.id}/600/400`}
+                  sizes={CARD_SIZES.ticketCard}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute top-4 right-4 md:top-6 md:right-6 bg-[#FF9D00] text-white px-4 md:px-5 py-2 rounded-2xl text-base md:text-[1.1rem] font-black shadow-lg">
                   ¥{ticket.price}

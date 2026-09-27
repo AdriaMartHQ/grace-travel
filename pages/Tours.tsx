@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
+import CardImage, { CARD_SIZES } from '../components/CardImage';
 
 // 'turkey' = classic + family（土耳其 S/Z 系列 + 以色列），排除巴尔干
 type TourFilter = 'all' | 'classic' | 'family' | 'balkan' | 'turkey';
@@ -129,17 +130,14 @@ const Tours: React.FC = () => {
             <div key={tour.id} className="group flex flex-col h-full bg-white rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500">
               <div className="relative aspect-video overflow-hidden bg-slate-100">
                 <Link to={tour.path || "/contact"} className="block w-full h-full">
-                  <img 
-                    src={tour.image} 
-                    alt={tour.title} 
+                  <CardImage
+                    src={tour.image}
+                    alt={tour.title}
                     loading="lazy"
                     decoding="async"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.onerror = null;
-                      target.src = fallbackImg;
-                    }}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                    fallback={fallbackImg}
+                    sizes={CARD_SIZES.tourCard}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                 </Link>
                 <div className="absolute top-4 right-4 md:top-6 md:right-6 bg-white/95 backdrop-blur-sm px-3 md:px-4 py-1.5 rounded-full text-[10px] md:text-[10px] font-black tracking-[0.12em] md:tracking-widest text-slate-900 shadow-sm max-w-[calc(100%-2rem)] md:max-w-none">

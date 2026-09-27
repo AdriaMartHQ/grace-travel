@@ -6,7 +6,8 @@
 Why: day-card images on the itinerary pages render at most 576 CSS px wide (342 on a
 phone) but used to download 1920px originals — 3.4 MB of images on the B2 page alone.
 For each raster under public/img that the source references and that is wider than a
-target width, this writes <stem>-<width>.webp next to it (640 and 1200 px, cwebp q80),
+target width, this writes <stem>-<width>.webp next to it (640, 800 and 1200 px, cwebp q80;
+800 fits the ~380px three-column cards on a 2x screen),
 and emits lib/imageVariants.generated.ts mapping the original URL to a ready srcset.
 
 Originals are never modified: they are served with a one-year `immutable` cache, so
@@ -24,7 +25,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parent.parent
 PUBLIC = ROOT / "public"
 OUT_TS = ROOT / "lib" / "imageVariants.generated.ts"
-WIDTHS = (640, 1200)
+WIDTHS = (640, 800, 1200)
 QUALITY = "80"
 SOURCES = ["pages", "components", "i18n", "lib", "constants.tsx", "translations.ts", "App.tsx"]
 REF = re.compile(r"""['"`](/img/[^'"`?#\s]+\.(?:webp|jpe?g|png))['"`]""")
