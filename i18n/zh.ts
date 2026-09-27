@@ -932,8 +932,8 @@ const zh: BaseTranslations = {
     ],
     ticketsData: [
       { id: 't1', title: '多尔玛巴赫切宫 (Dolmabahçe Sarayı)', price: 400, includes: ['包含礼宾厅、后宫及绘画博物馆进入权限', '支持官方语音导览', '详情请联系客服'], image: '/img/remote/u-1601565465051-67971a2d838c.webp', category: 'entry' },
-      { id: 't2', title: '耶尔德兹宫 (Yıldız Sarayı)', price: 180, includes: ['包含建筑群及园区参观权限', '支持导览服务', '详情请咨询客服'], image: 'https://cdn.istanbul.com/upload/dolmabahce-skip-the-line-7-853x480.webp', category: 'entry' },
-      { id: 't3', title: '贝勒贝伊宫 (Beylerbeyi Sarayı)', price: 150, includes: ['包含宫殿主建筑及海滨花园进入', '精美石雕艺术赏析', '详情请联系客服'], image: 'https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_828/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/alxi5drx8um7tsyhdf0l/博斯普鲁斯海峡游轮两大洲.jpg', category: 'entry' },
+      { id: 't2', title: '耶尔德兹宫 (Yıldız Sarayı)', price: 180, includes: ['包含建筑群及园区参观权限', '支持导览服务', '详情请咨询客服'], image: '/img/remote/wiki-i-stanbul-5716-ce175b.webp', category: 'entry' },
+      { id: 't3', title: '贝勒贝伊宫 (Beylerbeyi Sarayı)', price: 150, includes: ['包含宫殿主建筑及海滨花园进入', '精美石雕艺术赏析', '详情请联系客服'], image: '/img/remote/wiki-istanbul-beylerbeyi-palace-img-7663-1805-6a073d.webp', category: 'entry' },
       { id: 't4', title: '绘画博物馆 (Resim Müzesi)', price: 110, includes: ['包含美术馆绘画藏品区域进入权限', '艺术史导览支持', '详情请咨询客服'], image: '/img/remote/u-1692701824634-677c652fc111.webp', category: 'entry' },
       { id: 't5', title: '伊斯兰文明博物馆 (İslam Medeniyetleri Müzesi)', price: 95, includes: ['包含伊斯兰文明藏品展厅进入权限', '文化历史解读', '详情请咨询客服'], image: '/img/remote/u-1759930018775-bf3c3fe9bdc6.webp', category: 'entry' },
       { id: 't6', title: '贝伊科兹玻璃与水晶博物馆 (Beykoz Cam ve Billur Müzesi)', price: 85, includes: ['包含玻璃及水晶制品展厅进入权限', '工艺历史讲解', '详情请联系客服'], image: '/img/remote/u-1605988743975-c9c5b8550a91.webp', category: 'entry' },
@@ -941,7 +941,7 @@ const zh: BaseTranslations = {
       { id: 't8', title: '库楚克苏行宫 (Küçüksu Kasrı)', price: 50, includes: ['包含行宫主建筑进入权限', '花园区域漫步', '详情请联系客服'], image: '/img/remote/u-1680419928106-1804e2eb432d.webp', category: 'entry' },
       { id: 't9', title: '伊赫拉穆尔行宫 (Ihlamur Kasrı)', price: 50, includes: ['包含行宫区域及花园进入权限', '文化遗产参观', '详情请咨询客服'], image: '/img/remote/u-1661103112980-2ceae026f17b.webp', category: 'entry' },
       { id: 't10', title: '贝伊科兹梅吉迪耶行宫 (Beykoz Mecidiye Kasrı)', price: 50, includes: ['包含行宫主体及周边区域进入权限', '历史背景说明', '详情请咨询客服'], image: '/img/remote/u-1665860789948-bfe6ea95d6cf.webp', category: 'entry' },
-      { id: 't11', title: '艾纳勒卡瓦克行宫 (Aynalıkavak Kasrı)', price: 50, includes: ['包含行宫建筑及乐器收藏区域进入', '详情请咨询客服'], image: 'https://cdn.kulturenvanteri.com/wp-content/uploads/2019/11/Aynalikavak-Kasri-1-1024x683.jpg', category: 'entry' },
+      { id: 't11', title: '艾纳勒卡瓦克行宫 (Aynalıkavak Kasrı)', price: 50, includes: ['包含行宫建筑及乐器收藏区域进入', '详情请咨询客服'], image: '/img/remote/wiki-aynal-kavak-kasr-6b7814.webp', category: 'entry' },
       { id: 't12', title: '马斯拉克行宫 (Maslak Kasrı)', price: 50, includes: ['包含行宫群落及温室区域进入权限', '详情请咨询客服'], image: '/img/remote/u-1766778834237-34aeabf4d9b2.webp', category: 'entry' }
     ],
     faqs: [

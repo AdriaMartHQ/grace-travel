@@ -319,8 +319,8 @@ const tr: BaseTranslations = {
     ],
     ticketsData: [
       { id: 't1', title: 'Dolmabahçe Palace (Dolmabahçe Sarayı)', price: 400, includes: ['Access to main sections', 'Consult CS for details'], image: '/img/remote/u-1601565465051-67971a2d838c.webp', category: 'entry' },
-      { id: 't2', title: 'Yıldız Palace (Yıldız Sarayı)', price: 180, includes: ['Access to complex', 'Consult CS for details'], image: 'https://cdn.istanbul.com/upload/dolmabahce-skip-the-line-7-853x480.webp', category: 'entry' },
-      { id: 't3', title: 'Beylerbeyi Palace (Beylerbeyi Sarayı)', price: 150, includes: ['Main palace access', 'Consult CS for details'], image: 'https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_828/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/alxi5drx8um7tsyhdf0l/博斯普鲁斯海峡游轮两大洲.jpg', category: 'entry' },
+      { id: 't2', title: 'Yıldız Palace (Yıldız Sarayı)', price: 180, includes: ['Access to complex', 'Consult CS for details'], image: '/img/remote/wiki-i-stanbul-5716-ce175b.webp', category: 'entry' },
+      { id: 't3', title: 'Beylerbeyi Palace (Beylerbeyi Sarayı)', price: 150, includes: ['Main palace access', 'Consult CS for details'], image: '/img/remote/wiki-istanbul-beylerbeyi-palace-img-7663-1805-6a073d.webp', category: 'entry' },
       { id: 't4', title: 'Painting Museum (Resim Müzesi)', price: 110, includes: ['Art gallery access', 'Consult CS for details'], image: '/img/remote/u-1692701824634-677c652fc111.webp', category: 'entry' },
       { id: 't5', title: 'Museum of Islamic Civilizations (İslam Medeniyetleri Müzesi)', price: 95, includes: ['Galleries access', 'Consult CS for details'], image: '/img/remote/u-1759930018775-bf3c3fe9bdc6.webp', category: 'entry' },
       { id: 't6', title: 'Beykoz Glass Museum (Beykoz Cam Müzesi)', price: 85, includes: ['Museum access', 'Consult CS for details'], image: '/img/remote/u-1605988743975-c9c5b8550a91.webp', category: 'entry' },
@@ -328,7 +328,7 @@ const tr: BaseTranslations = {
       { id: 't8', title: 'Küçüksu Pavilion (Küçüksu Kasrı)', price: 50, includes: ['Pavilion access', 'Consult CS for details'], image: '/img/remote/u-1680419928106-1804e2eb432d.webp', category: 'entry' },
       { id: 't9', title: 'Ihlamur Pavilion (Ihlamur Kasrı)', price: 50, includes: ['Pavilion access', 'Consult CS for details'], image: '/img/remote/u-1661103112980-2ceae026f17b.webp', category: 'entry' },
       { id: 't10', title: 'Beykoz Mecidiye Pavilion (Beykoz Mecidiye Kasrı)', price: 50, includes: ['Pavilion access', 'Consult CS for details'], image: '/img/remote/u-1665860789948-bfe6ea95d6cf.webp', category: 'entry' },
-      { id: 't11', title: 'Aynalıkavak Pavilion (Aynalıkavak Kasrı)', price: 50, includes: ['Pavilion access', 'Consult CS for details'], image: 'https://cdn.kulturenvanteri.com/wp-content/uploads/2019/11/Aynalikavak-Kasri-1-1024x683.jpg', category: 'entry' },
+      { id: 't11', title: 'Aynalıkavak Pavilion (Aynalıkavak Kasrı)', price: 50, includes: ['Pavilion access', 'Consult CS for details'], image: '/img/remote/wiki-aynal-kavak-kasr-6b7814.webp', category: 'entry' },
       { id: 't12', title: 'Maslak Pavilion (Maslak Kasrı)', price: 50, includes: ['Pavilion access', 'Consult CS for details'], image: '/img/remote/u-1766778834237-34aeabf4d9b2.webp', category: 'entry' }
     ],
     faqs: [

@@ -136,6 +136,14 @@ const Tickets: React.FC = () => {
             <p className="text-slate-400 text-[13px] md:text-xs font-medium leading-relaxed tracking-normal md:tracking-wide">
                 {language === 'zh' ? '人民币价格为票面价格 9 折优惠后，按参考汇率换算，仅作展示参考，最终金额以实际支付页面为准。' : 'CNY prices are converted at reference exchange rates after a 10% face value discount, and are for display reference only. Final amounts depend on the actual payment page.'}
             </p>
+            {/* Photo credits — Wikimedia Commons images are self-hosted; CC BY-SA requires this. */}
+            <p className="mt-4 text-slate-400 text-[11px] leading-relaxed">
+                {language === 'zh'
+                  ? '图片版权：耶尔德兹宫 © Darwinek（CC BY-SA 3.0）；贝勒贝伊宫 © Alexxx1979（CC BY-SA 4.0）；艾纳勒卡瓦克行宫 © Hamdigumus（CC0），均来自 Wikimedia Commons。'
+                  : language === 'tr'
+                    ? 'Fotoğraflar: Yıldız Sarayı © Darwinek (CC BY-SA 3.0); Beylerbeyi Sarayı © Alexxx1979 (CC BY-SA 4.0); Aynalıkavak Kasrı © Hamdigumus (CC0) — Wikimedia Commons.'
+                    : 'Photos: Yıldız Palace © Darwinek (CC BY-SA 3.0); Beylerbeyi Palace © Alexxx1979 (CC BY-SA 4.0); Aynalıkavak Pavilion © Hamdigumus (CC0) — via Wikimedia Commons.'}
+            </p>
         </div>
       </section>
     </div>
